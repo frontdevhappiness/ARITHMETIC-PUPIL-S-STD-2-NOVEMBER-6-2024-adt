@@ -1,0 +1,1251 @@
+@font-face {
+  font-family: 'Atkinson Hyperlegible';
+  src: url('./fonts/AtkinsonHyperlegible-400-latin.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Atkinson Hyperlegible';
+  src: url('./fonts/AtkinsonHyperlegible-400-latin-ext.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Atkinson Hyperlegible';
+  src: url('./fonts/AtkinsonHyperlegible-700-latin.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Atkinson Hyperlegible';
+  src: url('./fonts/AtkinsonHyperlegible-700-latin-ext.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: 'Merriweather';
+  src: url('./fonts/Merriweather-VariableFont.woff2') format('woff2');
+  font-weight: 300 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Merriweather';
+  src: url('./fonts/Merriweather-Italic-VariableFont.woff2') format('woff2');
+  font-weight: 300 800;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sassoon Primary';
+  src: url('./fonts/SassoonPrimaryStd-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/*
+ * Match the source book with its licensed Sassoon Primary face. Atkinson is
+ * retained as the fallback and as the dedicated interface font below.
+ */
+body, p, h1, h2, h3, h4, h5, h6, span, div, button, input, textarea, select {
+  font-family: "Sassoon Primary", "Atkinson Hyperlegible", sans-serif;
+}
+
+/*
+ * Printed-book geometry
+ * ---------------------
+ * Poppler renders the 557.906 x 767.669 pt source page at 836 x 1151 px.
+ * The converted pages were originally allowed to grow to 1180–1280 px, which
+ * made type and margins look much smaller than the printed book.  Keep the
+ * same measured page width and height on desktop, and allow accessible reflow
+ * below it.
+ * Quiz pages use the separate `.content` class and intentionally retain their
+ * interactive card layout.
+ */
+#content:not(.content) {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 836px !important;
+  margin-inline: auto !important;
+  padding: 0 !important;
+  background: #ffffff !important;
+}
+
+/* Inline Comic Sans/font-serif declarations from conversion must not replace
+ * the source book face. SVG diagrams are included so their numerals match. */
+#content:not(.content),
+#content:not(.content) :not(i):not(.fa):not(.fas):not(.far):not(.fab),
+#content:not(.content) svg text {
+  font-family: "Sassoon Primary", "Atkinson Hyperlegible", sans-serif !important;
+}
+
+#content:not(.content) > [data-book-page] {
+  box-sizing: border-box;
+  position: relative;
+  width: 100% !important;
+  max-width: none !important;
+  margin-inline: auto !important;
+  margin-block: 0 !important;
+  border-width: 44px 54px !important;
+  border-style: solid !important;
+  border-color: transparent !important;
+  border-radius: 0 !important;
+  background-color: #ffffff !important;
+  background-image: url("./book-page-frame-source.jpg") !important;
+  background-origin: border-box !important;
+  background-clip: border-box !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: 100% 100% !important;
+  box-shadow: none !important;
+}
+
+@media (min-width: 885px) {
+  #content:not(.content) > [data-book-page] {
+    height: auto !important;
+    min-height: 1151px !important;
+    max-height: none !important;
+    overflow: visible !important;
+  }
+
+}
+
+@media (max-width: 884px) {
+  #content:not(.content) {
+    max-width: 100% !important;
+    padding: 0 !important;
+  }
+
+  #content:not(.content) > [data-book-page] {
+    min-height: 0 !important;
+    border-width: clamp(20px, 5.25vw, 44px) clamp(24px, 6.45vw, 54px) !important;
+    border-radius: 0 !important;
+  }
+}
+
+/* The PDF's opening approval/title page is plain white. Its blue frame begins
+ * on the following page, so do not apply the shared source texture here. */
+#content:not(.content) > [data-book-page][data-section-id="pg001_sec001"] {
+  border-width: 0 !important;
+  background-color: #ffffff !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+/* The source contents page is tightly typeset to fit eleven chapters on one
+ * printed page. These values come from the PDF text positions. */
+#content:not(.content) > [data-section-type="table_of_contents"] > div {
+  max-width: none !important;
+  padding: 74px 110px 64px !important;
+}
+
+#content:not(.content) [data-section-type="table_of_contents"] h1 {
+  margin-bottom: 4px !important;
+  font-size: 27px !important;
+  line-height: 30px !important;
+}
+
+#content:not(.content) [data-section-type="table_of_contents"] h2,
+#content:not(.content) [data-section-type="table_of_contents"] .toc-line {
+  font-size: 26px !important;
+  line-height: 31px !important;
+}
+
+#content:not(.content) [data-section-type="table_of_contents"] h2 {
+  margin-bottom: 0 !important;
+}
+
+#content:not(.content) [data-section-type="table_of_contents"] .toc-topic {
+  font-style: italic;
+}
+
+#content:not(.content) [data-section-type="table_of_contents"] .toc-list > * {
+  margin: 0 !important;
+}
+
+#content:not(.content) [data-section-type="table_of_contents"] .toc-list > * + * {
+  margin-top: 10px !important;
+}
+
+#content:not(.content) [data-section-type="table_of_contents"] .toc-frontmatter + .toc-frontmatter {
+  margin-top: 0 !important;
+}
+
+#content:not(.content) [data-section-type="table_of_contents"] .toc-list > .pt-1 {
+  padding-top: 0 !important;
+}
+
+#content:not(.content) [data-section-type="table_of_contents"] .toc-line {
+  display: flex;
+  align-items: baseline;
+  width: 100%;
+  color: #231f20;
+}
+
+#content:not(.content) [data-section-type="table_of_contents"] .toc-heading {
+  color: #293c9a;
+  font-weight: 700;
+  font-style: normal;
+}
+
+#content:not(.content) [data-section-type="table_of_contents"] .toc-label,
+#content:not(.content) [data-section-type="table_of_contents"] .toc-page {
+  flex: 0 0 auto;
+}
+
+#content:not(.content) [data-section-type="table_of_contents"] .toc-dots {
+  flex: 1 1 auto;
+  min-width: 16px;
+  margin: 0 7px 6px;
+  border-bottom: 2px dotted #383838;
+}
+
+@media (max-width: 700px) {
+  #content:not(.content) > [data-section-type="table_of_contents"] > div {
+    padding: 38px 18px 44px !important;
+  }
+
+  #content:not(.content) [data-section-type="table_of_contents"] h1 {
+    font-size: 23px !important;
+    line-height: 27px !important;
+  }
+
+  #content:not(.content) [data-section-type="table_of_contents"] h2,
+  #content:not(.content) [data-section-type="table_of_contents"] .toc-line {
+    font-size: 17px !important;
+    line-height: 22px !important;
+  }
+}
+
+/* Page 7 / printed page 1: the conversion treated every song line as a
+ * separate paragraph with an extra 16 px gap. The PDF uses one continuous
+ * 33 px baseline rhythm. */
+#content:not(.content) > [data-section-id="pg007_sec001"] > div {
+  padding-top: 10px !important;
+  padding-bottom: 52px !important;
+}
+
+#content:not(.content) [data-section-id="pg007_sec001"] h2 {
+  margin-bottom: 8px !important;
+}
+
+/* Number-reading grids use visible ruled rows and columns in the source.
+ * The conversion used an arbitrary descendant utility that was absent from
+ * the compiled stylesheet, leaving the numerals visually unruled. */
+#content:not(.content) .source-number-grid td {
+  border: 1px solid #405ad0;
+  padding: 10px 3px;
+  white-space: nowrap;
+}
+
+/* Source page 113 uses two equal ICT screenshots in one row. Flex items kept
+ * their intrinsic pixel width in Chromium, so the second screenshot escaped
+ * the page. A real two-column grid constrains both images to the panel. */
+#content:not(.content) .ict-screenshot-pair {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+#content:not(.content) .ict-screenshot-pair > img {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  height: auto;
+}
+
+#content:not(.content) .source-following-topic {
+  display: grid;
+  gap: 4px;
+  margin: 14px 8px 0;
+  color: #242424;
+  font-size: 17px;
+  line-height: 1.25;
+}
+
+/* The generated Tailwind bundle omitted the nested `[&_input]` utilities on
+ * the expanded/short-form exercises. The runtime therefore fell back to a
+ * tiny 4-character input whose underline appeared beneath the final digit.
+ * Keep each answer field in its own grid column, clearly after the equals
+ * sign, and give it the ruled width shown in the source book. */
+#content:not(.content) [data-section-id="pg032_sec001"] .fitb-sentence,
+#content:not(.content) [data-section-id="pg033_sec001"] .fitb-sentence {
+  display: block;
+  width: 100%;
+  min-width: 0;
+}
+
+/* Reserve the equation's real rendered width before allocating the remaining
+ * row width to the answer. `minmax(0,1fr)` previously made the unwrapped
+ * equation overflow beneath the input underline. */
+#content:not(.content) [data-section-id="pg033_sec001"] .space-y-5 > .grid {
+  grid-template-columns: 32px max-content minmax(0, 1fr) !important;
+  column-gap: 8px !important;
+}
+
+/*
+ * Source typography scale
+ * -----------------------
+ * Several generated templates used presentation-sized Tailwind type (30–48
+ * px) for ordinary pupil text. At the measured 836 px source-page width the
+ * PDF uses roughly 20–24 px for body/exercise text, 24–26 px for labels, and
+ * about 30 px for major headings. Normalize those recurring utility tokens
+ * without enlarging dense tables or changing the cover artwork.
+ */
+@media (min-width: 885px) {
+  #content:not(.content) > [data-book-page]:not([data-section-id="pg001_sec001"]) [class~="text-3xl"],
+  #content:not(.content) > [data-book-page]:not([data-section-id="pg001_sec001"]) [class~="text-[30px]"],
+  #content:not(.content) > [data-book-page]:not([data-section-id="pg001_sec001"]) [class~="text-[1.9rem]"] {
+    font-size: 22px !important;
+    line-height: 1.35 !important;
+  }
+
+  #content:not(.content) > [data-book-page]:not([data-section-id="pg001_sec001"]) [class~="text-[2rem]"],
+  #content:not(.content) > [data-book-page]:not([data-section-id="pg001_sec001"]) [class~="text-[31px]"],
+  #content:not(.content) > [data-book-page]:not([data-section-id="pg001_sec001"]) [class~="text-[32px]"] {
+    font-size: 24px !important;
+    line-height: 1.32 !important;
+  }
+
+  #content:not(.content) > [data-book-page]:not([data-section-id="pg001_sec001"]) [class~="text-[2.05rem]"],
+  #content:not(.content) > [data-book-page]:not([data-section-id="pg001_sec001"]) [class~="text-[2.1rem]"],
+  #content:not(.content) > [data-book-page]:not([data-section-id="pg001_sec001"]) [class~="text-[2.15rem]"],
+  #content:not(.content) > [data-book-page]:not([data-section-id="pg001_sec001"]) [class~="text-[2.2rem]"],
+  #content:not(.content) > [data-book-page]:not([data-section-id="pg001_sec001"]) [class~="text-[34px]"],
+  #content:not(.content) > [data-book-page]:not([data-section-id="pg001_sec001"]) [class~="text-4xl"],
+  #content:not(.content) > [data-book-page]:not([data-section-id="pg001_sec001"]) [class~="text-[36px]"] {
+    font-size: 26px !important;
+    line-height: 1.28 !important;
+  }
+
+  #content:not(.content) > [data-book-page]:not([data-section-id="pg001_sec001"]) [class~="text-[2.25rem]"],
+  #content:not(.content) > [data-book-page]:not([data-section-id="pg001_sec001"]) [class~="text-[2.4rem]"],
+  #content:not(.content) > [data-book-page]:not([data-section-id="pg001_sec001"]) [class~="text-[2.5rem]"],
+  #content:not(.content) > [data-book-page]:not([data-section-id="pg001_sec001"]) [class~="text-[2.6rem]"],
+  #content:not(.content) > [data-book-page]:not([data-section-id="pg001_sec001"]) [class~="text-[2.8rem]"],
+  #content:not(.content) > [data-book-page]:not([data-section-id="pg001_sec001"]) [class~="text-[38px]"],
+  #content:not(.content) > [data-book-page]:not([data-section-id="pg001_sec001"]) [class~="text-[40px]"],
+  #content:not(.content) > [data-book-page]:not([data-section-id="pg001_sec001"]) [class~="text-[42px]"] {
+    font-size: 28px !important;
+    line-height: 1.25 !important;
+  }
+
+  #content:not(.content) > [data-book-page]:not([data-section-id="pg001_sec001"]) [class~="text-5xl"],
+  #content:not(.content) > [data-book-page]:not([data-section-id="pg001_sec001"]) [class~="text-[44px]"],
+  #content:not(.content) > [data-book-page]:not([data-section-id="pg001_sec001"]) [class~="text-[2.75rem]"],
+  #content:not(.content) > [data-book-page]:not([data-section-id="pg001_sec001"]) [class~="text-[3.25rem]"],
+  #content:not(.content) > [data-book-page]:not([data-section-id="pg001_sec001"]) [class~="text-[clamp(2rem,3.2vw,3.25rem)]"],
+  #content:not(.content) > [data-book-page]:not([data-section-id="pg001_sec001"]) [class~="text-[clamp(2.25rem,4vw,3.25rem)]"] {
+    font-size: 30px !important;
+    line-height: 1.2 !important;
+  }
+
+  #content:not(.content) > [data-book-page] .exercise-line,
+  #content:not(.content) > [data-book-page] .exercise-equation,
+  #content:not(.content) > [data-book-page] .question-number,
+  #content:not(.content) > [data-book-page] .vertical-problem {
+    font-size: 22px !important;
+  }
+
+  #content:not(.content) > [data-book-page] .exercise-line input,
+  #content:not(.content) > [data-book-page] .exercise-equation input,
+  #content:not(.content) > [data-book-page] .vertical-answer {
+    font-size: 18px !important;
+  }
+}
+
+#content:not(.content) [data-section-id="pg032_sec001"] .fitb-sentence > input,
+#content:not(.content) [data-section-id="pg033_sec001"] .fitb-sentence > input {
+  box-sizing: border-box;
+  display: block;
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: 100% !important;
+  height: 36px !important;
+  margin: 0 !important;
+  padding: 0 8px !important;
+  border: 0 !important;
+  border-bottom: 2px solid #6b7280 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  text-align: center;
+}
+
+@media (max-width: 640px) {
+  #content:not(.content) .ict-screenshot-pair {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  #content:not(.content) .source-number-grid td {
+    padding: 5px 0;
+  }
+}
+
+#content:not(.content) [data-section-id="pg007_sec001"] .mx-auto.w-full.max-w-\[980px\] > p {
+  margin-bottom: 12px !important;
+}
+
+#content:not(.content) [data-section-id="pg007_sec001"] .mx-auto.w-full.max-w-\[980px\] {
+  max-width: 610px !important;
+}
+
+#content:not(.content) [data-section-id="pg007_sec001"] h2,
+#content:not(.content) [data-section-id="pg007_sec001"] .mx-auto.w-full.max-w-\[980px\] > p,
+#content:not(.content) [data-section-id="pg007_sec001"] .space-y-4 {
+  font-size: 27px !important;
+  line-height: 33px !important;
+}
+
+#content:not(.content) [data-section-id="pg007_sec001"] .space-y-4 {
+  line-height: 33px !important;
+}
+
+#content:not(.content) [data-section-id="pg007_sec001"] .space-y-4 > * {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  padding-top: 0 !important;
+}
+
+/*
+ * User-requested uniform book type size
+ * -------------------------------------
+ * Keep every piece of live textbook text at one computed size across all
+ * content pages and quizzes. This intentionally overrides the earlier
+ * source-role hierarchy (cover, headings, body, exercises and tables).
+ * Reader chrome remains separately sized below.
+ */
+html body #content#content#content,
+html body #content#content#content * {
+  font-size: 22px !important;
+}
+
+/* Cover-title exception requested for source fidelity. At the measured 836 px
+ * PDF width, Poppler reports 75 px, 39 px and 45 px for the three title lines.
+ * Their vertical offsets also follow the PDF rather than the uniform body
+ * rhythm used on the remaining pages. */
+html body #content#content#content [data-section-id="pg001_sec001"] .cover-page-inner {
+  padding-top: clamp(48px, 11.4vw, 95px) !important;
+}
+
+html body #content#content#content [data-section-id="pg001_sec001"] .cover-title-block {
+  margin-bottom: 8px !important;
+}
+
+html body #content#content#content [data-section-id="pg001_sec001"] [data-id="pg001_n0002"] {
+  font-size: clamp(48px, 9vw, 75px) !important;
+  line-height: 1.1333 !important;
+}
+
+html body #content#content#content [data-section-id="pg001_sec001"] [data-id="pg001_n0003"] {
+  margin-top: 2px !important;
+  font-size: clamp(28px, 4.67vw, 39px) !important;
+  line-height: 1.1282 !important;
+}
+
+html body #content#content#content [data-section-id="pg001_sec001"] [data-id="pg001_n0004"] {
+  margin-top: 17px !important;
+  font-size: clamp(34px, 5.39vw, 45px) !important;
+  line-height: 1.1333 !important;
+}
+
+html body #content#content#content [data-section-id="pg001_sec001"] [data-id="pg001_n0019"] {
+  font-size: 23px !important;
+  line-height: 1.087 !important;
+}
+
+/*
+ * PDF fidelity — reader pages 130–186
+ * -----------------------------------
+ * This range covers the fractions, measurements and shapes chapters.  The
+ * conversion preserved the content but enlarged many image rows and changed
+ * simple printed activities into application-style cards.  Restore the
+ * source book's compact ruled tables, blue exercise/example pills and green
+ * activity treatment while retaining usable form controls.
+ */
+
+/* Exercise pills are white with a blue outline in the printed book. */
+#content .source-pdf-exercise-boxes > .mb-5 > span,
+#content .source-pdf-comparison-table > .text-center:first-child > span,
+#content [data-section-id="pg142_sec001"] > .mb-5 > span {
+  background: #ffffff !important;
+  border-color: #169bd5 !important;
+  color: #168ac4 !important;
+}
+
+#content [data-section-id="pg108_sec001"] span:has(> [data-id="pg108_n0048"]),
+#content [data-section-id="pg108_sec001"] span:has(> [data-id="pg109_n0035"]) {
+  border: 2px solid #169bd5 !important;
+  background: #ffffff !important;
+  color: #168ac4 !important;
+  box-shadow: none !important;
+}
+
+/* Printed-book banner system for the audited reader range. The converter used
+ * several incompatible heading treatments; these classes are attached to the
+ * visible banner host by preserve-rich-content.js. */
+#content .source-book-banner {
+  box-sizing: border-box !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: auto !important;
+  min-width: 0 !important;
+  min-height: 0 !important;
+  max-width: calc(100% - 24px) !important;
+  margin: 0 !important;
+  padding: 3px 28px !important;
+  border-width: 2px !important;
+  border-style: solid !important;
+  border-radius: 999px !important;
+  font-weight: 700 !important;
+  font-style: italic !important;
+  line-height: 1.12 !important;
+  white-space: nowrap !important;
+  box-shadow: none !important;
+}
+
+#content .source-book-banner-exercise {
+  border-color: #169bd5 !important;
+  background: #ffffff !important;
+  color: #168ac4 !important;
+  min-width: 190px !important;
+  padding-left: 40px !important;
+  padding-right: 40px !important;
+}
+
+#content .source-book-banner-example {
+  border-color: #169bd5 !important;
+  background: #169bd5 !important;
+  color: #ffffff !important;
+  min-width: 180px !important;
+  padding-left: 40px !important;
+  padding-right: 40px !important;
+}
+
+#content .source-book-banner-activity,
+#content .source-book-banner-questions {
+  border-color: #54a64e !important;
+  background: #ffffff !important;
+  color: #4a9945 !important;
+}
+
+#content .source-book-banner-row {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  width: 100% !important;
+  margin-top: 0 !important;
+  margin-bottom: 10px !important;
+  padding-left: 22px !important;
+  text-align: left !important;
+}
+
+/* Exercises that occupy their own ADT section should retain the same framed
+ * panel and overlapping title pill used in the printed source. */
+#content .source-book-framed-exercise {
+  position: relative !important;
+  margin-top: 18px !important;
+  padding-top: 42px !important;
+  border: 2px solid #9acfee !important;
+  border-radius: 20px !important;
+  background: #ffffff !important;
+}
+
+/* When an Exercise occupies the whole ADT section, the section also carries
+ * the PDF-derived page texture. Draw the exercise's own thin rounded panel at
+ * the inner edge of that page frame; it is a separate source-book component. */
+#content:not(.content) > .source-book-framed-exercise::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  pointer-events: none;
+  border: 2px solid #9acfee;
+  border-radius: 20px;
+}
+
+#content:not(.content) > .source-book-framed-exercise > * {
+  position: relative;
+  z-index: 1;
+}
+
+#content:not(.content) > .source-book-framed-exercise > .source-book-attached-banner {
+  position: absolute !important;
+  z-index: 3 !important;
+}
+
+#content .source-book-banner-panel {
+  position: relative !important;
+  overflow: visible !important;
+  padding-top: 42px !important;
+}
+
+@media (max-width: 640px) {
+  #content .source-book-banner-exercise,
+  #content .source-book-banner-example {
+    min-width: 0 !important;
+    padding-left: 28px !important;
+    padding-right: 28px !important;
+  }
+}
+
+#content .source-book-attached-banner {
+  position: absolute !important;
+  z-index: 3 !important;
+  top: 0 !important;
+  left: clamp(20px, 6%, 52px) !important;
+  width: auto !important;
+  margin: 0 !important;
+  transform: translateY(-50%) !important;
+}
+
+#content .source-book-attached-banner.source-book-banner-row {
+  padding: 0 !important;
+}
+
+/* PDF page 123: one continuous Example panel surrounds the complete length-
+ * measurement example. The source has rounded top corners and uninterrupted
+ * side rules, but no separate application-card footer. */
+#content [data-section-id="pg123_sec001"] .source-main-example-panel {
+  position: relative !important;
+  margin: 0 !important;
+  padding: 42px 24px 0 !important;
+  border: 2px solid #9acfee !important;
+  border-bottom: 0 !important;
+  border-radius: 22px 22px 0 0 !important;
+  background: #ffffff !important;
+  box-shadow: none !important;
+}
+
+@media (max-width: 640px) {
+  #content [data-section-id="pg123_sec001"] .source-main-example-panel {
+    padding: 36px 14px 0 !important;
+    border-radius: 16px 16px 0 0 !important;
+  }
+}
+
+/* Exercise 3 and 4 were flattened into one page and their labels were left as
+ * large standalone headings. Restore the two rounded source exercise frames
+ * and place each pill on its own top rule. */
+#content [data-section-id="pg108_sec001"] .source-exercise-panel {
+  position: relative !important;
+  margin: 18px 0 32px !important;
+  padding: 42px 16px 16px !important;
+  border: 2px solid #9acfee !important;
+  border-radius: 20px !important;
+  background: #ffffff !important;
+}
+
+#content [data-section-id="pg108_sec001"] .source-exercise-panel:last-child {
+  margin-bottom: 0 !important;
+}
+
+#content [data-section-id="pg108_sec001"] .source-exercise-panel > .source-book-banner-row:first-child {
+  position: absolute !important;
+  z-index: 2 !important;
+  top: 0 !important;
+  left: 22px !important;
+  width: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  transform: translateY(-50%) !important;
+}
+
+#content [data-section-id="pg108_sec001"] .source-exercise-four-grid > div {
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: #ffffff !important;
+}
+
+#content [data-section-id="pg108_sec001"] .source-exercise-four-grid input {
+  background: transparent !important;
+}
+
+/* Source page 121: a green outlined Activity pill and a plain numbered list. */
+#content .source-pdf-activity-list > h1 {
+  display: inline-flex !important;
+  width: auto !important;
+  margin: 0 0 12px !important;
+  padding: 2px 16px !important;
+  border: 2px solid #54a64e !important;
+  border-radius: 999px !important;
+  background: #ffffff !important;
+  color: #4a9945 !important;
+  font-weight: 700 !important;
+  line-height: 1.15 !important;
+}
+
+#content .source-pdf-activity-list > div {
+  display: grid !important;
+  gap: 4px !important;
+}
+
+#content .source-pdf-activity-list > div > div {
+  padding: 2px 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+}
+
+#content .source-pdf-activity-list > div > div > div {
+  margin-bottom: 0 !important;
+}
+
+#content .source-pdf-activity-list > div > div > div > span:first-child {
+  padding: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  color: #3da5d8 !important;
+}
+
+#content .source-pdf-activity-list textarea,
+#content .source-pdf-continuation-questions textarea,
+#content .source-pdf-song-questions textarea {
+  box-sizing: border-box !important;
+  min-height: 34px !important;
+  height: 34px !important;
+  padding: 0 6px !important;
+  border: 0 !important;
+  border-bottom: 1px solid #8e9aa7 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  resize: vertical !important;
+}
+
+#content .source-pdf-activity-list textarea {
+  min-height: 20px !important;
+  height: 20px !important;
+  padding: 0 !important;
+  resize: none !important;
+}
+
+/* Source page 121 uses plain map labels and simple response rules rather than
+ * coloured application chips and rounded input boxes. */
+#content [data-section-id="pg121_sec001"] input,
+#content [data-section-id="pg121_sec002"] input {
+  height: 28px !important;
+  padding: 0 4px !important;
+  border: 0 !important;
+  border-bottom: 1px solid #8e9aa7 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+}
+
+#content [data-section-id="pg121_sec002"] .fa-book,
+#content [data-section-id="pg121_sec002"] .bg-amber-50 > .flex.flex-wrap {
+  display: none !important;
+}
+
+#content [data-section-id="pg121_sec002"] .bg-amber-50 {
+  margin-bottom: 16px !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+}
+
+#content [data-section-id="pg121_sec002"] [data-id="pg122_n0006"] {
+  color: #222222 !important;
+}
+
+/* Exercise 6 uses two simple ruled groups, not green/blue application cards. */
+#content .source-pdf-exercise-boxes > div:nth-child(3),
+#content .source-pdf-exercise-boxes > div:nth-child(4) {
+  margin-bottom: 14px !important;
+  padding: 18px 22px !important;
+  border: 2px solid #9bcfe6 !important;
+  border-radius: 18px !important;
+  background: #ffffff !important;
+}
+
+#content .source-pdf-exercise-boxes > div:nth-child(3) > div:first-child,
+#content .source-pdf-exercise-boxes > div:nth-child(4) > div:first-child {
+  margin-bottom: 12px !important;
+  gap: 10px !important;
+}
+
+#content .source-pdf-exercise-boxes > div:nth-child(3) > div:first-child > div:first-child,
+#content .source-pdf-exercise-boxes > div:nth-child(4) > div:first-child > div:first-child {
+  width: auto !important;
+  height: auto !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  color: #3da5d8 !important;
+}
+
+#content .source-pdf-exercise-boxes > div:nth-child(3) > div:nth-child(2),
+#content .source-pdf-exercise-boxes > div:nth-child(4) > div:nth-child(2) {
+  gap: 12px 18px !important;
+  padding: 0 !important;
+}
+
+#content .source-pdf-exercise-boxes input {
+  height: 78px !important;
+  max-width: none !important;
+  border: 2px solid #d88ab7 !important;
+  border-radius: 0 !important;
+}
+
+/* Exercise 8 is a single ruled comparison table in the PDF. */
+#content .source-pdf-comparison-table > .text-center:nth-child(2) {
+  margin-bottom: 12px !important;
+  text-align: left !important;
+}
+
+#content .source-pdf-comparison-table .fa-pen-to-square {
+  display: none !important;
+}
+
+#content .source-pdf-comparison-table > .space-y-6 {
+  display: grid !important;
+  gap: 0 !important;
+  overflow: hidden;
+  border: 2px solid #4f65c8;
+  border-radius: 12px;
+}
+
+#content .source-pdf-comparison-table > .space-y-6 > div {
+  padding: 8px !important;
+  border: 0 !important;
+  border-bottom: 1px solid #4f65c8 !important;
+  border-radius: 0 !important;
+  background: #ffffff !important;
+}
+
+#content .source-pdf-comparison-table > .space-y-6 > div:last-child {
+  border-bottom: 0 !important;
+}
+
+#content .source-pdf-comparison-table > .space-y-6 > div > div {
+  gap: 8px !important;
+}
+
+#content .source-pdf-comparison-table > .space-y-6 > div > div > div:first-child {
+  width: 26px !important;
+  height: auto !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  color: #3da5d8 !important;
+}
+
+#content .source-pdf-comparison-table .grid.grid-cols-2 {
+  gap: 0 !important;
+  margin-bottom: 5px !important;
+}
+
+#content .source-pdf-comparison-table .grid.grid-cols-2 > div {
+  min-height: 125px !important;
+  padding: 4px !important;
+  border: 0 !important;
+  border-right: 1px solid #9aa7d7 !important;
+  border-radius: 0 !important;
+}
+
+#content .source-pdf-comparison-table .grid.grid-cols-2 > div:last-child {
+  border-right: 0 !important;
+}
+
+#content .source-pdf-comparison-table img {
+  max-height: 105px !important;
+  width: auto !important;
+  margin-bottom: 2px !important;
+}
+
+#content .source-pdf-comparison-table input {
+  height: 32px !important;
+  padding: 0 5px !important;
+  border: 0 !important;
+  border-bottom: 1px solid #6b7280 !important;
+  border-radius: 0 !important;
+}
+
+#content .source-pdf-comparison-table input + *,
+#content .source-pdf-comparison-table [aria-hidden="true"] {
+  display: none !important;
+}
+
+/* This is a continuation list; the conversion created an empty title pill. */
+#content .source-pdf-continuation-questions {
+  padding-top: 22px !important;
+}
+
+#content .source-pdf-continuation-questions > div {
+  display: grid !important;
+  gap: 12px !important;
+}
+
+#content .source-pdf-continuation-questions p {
+  margin-bottom: 2px !important;
+}
+
+/* The song is plain on the source page; only Questions has a green panel. */
+#content .source-pdf-song-questions > div:nth-child(2) {
+  margin-bottom: 24px !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+}
+
+#content .source-pdf-song-questions > div:nth-child(3) {
+  margin-bottom: 0 !important;
+  padding-bottom: 16px !important;
+}
+
+#content .source-pdf-song-questions > div:nth-child(3) > div:last-child {
+  gap: 10px !important;
+}
+
+/* Page 133 previously displayed a whole-page crop and then repeated it as
+ * live content. It now uses a diagram-only crop with accessible questions. */
+#content .source-pdf-shape-exercise {
+  padding: 30px !important;
+}
+
+#content .source-pdf-shape-exercise > div:first-child {
+  padding: 40px 24px 24px !important;
+}
+
+#content .source-pdf-shape-exercise img[data-id="pg139_im005"] {
+  max-height: 255px !important;
+  width: auto !important;
+}
+
+#content .source-pdf-shape-exercise .space-y-6 {
+  display: grid !important;
+  gap: 12px !important;
+}
+
+#content .source-pdf-shape-exercise input {
+  height: 32px !important;
+  margin-top: 2px !important;
+  border: 0 !important;
+  border-bottom: 1px solid #7d8793 !important;
+  border-radius: 0 !important;
+}
+
+/* The questions following Exercise 2 continue as a plain full-width list in
+ * the source; the conversion placed them in a small blue application card. */
+#content [data-section-id="pg136_sec002"] > .mt-8 {
+  display: block !important;
+  margin-top: 14px !important;
+}
+
+#content [data-section-id="pg136_sec002"] > .mt-8 > section {
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+}
+
+#content [data-section-id="pg136_sec002"] > .mt-8 ul {
+  display: grid !important;
+  gap: 4px !important;
+}
+
+/* Source page 140 continues Exercise 4 in a ruled panel, then introduces the
+ * non-plane table with an unboxed sentence. */
+#content [data-section-id="pg140_sec001"] > .source-exercise-continuation {
+  padding: 14px 16px !important;
+  border: 2px solid #9acfee !important;
+  border-radius: 18px !important;
+  background: #ffffff !important;
+}
+
+#content [data-section-id="pg140_sec001"] > div:nth-child(2) {
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+}
+
+@media (min-width: 885px) {
+  #content [data-section-id="pg108_sec001"] .source-exercise-four-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 12px 18px !important;
+  }
+
+  #content [data-section-id="pg108_sec001"] .source-exercise-four-grid > div {
+    padding: 6px !important;
+  }
+
+  #content [data-section-id="pg108_sec001"] .source-exercise-four-grid img {
+    max-height: 108px !important;
+    width: auto !important;
+    margin-bottom: 5px !important;
+  }
+
+  #content [data-section-id="pg108_sec001"] .source-exercise-four-grid input {
+    height: 30px !important;
+    padding: 0 !important;
+    border-bottom-width: 2px !important;
+  }
+
+  /* Fractions chapter opening: source tables use compact picture rows. */
+  #content .source-pdf-fractions-opening {
+    padding: 26px !important;
+  }
+
+  #content .source-pdf-fractions-opening > div:first-child {
+    margin-bottom: 22px !important;
+  }
+
+  #content .source-pdf-fractions-opening > .relative {
+    margin-bottom: 28px !important;
+    padding: 30px 12px 12px !important;
+  }
+
+  #content .source-pdf-fractions-opening > .relative:last-child {
+    margin-bottom: 0 !important;
+  }
+
+  #content .source-pdf-fractions-opening > .relative .grid > div:nth-child(n+4):nth-child(-n+6) {
+    min-height: 128px !important;
+    padding: 6px !important;
+  }
+
+  #content .source-pdf-fractions-opening > .relative img:not([data-id="pg104_upload1"]) {
+    max-height: 112px !important;
+  }
+
+  /* Exercise 10: keep the six figures in the same compact ruled table. */
+  #content [data-section-id="pg118_sec001"] > div:nth-child(3) {
+    padding: 12px !important;
+  }
+
+  #content [data-section-id="pg118_sec001"] > div:nth-child(3) .grid > div {
+    padding: 7px !important;
+  }
+
+  #content [data-section-id="pg118_sec001"] > div:nth-child(3) img {
+    max-height: 112px !important;
+    width: auto !important;
+  }
+
+  #content [data-section-id="pg118_sec001"] > div:nth-child(3) input {
+    height: 30px !important;
+    border-width: 1px !important;
+    border-radius: 5px !important;
+  }
+
+  /* Distance map: source questions are short ruled responses, not form cards. */
+  #content [data-section-id="pg121_sec002"] > h1 {
+    display: inline-flex !important;
+    margin-bottom: 12px !important;
+    padding: 2px 16px !important;
+    border: 2px solid #169bd5 !important;
+    border-radius: 999px !important;
+    color: #168ac4 !important;
+  }
+
+  #content [data-section-id="pg121_sec002"] > p {
+    margin-bottom: 12px !important;
+  }
+
+  #content [data-section-id="pg121_sec002"] > div:nth-of-type(1) {
+    margin-bottom: 12px !important;
+    padding: 6px !important;
+    background: transparent !important;
+  }
+
+  #content [data-section-id="pg121_sec002"] img {
+    max-height: 330px !important;
+    width: auto !important;
+    margin-inline: auto !important;
+  }
+
+  #content [data-section-id="pg121_sec002"] > div:last-child > div {
+    margin-bottom: 8px !important;
+  }
+
+  #content [data-section-id="pg121_sec002"] input {
+    height: 30px !important;
+    padding: 0 5px !important;
+    border: 0 !important;
+    border-bottom: 1px solid #7d8793 !important;
+    border-radius: 0 !important;
+  }
+
+  /* Length, mass and shapes picture tables were generated at presentation
+   * size; these dimensions match the source page's measured row proportions. */
+  #content [data-section-id="pg126_sec001"] label.activity-option {
+    min-height: 92px !important;
+    padding: 4px 10px !important;
+  }
+
+  #content [data-section-id="pg126_sec001"] label.activity-option img {
+    max-height: 92px !important;
+    width: auto !important;
+  }
+
+  #content [data-section-id="pg128_sec001"] {
+    padding: 18px !important;
+  }
+
+  #content [data-section-id="pg128_sec001"] > div:first-child {
+    padding: 10px !important;
+  }
+
+  #content [data-section-id="pg128_sec001"] > div:first-child img {
+    max-height: 105px !important;
+  }
+
+  #content [data-section-id="pg128_sec001"] > div:last-child .min-h-\[540px\] {
+    min-height: 340px !important;
+  }
+
+  #content [data-section-id="pg128_sec001"] > div:last-child img {
+    max-height: 150px !important;
+  }
+
+  #content [data-section-id="pg130_sec001"] .grid.grid-cols-2 > .grid {
+    min-height: 142px !important;
+  }
+
+  #content [data-section-id="pg130_sec001"] label.activity-option {
+    min-height: 92px !important;
+  }
+
+  #content [data-section-id="pg130_sec001"] label.activity-option img {
+    max-height: 96px !important;
+    width: auto !important;
+  }
+
+  #content [data-section-id="pg134_sec001"] {
+    padding: 24px !important;
+  }
+
+  #content [data-section-id="pg134_sec001"] > div:first-child {
+    margin-bottom: 20px !important;
+  }
+
+  #content [data-section-id="pg134_sec001"] > div:nth-child(2) {
+    margin-bottom: 16px !important;
+  }
+
+  #content [data-section-id="pg134_sec001"] .grid.min-h-\[240px\] {
+    min-height: 170px !important;
+  }
+
+  #content [data-section-id="pg134_sec001"] .grid.min-h-\[240px\] img {
+    max-height: 105px !important;
+  }
+
+  #content [data-section-id="pg140_sec001"] {
+    padding: 24px !important;
+  }
+
+  #content [data-section-id="pg140_sec001"] .source-exercise-continuation {
+    margin-bottom: 16px !important;
+  }
+
+  #content [data-section-id="pg140_sec001"] > div:nth-of-type(3) {
+    margin-bottom: 10px !important;
+    padding: 0 !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+  }
+
+  #content [data-section-id="pg140_sec001"] table th,
+  #content [data-section-id="pg140_sec001"] table td {
+    padding: 6px 8px !important;
+  }
+
+  #content [data-section-id="pg140_sec001"] table img {
+    max-height: 68px !important;
+    width: auto !important;
+  }
+
+  #content [data-section-id="pg140_sec001"] table .gap-3 {
+    gap: 2px !important;
+  }
+
+  #content [data-section-id="pg141_sec001"] > div:first-child .grid > div {
+    min-height: 112px !important;
+    padding: 8px !important;
+  }
+
+  #content [data-section-id="pg141_sec001"] > div:first-child img {
+    max-height: 75px !important;
+  }
+
+  #content [data-section-id="pg141_sec001"] > div:nth-child(2) {
+    padding: 18px 20px !important;
+  }
+
+  #content [data-section-id="pg141_sec001"] > div:nth-child(2) .grid > div {
+    min-height: 96px !important;
+    padding: 6px !important;
+    gap: 4px !important;
+  }
+
+  #content [data-section-id="pg141_sec001"] > div:nth-child(2) img {
+    max-height: 54px !important;
+  }
+
+  #content [data-section-id="pg141_sec001"] input {
+    height: 30px !important;
+    border-width: 1px !important;
+    border-radius: 5px !important;
+  }
+
+  #content [data-section-id="pg142_sec001"] {
+    padding: 22px 28px !important;
+  }
+
+  #content [data-section-id="pg142_sec001"] > p {
+    margin-bottom: 14px !important;
+  }
+
+  #content [data-section-id="pg142_sec001"] > .grid {
+    gap: 14px 30px !important;
+    margin-bottom: 16px !important;
+  }
+
+  #content [data-section-id="pg142_sec001"] > .grid img {
+    max-height: 105px !important;
+    width: auto !important;
+    margin-bottom: 4px !important;
+  }
+}
+
+@media (max-width: 640px) {
+  #content [data-section-id="pg084_sec001"] [data-id="pg084_n0028"] {
+    white-space: normal !important;
+    overflow-wrap: anywhere;
+  }
+
+  #content [data-section-id="pg096_sec001"] .source-fraction-share-grid {
+    width: 100%;
+    min-width: 0;
+  }
+
+  #content [data-section-id="pg096_sec001"] .source-fraction-share-grid > * {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  #content [data-section-id="pg096_sec001"] .source-fraction-share-grid img {
+    width: 100% !important;
+    min-width: 0;
+    max-width: 100% !important;
+  }
+}
+
+#nav-container, #nav-container *,
+#interface-container, #interface-container * {
+  font-family: 'Atkinson Hyperlegible', sans-serif;
+}

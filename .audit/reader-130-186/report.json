@@ -1,0 +1,4043 @@
+[
+  {
+    "readerPage": 130,
+    "section_id": "pg104_sec001",
+    "href": "pg104_sec001.html",
+    "page_number": 98,
+    "layout": {
+      "width": 836,
+      "height": 1182,
+      "sectionHeight": 1182,
+      "tables": [],
+      "images": [
+        {
+          "id": "pg104_upload1",
+          "src": "images/pg104_upload1.png",
+          "naturalWidth": 1172,
+          "naturalHeight": 409,
+          "width": 676,
+          "height": 236,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg104_im001",
+          "src": "images/pg104_im001.jpg",
+          "naturalWidth": 81,
+          "naturalHeight": 78,
+          "width": 81,
+          "height": 78,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg104_im002",
+          "src": "images/pg104_im002.jpg",
+          "naturalWidth": 54,
+          "naturalHeight": 82,
+          "width": 54,
+          "height": 82,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg104_im003",
+          "src": "images/pg104_im003.jpg",
+          "naturalWidth": 50,
+          "naturalHeight": 82,
+          "width": 50,
+          "height": 82,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg104_im004",
+          "src": "images/pg104_im004.jpg",
+          "naturalWidth": 87,
+          "naturalHeight": 111,
+          "width": 87,
+          "height": 111,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg104_im005",
+          "src": "images/pg104_im005.jpg",
+          "naturalWidth": 64,
+          "naturalHeight": 118,
+          "width": 61,
+          "height": 112,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg104_upload2",
+          "src": "images/pg104_upload2.png",
+          "naturalWidth": 148,
+          "naturalHeight": 162,
+          "width": 102,
+          "height": 112,
+          "loaded": true,
+          "overflow": false
+        }
+      ],
+      "banners": [
+        {
+          "text": "Chapter Nine",
+          "tag": "span",
+          "className": "",
+          "x": 79,
+          "y": 311,
+          "width": 116,
+          "height": 20,
+          "color": "oklch(0.145 0 0)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "borderColor": "oklch(0.922 0 0)",
+          "borderWidth": "0px",
+          "borderRadius": "0px"
+        },
+        {
+          "text": "Example 1",
+          "tag": "div",
+          "className": "absolute left-8 top-0 -translate-y-1/2 rounded-full bg-sky-500 px-7 py-2 text-[1.9rem] font-bold leading-none text-white shadow-sm max-sm:left-4 max-sm:px-5 max-sm:text-[1.25rem] source-book-banner source-book-banner-example source-book-attached-banner",
+          "x": 123,
+          "y": 509,
+          "width": 180,
+          "height": 40,
+          "color": "rgb(255, 255, 255)",
+          "backgroundColor": "rgb(22, 155, 213)",
+          "borderColor": "rgb(22, 155, 213)",
+          "borderWidth": "2px",
+          "borderRadius": "999px"
+        },
+        {
+          "text": "Example 2",
+          "tag": "div",
+          "className": "absolute left-8 top-0 -translate-y-1/2 rounded-full bg-sky-500 px-7 py-2 text-[1.9rem] font-bold leading-none text-white shadow-sm max-sm:left-4 max-sm:px-5 max-sm:text-[1.25rem] source-book-banner source-book-banner-example source-book-attached-banner",
+          "x": 123,
+          "y": 806,
+          "width": 180,
+          "height": 40,
+          "color": "rgb(255, 255, 255)",
+          "backgroundColor": "rgb(22, 155, 213)",
+          "borderColor": "rgb(22, 155, 213)",
+          "borderWidth": "2px",
+          "borderRadius": "999px"
+        }
+      ]
+    },
+    "capture": "130-pg104_sec001.jpg"
+  },
+  {
+    "readerPage": 131,
+    "section_id": "pg105_sec001",
+    "href": "pg105_sec001.html",
+    "page_number": 99,
+    "layout": {
+      "width": 836,
+      "height": 1151,
+      "sectionHeight": 1151,
+      "tables": [],
+      "images": [
+        {
+          "id": "pg105_im001",
+          "src": "images/pg105_im001.jpg",
+          "naturalWidth": 92,
+          "naturalHeight": 84,
+          "width": 92,
+          "height": 84,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg105_im002",
+          "src": "images/pg105_im002.jpg",
+          "naturalWidth": 60,
+          "naturalHeight": 80,
+          "width": 60,
+          "height": 80,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg105_im003",
+          "src": "images/pg105_im003.jpg",
+          "naturalWidth": 50,
+          "naturalHeight": 78,
+          "width": 50,
+          "height": 78,
+          "loaded": true,
+          "overflow": false
+        }
+      ],
+      "banners": [
+        {
+          "text": "Example 3",
+          "tag": "div",
+          "className": "absolute -top-5 left-10 z-10 rounded-full bg-sky-500 px-6 py-2 text-3xl font-extrabold tracking-wide text-white shadow-md max-lg:text-2xl max-sm:left-4 max-sm:px-5 max-sm:py-1.5 max-sm:text-xl source-book-banner source-book-banner-example source-book-attached-banner",
+          "x": 128,
+          "y": 58,
+          "width": 180,
+          "height": 40,
+          "color": "rgb(255, 255, 255)",
+          "backgroundColor": "rgb(22, 155, 213)",
+          "borderColor": "rgb(22, 155, 213)",
+          "borderWidth": "2px",
+          "borderRadius": "999px"
+        }
+      ]
+    },
+    "capture": "131-pg105_sec001.jpg"
+  },
+  {
+    "readerPage": 132,
+    "section_id": "pg105_sec002",
+    "href": "pg105_sec002.html",
+    "page_number": 99,
+    "layout": {
+      "width": 836,
+      "height": 1649,
+      "sectionHeight": 1649,
+      "tables": [],
+      "images": [
+        {
+          "id": "pg105_im004",
+          "src": "images/pg105_im004.png",
+          "naturalWidth": 99,
+          "naturalHeight": 96,
+          "width": 99,
+          "height": 96,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg105_im005",
+          "src": "images/pg105_im005.png",
+          "naturalWidth": 192,
+          "naturalHeight": 199,
+          "width": 101,
+          "height": 105,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg105_im006",
+          "src": "images/pg105_im006.png",
+          "naturalWidth": 177,
+          "naturalHeight": 91,
+          "width": 177,
+          "height": 91,
+          "loaded": true,
+          "overflow": false
+        }
+      ],
+      "banners": [
+        {
+          "text": "Exercise 1",
+          "tag": "div",
+          "className": "rounded-full border-[3px] border-sky-500 bg-white px-8 py-2 shadow-sm max-sm:px-5 max-sm:py-1.5 source-book-banner source-book-banner-exercise",
+          "x": 135,
+          "y": 74,
+          "width": 190,
+          "height": 40,
+          "color": "rgb(22, 138, 196)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderColor": "rgb(22, 155, 213)",
+          "borderWidth": "2px",
+          "borderRadius": "999px"
+        }
+      ]
+    },
+    "capture": "132-pg105_sec002.jpg"
+  },
+  {
+    "readerPage": 133,
+    "section_id": "qz023",
+    "href": "qz023.html",
+    "layout": {
+      "width": 1024,
+      "height": 900,
+      "sectionHeight": 550,
+      "tables": [],
+      "images": [],
+      "banners": []
+    },
+    "capture": "133-qz023.jpg"
+  },
+  {
+    "readerPage": 134,
+    "section_id": "pg107_sec001",
+    "href": "pg107_sec001.html",
+    "page_number": 101,
+    "layout": {
+      "width": 836,
+      "height": 1151,
+      "sectionHeight": 1151,
+      "tables": [],
+      "images": [
+        {
+          "id": "pg107_im001",
+          "src": "images/pg107_im001.png",
+          "naturalWidth": 138,
+          "naturalHeight": 110,
+          "width": 138,
+          "height": 110,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg107_im002",
+          "src": "images/pg107_im002.png",
+          "naturalWidth": 139,
+          "naturalHeight": 106,
+          "width": 139,
+          "height": 106,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg107_im003",
+          "src": "images/pg107_im003.png",
+          "naturalWidth": 140,
+          "naturalHeight": 112,
+          "width": 140,
+          "height": 112,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg107_im004",
+          "src": "images/pg107_im004.png",
+          "naturalWidth": 122,
+          "naturalHeight": 114,
+          "width": 120,
+          "height": 112,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg107_im005",
+          "src": "images/pg107_im005.png",
+          "naturalWidth": 132,
+          "naturalHeight": 113,
+          "width": 131,
+          "height": 112,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg107_im006",
+          "src": "images/pg107_im006.png",
+          "naturalWidth": 138,
+          "naturalHeight": 114,
+          "width": 136,
+          "height": 112,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg107_im007",
+          "src": "images/pg107_im007.png",
+          "naturalWidth": 134,
+          "naturalHeight": 114,
+          "width": 132,
+          "height": 112,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg107_im008",
+          "src": "images/pg107_im008.png",
+          "naturalWidth": 136,
+          "naturalHeight": 98,
+          "width": 136,
+          "height": 98,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg107_im010_seg009_v1",
+          "src": "images/pg107_im010_seg009_v1.png",
+          "naturalWidth": 285,
+          "naturalHeight": 200,
+          "width": 144,
+          "height": 101,
+          "loaded": true,
+          "overflow": false
+        }
+      ],
+      "banners": [
+        {
+          "text": "Exercise 2",
+          "tag": "div",
+          "className": "rounded-full border-[3px] border-sky-500 bg-white px-7 py-2 shadow-sm max-sm:px-5 max-sm:py-1.5 source-book-banner source-book-banner-exercise",
+          "x": 135,
+          "y": 66,
+          "width": 190,
+          "height": 39,
+          "color": "rgb(22, 138, 196)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderColor": "rgb(22, 155, 213)",
+          "borderWidth": "2px",
+          "borderRadius": "999px"
+        }
+      ]
+    },
+    "capture": "134-pg107_sec001.jpg"
+  },
+  {
+    "readerPage": 135,
+    "section_id": "pg107_sec002",
+    "href": "pg107_sec002.html",
+    "page_number": 101,
+    "layout": {
+      "width": 836,
+      "height": 1398,
+      "sectionHeight": 1398,
+      "tables": [],
+      "images": [
+        {
+          "id": "pg108_im001",
+          "src": "images/pg108_im001.png",
+          "naturalWidth": 128,
+          "naturalHeight": 123,
+          "width": 84,
+          "height": 81,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg108_im002",
+          "src": "images/pg108_im002.png",
+          "naturalWidth": 70,
+          "naturalHeight": 68,
+          "width": 84,
+          "height": 81,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "",
+          "src": "images/pg108_im002.png",
+          "naturalWidth": 70,
+          "naturalHeight": 68,
+          "width": 81,
+          "height": 84,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "",
+          "src": "images/pg108_im002.png",
+          "naturalWidth": 70,
+          "naturalHeight": 68,
+          "width": 84,
+          "height": 81,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "",
+          "src": "images/pg108_im002.png",
+          "naturalWidth": 70,
+          "naturalHeight": 68,
+          "width": 82,
+          "height": 85,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg108_im009",
+          "src": "images/pg108_im009.png",
+          "naturalWidth": 70,
+          "naturalHeight": 69,
+          "width": 70,
+          "height": 69,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg108_im010",
+          "src": "images/pg108_im010.png",
+          "naturalWidth": 67,
+          "naturalHeight": 66,
+          "width": 67,
+          "height": 66,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg108_im011",
+          "src": "images/pg108_im011.png",
+          "naturalWidth": 66,
+          "naturalHeight": 66,
+          "width": 66,
+          "height": 66,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg108_im012",
+          "src": "images/pg108_im012.png",
+          "naturalWidth": 150,
+          "naturalHeight": 72,
+          "width": 117,
+          "height": 56,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg108_im003",
+          "src": "images/pg108_im003.png",
+          "naturalWidth": 150,
+          "naturalHeight": 117,
+          "width": 108,
+          "height": 84,
+          "loaded": true,
+          "overflow": false
+        }
+      ],
+      "banners": [
+        {
+          "text": "Example 1",
+          "tag": "div",
+          "className": "absolute left-10 top-0 -translate-y-1/2 rounded-full bg-sky-500 px-8 py-2 text-[2rem] font-bold leading-none text-white shadow-sm max-sm:left-5 max-sm:px-5 max-sm:text-[1.3rem] source-book-banner source-book-banner-example source-book-attached-banner",
+          "x": 143,
+          "y": 345,
+          "width": 180,
+          "height": 39,
+          "color": "rgb(255, 255, 255)",
+          "backgroundColor": "rgb(22, 155, 213)",
+          "borderColor": "rgb(22, 155, 213)",
+          "borderWidth": "2px",
+          "borderRadius": "999px"
+        },
+        {
+          "text": "Example 2",
+          "tag": "div",
+          "className": "absolute left-10 top-0 -translate-y-1/2 rounded-full bg-sky-500 px-8 py-2 text-[2rem] font-bold leading-none text-white shadow-sm max-sm:left-5 max-sm:px-5 max-sm:text-[1.3rem] source-book-banner source-book-banner-example source-book-attached-banner",
+          "x": 143,
+          "y": 751,
+          "width": 180,
+          "height": 39,
+          "color": "rgb(255, 255, 255)",
+          "backgroundColor": "rgb(22, 155, 213)",
+          "borderColor": "rgb(22, 155, 213)",
+          "borderWidth": "2px",
+          "borderRadius": "999px"
+        },
+        {
+          "text": "Example 3",
+          "tag": "div",
+          "className": "absolute left-10 top-0 -translate-y-1/2 rounded-full bg-sky-500 px-8 py-2 text-[2rem] font-bold leading-none text-white shadow-sm max-sm:left-5 max-sm:px-5 max-sm:text-[1.3rem] source-book-banner source-book-banner-example source-book-attached-banner",
+          "x": 143,
+          "y": 1048,
+          "width": 180,
+          "height": 39,
+          "color": "rgb(255, 255, 255)",
+          "backgroundColor": "rgb(22, 155, 213)",
+          "borderColor": "rgb(22, 155, 213)",
+          "borderWidth": "2px",
+          "borderRadius": "999px"
+        }
+      ]
+    },
+    "capture": "135-pg107_sec002.jpg"
+  },
+  {
+    "readerPage": 136,
+    "section_id": "pg108_sec001",
+    "href": "pg108_sec001.html",
+    "page_number": 102,
+    "layout": {
+      "width": 836,
+      "height": 1374,
+      "sectionHeight": 1374,
+      "tables": [
+        {
+          "rows": 5,
+          "columns": 4,
+          "width": 692,
+          "height": 607,
+          "overflow": false
+        }
+      ],
+      "images": [
+        {
+          "id": "pg108_im008",
+          "src": "images/pg108_im008.png",
+          "naturalWidth": 111,
+          "naturalHeight": 101,
+          "width": 112,
+          "height": 102,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg109_im001",
+          "src": "images/pg109_im001.png",
+          "naturalWidth": 210,
+          "naturalHeight": 70,
+          "width": 143,
+          "height": 48,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg109_im002",
+          "src": "images/pg109_im002.png",
+          "naturalWidth": 155,
+          "naturalHeight": 112,
+          "width": 143,
+          "height": 103,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg109_im004",
+          "src": "images/pg109_im004.png",
+          "naturalWidth": 134,
+          "naturalHeight": 75,
+          "width": 143,
+          "height": 80,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg109_im005",
+          "src": "images/pg109_im005.png",
+          "naturalWidth": 113,
+          "naturalHeight": 109,
+          "width": 112,
+          "height": 108,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg109_im006",
+          "src": "images/pg109_im006.png",
+          "naturalWidth": 124,
+          "naturalHeight": 73,
+          "width": 124,
+          "height": 73,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg109_im007",
+          "src": "images/pg109_im007.png",
+          "naturalWidth": 98,
+          "naturalHeight": 100,
+          "width": 98,
+          "height": 100,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg109_im012_seg007_v1",
+          "src": "images/pg109_ovals.png",
+          "naturalWidth": 192,
+          "naturalHeight": 87,
+          "width": 192,
+          "height": 87,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg109_im010",
+          "src": "images/pg109_im010.png",
+          "naturalWidth": 130,
+          "naturalHeight": 142,
+          "width": 99,
+          "height": 108,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg109_im011",
+          "src": "images/pg109_im011.png",
+          "naturalWidth": 94,
+          "naturalHeight": 196,
+          "width": 52,
+          "height": 108,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg109_im003",
+          "src": "images/pg109_im003.png",
+          "naturalWidth": 139,
+          "naturalHeight": 74,
+          "width": 139,
+          "height": 74,
+          "loaded": true,
+          "overflow": false
+        }
+      ],
+      "banners": [
+        {
+          "text": "Exercise 3",
+          "tag": "span",
+          "className": "inline-flex items-center justify-center bg-blue-600 text-white rounded-full px-8 py-2 text-3xl max-lg:text-2xl max-sm:text-xl font-bold shadow-sm source-book-banner source-book-banner-exercise",
+          "x": 78,
+          "y": 44,
+          "width": 190,
+          "height": 40,
+          "color": "rgb(22, 138, 196)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderColor": "rgb(22, 155, 213)",
+          "borderWidth": "2px",
+          "borderRadius": "999px"
+        },
+        {
+          "text": "Exercise 4",
+          "tag": "span",
+          "className": "inline-flex items-center justify-center bg-blue-600 text-white rounded-full px-8 py-2 text-3xl max-lg:text-2xl max-sm:text-xl font-bold shadow-sm source-book-banner source-book-banner-exercise",
+          "x": 78,
+          "y": 796,
+          "width": 190,
+          "height": 40,
+          "color": "rgb(22, 138, 196)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderColor": "rgb(22, 155, 213)",
+          "borderWidth": "2px",
+          "borderRadius": "999px"
+        }
+      ]
+    },
+    "capture": "136-pg108_sec001.jpg"
+  },
+  {
+    "readerPage": 137,
+    "section_id": "pg110_sec001",
+    "href": "pg110_sec001.html",
+    "page_number": 104,
+    "layout": {
+      "width": 836,
+      "height": 1151,
+      "sectionHeight": 1151,
+      "tables": [],
+      "images": [
+        {
+          "id": "pg110_im001",
+          "src": "images/pg110_im001.png",
+          "naturalWidth": 154,
+          "naturalHeight": 116,
+          "width": 150,
+          "height": 113,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg110_im002",
+          "src": "images/pg110_im002.png",
+          "naturalWidth": 90,
+          "naturalHeight": 98,
+          "width": 88,
+          "height": 96,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg110_im003",
+          "src": "images/pg110_im003.png",
+          "naturalWidth": 78,
+          "naturalHeight": 62,
+          "width": 92,
+          "height": 73,
+          "loaded": true,
+          "overflow": false
+        }
+      ],
+      "banners": []
+    },
+    "capture": "137-pg110_sec001.jpg"
+  },
+  {
+    "readerPage": 138,
+    "section_id": "pg110_sec002",
+    "href": "pg110_sec002.html",
+    "page_number": 104,
+    "layout": {
+      "width": 836,
+      "height": 1151,
+      "sectionHeight": 1151,
+      "tables": [],
+      "images": [
+        {
+          "id": "pg110_im005",
+          "src": "images/pg110_im005.jpg",
+          "naturalWidth": 186,
+          "naturalHeight": 177,
+          "width": 186,
+          "height": 177,
+          "loaded": true,
+          "overflow": false
+        }
+      ],
+      "banners": []
+    },
+    "capture": "138-pg110_sec002.jpg"
+  },
+  {
+    "readerPage": 139,
+    "section_id": "qz024",
+    "href": "qz024.html",
+    "layout": {
+      "width": 1024,
+      "height": 900,
+      "sectionHeight": 550,
+      "tables": [],
+      "images": [],
+      "banners": []
+    },
+    "capture": "139-qz024.jpg"
+  },
+  {
+    "readerPage": 140,
+    "section_id": "pg111_sec001",
+    "href": "pg111_sec001.html",
+    "page_number": 105,
+    "layout": {
+      "width": 836,
+      "height": 1151,
+      "sectionHeight": 1151,
+      "tables": [],
+      "images": [
+        {
+          "id": "pg111_im001",
+          "src": "images/pg111_im001.jpg",
+          "naturalWidth": 215,
+          "naturalHeight": 196,
+          "width": 215,
+          "height": 196,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg111_im002",
+          "src": "images/pg111_im002.jpg",
+          "naturalWidth": 228,
+          "naturalHeight": 208,
+          "width": 228,
+          "height": 208,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg111_im003_seg001_v1",
+          "src": "images/pg111_im003_seg001_v1.png",
+          "naturalWidth": 159,
+          "naturalHeight": 147,
+          "width": 157,
+          "height": 145,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg111_im003_seg002_v1",
+          "src": "images/pg111_im003_seg002_v1.png",
+          "naturalWidth": 159,
+          "naturalHeight": 169,
+          "width": 159,
+          "height": 169,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg111_im004",
+          "src": "images/pg111_im004.jpg",
+          "naturalWidth": 130,
+          "naturalHeight": 148,
+          "width": 130,
+          "height": 148,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg111_im005",
+          "src": "images/pg111_im005.jpg",
+          "naturalWidth": 156,
+          "naturalHeight": 125,
+          "width": 156,
+          "height": 125,
+          "loaded": true,
+          "overflow": false
+        }
+      ],
+      "banners": [
+        {
+          "text": "Activity",
+          "tag": "div",
+          "className": "inline-block rounded-full border-[5px] border-green-500 px-5 py-1 max-sm:px-4 source-book-banner source-book-banner-activity",
+          "x": 86,
+          "y": 870,
+          "width": 127,
+          "height": 35,
+          "color": "rgb(74, 153, 69)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderColor": "rgb(84, 166, 78)",
+          "borderWidth": "2px",
+          "borderRadius": "999px"
+        }
+      ]
+    },
+    "capture": "140-pg111_sec001.jpg"
+  },
+  {
+    "readerPage": 141,
+    "section_id": "pg112_sec001",
+    "href": "pg112_sec001.html",
+    "page_number": 106,
+    "layout": {
+      "width": 836,
+      "height": 1151,
+      "sectionHeight": 1151,
+      "tables": [],
+      "images": [
+        {
+          "id": "pg112_im001",
+          "src": "images/pg112_im001.jpg",
+          "naturalWidth": 573,
+          "naturalHeight": 292,
+          "width": 573,
+          "height": 292,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg112_im002",
+          "src": "images/pg112_im002.png",
+          "naturalWidth": 942,
+          "naturalHeight": 468,
+          "width": 632,
+          "height": 314,
+          "loaded": true,
+          "overflow": false
+        }
+      ],
+      "banners": []
+    },
+    "capture": "141-pg112_sec001.jpg"
+  },
+  {
+    "readerPage": 142,
+    "section_id": "pg113_sec001",
+    "href": "pg113_sec001.html",
+    "page_number": 107,
+    "layout": {
+      "width": 836,
+      "height": 1269,
+      "sectionHeight": 1269,
+      "tables": [],
+      "images": [
+        {
+          "id": "pg113_im001",
+          "src": "images/pg113_im001.png",
+          "naturalWidth": 177,
+          "naturalHeight": 177,
+          "width": 177,
+          "height": 177,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg113_im002",
+          "src": "images/pg113_im002.png",
+          "naturalWidth": 175,
+          "naturalHeight": 151,
+          "width": 175,
+          "height": 151,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg113_im003",
+          "src": "images/pg113_im003.png",
+          "naturalWidth": 225,
+          "naturalHeight": 76,
+          "width": 225,
+          "height": 76,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg113_im004",
+          "src": "images/pg113_im004.png",
+          "naturalWidth": 193,
+          "naturalHeight": 66,
+          "width": 193,
+          "height": 66,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg113_im005",
+          "src": "images/pg113_im005.png",
+          "naturalWidth": 268,
+          "naturalHeight": 90,
+          "width": 268,
+          "height": 90,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg113_im006",
+          "src": "images/pg113_im006.png",
+          "naturalWidth": 188,
+          "naturalHeight": 190,
+          "width": 170,
+          "height": 172,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg113_im007",
+          "src": "images/pg113_im007.png",
+          "naturalWidth": 300,
+          "naturalHeight": 223,
+          "width": 220,
+          "height": 164,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg113_im008",
+          "src": "images/pg113_im008.png",
+          "naturalWidth": 248,
+          "naturalHeight": 97,
+          "width": 210,
+          "height": 82,
+          "loaded": true,
+          "overflow": false
+        }
+      ],
+      "banners": [
+        {
+          "text": "Example 1",
+          "tag": "div",
+          "className": "mb-5 inline-block -mt-6 rounded-full bg-sky-500 px-6 py-2 text-white shadow source-book-banner source-book-banner-example source-book-attached-banner",
+          "x": 99,
+          "y": 26,
+          "width": 180,
+          "height": 40,
+          "color": "rgb(255, 255, 255)",
+          "backgroundColor": "rgb(22, 155, 213)",
+          "borderColor": "rgb(22, 155, 213)",
+          "borderWidth": "2px",
+          "borderRadius": "999px"
+        },
+        {
+          "text": "Example 2",
+          "tag": "div",
+          "className": "mb-5 inline-block -mt-6 rounded-full bg-sky-500 px-6 py-2 text-white shadow source-book-banner source-book-banner-example source-book-attached-banner",
+          "x": 99,
+          "y": 548,
+          "width": 180,
+          "height": 40,
+          "color": "rgb(255, 255, 255)",
+          "backgroundColor": "rgb(22, 155, 213)",
+          "borderColor": "rgb(22, 155, 213)",
+          "borderWidth": "2px",
+          "borderRadius": "999px"
+        }
+      ]
+    },
+    "capture": "142-pg113_sec001.jpg"
+  },
+  {
+    "readerPage": 143,
+    "section_id": "qz025",
+    "href": "qz025.html",
+    "layout": {
+      "width": 1024,
+      "height": 900,
+      "sectionHeight": 577,
+      "tables": [],
+      "images": [],
+      "banners": []
+    },
+    "capture": "143-qz025.jpg"
+  },
+  {
+    "readerPage": 144,
+    "section_id": "pg114_sec001",
+    "href": "pg114_sec001.html",
+    "page_number": 108,
+    "layout": {
+      "width": 836,
+      "height": 1151,
+      "sectionHeight": 1151,
+      "tables": [],
+      "images": [
+        {
+          "id": "pg114_im001",
+          "src": "images/pg114_im001.png",
+          "naturalWidth": 248,
+          "naturalHeight": 102,
+          "width": 248,
+          "height": 102,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg114_im002",
+          "src": "images/pg114_im002.png",
+          "naturalWidth": 262,
+          "naturalHeight": 87,
+          "width": 262,
+          "height": 87,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg114_im003",
+          "src": "images/pg114_im003.png",
+          "naturalWidth": 138,
+          "naturalHeight": 137,
+          "width": 138,
+          "height": 137,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg114_im004",
+          "src": "images/pg114_im004.png",
+          "naturalWidth": 238,
+          "naturalHeight": 217,
+          "width": 238,
+          "height": 217,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg114_im005",
+          "src": "images/pg114_im005.png",
+          "naturalWidth": 145,
+          "naturalHeight": 139,
+          "width": 145,
+          "height": 139,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg114_im006",
+          "src": "images/pg114_im006.png",
+          "naturalWidth": 157,
+          "naturalHeight": 115,
+          "width": 157,
+          "height": 115,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg114_im007",
+          "src": "images/pg114_im007.png",
+          "naturalWidth": 234,
+          "naturalHeight": 68,
+          "width": 234,
+          "height": 68,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg114_im008",
+          "src": "images/pg114_im008.png",
+          "naturalWidth": 300,
+          "naturalHeight": 86,
+          "width": 273,
+          "height": 78,
+          "loaded": true,
+          "overflow": false
+        }
+      ],
+      "banners": [
+        {
+          "text": "Exercise 5",
+          "tag": "span",
+          "className": "inline-block rounded-full border-4 border-sky-500 bg-sky-100 px-8 py-2 text-4xl max-sm:text-3xl font-bold text-sky-600 leading-none source-book-banner source-book-banner-exercise",
+          "x": 98,
+          "y": 25,
+          "width": 190,
+          "height": 38,
+          "color": "rgb(22, 138, 196)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderColor": "rgb(22, 155, 213)",
+          "borderWidth": "2px",
+          "borderRadius": "999px"
+        }
+      ]
+    },
+    "capture": "144-pg114_sec001.jpg"
+  },
+  {
+    "readerPage": 145,
+    "section_id": "pg114_sec002",
+    "href": "pg114_sec002.html",
+    "page_number": 108,
+    "layout": {
+      "width": 836,
+      "height": 1151,
+      "sectionHeight": 1151,
+      "tables": [],
+      "images": [],
+      "banners": [
+        {
+          "text": "Exercise 6",
+          "tag": "span",
+          "className": "inline-block rounded-full border-[3px] border-blue-500 bg-blue-100 px-8 py-2 text-3xl font-bold leading-none text-blue-700 max-sm:px-6 max-sm:text-2xl source-book-banner source-book-banner-exercise",
+          "x": 98,
+          "y": 24,
+          "width": 190,
+          "height": 40,
+          "color": "rgb(22, 138, 196)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderColor": "rgb(22, 155, 213)",
+          "borderWidth": "2px",
+          "borderRadius": "999px"
+        }
+      ]
+    },
+    "capture": "145-pg114_sec002.jpg"
+  },
+  {
+    "readerPage": 146,
+    "section_id": "pg115_sec001",
+    "href": "pg115_sec001.html",
+    "page_number": 109,
+    "layout": {
+      "width": 836,
+      "height": 1151,
+      "sectionHeight": 1151,
+      "tables": [
+        {
+          "rows": 6,
+          "columns": 4,
+          "width": 684,
+          "height": 528,
+          "overflow": false
+        }
+      ],
+      "images": [
+        {
+          "id": "pg115_im002",
+          "src": "images/pg115_im002.jpg",
+          "naturalWidth": 170,
+          "naturalHeight": 51,
+          "width": 128,
+          "height": 38,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg115_im003",
+          "src": "images/pg115_im003.jpg",
+          "naturalWidth": 183,
+          "naturalHeight": 71,
+          "width": 137,
+          "height": 53,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg115_im004",
+          "src": "images/pg115_im004.jpg",
+          "naturalWidth": 153,
+          "naturalHeight": 75,
+          "width": 115,
+          "height": 56,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg115_im005",
+          "src": "images/pg115_im005.jpg",
+          "naturalWidth": 136,
+          "naturalHeight": 97,
+          "width": 102,
+          "height": 73,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg115_im006",
+          "src": "images/pg115_im006.jpg",
+          "naturalWidth": 212,
+          "naturalHeight": 91,
+          "width": 159,
+          "height": 68,
+          "loaded": true,
+          "overflow": false
+        }
+      ],
+      "banners": [
+        {
+          "text": "Exercise 7",
+          "tag": "h1",
+          "className": "inline-block rounded-full border-2 border-sky-500 bg-sky-50 px-8 py-2 text-3xl font-bold leading-none text-sky-600 max-sm:text-2xl source-book-banner source-book-banner-exercise",
+          "x": 98,
+          "y": 24,
+          "width": 190,
+          "height": 40,
+          "color": "rgb(22, 138, 196)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderColor": "rgb(22, 155, 213)",
+          "borderWidth": "2px",
+          "borderRadius": "999px"
+        }
+      ]
+    },
+    "capture": "146-pg115_sec001.jpg"
+  },
+  {
+    "readerPage": 147,
+    "section_id": "pg116_sec001",
+    "href": "pg116_sec001.html",
+    "page_number": 110,
+    "layout": {
+      "width": 836,
+      "height": 1151,
+      "sectionHeight": 1151,
+      "tables": [
+        {
+          "rows": 10,
+          "columns": 4,
+          "width": 680,
+          "height": 908,
+          "overflow": false
+        }
+      ],
+      "images": [
+        {
+          "id": "pg116_im001",
+          "src": "images/pg116_im001.png",
+          "naturalWidth": 85,
+          "naturalHeight": 113,
+          "width": 61,
+          "height": 80,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg116_im002",
+          "src": "images/pg116_im002.png",
+          "naturalWidth": 119,
+          "naturalHeight": 116,
+          "width": 85,
+          "height": 83,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg116_im003",
+          "src": "images/pg116_im003.png",
+          "naturalWidth": 137,
+          "naturalHeight": 94,
+          "width": 98,
+          "height": 67,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg116_im004",
+          "src": "images/pg116_im004.png",
+          "naturalWidth": 205,
+          "naturalHeight": 124,
+          "width": 146,
+          "height": 88,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg116_im005",
+          "src": "images/pg116_im005.png",
+          "naturalWidth": 115,
+          "naturalHeight": 115,
+          "width": 82,
+          "height": 82,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg116_im006",
+          "src": "images/pg116_im006.png",
+          "naturalWidth": 142,
+          "naturalHeight": 135,
+          "width": 101,
+          "height": 96,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg116_im007",
+          "src": "images/pg116_im007.png",
+          "naturalWidth": 187,
+          "naturalHeight": 109,
+          "width": 133,
+          "height": 78,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg116_im008",
+          "src": "images/pg116_im008.png",
+          "naturalWidth": 111,
+          "naturalHeight": 60,
+          "width": 79,
+          "height": 43,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg116_im009",
+          "src": "images/pg116_im009.png",
+          "naturalWidth": 112,
+          "naturalHeight": 80,
+          "width": 80,
+          "height": 57,
+          "loaded": true,
+          "overflow": false
+        }
+      ],
+      "banners": [
+        {
+          "text": "Exercise 8",
+          "tag": "h1",
+          "className": "rounded-full border-2 border-sky-500 bg-white px-6 py-2 text-2xl font-bold leading-none text-sky-600 max-sm:text-xl source-book-banner source-book-banner-exercise",
+          "x": 98,
+          "y": 27,
+          "width": 190,
+          "height": 35,
+          "color": "rgb(22, 138, 196)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderColor": "rgb(22, 155, 213)",
+          "borderWidth": "2px",
+          "borderRadius": "999px"
+        }
+      ]
+    },
+    "capture": "147-pg116_sec001.jpg"
+  },
+  {
+    "readerPage": 148,
+    "section_id": "pg117_sec001",
+    "href": "pg117_sec001.html",
+    "page_number": 111,
+    "layout": {
+      "width": 836,
+      "height": 1251,
+      "sectionHeight": 1251,
+      "tables": [
+        {
+          "rows": 13,
+          "columns": 3,
+          "width": 664,
+          "height": 1031,
+          "overflow": false
+        }
+      ],
+      "images": [],
+      "banners": [
+        {
+          "text": "Exercise 9",
+          "tag": "h1",
+          "className": "rounded-full border-2 border-sky-500 bg-white px-10 py-2 text-[34px] font-bold leading-none text-sky-600 max-lg:text-[30px] max-sm:px-6 max-sm:text-[24px] source-book-banner source-book-banner-exercise",
+          "x": 98,
+          "y": 25,
+          "width": 190,
+          "height": 38,
+          "color": "rgb(22, 138, 196)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderColor": "rgb(22, 155, 213)",
+          "borderWidth": "2px",
+          "borderRadius": "999px"
+        }
+      ]
+    },
+    "capture": "148-pg117_sec001.jpg"
+  },
+  {
+    "readerPage": 149,
+    "section_id": "pg118_sec001",
+    "href": "pg118_sec001.html",
+    "page_number": 112,
+    "layout": {
+      "width": 836,
+      "height": 1151,
+      "sectionHeight": 1151,
+      "tables": [],
+      "images": [
+        {
+          "id": "pg118_im001",
+          "src": "images/pg118_im001.png",
+          "naturalWidth": 225,
+          "naturalHeight": 177,
+          "width": 142,
+          "height": 112,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg118_im002",
+          "src": "images/pg118_im002.png",
+          "naturalWidth": 293,
+          "naturalHeight": 154,
+          "width": 213,
+          "height": 112,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg118_im003",
+          "src": "images/pg118_im003.jpg",
+          "naturalWidth": 830,
+          "naturalHeight": 242,
+          "width": 384,
+          "height": 112,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg118_im004",
+          "src": "images/pg118_im004.png",
+          "naturalWidth": 201,
+          "naturalHeight": 200,
+          "width": 113,
+          "height": 112,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg118_im005",
+          "src": "images/pg118_im005.png",
+          "naturalWidth": 184,
+          "naturalHeight": 178,
+          "width": 116,
+          "height": 112,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg118_im006",
+          "src": "images/pg118_im006.png",
+          "naturalWidth": 422,
+          "naturalHeight": 113,
+          "width": 418,
+          "height": 112,
+          "loaded": true,
+          "overflow": false
+        }
+      ],
+      "banners": [
+        {
+          "text": "Exercise 10",
+          "tag": "span",
+          "className": "inline-flex items-center justify-center rounded-full border-2 border-sky-500 bg-white px-10 py-2 text-3xl font-bold italic text-sky-600 max-sm:px-6 max-sm:text-2xl source-book-banner source-book-banner-exercise",
+          "x": 98,
+          "y": 24,
+          "width": 190,
+          "height": 40,
+          "color": "rgb(22, 138, 196)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderColor": "rgb(22, 155, 213)",
+          "borderWidth": "2px",
+          "borderRadius": "999px"
+        }
+      ]
+    },
+    "capture": "149-pg118_sec001.jpg"
+  },
+  {
+    "readerPage": 150,
+    "section_id": "pg119_sec001",
+    "href": "pg119_sec001.html",
+    "page_number": 113,
+    "layout": {
+      "width": 836,
+      "height": 1151,
+      "sectionHeight": 1151,
+      "tables": [],
+      "images": [
+        {
+          "id": "pg119_im001",
+          "src": "images/pg119_im001.png",
+          "naturalWidth": 387,
+          "naturalHeight": 224,
+          "width": 300,
+          "height": 174,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg119_im002",
+          "src": "images/pg119_im002.png",
+          "naturalWidth": 390,
+          "naturalHeight": 222,
+          "width": 300,
+          "height": 172,
+          "loaded": true,
+          "overflow": false
+        }
+      ],
+      "banners": [
+        {
+          "text": "Example",
+          "tag": "div",
+          "className": "inline-block rounded-full bg-sky-600 px-8 py-2 text-left font-bold text-white text-3xl leading-none max-lg:text-2xl max-sm:text-xl source-book-banner source-book-banner-example",
+          "x": 128,
+          "y": 58,
+          "width": 180,
+          "height": 40,
+          "color": "rgb(255, 255, 255)",
+          "backgroundColor": "rgb(22, 155, 213)",
+          "borderColor": "rgb(22, 155, 213)",
+          "borderWidth": "2px",
+          "borderRadius": "999px"
+        }
+      ]
+    },
+    "capture": "150-pg119_sec001.jpg"
+  },
+  {
+    "readerPage": 151,
+    "section_id": "pg120_sec001",
+    "href": "pg120_sec001.html",
+    "page_number": 114,
+    "layout": {
+      "width": 836,
+      "height": 1151,
+      "sectionHeight": 1151,
+      "tables": [],
+      "images": [
+        {
+          "id": "pg120_im005",
+          "src": "images/pg120_im005.png",
+          "naturalWidth": 812,
+          "naturalHeight": 391,
+          "width": 648,
+          "height": 312,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg120_im001",
+          "src": "images/pg120_im001.jpg",
+          "naturalWidth": 244,
+          "naturalHeight": 309,
+          "width": 244,
+          "height": 309,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg120_im002",
+          "src": "images/pg120_im002.jpg",
+          "naturalWidth": 122,
+          "naturalHeight": 299,
+          "width": 122,
+          "height": 299,
+          "loaded": true,
+          "overflow": false
+        }
+      ],
+      "banners": []
+    },
+    "capture": "151-pg120_sec001.jpg"
+  },
+  {
+    "readerPage": 152,
+    "section_id": "pg120_sec002",
+    "href": "pg120_sec002.html",
+    "page_number": 114,
+    "layout": {
+      "width": 836,
+      "height": 1151,
+      "sectionHeight": 1151,
+      "tables": [],
+      "images": [
+        {
+          "id": "pg120_im003_seg001_v1",
+          "src": "images/pg120_im003_seg001_v1.png",
+          "naturalWidth": 97,
+          "naturalHeight": 94,
+          "width": 97,
+          "height": 94,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg120_im003_seg002_v1",
+          "src": "images/pg120_im003_seg002_v1.png",
+          "naturalWidth": 91,
+          "naturalHeight": 94,
+          "width": 91,
+          "height": 94,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg120_im004",
+          "src": "images/pg120_im004.png",
+          "naturalWidth": 91,
+          "naturalHeight": 122,
+          "width": 91,
+          "height": 122,
+          "loaded": true,
+          "overflow": false
+        }
+      ],
+      "banners": [
+        {
+          "text": "Exercise 1",
+          "tag": "div",
+          "className": "rounded-full border-2 border-sky-500 bg-sky-100 px-6 py-1.5 text-[1.05rem] font-bold text-sky-600 max-sm:px-5 max-sm:text-base source-book-banner source-book-banner-exercise",
+          "x": 99,
+          "y": 45,
+          "width": 190,
+          "height": 35,
+          "color": "rgb(22, 138, 196)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderColor": "rgb(22, 155, 213)",
+          "borderWidth": "2px",
+          "borderRadius": "999px"
+        }
+      ]
+    },
+    "capture": "152-pg120_sec002.jpg"
+  },
+  {
+    "readerPage": 153,
+    "section_id": "qz026",
+    "href": "qz026.html",
+    "layout": {
+      "width": 1024,
+      "height": 900,
+      "sectionHeight": 550,
+      "tables": [],
+      "images": [],
+      "banners": []
+    },
+    "capture": "153-qz026.jpg"
+  },
+  {
+    "readerPage": 154,
+    "section_id": "pg121_sec001",
+    "href": "pg121_sec001.html",
+    "page_number": 115,
+    "layout": {
+      "width": 836,
+      "height": 1151,
+      "sectionHeight": 1151,
+      "tables": [],
+      "images": [
+        {
+          "id": "pg121_im001",
+          "src": "images/pg121_im001.png",
+          "naturalWidth": 120,
+          "naturalHeight": 111,
+          "width": 237,
+          "height": 232,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg121_im002_seg001_v1",
+          "src": "images/pg121_im002_seg001_v1.png",
+          "naturalWidth": 142,
+          "naturalHeight": 117,
+          "width": 90,
+          "height": 74,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg121_im002_seg002_v1",
+          "src": "images/pg121_im002_seg002_v1.png",
+          "naturalWidth": 116,
+          "naturalHeight": 117,
+          "width": 104,
+          "height": 105,
+          "loaded": true,
+          "overflow": false
+        }
+      ],
+      "banners": [
+        {
+          "text": "Exercise 2",
+          "tag": "div",
+          "className": "rounded-full border-[3px] border-sky-500 bg-white px-8 py-1 shadow-sm source-book-banner source-book-banner-exercise",
+          "x": 98,
+          "y": 28,
+          "width": 190,
+          "height": 32,
+          "color": "rgb(22, 138, 196)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderColor": "rgb(22, 155, 213)",
+          "borderWidth": "2px",
+          "borderRadius": "999px"
+        }
+      ]
+    },
+    "capture": "154-pg121_sec001.jpg"
+  },
+  {
+    "readerPage": 155,
+    "section_id": "pg121_sec002",
+    "href": "pg121_sec002.html",
+    "page_number": 115,
+    "layout": {
+      "width": 836,
+      "height": 1151,
+      "sectionHeight": 1151,
+      "tables": [],
+      "images": [
+        {
+          "id": "pg122_im001",
+          "src": "images/pg122_im001.png",
+          "naturalWidth": 870,
+          "naturalHeight": 500,
+          "width": 574,
+          "height": 330,
+          "loaded": true,
+          "overflow": false
+        }
+      ],
+      "banners": [
+        {
+          "text": "Exercise 3",
+          "tag": "h1",
+          "className": "text-5xl font-bold mb-4 text-amber-700 source-book-banner source-book-banner-exercise",
+          "x": 54,
+          "y": 44,
+          "width": 190,
+          "height": 34,
+          "color": "rgb(22, 138, 196)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderColor": "rgb(22, 155, 213)",
+          "borderWidth": "2px",
+          "borderRadius": "999px"
+        },
+        {
+          "text": "Questions",
+          "tag": "span",
+          "className": "block text-2xl font-semibold mb-4 text-amber-700",
+          "x": 54,
+          "y": 503,
+          "width": 728,
+          "height": 29,
+          "color": "rgb(34, 34, 34)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "borderColor": "oklch(0.922 0 0)",
+          "borderWidth": "0px",
+          "borderRadius": "0px"
+        }
+      ]
+    },
+    "capture": "155-pg121_sec002.jpg"
+  },
+  {
+    "readerPage": 156,
+    "section_id": "pg122_sec001",
+    "href": "pg122_sec001.html",
+    "page_number": 116,
+    "layout": {
+      "width": 836,
+      "height": 1151,
+      "sectionHeight": 1151,
+      "tables": [],
+      "images": [],
+      "banners": []
+    },
+    "capture": "156-pg122_sec001.jpg"
+  },
+  {
+    "readerPage": 157,
+    "section_id": "pg123_sec001",
+    "href": "pg123_sec001.html",
+    "page_number": 117,
+    "layout": {
+      "width": 836,
+      "height": 1151,
+      "sectionHeight": 1151,
+      "tables": [],
+      "images": [
+        {
+          "id": "pg123_im001",
+          "src": "images/pg123_im001.png",
+          "naturalWidth": 91,
+          "naturalHeight": 122,
+          "width": 91,
+          "height": 122,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg123_im005",
+          "src": "images/pg123_im005.png",
+          "naturalWidth": 53,
+          "naturalHeight": 138,
+          "width": 53,
+          "height": 138,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg123_im002",
+          "src": "images/pg123_im002.png",
+          "naturalWidth": 210,
+          "naturalHeight": 203,
+          "width": 210,
+          "height": 203,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg123_im003",
+          "src": "images/pg123_im003.jpg",
+          "naturalWidth": 587,
+          "naturalHeight": 179,
+          "width": 396,
+          "height": 121,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg123_im004",
+          "src": "images/pg123_im004.png",
+          "naturalWidth": 223,
+          "naturalHeight": 198,
+          "width": 223,
+          "height": 198,
+          "loaded": true,
+          "overflow": false
+        }
+      ],
+      "banners": [
+        {
+          "text": "Example",
+          "tag": "div",
+          "className": "mb-4 inline-block rounded-full bg-sky-500 px-10 py-2 text-left text-3xl font-bold text-white max-lg:text-2xl max-sm:text-xl source-book-banner source-book-banner-example",
+          "x": 94,
+          "y": 76,
+          "width": 180,
+          "height": 40,
+          "color": "rgb(255, 255, 255)",
+          "backgroundColor": "rgb(22, 155, 213)",
+          "borderColor": "rgb(22, 155, 213)",
+          "borderWidth": "2px",
+          "borderRadius": "999px"
+        }
+      ]
+    },
+    "capture": "157-pg123_sec001.jpg"
+  },
+  {
+    "readerPage": 158,
+    "section_id": "pg124_sec001",
+    "href": "pg124_sec001.html",
+    "page_number": 118,
+    "layout": {
+      "width": 836,
+      "height": 1809,
+      "sectionHeight": 1809,
+      "tables": [],
+      "images": [
+        {
+          "id": "pg124_im001",
+          "src": "images/pg124_im001.png",
+          "naturalWidth": 261,
+          "naturalHeight": 242,
+          "width": 261,
+          "height": 242,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg124_im002",
+          "src": "images/pg124_im002.png",
+          "naturalWidth": 264,
+          "naturalHeight": 107,
+          "width": 264,
+          "height": 107,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg124_im006",
+          "src": "images/pg124_im006.jpg",
+          "naturalWidth": 130,
+          "naturalHeight": 253,
+          "width": 130,
+          "height": 253,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg124_im005",
+          "src": "images/pg124_im005.jpg",
+          "naturalWidth": 162,
+          "naturalHeight": 308,
+          "width": 162,
+          "height": 308,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg124_im003",
+          "src": "images/pg124_im003.png",
+          "naturalWidth": 91,
+          "naturalHeight": 51,
+          "width": 91,
+          "height": 51,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg124_im004",
+          "src": "images/pg124_im004.png",
+          "naturalWidth": 60,
+          "naturalHeight": 74,
+          "width": 60,
+          "height": 74,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg125_im004",
+          "src": "images/pg125_im004.png",
+          "naturalWidth": 73,
+          "naturalHeight": 107,
+          "width": 73,
+          "height": 107,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg125_im005",
+          "src": "images/pg125_im005.png",
+          "naturalWidth": 77,
+          "naturalHeight": 81,
+          "width": 77,
+          "height": 81,
+          "loaded": true,
+          "overflow": false
+        }
+      ],
+      "banners": [
+        {
+          "text": "Exercise 4",
+          "tag": "span",
+          "className": "inline-block bg-white border-2 border-sky-500 rounded-full px-5 py-1 text-[2.1rem] leading-none font-bold text-sky-600 max-lg:text-[1.9rem] max-sm:text-[1.15rem] source-book-banner source-book-banner-exercise",
+          "x": 99,
+          "y": 555,
+          "width": 190,
+          "height": 38,
+          "color": "rgb(22, 138, 196)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderColor": "rgb(22, 155, 213)",
+          "borderWidth": "2px",
+          "borderRadius": "999px"
+        }
+      ]
+    },
+    "capture": "158-pg124_sec001.jpg"
+  },
+  {
+    "readerPage": 159,
+    "section_id": "pg125_sec001",
+    "href": "pg125_sec001.html",
+    "page_number": 119,
+    "layout": {
+      "width": 836,
+      "height": 1151,
+      "sectionHeight": 1151,
+      "tables": [],
+      "images": [
+        {
+          "id": "pg125_im001",
+          "src": "images/pg125_im001.jpg",
+          "naturalWidth": 225,
+          "naturalHeight": 191,
+          "width": 256,
+          "height": 217,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg125_im002",
+          "src": "images/pg125_im002.jpg",
+          "naturalWidth": 227,
+          "naturalHeight": 193,
+          "width": 256,
+          "height": 218,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg125_im003",
+          "src": "images/pg125_im003.jpg",
+          "naturalWidth": 350,
+          "naturalHeight": 149,
+          "width": 256,
+          "height": 109,
+          "loaded": true,
+          "overflow": false
+        }
+      ],
+      "banners": [
+        {
+          "text": "Example",
+          "tag": "div",
+          "className": "mb-4 inline-block rounded-full bg-sky-500 px-6 py-2 shadow-sm source-book-banner source-book-banner-example source-book-attached-banner",
+          "x": 129,
+          "y": 112,
+          "width": 180,
+          "height": 40,
+          "color": "rgb(255, 255, 255)",
+          "backgroundColor": "rgb(22, 155, 213)",
+          "borderColor": "rgb(22, 155, 213)",
+          "borderWidth": "2px",
+          "borderRadius": "999px"
+        }
+      ]
+    },
+    "capture": "159-pg125_sec001.jpg"
+  },
+  {
+    "readerPage": 160,
+    "section_id": "qz027",
+    "href": "qz027.html",
+    "layout": {
+      "width": 1024,
+      "height": 900,
+      "sectionHeight": 550,
+      "tables": [],
+      "images": [],
+      "banners": []
+    },
+    "capture": "160-qz027.jpg"
+  },
+  {
+    "readerPage": 161,
+    "section_id": "pg126_sec001",
+    "href": "pg126_sec001.html",
+    "page_number": 120,
+    "layout": {
+      "width": 836,
+      "height": 1151,
+      "sectionHeight": 1151,
+      "tables": [],
+      "images": [
+        {
+          "id": "pg126_im007",
+          "src": "images/pg126_im007.jpg",
+          "naturalWidth": 139,
+          "naturalHeight": 187,
+          "width": 68,
+          "height": 92,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg126_im008",
+          "src": "images/pg126_im008.jpg",
+          "naturalWidth": 99,
+          "naturalHeight": 143,
+          "width": 64,
+          "height": 92,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg126_im004",
+          "src": "images/pg126_im004.png",
+          "naturalWidth": 696,
+          "naturalHeight": 107,
+          "width": 296,
+          "height": 46,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg126_im003",
+          "src": "images/pg126_im003.png",
+          "naturalWidth": 371,
+          "naturalHeight": 111,
+          "width": 297,
+          "height": 89,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg126_im006",
+          "src": "images/pg126_im006.png",
+          "naturalWidth": 409,
+          "naturalHeight": 62,
+          "width": 296,
+          "height": 45,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg126_im005",
+          "src": "images/pg126_im005.png",
+          "naturalWidth": 663,
+          "naturalHeight": 54,
+          "width": 297,
+          "height": 24,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg126_im009",
+          "src": "images/pg126_im009.jpg",
+          "naturalWidth": 161,
+          "naturalHeight": 300,
+          "width": 49,
+          "height": 92,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg126_im010",
+          "src": "images/pg126_im010.jpg",
+          "naturalWidth": 200,
+          "naturalHeight": 168,
+          "width": 110,
+          "height": 92,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg126_im002",
+          "src": "images/pg126_im002.jpg",
+          "naturalWidth": 157,
+          "naturalHeight": 166,
+          "width": 87,
+          "height": 92,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg126_im001",
+          "src": "images/pg126_im001.jpg",
+          "naturalWidth": 262,
+          "naturalHeight": 256,
+          "width": 94,
+          "height": 92,
+          "loaded": true,
+          "overflow": false
+        }
+      ],
+      "banners": [
+        {
+          "text": "Exercise 5",
+          "tag": "div",
+          "className": "rounded-full border-2 border-sky-500 px-6 py-1 text-center leading-none source-book-banner source-book-banner-exercise",
+          "x": 76,
+          "y": 44,
+          "width": 190,
+          "height": 40,
+          "color": "rgb(22, 138, 196)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderColor": "rgb(22, 155, 213)",
+          "borderWidth": "2px",
+          "borderRadius": "999px"
+        }
+      ]
+    },
+    "capture": "161-pg126_sec001.jpg"
+  },
+  {
+    "readerPage": 162,
+    "section_id": "pg127_sec001",
+    "href": "pg127_sec001.html",
+    "page_number": 121,
+    "layout": {
+      "width": 836,
+      "height": 1151,
+      "sectionHeight": 1151,
+      "tables": [],
+      "images": [],
+      "banners": [
+        {
+          "text": "Activity",
+          "tag": "h1",
+          "className": "text-5xl font-bold mb-4 text-amber-700 source-book-banner source-book-banner-activity",
+          "x": 54,
+          "y": 44,
+          "width": 103,
+          "height": 34,
+          "color": "rgb(74, 153, 69)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderColor": "rgb(84, 166, 78)",
+          "borderWidth": "2px",
+          "borderRadius": "999px"
+        }
+      ]
+    },
+    "capture": "162-pg127_sec001.jpg"
+  },
+  {
+    "readerPage": 163,
+    "section_id": "pg127_sec002",
+    "href": "pg127_sec002.html",
+    "page_number": 121,
+    "layout": {
+      "width": 836,
+      "height": 1151,
+      "sectionHeight": 1151,
+      "tables": [],
+      "images": [
+        {
+          "id": "pg127_im005",
+          "src": "images/pg127_example_objects.png",
+          "naturalWidth": 310,
+          "naturalHeight": 156,
+          "width": 304,
+          "height": 153,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg127_im002",
+          "src": "images/pg127_im002.jpg",
+          "naturalWidth": 292,
+          "naturalHeight": 213,
+          "width": 240,
+          "height": 175,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg127_im003",
+          "src": "images/pg127_im003.jpg",
+          "naturalWidth": 219,
+          "naturalHeight": 228,
+          "width": 216,
+          "height": 225,
+          "loaded": true,
+          "overflow": false
+        }
+      ],
+      "banners": [
+        {
+          "text": "Example",
+          "tag": "div",
+          "className": "absolute -top-4 left-8 max-sm:left-5 inline-block bg-sky-500 text-white text-[1.15rem] max-sm:text-lg font-bold rounded-full px-6 py-1 z-10 source-book-banner source-book-banner-example source-book-attached-banner",
+          "x": 99,
+          "y": 159,
+          "width": 180,
+          "height": 35,
+          "color": "rgb(255, 255, 255)",
+          "backgroundColor": "rgb(22, 155, 213)",
+          "borderColor": "rgb(22, 155, 213)",
+          "borderWidth": "2px",
+          "borderRadius": "999px"
+        },
+        {
+          "text": "Exercise 6",
+          "tag": "div",
+          "className": "absolute -top-4 left-8 max-sm:left-5 inline-block bg-white border-[4px] border-sky-500 text-sky-600 text-[1.15rem] max-sm:text-lg font-bold rounded-full px-6 py-1 z-10 source-book-banner source-book-banner-exercise source-book-attached-banner",
+          "x": 99,
+          "y": 448,
+          "width": 190,
+          "height": 35,
+          "color": "rgb(22, 138, 196)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderColor": "rgb(22, 155, 213)",
+          "borderWidth": "2px",
+          "borderRadius": "999px"
+        }
+      ]
+    },
+    "capture": "163-pg127_sec002.jpg"
+  },
+  {
+    "readerPage": 164,
+    "section_id": "pg128_sec001",
+    "href": "pg128_sec001.html",
+    "page_number": 122,
+    "layout": {
+      "width": 836,
+      "height": 1151,
+      "sectionHeight": 1151,
+      "tables": [],
+      "images": [
+        {
+          "id": "pg128_im001",
+          "src": "images/pg128_im001.jpg",
+          "naturalWidth": 95,
+          "naturalHeight": 302,
+          "width": 33,
+          "height": 105,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg128_im002",
+          "src": "images/pg128_im002.jpg",
+          "naturalWidth": 272,
+          "naturalHeight": 82,
+          "width": 265,
+          "height": 80,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg128_im003",
+          "src": "images/pg128_im003.jpg",
+          "naturalWidth": 274,
+          "naturalHeight": 204,
+          "width": 141,
+          "height": 105,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg128_im004",
+          "src": "images/pg128_im004.jpg",
+          "naturalWidth": 280,
+          "naturalHeight": 216,
+          "width": 136,
+          "height": 105,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg128_im005",
+          "src": "images/pg128_im005.jpg",
+          "naturalWidth": 288,
+          "naturalHeight": 193,
+          "width": 224,
+          "height": 150,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg128_im006",
+          "src": "images/pg128_im006.jpg",
+          "naturalWidth": 218,
+          "naturalHeight": 242,
+          "width": 135,
+          "height": 150,
+          "loaded": true,
+          "overflow": false
+        }
+      ],
+      "banners": []
+    },
+    "capture": "164-pg128_sec001.jpg"
+  },
+  {
+    "readerPage": 165,
+    "section_id": "pg129_sec001",
+    "href": "pg129_sec001.html",
+    "page_number": 123,
+    "layout": {
+      "width": 836,
+      "height": 1246,
+      "sectionHeight": 1246,
+      "tables": [],
+      "images": [
+        {
+          "id": "pg129_im001",
+          "src": "images/pg129_im001.png",
+          "naturalWidth": 243,
+          "naturalHeight": 156,
+          "width": 243,
+          "height": 156,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg129_im002",
+          "src": "images/pg129_im002.png",
+          "naturalWidth": 136,
+          "naturalHeight": 145,
+          "width": 136,
+          "height": 145,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg129_im003",
+          "src": "images/pg129_im003.png",
+          "naturalWidth": 176,
+          "naturalHeight": 151,
+          "width": 176,
+          "height": 151,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg129_im004",
+          "src": "images/pg129_im004.png",
+          "naturalWidth": 191,
+          "naturalHeight": 152,
+          "width": 191,
+          "height": 152,
+          "loaded": true,
+          "overflow": false
+        }
+      ],
+      "banners": []
+    },
+    "capture": "165-pg129_sec001.jpg"
+  },
+  {
+    "readerPage": 166,
+    "section_id": "pg130_sec001",
+    "href": "pg130_sec001.html",
+    "page_number": 124,
+    "layout": {
+      "width": 836,
+      "height": 1151,
+      "sectionHeight": 1151,
+      "tables": [],
+      "images": [
+        {
+          "id": "pg130_im001",
+          "src": "images/pg130_im001.jpg",
+          "naturalWidth": 130,
+          "naturalHeight": 82,
+          "width": 130,
+          "height": 82,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg130_im002",
+          "src": "images/pg130_im002.jpg",
+          "naturalWidth": 178,
+          "naturalHeight": 163,
+          "width": 105,
+          "height": 96,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg130_im013",
+          "src": "images/pg130_im013.jpg",
+          "naturalWidth": 199,
+          "naturalHeight": 178,
+          "width": 107,
+          "height": 96,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg130_im014",
+          "src": "images/pg130_im014.jpg",
+          "naturalWidth": 102,
+          "naturalHeight": 99,
+          "width": 99,
+          "height": 96,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg130_im015",
+          "src": "images/pg130_im015.png",
+          "naturalWidth": 97,
+          "naturalHeight": 145,
+          "width": 64,
+          "height": 96,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg130_im016",
+          "src": "images/pg130_im016.png",
+          "naturalWidth": 64,
+          "naturalHeight": 94,
+          "width": 64,
+          "height": 94,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg130_im017",
+          "src": "images/pg130_im017.jpg",
+          "naturalWidth": 252,
+          "naturalHeight": 148,
+          "width": 131,
+          "height": 77,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg130_im018",
+          "src": "images/pg130_im018.jpg",
+          "naturalWidth": 262,
+          "naturalHeight": 148,
+          "width": 131,
+          "height": 74,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg130_im019",
+          "src": "images/pg130_im019.jpg",
+          "naturalWidth": 203,
+          "naturalHeight": 198,
+          "width": 98,
+          "height": 96,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg130_im020",
+          "src": "images/pg130_im020.jpg",
+          "naturalWidth": 106,
+          "naturalHeight": 97,
+          "width": 105,
+          "height": 96,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg130_im003",
+          "src": "images/pg130_im003.jpg",
+          "naturalWidth": 179,
+          "naturalHeight": 126,
+          "width": 131,
+          "height": 92,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg130_im004",
+          "src": "images/pg130_im004.png",
+          "naturalWidth": 89,
+          "naturalHeight": 59,
+          "width": 89,
+          "height": 59,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg130_im005",
+          "src": "images/pg130_im005.jpg",
+          "naturalWidth": 217,
+          "naturalHeight": 214,
+          "width": 97,
+          "height": 96,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg130_im006",
+          "src": "images/pg130_im006.jpg",
+          "naturalWidth": 115,
+          "naturalHeight": 114,
+          "width": 97,
+          "height": 96,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg130_im007",
+          "src": "images/pg130_im007.jpg",
+          "naturalWidth": 114,
+          "naturalHeight": 84,
+          "width": 114,
+          "height": 84,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg130_im008",
+          "src": "images/pg130_im008.jpg",
+          "naturalWidth": 160,
+          "naturalHeight": 154,
+          "width": 100,
+          "height": 96,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg130_im009",
+          "src": "images/pg130_im009.jpg",
+          "naturalWidth": 151,
+          "naturalHeight": 177,
+          "width": 82,
+          "height": 96,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg130_im010",
+          "src": "images/pg130_im010.jpg",
+          "naturalWidth": 73,
+          "naturalHeight": 85,
+          "width": 73,
+          "height": 85,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg130_im011",
+          "src": "images/pg130_im011.jpg",
+          "naturalWidth": 105,
+          "naturalHeight": 242,
+          "width": 42,
+          "height": 96,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg130_im012",
+          "src": "images/pg130_im012.jpg",
+          "naturalWidth": 125,
+          "naturalHeight": 193,
+          "width": 62,
+          "height": 96,
+          "loaded": true,
+          "overflow": false
+        }
+      ],
+      "banners": [
+        {
+          "text": "Exercise 7",
+          "tag": "span",
+          "className": "inline-block text-4xl max-lg:text-3xl max-sm:text-2xl font-bold italic text-sky-600 border-[3px] border-sky-500 rounded-full px-6 py-1 leading-none source-book-banner source-book-banner-exercise",
+          "x": 76,
+          "y": 44,
+          "width": 190,
+          "height": 38,
+          "color": "rgb(22, 138, 196)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderColor": "rgb(22, 155, 213)",
+          "borderWidth": "2px",
+          "borderRadius": "999px"
+        }
+      ]
+    },
+    "capture": "166-pg130_sec001.jpg"
+  },
+  {
+    "readerPage": 167,
+    "section_id": "pg131_sec001",
+    "href": "pg131_sec001.html",
+    "page_number": 125,
+    "layout": {
+      "width": 836,
+      "height": 1264,
+      "sectionHeight": 1264,
+      "tables": [],
+      "images": [
+        {
+          "id": "pg131_im001",
+          "src": "images/pg131_im001.jpg",
+          "naturalWidth": 209,
+          "naturalHeight": 178,
+          "width": 209,
+          "height": 178,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg131_im002",
+          "src": "images/pg131_im002.png",
+          "naturalWidth": 91,
+          "naturalHeight": 51,
+          "width": 91,
+          "height": 51,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg131_im003",
+          "src": "images/pg131_im003.png",
+          "naturalWidth": 167,
+          "naturalHeight": 344,
+          "width": 157,
+          "height": 324,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg131_im004",
+          "src": "images/pg131_im004.png",
+          "naturalWidth": 141,
+          "naturalHeight": 246,
+          "width": 141,
+          "height": 246,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg131_im005",
+          "src": "images/pg131_im005.png",
+          "naturalWidth": 217,
+          "naturalHeight": 313,
+          "width": 157,
+          "height": 227,
+          "loaded": true,
+          "overflow": false
+        }
+      ],
+      "banners": [
+        {
+          "text": "Example",
+          "tag": "div",
+          "className": "z-10 -mt-10 mb-3 ml-6 inline-block rounded-full bg-sky-500 px-10 py-2 text-[1.15rem] font-extrabold text-white shadow-md max-lg:text-[1.05rem] max-sm:ml-4 max-sm:px-8 max-sm:text-[1rem] source-book-banner source-book-banner-example source-book-attached-banner",
+          "x": 185,
+          "y": 321,
+          "width": 180,
+          "height": 35,
+          "color": "rgb(255, 255, 255)",
+          "backgroundColor": "rgb(22, 155, 213)",
+          "borderColor": "rgb(22, 155, 213)",
+          "borderWidth": "2px",
+          "borderRadius": "999px"
+        }
+      ]
+    },
+    "capture": "167-pg131_sec001.jpg"
+  },
+  {
+    "readerPage": 168,
+    "section_id": "qz028",
+    "href": "qz028.html",
+    "layout": {
+      "width": 1024,
+      "height": 900,
+      "sectionHeight": 550,
+      "tables": [],
+      "images": [],
+      "banners": []
+    },
+    "capture": "168-qz028.jpg"
+  },
+  {
+    "readerPage": 169,
+    "section_id": "pg132_sec001",
+    "href": "pg132_sec001.html",
+    "page_number": 126,
+    "layout": {
+      "width": 836,
+      "height": 1151,
+      "sectionHeight": 1151,
+      "tables": [],
+      "images": [
+        {
+          "id": "pg132_im001",
+          "src": "images/pg132_im001.png",
+          "naturalWidth": 91,
+          "naturalHeight": 176,
+          "width": 91,
+          "height": 176,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg132_im002",
+          "src": "images/pg132_im002.png",
+          "naturalWidth": 131,
+          "naturalHeight": 146,
+          "width": 131,
+          "height": 146,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg132_im003",
+          "src": "images/pg132_im003.png",
+          "naturalWidth": 103,
+          "naturalHeight": 141,
+          "width": 103,
+          "height": 141,
+          "loaded": true,
+          "overflow": false
+        }
+      ],
+      "banners": []
+    },
+    "capture": "169-pg132_sec001.jpg"
+  },
+  {
+    "readerPage": 170,
+    "section_id": "pg132_sec002",
+    "href": "pg132_sec002.html",
+    "page_number": 126,
+    "layout": {
+      "width": 836,
+      "height": 1151,
+      "sectionHeight": 1151,
+      "tables": [],
+      "images": [
+        {
+          "id": "pg132_im004",
+          "src": "images/pg132_im004.jpg",
+          "naturalWidth": 162,
+          "naturalHeight": 194,
+          "width": 88,
+          "height": 105,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg132_im005",
+          "src": "images/pg132_im005.png",
+          "naturalWidth": 60,
+          "naturalHeight": 66,
+          "width": 60,
+          "height": 66,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg132_im006",
+          "src": "images/pg132_im006.png",
+          "naturalWidth": 86,
+          "naturalHeight": 79,
+          "width": 86,
+          "height": 79,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg132_im007",
+          "src": "images/pg132_im007.png",
+          "naturalWidth": 50,
+          "naturalHeight": 71,
+          "width": 50,
+          "height": 71,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg133_im001",
+          "src": "images/pg133_im001.png",
+          "naturalWidth": 87,
+          "naturalHeight": 57,
+          "width": 87,
+          "height": 57,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg133_im002",
+          "src": "images/pg133_im002.png",
+          "naturalWidth": 85,
+          "naturalHeight": 62,
+          "width": 85,
+          "height": 62,
+          "loaded": true,
+          "overflow": false
+        }
+      ],
+      "banners": [
+        {
+          "text": "Exercise 8",
+          "tag": "span",
+          "className": "inline-flex items-center justify-center px-5 py-2 bg-blue-100 border-2 border-blue-500 rounded-full text-blue-700 font-bold text-xl source-book-banner source-book-banner-exercise",
+          "x": 98,
+          "y": 27,
+          "width": 190,
+          "height": 35,
+          "color": "rgb(22, 138, 196)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderColor": "rgb(22, 155, 213)",
+          "borderWidth": "2px",
+          "borderRadius": "999px"
+        }
+      ]
+    },
+    "capture": "170-pg132_sec002.jpg"
+  },
+  {
+    "readerPage": 171,
+    "section_id": "pg133_sec001",
+    "href": "pg133_sec001.html",
+    "page_number": 127,
+    "layout": {
+      "width": 836,
+      "height": 1151,
+      "sectionHeight": 1151,
+      "tables": [],
+      "images": [
+        {
+          "id": "pg133_im003",
+          "src": "images/pg133_im003.png",
+          "naturalWidth": 56,
+          "naturalHeight": 159,
+          "width": 56,
+          "height": 159,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg133_im004",
+          "src": "images/pg133_im004.png",
+          "naturalWidth": 59,
+          "naturalHeight": 155,
+          "width": 59,
+          "height": 155,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg133_im005",
+          "src": "images/pg133_im005.jpg",
+          "naturalWidth": 192,
+          "naturalHeight": 213,
+          "width": 192,
+          "height": 213,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg133_im006",
+          "src": "images/pg133_im006.png",
+          "naturalWidth": 88,
+          "naturalHeight": 105,
+          "width": 88,
+          "height": 105,
+          "loaded": true,
+          "overflow": false
+        }
+      ],
+      "banners": [
+        {
+          "text": "Exercise 9",
+          "tag": "span",
+          "className": "inline-block rounded-full border-[3px] border-sky-500 bg-sky-100 px-8 py-1 text-[24px] font-bold leading-none text-sky-700 max-lg:text-[22px] max-sm:text-[18px] max-sm:px-5 max-sm:py-2 source-book-banner source-book-banner-exercise",
+          "x": 98,
+          "y": 27,
+          "width": 190,
+          "height": 35,
+          "color": "rgb(22, 138, 196)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderColor": "rgb(22, 155, 213)",
+          "borderWidth": "2px",
+          "borderRadius": "999px"
+        }
+      ]
+    },
+    "capture": "171-pg133_sec001.jpg"
+  },
+  {
+    "readerPage": 172,
+    "section_id": "pg133_sec002",
+    "href": "pg133_sec002.html",
+    "page_number": 127,
+    "layout": {
+      "width": 836,
+      "height": 1151,
+      "sectionHeight": 1151,
+      "tables": [],
+      "images": [],
+      "banners": []
+    },
+    "capture": "172-pg133_sec002.jpg"
+  },
+  {
+    "readerPage": 173,
+    "section_id": "pg134_sec001",
+    "href": "pg134_sec001.html",
+    "page_number": 128,
+    "layout": {
+      "width": 836,
+      "height": 1153,
+      "sectionHeight": 1153,
+      "tables": [],
+      "images": [
+        {
+          "id": "pg134_im007_crop1",
+          "src": "images/pg134_im007_crop1.png",
+          "naturalWidth": 1478,
+          "naturalHeight": 512,
+          "width": 680,
+          "height": 236,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg134_im001",
+          "src": "images/pg134_im001.png",
+          "naturalWidth": 220,
+          "naturalHeight": 129,
+          "width": 179,
+          "height": 105,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg134_im002",
+          "src": "images/pg134_im002.png",
+          "naturalWidth": 207,
+          "naturalHeight": 129,
+          "width": 168,
+          "height": 105,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg134_im003",
+          "src": "images/pg134_im003.png",
+          "naturalWidth": 173,
+          "naturalHeight": 136,
+          "width": 134,
+          "height": 105,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg134_im004",
+          "src": "images/pg134_im004.png",
+          "naturalWidth": 164,
+          "naturalHeight": 133,
+          "width": 129,
+          "height": 105,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg134_im005",
+          "src": "images/pg134_im005.png",
+          "naturalWidth": 146,
+          "naturalHeight": 127,
+          "width": 121,
+          "height": 105,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg134_im006",
+          "src": "images/pg134_im006.png",
+          "naturalWidth": 172,
+          "naturalHeight": 127,
+          "width": 142,
+          "height": 105,
+          "loaded": true,
+          "overflow": false
+        }
+      ],
+      "banners": [
+        {
+          "text": "Example",
+          "tag": "div",
+          "className": "inline-block rounded-full bg-sky-500 px-8 py-2 text-[2rem] font-extrabold leading-none text-white shadow-sm max-lg:text-[1.7rem] max-sm:px-5 max-sm:text-[1.25rem] source-book-banner source-book-banner-example",
+          "x": 100,
+          "y": 415,
+          "width": 180,
+          "height": 39,
+          "color": "rgb(255, 255, 255)",
+          "backgroundColor": "rgb(22, 155, 213)",
+          "borderColor": "rgb(22, 155, 213)",
+          "borderWidth": "2px",
+          "borderRadius": "999px"
+        }
+      ]
+    },
+    "capture": "173-pg134_sec001.jpg"
+  },
+  {
+    "readerPage": 174,
+    "section_id": "pg135_sec001",
+    "href": "pg135_sec001.html",
+    "page_number": 129,
+    "layout": {
+      "width": 836,
+      "height": 1151,
+      "sectionHeight": 1151,
+      "tables": [
+        {
+          "rows": 5,
+          "columns": 3,
+          "width": 684,
+          "height": 920,
+          "overflow": false
+        }
+      ],
+      "images": [
+        {
+          "id": "pg135_im001",
+          "src": "images/pg135_im001.png",
+          "naturalWidth": 232,
+          "naturalHeight": 93,
+          "width": 210,
+          "height": 84,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg135_im002",
+          "src": "images/pg135_im002.png",
+          "naturalWidth": 237,
+          "naturalHeight": 90,
+          "width": 237,
+          "height": 90,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg135_im003",
+          "src": "images/pg135_im003.png",
+          "naturalWidth": 201,
+          "naturalHeight": 107,
+          "width": 201,
+          "height": 107,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg135_im004",
+          "src": "images/pg135_im004.png",
+          "naturalWidth": 215,
+          "naturalHeight": 109,
+          "width": 215,
+          "height": 109,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg135_im005",
+          "src": "images/pg135_im005.png",
+          "naturalWidth": 156,
+          "naturalHeight": 118,
+          "width": 156,
+          "height": 118,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg135_im006",
+          "src": "images/pg135_im006.png",
+          "naturalWidth": 180,
+          "naturalHeight": 113,
+          "width": 180,
+          "height": 113,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg135_im007",
+          "src": "images/pg135_im007.png",
+          "naturalWidth": 120,
+          "naturalHeight": 84,
+          "width": 120,
+          "height": 84,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg135_im008",
+          "src": "images/pg135_im008.png",
+          "naturalWidth": 180,
+          "naturalHeight": 111,
+          "width": 180,
+          "height": 111,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg135_im009",
+          "src": "images/pg135_im009.png",
+          "naturalWidth": 189,
+          "naturalHeight": 100,
+          "width": 189,
+          "height": 100,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg135_im010",
+          "src": "images/pg135_im010.png",
+          "naturalWidth": 173,
+          "naturalHeight": 91,
+          "width": 173,
+          "height": 91,
+          "loaded": true,
+          "overflow": false
+        }
+      ],
+      "banners": []
+    },
+    "capture": "174-pg135_sec001.jpg"
+  },
+  {
+    "readerPage": 175,
+    "section_id": "qz029",
+    "href": "qz029.html",
+    "layout": {
+      "width": 1024,
+      "height": 900,
+      "sectionHeight": 550,
+      "tables": [],
+      "images": [],
+      "banners": []
+    },
+    "capture": "175-qz029.jpg"
+  },
+  {
+    "readerPage": 176,
+    "section_id": "pg136_sec001",
+    "href": "pg136_sec001.html",
+    "page_number": 130,
+    "layout": {
+      "width": 836,
+      "height": 1151,
+      "sectionHeight": 1151,
+      "tables": [],
+      "images": [],
+      "banners": [
+        {
+          "text": "Exercise 1",
+          "tag": "div",
+          "className": "absolute left-16 -top-6 rounded-full border-4 border-sky-500 bg-white px-7 py-2 max-sm:left-6 max-sm:px-5 max-sm:py-1.5 source-book-banner source-book-banner-exercise source-book-attached-banner",
+          "x": 99,
+          "y": 26,
+          "width": 190,
+          "height": 40,
+          "color": "rgb(22, 138, 196)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderColor": "rgb(22, 155, 213)",
+          "borderWidth": "2px",
+          "borderRadius": "999px"
+        }
+      ]
+    },
+    "capture": "176-pg136_sec001.jpg"
+  },
+  {
+    "readerPage": 177,
+    "section_id": "pg136_sec002",
+    "href": "pg136_sec002.html",
+    "page_number": 130,
+    "layout": {
+      "width": 836,
+      "height": 1151,
+      "sectionHeight": 1151,
+      "tables": [],
+      "images": [
+        {
+          "id": "pg136_im001",
+          "src": "images/pg136_im001.png",
+          "naturalWidth": 141,
+          "naturalHeight": 115,
+          "width": 106,
+          "height": 87,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg136_im002",
+          "src": "images/pg136_im002.png",
+          "naturalWidth": 171,
+          "naturalHeight": 160,
+          "width": 106,
+          "height": 99,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg136_im003",
+          "src": "images/pg136_im003.png",
+          "naturalWidth": 113,
+          "naturalHeight": 125,
+          "width": 107,
+          "height": 119,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg136_im004",
+          "src": "images/pg136_im004.png",
+          "naturalWidth": 137,
+          "naturalHeight": 124,
+          "width": 106,
+          "height": 96,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg136_im005",
+          "src": "images/pg136_im005.png",
+          "naturalWidth": 153,
+          "naturalHeight": 133,
+          "width": 106,
+          "height": 92,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg136_im006",
+          "src": "images/pg136_im006.png",
+          "naturalWidth": 121,
+          "naturalHeight": 139,
+          "width": 107,
+          "height": 123,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg136_im007",
+          "src": "images/pg136_im007.png",
+          "naturalWidth": 145,
+          "naturalHeight": 115,
+          "width": 106,
+          "height": 84,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg136_im008",
+          "src": "images/pg136_im008.png",
+          "naturalWidth": 196,
+          "naturalHeight": 112,
+          "width": 106,
+          "height": 61,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg136_im009",
+          "src": "images/pg136_im009.png",
+          "naturalWidth": 132,
+          "naturalHeight": 80,
+          "width": 107,
+          "height": 65,
+          "loaded": true,
+          "overflow": false
+        }
+      ],
+      "banners": [
+        {
+          "text": "Exercise 2",
+          "tag": "div",
+          "className": "mb-5 inline-block rounded-full border-[5px] border-sky-500 bg-white px-8 py-2 text-left text-3xl font-bold italic leading-none text-sky-600 max-lg:text-2xl max-sm:text-xl source-book-banner source-book-banner-exercise source-book-attached-banner",
+          "x": 128,
+          "y": 58,
+          "width": 190,
+          "height": 40,
+          "color": "rgb(22, 138, 196)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderColor": "rgb(22, 155, 213)",
+          "borderWidth": "2px",
+          "borderRadius": "999px"
+        }
+      ]
+    },
+    "capture": "177-pg136_sec002.jpg"
+  },
+  {
+    "readerPage": 178,
+    "section_id": "pg137_sec001",
+    "href": "pg137_sec001.html",
+    "page_number": 131,
+    "layout": {
+      "width": 836,
+      "height": 1151,
+      "sectionHeight": 1151,
+      "tables": [],
+      "images": [
+        {
+          "id": "pg137_im001",
+          "src": "images/pg137_im001.jpg",
+          "naturalWidth": 885,
+          "naturalHeight": 698,
+          "width": 632,
+          "height": 498,
+          "loaded": true,
+          "overflow": false
+        }
+      ],
+      "banners": [
+        {
+          "text": "Activity",
+          "tag": "div",
+          "className": "mb-5 inline-block rounded-full border-4 border-green-500 bg-green-50 px-6 py-1.5 text-left max-sm:px-4 source-book-banner source-book-banner-activity",
+          "x": 102,
+          "y": 84,
+          "width": 127,
+          "height": 40,
+          "color": "rgb(74, 153, 69)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderColor": "rgb(84, 166, 78)",
+          "borderWidth": "2px",
+          "borderRadius": "999px"
+        }
+      ]
+    },
+    "capture": "178-pg137_sec001.jpg"
+  },
+  {
+    "readerPage": 179,
+    "section_id": "pg138_sec001",
+    "href": "pg138_sec001.html",
+    "page_number": 132,
+    "layout": {
+      "width": 836,
+      "height": 1151,
+      "sectionHeight": 1151,
+      "tables": [],
+      "images": [],
+      "banners": [
+        {
+          "text": "Questions",
+          "tag": "div",
+          "className": "absolute -top-5 left-4 rounded-full border-[3px] border-green-600 bg-white px-7 py-1 text-[23px] font-bold leading-none text-green-600 max-sm:left-3 max-sm:px-5 max-sm:text-[18px] source-book-banner source-book-banner-questions",
+          "x": 71,
+          "y": 507,
+          "width": 145,
+          "height": 35,
+          "color": "rgb(74, 153, 69)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderColor": "rgb(84, 166, 78)",
+          "borderWidth": "2px",
+          "borderRadius": "999px"
+        }
+      ]
+    },
+    "capture": "179-pg138_sec001.jpg"
+  },
+  {
+    "readerPage": 180,
+    "section_id": "pg138_sec002",
+    "href": "pg138_sec002.html",
+    "page_number": 132,
+    "layout": {
+      "width": 836,
+      "height": 1151,
+      "sectionHeight": 1151,
+      "tables": [],
+      "images": [],
+      "banners": [
+        {
+          "text": "Exercise 3",
+          "tag": "div",
+          "className": "absolute left-10 top-0 -translate-y-1/2 rounded-full border-[3px] border-sky-500 bg-white px-8 py-2 text-3xl font-extrabold leading-none text-sky-600 shadow-sm max-lg:left-8 max-lg:text-2xl max-sm:left-4 max-sm:px-5 max-sm:text-xl source-book-banner source-book-banner-exercise source-book-attached-banner",
+          "x": 143,
+          "y": 55,
+          "width": 190,
+          "height": 40,
+          "color": "rgb(22, 138, 196)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderColor": "rgb(22, 155, 213)",
+          "borderWidth": "2px",
+          "borderRadius": "999px"
+        }
+      ]
+    },
+    "capture": "180-pg138_sec002.jpg"
+  },
+  {
+    "readerPage": 181,
+    "section_id": "pg139_sec001",
+    "href": "pg139_sec001.html",
+    "page_number": 133,
+    "layout": {
+      "width": 836,
+      "height": 1151,
+      "sectionHeight": 1151,
+      "tables": [],
+      "images": [
+        {
+          "id": "pg139_im005",
+          "src": "images/pg139_shapes.png",
+          "naturalWidth": 717,
+          "naturalHeight": 297,
+          "width": 614,
+          "height": 254,
+          "loaded": true,
+          "overflow": false
+        }
+      ],
+      "banners": [
+        {
+          "text": "Exercise 4",
+          "tag": "div",
+          "className": "absolute left-10 top-0 -translate-y-1/2 rounded-full border-[3px] border-sky-500 bg-white px-8 py-2 text-3xl font-extrabold leading-none text-sky-600 shadow-sm max-lg:left-8 max-lg:text-2xl max-sm:left-4 max-sm:px-5 max-sm:text-xl source-book-banner source-book-banner-exercise source-book-attached-banner",
+          "x": 127,
+          "y": 37,
+          "width": 190,
+          "height": 40,
+          "color": "rgb(22, 138, 196)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderColor": "rgb(22, 155, 213)",
+          "borderWidth": "2px",
+          "borderRadius": "999px"
+        },
+        {
+          "text": "Questions",
+          "tag": "h1",
+          "className": "mb-5 text-left text-[2rem] font-extrabold leading-tight text-neutral-800 max-lg:text-[1.7rem] max-sm:text-[1.3rem]",
+          "x": 111,
+          "y": 495,
+          "width": 614,
+          "height": 29,
+          "color": "oklch(0.269 0 0)",
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "borderColor": "oklch(0.922 0 0)",
+          "borderWidth": "0px",
+          "borderRadius": "0px"
+        }
+      ]
+    },
+    "capture": "181-pg139_sec001.jpg"
+  },
+  {
+    "readerPage": 182,
+    "section_id": "pg140_sec001",
+    "href": "pg140_sec001.html",
+    "page_number": 134,
+    "layout": {
+      "width": 836,
+      "height": 1151,
+      "sectionHeight": 1151,
+      "tables": [
+        {
+          "rows": 5,
+          "columns": 3,
+          "width": 680,
+          "height": 506,
+          "overflow": false
+        }
+      ],
+      "images": [
+        {
+          "id": "pg140_im001",
+          "src": "images/pg140_im001.png",
+          "naturalWidth": 154,
+          "naturalHeight": 74,
+          "width": 142,
+          "height": 68,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg140_im002",
+          "src": "images/pg140_im002.png",
+          "naturalWidth": 86,
+          "naturalHeight": 93,
+          "width": 63,
+          "height": 68,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg140_im005",
+          "src": "images/pg140_im005.png",
+          "naturalWidth": 84,
+          "naturalHeight": 77,
+          "width": 74,
+          "height": 68,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg140_im006",
+          "src": "images/pg140_im006.png",
+          "naturalWidth": 107,
+          "naturalHeight": 88,
+          "width": 83,
+          "height": 68,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg140_im007",
+          "src": "images/pg140_im007.png",
+          "naturalWidth": 74,
+          "naturalHeight": 88,
+          "width": 57,
+          "height": 68,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg140_im008",
+          "src": "images/pg140_im008.png",
+          "naturalWidth": 73,
+          "naturalHeight": 63,
+          "width": 73,
+          "height": 63,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg140_im009",
+          "src": "images/pg140_im009.png",
+          "naturalWidth": 159,
+          "naturalHeight": 68,
+          "width": 159,
+          "height": 68,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg140_im010",
+          "src": "images/pg140_im010.png",
+          "naturalWidth": 150,
+          "naturalHeight": 90,
+          "width": 113,
+          "height": 68,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg140_im011",
+          "src": "images/pg140_im011.png",
+          "naturalWidth": 179,
+          "naturalHeight": 112,
+          "width": 109,
+          "height": 68,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg140_im012",
+          "src": "images/pg140_im012.png",
+          "naturalWidth": 136,
+          "naturalHeight": 84,
+          "width": 110,
+          "height": 68,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg140_im003",
+          "src": "images/pg140_im003.png",
+          "naturalWidth": 126,
+          "naturalHeight": 89,
+          "width": 96,
+          "height": 68,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg140_im004",
+          "src": "images/pg140_im004.png",
+          "naturalWidth": 96,
+          "naturalHeight": 77,
+          "width": 85,
+          "height": 68,
+          "loaded": true,
+          "overflow": false
+        }
+      ],
+      "banners": []
+    },
+    "capture": "182-pg140_sec001.jpg"
+  },
+  {
+    "readerPage": 183,
+    "section_id": "qz030",
+    "href": "qz030.html",
+    "layout": {
+      "width": 1024,
+      "height": 900,
+      "sectionHeight": 550,
+      "tables": [],
+      "images": [],
+      "banners": []
+    },
+    "capture": "183-qz030.jpg"
+  },
+  {
+    "readerPage": 184,
+    "section_id": "pg141_sec001",
+    "href": "pg141_sec001.html",
+    "page_number": 135,
+    "layout": {
+      "width": 836,
+      "height": 1151,
+      "sectionHeight": 1151,
+      "tables": [],
+      "images": [
+        {
+          "id": "pg141_im001",
+          "src": "images/pg141_im001.png",
+          "naturalWidth": 115,
+          "naturalHeight": 88,
+          "width": 98,
+          "height": 75,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg141_im002",
+          "src": "images/pg141_im002.png",
+          "naturalWidth": 120,
+          "naturalHeight": 84,
+          "width": 107,
+          "height": 75,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg141_im008",
+          "src": "images/pg141_im008.png",
+          "naturalWidth": 96,
+          "naturalHeight": 74,
+          "width": 96,
+          "height": 74,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg141_im009",
+          "src": "images/pg141_im009.png",
+          "naturalWidth": 120,
+          "naturalHeight": 93,
+          "width": 97,
+          "height": 75,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg141_im010",
+          "src": "images/pg141_im010.png",
+          "naturalWidth": 130,
+          "naturalHeight": 94,
+          "width": 104,
+          "height": 75,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg141_im011",
+          "src": "images/pg141_im011.png",
+          "naturalWidth": 159,
+          "naturalHeight": 68,
+          "width": 126,
+          "height": 54,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg141_im012",
+          "src": "images/pg141_im012.png",
+          "naturalWidth": 154,
+          "naturalHeight": 74,
+          "width": 112,
+          "height": 54,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg141_im013",
+          "src": "images/pg141_im013.png",
+          "naturalWidth": 84,
+          "naturalHeight": 61,
+          "width": 74,
+          "height": 54,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg141_im014",
+          "src": "images/pg141_im014.png",
+          "naturalWidth": 68,
+          "naturalHeight": 69,
+          "width": 53,
+          "height": 54,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg141_im015",
+          "src": "images/pg141_im015.png",
+          "naturalWidth": 78,
+          "naturalHeight": 63,
+          "width": 67,
+          "height": 54,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg141_im003",
+          "src": "images/pg141_im003.png",
+          "naturalWidth": 95,
+          "naturalHeight": 67,
+          "width": 77,
+          "height": 54,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg141_im004",
+          "src": "images/pg141_im004.png",
+          "naturalWidth": 117,
+          "naturalHeight": 69,
+          "width": 92,
+          "height": 54,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg141_im005",
+          "src": "images/pg141_im005.png",
+          "naturalWidth": 120,
+          "naturalHeight": 69,
+          "width": 94,
+          "height": 54,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg141_im006",
+          "src": "images/pg141_im006.png",
+          "naturalWidth": 78,
+          "naturalHeight": 71,
+          "width": 59,
+          "height": 54,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg141_im007",
+          "src": "images/pg141_im007.png",
+          "naturalWidth": 77,
+          "naturalHeight": 77,
+          "width": 54,
+          "height": 54,
+          "loaded": true,
+          "overflow": false
+        }
+      ],
+      "banners": [
+        {
+          "text": "Exercise 5",
+          "tag": "div",
+          "className": "inline-flex items-center justify-center rounded-full border-[3px] border-sky-500 bg-white px-7 py-1.5 -mt-14 ml-8 max-lg:ml-5 max-sm:ml-2 max-sm:-mt-10 source-book-banner source-book-banner-exercise source-book-attached-banner",
+          "x": 100,
+          "y": 308,
+          "width": 190,
+          "height": 35,
+          "color": "rgb(22, 138, 196)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderColor": "rgb(22, 155, 213)",
+          "borderWidth": "2px",
+          "borderRadius": "999px"
+        }
+      ]
+    },
+    "capture": "184-pg141_sec001.jpg"
+  },
+  {
+    "readerPage": 185,
+    "section_id": "pg142_sec001",
+    "href": "pg142_sec001.html",
+    "page_number": 136,
+    "layout": {
+      "width": 836,
+      "height": 1151,
+      "sectionHeight": 1151,
+      "tables": [],
+      "images": [
+        {
+          "id": "pg142_im001",
+          "src": "images/pg142_im001.jpg",
+          "naturalWidth": 209,
+          "naturalHeight": 178,
+          "width": 123,
+          "height": 105,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg142_im002",
+          "src": "images/pg142_im002.jpg",
+          "naturalWidth": 202,
+          "naturalHeight": 225,
+          "width": 94,
+          "height": 105,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg142_im003",
+          "src": "images/pg142_im003.png",
+          "naturalWidth": 167,
+          "naturalHeight": 127,
+          "width": 138,
+          "height": 105,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg142_im004",
+          "src": "images/pg142_im004.jpg",
+          "naturalWidth": 249,
+          "naturalHeight": 325,
+          "width": 80,
+          "height": 105,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg142_im005",
+          "src": "images/pg142_im005.png",
+          "naturalWidth": 185,
+          "naturalHeight": 115,
+          "width": 169,
+          "height": 105,
+          "loaded": true,
+          "overflow": false
+        },
+        {
+          "id": "pg142_im006",
+          "src": "images/pg142_im006.png",
+          "naturalWidth": 185,
+          "naturalHeight": 239,
+          "width": 81,
+          "height": 105,
+          "loaded": true,
+          "overflow": false
+        }
+      ],
+      "banners": [
+        {
+          "text": "Exercise 6",
+          "tag": "span",
+          "className": "inline-block rounded-full border-[3px] border-sky-500 bg-sky-100 px-8 py-2 text-4xl font-bold italic leading-none text-sky-600 max-sm:text-3xl source-book-banner source-book-banner-exercise",
+          "x": 98,
+          "y": 25,
+          "width": 190,
+          "height": 38,
+          "color": "rgb(22, 138, 196)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderColor": "rgb(22, 155, 213)",
+          "borderWidth": "2px",
+          "borderRadius": "999px"
+        }
+      ]
+    },
+    "capture": "185-pg142_sec001.jpg"
+  },
+  {
+    "readerPage": 186,
+    "section_id": "pg143_sec001",
+    "href": "pg143_sec001.html",
+    "page_number": 137,
+    "layout": {
+      "width": 836,
+      "height": 1524,
+      "sectionHeight": 1524,
+      "tables": [],
+      "images": [],
+      "banners": [
+        {
+          "text": "Exercise 7",
+          "tag": "div",
+          "className": "inline-block rounded-full border-[3px] border-sky-500 bg-white px-7 py-2 text-[2.2rem] font-semibold italic leading-none text-sky-600 max-lg:px-6 max-lg:text-[1.8rem] max-sm:px-5 max-sm:text-[1.2rem] source-book-banner source-book-banner-exercise",
+          "x": 98,
+          "y": 25,
+          "width": 190,
+          "height": 38,
+          "color": "rgb(22, 138, 196)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "borderColor": "rgb(22, 155, 213)",
+          "borderWidth": "2px",
+          "borderRadius": "999px"
+        }
+      ]
+    },
+    "capture": "186-pg143_sec001.jpg"
+  }
+]
