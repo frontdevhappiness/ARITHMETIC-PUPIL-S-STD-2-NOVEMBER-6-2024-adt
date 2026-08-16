@@ -10,6 +10,79 @@
     <link href="./content/tailwind_output.css" rel="stylesheet">
     <link href="./assets/libs/fontawesome/css/all.min.css" rel="stylesheet">
     <link href="./assets/fonts.css" rel="stylesheet">
+    <style>
+        /* Page-only layout rules. Activity and TTS behaviour remain unchanged. */
+        .pg053-exercise-body {
+            padding-left: 2rem !important;
+            padding-right: 2rem !important;
+        }
+
+        .pg053-exercise-panel {
+            padding-left: 2rem !important;
+            padding-right: 2rem !important;
+            padding-bottom: 8rem !important;
+        }
+
+        .pg053-question-grid {
+            grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+            column-gap: 2rem !important;
+        }
+
+        .pg053-question-grid > div {
+            display: grid;
+            grid-template-columns: 2.5rem minmax(8rem, 11rem);
+            justify-content: center;
+            gap: 0.75rem;
+            min-width: 0;
+        }
+
+        .pg053-question-grid > div > span {
+            width: 2.5rem;
+        }
+
+        .pg053-question-grid > div > div {
+            width: 100%;
+            min-width: 0;
+        }
+
+        @media (max-width: 1199px) {
+            .pg053-question-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .pg053-exercise-body {
+                padding-left: 0.75rem !important;
+                padding-right: 0.75rem !important;
+            }
+
+            .pg053-exercise-panel {
+                padding-left: 0.75rem !important;
+                padding-right: 0.75rem !important;
+                padding-bottom: 7rem !important;
+            }
+
+            .pg053-question-grid {
+                grid-template-columns: minmax(0, 1fr) !important;
+                row-gap: 2rem !important;
+            }
+
+            .pg053-question-grid > div {
+                grid-template-columns: 2rem minmax(8rem, 10rem);
+                gap: 0.5rem;
+            }
+
+            .pg053-question-grid > div > span {
+                width: 2rem;
+                font-size: 1.5rem;
+            }
+
+            .pg053-question-grid > div > div {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
 </head>
 
 <body class="min-h-screen flex items-center justify-center">
@@ -17,12 +90,8 @@
       <h1 class="sr-only" id="page-heading">Exercise 8</h1>
       <div id="content" class="mx-auto w-full max-w-7xl bg-white p-8 max-lg:p-5 max-sm:p-3 opacity-0">
   <section data-book-page="true" data-section-type="activity_fill_in_the_blank" data-section-id="pg053_sec002" class="relative mx-auto overflow-hidden rounded-[3.5rem] border-[18px] border-sky-100 bg-white shadow-[inset_0_0_30px_rgba(125,190,235,0.14),0_8px_24px_rgba(14,116,144,0.08)] max-lg:rounded-[2.75rem] max-lg:border-[14px] max-sm:rounded-[2rem] max-sm:border-[9px]">
-    <img src="images/pg053_im001_seg002_v1.png" alt="Exercise 8. Write the answer in each question. Three vertical addition sums: 576 + 234, 248 + 134, and 356 + 275, each with a blank line for the answer." data-id="pg053_im001_seg002_v1" class="hidden" style="max-width: 100%; height: auto;">
-
-    <img src="images/pg054_im001.png" alt="Exercise 8 continued with twelve vertical addition sums: 486 + 116, 367 + 475, 237 + 295, 429 + 134, 586 + 236, 178 + 276, 285 + 37, 328 + 79, 467 + 295, 88 + 2, 179 + 95, and 587 + 162, each with a blank answer line." data-id="pg054_im001" class="hidden" style="max-width: 100%; height: auto;">
-
-    <div class="relative z-10 px-14 py-14 font-serif text-neutral-900 max-lg:px-8 max-lg:py-10 max-sm:px-3 max-sm:py-7">
-      <div class="relative rounded-[2.5rem] border-[3px] border-sky-300 px-12 pb-12 pt-16 max-lg:px-7 max-sm:rounded-[1.75rem] max-sm:px-4">
+    <div class="pg053-exercise-body relative z-10 px-14 py-14 font-serif text-neutral-900 max-lg:px-8 max-lg:py-10 max-sm:px-3 max-sm:py-7">
+      <div class="pg053-exercise-panel relative rounded-[2.5rem] border-[3px] border-sky-300 px-12 pb-12 pt-16 max-lg:px-7 max-sm:rounded-[1.75rem] max-sm:px-4">
         <div class="absolute left-16 top-0 -translate-y-1/2 rounded-full border-[3px] border-sky-500 bg-white px-10 py-2 max-sm:left-5 max-sm:px-6">
           <span data-id="pg053_n0080" class="text-4xl font-bold italic text-sky-600 max-lg:text-3xl max-sm:text-xl">
             Exercise 8
@@ -33,19 +102,16 @@
           Write the answer in each question.
         </p>
 
-        <div class="grid grid-cols-3 gap-x-16 gap-y-10 max-lg:grid-cols-2 max-md:grid-cols-1">
+        <div class="pg053-question-grid grid grid-cols-3 gap-x-16 gap-y-10 max-lg:grid-cols-2 max-md:grid-cols-1">
           <!-- Question 1 -->
           <div class="flex items-start gap-5">
             <span data-id="pg053_n0083" class="w-12 shrink-0 text-3xl text-sky-500">1.</span>
 
             <div class="w-44 font-mono text-3xl">
-              <span data-id="pg053_n0084" class="hidden">576</span>
-              <span data-id="pg053_n0085" class="hidden">+ 234</span>
-
-              <div class="grid grid-cols-[2rem_repeat(3,2rem)] justify-end text-center">
+              <div data-id="pg053_n0084" class="grid grid-cols-[2rem_repeat(3,2rem)] justify-end text-center">
                 <span></span><span>5</span><span>7</span><span>6</span>
               </div>
-              <div class="grid grid-cols-[2rem_repeat(3,2rem)] justify-end border-b-2 border-neutral-800 pb-2 text-center">
+              <div data-id="pg053_n0085" class="grid grid-cols-[2rem_repeat(3,2rem)] justify-end border-b-2 border-neutral-800 pb-2 text-center">
                 <span>+</span><span>2</span><span>3</span><span>4</span>
               </div>
               <input type="text" data-aria-id="aria-1-0-0" data-activity-item="item-1" aria-label="Answer for question 1" tabindex="0" class="mt-5 h-10 w-full border-b-2 border-neutral-800 bg-transparent text-center text-2xl outline-none">
@@ -57,13 +123,10 @@
             <span data-id="pg053_n0088" class="w-12 shrink-0 text-3xl text-sky-500">2.</span>
 
             <div class="w-44 font-mono text-3xl">
-              <span data-id="pg053_n0089" class="hidden">248</span>
-              <span data-id="pg053_n0090" class="hidden">+ 134</span>
-
-              <div class="grid grid-cols-[2rem_repeat(3,2rem)] justify-end text-center">
+              <div data-id="pg053_n0089" class="grid grid-cols-[2rem_repeat(3,2rem)] justify-end text-center">
                 <span></span><span>2</span><span>4</span><span>8</span>
               </div>
-              <div class="grid grid-cols-[2rem_repeat(3,2rem)] justify-end border-b-2 border-neutral-800 pb-2 text-center">
+              <div data-id="pg053_n0090" class="grid grid-cols-[2rem_repeat(3,2rem)] justify-end border-b-2 border-neutral-800 pb-2 text-center">
                 <span>+</span><span>1</span><span>3</span><span>4</span>
               </div>
               <input type="text" data-aria-id="aria-1-0-1" data-activity-item="item-2" aria-label="Answer for question 2" tabindex="0" class="mt-5 h-10 w-full border-b-2 border-neutral-800 bg-transparent text-center text-2xl outline-none">
@@ -75,13 +138,10 @@
             <span data-id="pg053_n0093" class="w-12 shrink-0 text-3xl text-sky-500">3.</span>
 
             <div class="w-44 font-mono text-3xl">
-              <span data-id="pg053_n0094" class="hidden">356</span>
-              <span data-id="pg053_n0095" class="hidden">+ 275</span>
-
-              <div class="grid grid-cols-[2rem_repeat(3,2rem)] justify-end text-center">
+              <div data-id="pg053_n0094" class="grid grid-cols-[2rem_repeat(3,2rem)] justify-end text-center">
                 <span></span><span>3</span><span>5</span><span>6</span>
               </div>
-              <div class="grid grid-cols-[2rem_repeat(3,2rem)] justify-end border-b-2 border-neutral-800 pb-2 text-center">
+              <div data-id="pg053_n0095" class="grid grid-cols-[2rem_repeat(3,2rem)] justify-end border-b-2 border-neutral-800 pb-2 text-center">
                 <span>+</span><span>2</span><span>7</span><span>5</span>
               </div>
               <input type="text" data-aria-id="aria-1-0-2" data-activity-item="item-3" aria-label="Answer for question 3" tabindex="0" class="mt-5 h-10 w-full border-b-2 border-neutral-800 bg-transparent text-center text-2xl outline-none">
@@ -92,9 +152,7 @@
           <div class="flex items-start gap-5">
             <span data-id="pg054_n0002" class="w-12 shrink-0 text-3xl text-sky-500">4.</span>
 
-            <div class="w-44 font-mono text-3xl">
-              <span data-id="pg054_n0003" class="hidden">486 + 116</span>
-
+            <div data-id="pg054_n0003" class="w-44 font-mono text-3xl">
               <div class="grid grid-cols-[2rem_repeat(3,2rem)] justify-end text-center">
                 <span></span><span>4</span><span>8</span><span>6</span>
               </div>
@@ -109,9 +167,7 @@
           <div class="flex items-start gap-5">
             <span data-id="pg054_n0005" class="w-12 shrink-0 text-3xl text-sky-500">5.</span>
 
-            <div class="w-44 font-mono text-3xl">
-              <span data-id="pg054_n0006" class="hidden">367 + 475</span>
-
+            <div data-id="pg054_n0006" class="w-44 font-mono text-3xl">
               <div class="grid grid-cols-[2rem_repeat(3,2rem)] justify-end text-center">
                 <span></span><span>3</span><span>6</span><span>7</span>
               </div>
@@ -126,9 +182,7 @@
           <div class="flex items-start gap-5">
             <span data-id="pg054_n0008" class="w-12 shrink-0 text-3xl text-sky-500">6.</span>
 
-            <div class="w-44 font-mono text-3xl">
-              <span data-id="pg054_n0009" class="hidden">237 + 295</span>
-
+            <div data-id="pg054_n0009" class="w-44 font-mono text-3xl">
               <div class="grid grid-cols-[2rem_repeat(3,2rem)] justify-end text-center">
                 <span></span><span>2</span><span>3</span><span>7</span>
               </div>
@@ -143,9 +197,7 @@
           <div class="flex items-start gap-5">
             <span data-id="pg054_n0011" class="w-12 shrink-0 text-3xl text-sky-500">7.</span>
 
-            <div class="w-44 font-mono text-3xl">
-              <span data-id="pg054_n0012" class="hidden">429 + 134</span>
-
+            <div data-id="pg054_n0012" class="w-44 font-mono text-3xl">
               <div class="grid grid-cols-[2rem_repeat(3,2rem)] justify-end text-center">
                 <span></span><span>4</span><span>2</span><span>9</span>
               </div>
@@ -160,9 +212,7 @@
           <div class="flex items-start gap-5">
             <span data-id="pg054_n0014" class="w-12 shrink-0 text-3xl text-sky-500">8.</span>
 
-            <div class="w-44 font-mono text-3xl">
-              <span data-id="pg054_n0015" class="hidden">586 + 236</span>
-
+            <div data-id="pg054_n0015" class="w-44 font-mono text-3xl">
               <div class="grid grid-cols-[2rem_repeat(3,2rem)] justify-end text-center">
                 <span></span><span>5</span><span>8</span><span>6</span>
               </div>
@@ -177,9 +227,7 @@
           <div class="flex items-start gap-5">
             <span data-id="pg054_n0017" class="w-12 shrink-0 text-3xl text-sky-500">9.</span>
 
-            <div class="w-44 font-mono text-3xl">
-              <span data-id="pg054_n0018" class="hidden">178 + 276</span>
-
+            <div data-id="pg054_n0018" class="w-44 font-mono text-3xl">
               <div class="grid grid-cols-[2rem_repeat(3,2rem)] justify-end text-center">
                 <span></span><span>1</span><span>7</span><span>8</span>
               </div>
@@ -194,9 +242,7 @@
           <div class="flex items-start gap-5">
             <span data-id="pg054_n0020" class="w-12 shrink-0 text-3xl text-sky-500">10.</span>
 
-            <div class="w-44 font-mono text-3xl">
-              <span data-id="pg054_n0021" class="hidden">285 + 37</span>
-
+            <div data-id="pg054_n0021" class="w-44 font-mono text-3xl">
               <div class="grid grid-cols-[2rem_repeat(3,2rem)] justify-end text-center">
                 <span></span><span>2</span><span>8</span><span>5</span>
               </div>
@@ -211,9 +257,7 @@
           <div class="flex items-start gap-5">
             <span data-id="pg054_n0023" class="w-12 shrink-0 text-3xl text-sky-500">11.</span>
 
-            <div class="w-44 font-mono text-3xl">
-              <span data-id="pg054_n0024" class="hidden">328 + 79</span>
-
+            <div data-id="pg054_n0024" class="w-44 font-mono text-3xl">
               <div class="grid grid-cols-[2rem_repeat(3,2rem)] justify-end text-center">
                 <span></span><span>3</span><span>2</span><span>8</span>
               </div>
@@ -228,9 +272,7 @@
           <div class="flex items-start gap-5">
             <span data-id="pg054_n0026" class="w-12 shrink-0 text-3xl text-sky-500">12.</span>
 
-            <div class="w-44 font-mono text-3xl">
-              <span data-id="pg054_n0027" class="hidden">467 + 295</span>
-
+            <div data-id="pg054_n0027" class="w-44 font-mono text-3xl">
               <div class="grid grid-cols-[2rem_repeat(3,2rem)] justify-end text-center">
                 <span></span><span>4</span><span>6</span><span>7</span>
               </div>
@@ -245,9 +287,7 @@
           <div class="flex items-start gap-5">
             <span data-id="pg054_n0029" class="w-12 shrink-0 text-3xl text-sky-500">13.</span>
 
-            <div class="w-44 font-mono text-3xl">
-              <span data-id="pg054_n0030" class="hidden">88 + 2</span>
-
+            <div data-id="pg054_n0030" class="w-44 font-mono text-3xl">
               <div class="grid grid-cols-[2rem_repeat(3,2rem)] justify-end text-center">
                 <span></span><span></span><span>8</span><span>8</span>
               </div>
@@ -262,9 +302,7 @@
           <div class="flex items-start gap-5">
             <span data-id="pg054_n0032" class="w-12 shrink-0 text-3xl text-sky-500">14.</span>
 
-            <div class="w-44 font-mono text-3xl">
-              <span data-id="pg054_n0033" class="hidden">179 + 95</span>
-
+            <div data-id="pg054_n0033" class="w-44 font-mono text-3xl">
               <div class="grid grid-cols-[2rem_repeat(3,2rem)] justify-end text-center">
                 <span></span><span>1</span><span>7</span><span>9</span>
               </div>
@@ -279,9 +317,7 @@
           <div class="flex items-start gap-5">
             <span data-id="pg054_n0035" class="w-12 shrink-0 text-3xl text-sky-500">15.</span>
 
-            <div class="w-44 font-mono text-3xl">
-              <span data-id="pg054_n0036" class="hidden">587 + 162</span>
-
+            <div data-id="pg054_n0036" class="w-44 font-mono text-3xl">
               <div class="grid grid-cols-[2rem_repeat(3,2rem)] justify-end text-center">
                 <span></span><span>5</span><span>8</span><span>7</span>
               </div>
