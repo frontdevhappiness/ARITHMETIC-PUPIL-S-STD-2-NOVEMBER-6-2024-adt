@@ -10,6 +10,79 @@
     <link href="./content/tailwind_output.css" rel="stylesheet">
     <link href="./assets/libs/fontawesome/css/all.min.css" rel="stylesheet">
     <link href="./assets/fonts.css" rel="stylesheet">
+    <style>
+        /* Page-only layout rules. Activity and TTS behaviour remain unchanged. */
+        .pg053-exercise-body {
+            padding-left: 2rem !important;
+            padding-right: 2rem !important;
+        }
+
+        .pg053-exercise-panel {
+            padding-left: 2rem !important;
+            padding-right: 2rem !important;
+            padding-bottom: 8rem !important;
+        }
+
+        .pg053-question-grid {
+            grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+            column-gap: 2rem !important;
+        }
+
+        .pg053-question-grid > div {
+            display: grid;
+            grid-template-columns: 2.5rem minmax(8rem, 11rem);
+            justify-content: center;
+            gap: 0.75rem;
+            min-width: 0;
+        }
+
+        .pg053-question-grid > div > span {
+            width: 2.5rem;
+        }
+
+        .pg053-question-grid > div > div {
+            width: 100%;
+            min-width: 0;
+        }
+
+        @media (max-width: 1199px) {
+            .pg053-question-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .pg053-exercise-body {
+                padding-left: 0.75rem !important;
+                padding-right: 0.75rem !important;
+            }
+
+            .pg053-exercise-panel {
+                padding-left: 0.75rem !important;
+                padding-right: 0.75rem !important;
+                padding-bottom: 7rem !important;
+            }
+
+            .pg053-question-grid {
+                grid-template-columns: minmax(0, 1fr) !important;
+                row-gap: 2rem !important;
+            }
+
+            .pg053-question-grid > div {
+                grid-template-columns: 2rem minmax(8rem, 10rem);
+                gap: 0.5rem;
+            }
+
+            .pg053-question-grid > div > span {
+                width: 2rem;
+                font-size: 1.5rem;
+            }
+
+            .pg053-question-grid > div > div {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
 </head>
 
 <body class="min-h-screen flex items-center justify-center">
@@ -17,8 +90,8 @@
       <h1 class="sr-only" id="page-heading">Exercise 7</h1>
       <div id="content" class="mx-auto w-full max-w-7xl bg-white p-8 max-lg:p-5 max-sm:p-3 opacity-0">
   <section data-book-page="true" data-section-type="activity_fill_in_the_blank" data-section-id="pg053_sec001" class="relative mx-auto overflow-hidden rounded-[3.5rem] border-[18px] border-sky-100 bg-white shadow-[inset_0_0_30px_rgba(125,190,235,0.14),0_8px_24px_rgba(14,116,144,0.08)] max-lg:rounded-[2.75rem] max-lg:border-[14px] max-sm:rounded-[2rem] max-sm:border-[9px]">
-    <div class="relative z-10 px-14 py-14 font-serif text-neutral-900 max-lg:px-8 max-lg:py-10 max-sm:px-3 max-sm:py-7">
-      <div class="relative rounded-[2.5rem] border-[3px] border-sky-300 px-12 pb-12 pt-16 max-lg:px-7 max-sm:rounded-[1.75rem] max-sm:px-4 max-sm:pb-7">
+    <div class="pg053-exercise-body relative z-10 px-14 py-14 font-serif text-neutral-900 max-lg:px-8 max-lg:py-10 max-sm:px-3 max-sm:py-7">
+      <div class="pg053-exercise-panel relative rounded-[2.5rem] border-[3px] border-sky-300 px-12 pb-12 pt-16 max-lg:px-7 max-sm:rounded-[1.75rem] max-sm:px-4 max-sm:pb-7">
         <div class="absolute left-16 top-0 -translate-y-1/2 rounded-full border-[3px] border-sky-500 bg-white px-10 py-2 max-sm:left-5 max-sm:px-6">
           <span data-id="pg053_n0002" class="text-4xl font-bold italic text-sky-600 max-lg:text-3xl max-sm:text-xl">
             Exercise 7
@@ -29,7 +102,7 @@
           Write the answer in each question.
         </p>
 
-        <div class="grid grid-cols-3 gap-x-16 gap-y-10 max-lg:grid-cols-2 max-lg:gap-x-10 max-md:grid-cols-1">
+        <div class="pg053-question-grid grid grid-cols-3 gap-x-16 gap-y-10 max-lg:grid-cols-2 max-lg:gap-x-10 max-md:grid-cols-1">
           <!-- Question 1 -->
           <div class="flex items-start gap-5">
             <span data-id="pg053_n0005" class="w-12 shrink-0 text-3xl text-sky-500">1.</span>
