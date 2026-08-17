@@ -39,10 +39,10 @@ const updates = {
   pg030_n0017: "3 hundreds, 7 tens, 1 ones.",
   pg031_im001: "Abacus showing 0 hundreds, 2 tens and 5 ones.",
   pg031_im002: "Abacus showing 2 hundreds, 2 tens and 5 ones.",
-  pg031_im003: "Abacus showing 0 hundreds, 3 tens and 4 ones.",
+  pg031_im003: "Abacus showing 0 hundreds, 3 tens and 3 ones.",
   pg031_im004: "Abacus showing 4 hundreds, 0 tens and 4 ones.",
-  pg031_im005: "Abacus showing 1 hundred, 4 tens and 3 ones.",
-  pg031_im006: "Abacus showing 3 hundreds, 6 tens and 5 ones.",
+  pg031_im005: "Abacus showing 1 hundred, 3 tens and 3 ones.",
+  pg031_im006: "Abacus showing 3 hundreds, 7 tens and 5 ones.",
 }
 
 for (const [id, value] of Object.entries(updates)) {
