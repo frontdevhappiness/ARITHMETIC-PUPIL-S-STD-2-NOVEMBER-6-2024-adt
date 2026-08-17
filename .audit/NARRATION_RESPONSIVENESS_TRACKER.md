@@ -57,7 +57,7 @@ This tracker follows the 186-entry ADT reading order. A page is complete only af
 | 42 | `qz006` | `qz006.html` | — | NOT CHECKED | |
 | 43 | `pg035_sec001` | `pg035_sec001.html` | 29 | COMPLETE | Corrected the complete 28-number arrow sequence, removed the duplicate inaccurate hidden caption, standardized 999 and zero readings, and passed responsive checks. |
 | 44 | `pg036_sec001` | `pg036_sec001.html` | 30 | COMPLETE | Regenerated all 69 visible three-digit entries with standard British readings and all 20 single-digit table cells to prevent clipped or skipped speech; rebuilt highlighting, preserved answer privacy, and passed responsive table checks. |
-| 45 | `pg037_sec001` | `pg037_sec001.html` | 31 | NOT CHECKED | |
+| 45 | `pg037_sec001` | `pg037_sec001.html` | 31 | COMPLETE | Removed duplicate chapter and worked-example captions, standardized 999 and all example number readings, narrated both visible equals signs, rebuilt highlighting, and passed responsive checks. |
 | 46 | `pg038_sec001` | `pg038_sec001.html` | 32 | NOT CHECKED | |
 | 47 | `pg039_sec001` | `pg039_sec001.html` | 33 | NOT CHECKED | |
 | 48 | `pg042_sec001` | `pg042_sec001.html` | 36 | NOT CHECKED | |
