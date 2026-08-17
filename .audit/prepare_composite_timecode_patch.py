@@ -1,11 +1,12 @@
 import json
+import os
 import re
 import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 TIMECODES_PATH = ROOT / "content/i18n/en-GB/timecode/timecode_output.json"
-SOURCE_PATH = Path("/tmp/batch2_composite_timecodes.json")
+SOURCE_PATH = Path(os.environ.get("COMPOSITE_TIMECODES_SOURCE", "/tmp/batch2_composite_timecodes.json"))
 timecodes = json.loads(TIMECODES_PATH.read_text())
 source = json.loads(SOURCE_PATH.read_text())
 lines = TIMECODES_PATH.read_text().splitlines()

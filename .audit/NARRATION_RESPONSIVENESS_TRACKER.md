@@ -33,16 +33,16 @@ This tracker follows the 186-entry ADT reading order. A page is complete only af
 | 18 | `pg014_sec001` | `pg014_sec001.html` | 8 | COMPLETE | Standardized the displayed three-digit numbers; repaired item 8 and item 19 narration/highlighting in normal and easy modes. |
 | 19 | `pg014_sec002` | `pg014_sec002.html` | 8 | COMPLETE | Repaired item 8 and item 19 narration/highlighting in normal and easy modes; responsive layout passed. |
 | 20 | `pg016_sec001` | `pg016_sec001.html` | 10 | COMPLETE | Removed duplicate chapter/example image narration; standardized all number sequences with word-level highlighting. |
-| 21 | `pg017_sec001` | `pg017_sec001.html` | 11 | NOT CHECKED | |
-| 22 | `pg018_sec001` | `pg018_sec001.html` | 12 | NOT CHECKED | |
-| 23 | `qz003` | `qz003.html` | — | NOT CHECKED | |
-| 24 | `pg019_sec001` | `pg019_sec001.html` | 13 | NOT CHECKED | |
-| 25 | `pg020_sec001` | `pg020_sec001.html` | 14 | NOT CHECKED | |
-| 26 | `pg021_sec001` | `pg021_sec001.html` | 15 | NOT CHECKED | |
-| 27 | `pg022_sec001` | `pg022_sec001.html` | 16 | NOT CHECKED | |
-| 28 | `qz004` | `qz004.html` | — | NOT CHECKED | |
-| 29 | `pg024_sec001` | `pg024_sec001.html` | 18 | NOT CHECKED | |
-| 30 | `pg025_sec001` | `pg025_sec001.html` | 19 | NOT CHECKED | |
+| 21 | `pg017_sec001` | `pg017_sec001.html` | 11 | COMPLETE | Standardized number sequences and all item-number narration/highlighting, including item 8; responsive layout passed. |
+| 22 | `pg018_sec001` | `pg018_sec001.html` | 12 | COMPLETE | Removed duplicate hidden-image narration; standardized all number-list narration and highlighting; responsive layout passed. |
+| 23 | `qz003` | `qz003.html` | — | COMPLETE | Standardized three-digit option narration and word-level highlighting; quiz behaviour and responsive layout passed. |
+| 24 | `pg019_sec001` | `pg019_sec001.html` | 13 | COMPLETE | Standardized number sequences, repaired missing timestamps, and corrected item 8 narration/highlighting; responsive layout passed. |
+| 25 | `pg020_sec001` | `pg020_sec001.html` | 14 | COMPLETE | Removed duplicate chapter/table image narration so the live place-value content is read; responsive layout passed. |
+| 26 | `pg021_sec001` | `pg021_sec001.html` | 15 | COMPLETE | Removed duplicate table-piece image narration so the accessible values are read; responsive layout passed. |
+| 27 | `pg022_sec001` | `pg022_sec001.html` | 16 | COMPLETE | Removed duplicate worked-example and exercise image narration; live quantities remain readable; responsive layout passed. |
+| 28 | `qz004` | `qz004.html` | — | COMPLETE | Narration, highlighting, quiz behaviour, and responsive layout passed. |
+| 29 | `pg024_sec001` | `pg024_sec001.html` | 18 | COMPLETE | Narration, highlighting, activity behaviour, and responsive layout passed. |
+| 30 | `pg025_sec001` | `pg025_sec001.html` | 19 | COMPLETE | Standardized three-digit abacus descriptions; narration, highlighting, activity behaviour, and responsive layout passed. |
 | 31 | `pg026_sec001` | `pg026_sec001.html` | 20 | NOT CHECKED | |
 | 32 | `pg027_sec001` | `pg027_sec001.html` | 21 | NOT CHECKED | |
 | 33 | `pg028_sec001` | `pg028_sec001.html` | 22 | NOT CHECKED | |

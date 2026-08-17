@@ -10,6 +10,17 @@
     <link href="./content/tailwind_output.css" rel="stylesheet">
     <link href="./assets/libs/fontawesome/css/all.min.css" rel="stylesheet">
     <link href="./assets/fonts.css" rel="stylesheet">
+    <style>
+      .pg022-place-grid {
+        grid-template-columns: 62px repeat(3, minmax(0, 1fr));
+      }
+
+      @media (max-width: 639px) {
+        .pg022-place-grid {
+          grid-template-columns: 38px repeat(3, minmax(0, 1fr));
+        }
+      }
+    </style>
 </head>
 
 <body class="min-h-screen flex items-center justify-center">
@@ -19,15 +30,8 @@
     <div class="mx-auto w-full max-w-[1030px] px-10 py-12 max-lg:px-6 max-lg:py-10 max-sm:px-3 max-sm:py-7">
       <!-- Example 5 -->
       <figure class="mx-auto mb-12 w-full max-w-[900px]">
-        <img data-id="pg022_im009" src="images/pg022_im009.png" alt="Worked example with pencils grouped into place value: 3 hundreds, 2 tens and 4 ones, making three hundred and twenty-four." class="mx-auto block h-auto w-full max-w-full object-contain" style="max-width: 100%; height: auto;">
+        <img data-id="pg022_im009" src="images/pg022_im009.png" alt="Example 5. Count the following pencils. Write their total in words. Hundreds: three hundreds. Tens: two tens. Ones: four ones. Three hundred and twenty-four." class="mx-auto block h-auto w-full max-w-full object-contain" style="max-width: 100%; height: auto;">
 
-        <figcaption class="sr-only">
-          <span data-id="pg022_n0002">Example 5.</span>
-          <span data-id="pg022_n0006">Count the following pencils.</span>
-          <span data-id="pg022_n0007">Write their total in words.</span>
-          Three hundreds, two tens and four ones make three hundred and
-          twenty-four.
-        </figcaption>
       </figure>
 
       <!-- Exercise heading -->
@@ -37,8 +41,8 @@
         </h1>
 
         <p class="text-[24px] leading-[1.45] max-lg:text-[21px] max-sm:text-[16px]">
-          <span>Count the following pencils. </span>
-          <span>Write their total in words.</span>
+          <span data-id="pg022_n0006">Count the following pencils. </span>
+          <span data-id="pg022_n0007">Write their total in words.</span>
         </p>
       </div>
 
@@ -47,7 +51,7 @@
         <!-- QUESTION 1: 3 hundreds, 4 tens and 5 ones                -->
         <!-- ======================================================== -->
         <article aria-labelledby="pg022-question-1" class="overflow-hidden rounded-[30px] border-[2px] border-[#5067d8] bg-white">
-          <div id="pg022-question-1" class="grid grid-cols-[62px_1.4fr_1fr_0.8fr] border-b-2 border-[#5067d8] text-center max-sm:grid-cols-[38px_1.25fr_1fr_0.8fr]">
+          <div id="pg022-question-1" class="pg022-place-grid grid border-b-2 border-[#5067d8] text-center">
             <div data-id="pg022_n0008" class="border-r-2 border-[#5067d8] px-2 py-4 text-[23px] text-sky-600 max-sm:px-1 max-sm:py-3 max-sm:text-[15px]">
               1.
             </div>
@@ -66,13 +70,13 @@
           </div>
 
           <!-- Pictures -->
-          <div class="grid min-h-[350px] grid-cols-[62px_1.4fr_1fr_0.8fr] border-b-2 border-[#5067d8] max-lg:min-h-[300px] max-sm:min-h-[190px] max-sm:grid-cols-[38px_1.25fr_1fr_0.8fr]">
+          <div class="pg022-place-grid grid min-h-[350px] border-b-2 border-[#5067d8] max-lg:min-h-[300px] max-sm:min-h-[190px]">
             <div class="border-r-2 border-[#5067d8]" aria-hidden="true"></div>
 
             <!-- Three separate hundreds -->
             <div class="border-r-2 border-[#5067d8] px-4 py-6 max-sm:px-1 max-sm:py-3">
               <div class="grid h-full grid-cols-2 place-items-center gap-4 max-sm:gap-1">
-                <img data-id="pg023_im002_seg001_v1" src="images/pg021_im002.png" alt="Part of a large bundle of pencils representing hundreds." aria-hidden="true" class="h-36 w-auto max-w-full object-contain max-lg:h-32 max-sm:h-20" style="max-width: 100%; height: auto;">
+                <img data-id="pg023_im002_seg001_v1" src="images/pg021_im002.png" alt="Three separate groups of one hundred pencils in the hundreds column." class="h-36 w-auto max-w-full object-contain max-lg:h-32 max-sm:h-20" style="max-width: 100%; height: auto;">
 
                 <img src="images/pg021_im002.png" alt="" aria-hidden="true" class="h-36 w-auto max-w-full object-contain max-lg:h-32 max-sm:h-20" style="max-width: 100%; height: auto;">
 
@@ -87,7 +91,7 @@
             <!-- Four separate tens -->
             <div class="border-r-2 border-[#5067d8] px-4 py-6 max-sm:px-1 max-sm:py-3">
               <div class="grid h-full grid-cols-2 place-items-center gap-4 max-sm:gap-1">
-                <img data-id="pg023_im003_seg001_v1" src="images/pg021_im003.png" alt="Bundle of pencils representing a ten, with part of a single pencil beside it." aria-hidden="true" class="h-28 w-auto max-w-full object-contain max-lg:h-24 max-sm:h-16" style="max-width: 100%; height: auto;">
+                <img data-id="pg023_im003_seg001_v1" src="images/pg021_im003.png" alt="Four separate groups of ten pencils in the tens column." class="h-28 w-auto max-w-full object-contain max-lg:h-24 max-sm:h-16" style="max-width: 100%; height: auto;">
 
                 <img src="images/pg021_im003.png" alt="" aria-hidden="true" class="h-28 w-auto max-w-full object-contain max-lg:h-24 max-sm:h-16" style="max-width: 100%; height: auto;">
 
@@ -106,7 +110,7 @@
               <div class="flex h-full items-center justify-center gap-3 max-lg:gap-2 max-sm:gap-0.5">
                 <!-- Each wrapper hides the words embedded in the source crop -->
                 <div class="relative h-[170px] w-[34px] overflow-hidden max-lg:h-[145px] max-lg:w-[29px] max-sm:h-[82px] max-sm:w-[15px]">
-                  <img data-id="pg022_im010" src="images/pg021_im008_seg003_v2.png" alt="Exercise counting pencils by place value: 4 hundreds, 4 tens and 5 ones." aria-hidden="true" class="absolute left-1/2 top-1/2 h-[150%] w-auto max-w-none -translate-x-1/2 -translate-y-1/2 object-contain" style="max-width: 100%; height: auto;">
+                  <img data-id="pg022_im010" src="images/pg021_im008_seg003_v2.png" alt="Five individual pencils in the ones column." class="absolute left-1/2 top-1/2 h-[150%] w-auto max-w-none -translate-x-1/2 -translate-y-1/2 object-contain" style="max-width: 100%; height: auto;">
                 </div>
 
                 <div class="relative h-[170px] w-[34px] overflow-hidden max-lg:h-[145px] max-lg:w-[29px] max-sm:h-[82px] max-sm:w-[15px]">
@@ -131,27 +135,18 @@
           </div>
 
           <!-- Place-value answers -->
-          <div class="grid grid-cols-[62px_1.4fr_1fr_0.8fr] border-b-2 border-[#5067d8] max-sm:grid-cols-[38px_1.25fr_1fr_0.8fr]">
+          <div class="pg022-place-grid grid border-b-2 border-[#5067d8]">
             <div class="border-r-2 border-[#5067d8]" aria-hidden="true"></div>
 
             <label class="border-r-2 border-[#5067d8] px-5 py-4 max-sm:px-2 max-sm:py-3">
-              <span data-id="pg022_n0012" class="sr-only">
-                Number of hundreds
-              </span>
               <input type="text" inputmode="numeric" data-aria-id="aria-1-0-0" data-activity-item="item-1" aria-label="Question 1, number of hundreds" tabindex="0" class="h-10 w-full border-0 border-b-[3px] border-neutral-700 bg-transparent text-center text-xl outline-none focus:border-blue-600 focus:ring-0 max-sm:h-8 max-sm:text-sm">
             </label>
 
             <label class="border-r-2 border-[#5067d8] px-5 py-4 max-sm:px-2 max-sm:py-3">
-              <span data-id="pg022_n0013" class="sr-only">
-                Number of tens
-              </span>
               <input type="text" inputmode="numeric" data-aria-id="aria-1-0-1" data-activity-item="item-2" aria-label="Question 1, number of tens" tabindex="0" class="h-10 w-full border-0 border-b-[3px] border-neutral-700 bg-transparent text-center text-xl outline-none focus:border-blue-600 focus:ring-0 max-sm:h-8 max-sm:text-sm">
             </label>
 
             <label class="px-5 py-4 max-sm:px-2 max-sm:py-3">
-              <span data-id="pg022_n0014" class="sr-only">
-                Number of ones
-              </span>
               <input type="text" inputmode="numeric" data-aria-id="aria-1-0-2" data-activity-item="item-3" aria-label="Question 1, number of ones" tabindex="0" class="h-10 w-full border-0 border-b-[3px] border-neutral-700 bg-transparent text-center text-xl outline-none focus:border-blue-600 focus:ring-0 max-sm:h-8 max-sm:text-sm">
             </label>
           </div>
@@ -161,9 +156,6 @@
             <div class="border-r-2 border-[#5067d8]" aria-hidden="true"></div>
 
             <label class="px-10 py-5 max-sm:px-4 max-sm:py-3">
-              <span data-id="pg022_n0015" class="sr-only">
-                Write the total in words
-              </span>
               <input type="text" data-aria-id="aria-1-0-3" data-activity-item="item-4" aria-label="Question 1, write the total in words" tabindex="0" class="h-10 w-full border-0 border-b-[3px] border-neutral-700 bg-transparent text-center text-xl outline-none focus:border-blue-600 focus:ring-0 max-sm:h-8 max-sm:text-sm">
             </label>
           </div>
@@ -173,7 +165,7 @@
         <!-- QUESTION 2: 2 hundreds, 3 tens and 3 ones                -->
         <!-- ======================================================== -->
         <article aria-labelledby="pg023-question-2" class="overflow-hidden rounded-[30px] border-[2px] border-[#5067d8] bg-white">
-          <div id="pg023-question-2" class="grid grid-cols-[62px_1.4fr_1fr_0.8fr] border-b-2 border-[#5067d8] text-center max-sm:grid-cols-[38px_1.25fr_1fr_0.8fr]">
+          <div id="pg023-question-2" class="pg022-place-grid grid border-b-2 border-[#5067d8] text-center">
             <div data-id="pg023_n0002" class="border-r-2 border-[#5067d8] px-2 py-4 text-[23px] text-sky-600 max-sm:px-1 max-sm:py-3 max-sm:text-[15px]">
               2.
             </div>
@@ -191,13 +183,13 @@
             </div>
           </div>
 
-          <div class="grid min-h-[350px] grid-cols-[62px_1.4fr_1fr_0.8fr] border-b-2 border-[#5067d8] max-lg:min-h-[300px] max-sm:min-h-[190px] max-sm:grid-cols-[38px_1.25fr_1fr_0.8fr]">
+          <div class="pg022-place-grid grid min-h-[350px] border-b-2 border-[#5067d8] max-lg:min-h-[300px] max-sm:min-h-[190px]">
             <div class="border-r-2 border-[#5067d8]" aria-hidden="true"></div>
 
             <!-- Two hundreds -->
             <div class="border-r-2 border-[#5067d8] px-4 py-6 max-sm:px-1 max-sm:py-3">
               <div class="flex h-full items-center justify-center gap-6 max-sm:gap-1">
-                <img src="images/pg021_im002.png" alt="" aria-hidden="true" class="h-40 w-auto max-w-full object-contain max-lg:h-32 max-sm:h-20" style="max-width: 100%; height: auto;">
+                <img data-id="pg022_im011" src="images/pg021_im002.png" alt="Two separate groups of one hundred pencils in the hundreds column." class="h-40 w-auto max-w-full object-contain max-lg:h-32 max-sm:h-20" style="max-width: 100%; height: auto;">
                 <img src="images/pg021_im002.png" alt="" aria-hidden="true" class="h-40 w-auto max-w-full object-contain max-lg:h-32 max-sm:h-20" style="max-width: 100%; height: auto;">
               </div>
               <span class="sr-only">
@@ -208,7 +200,7 @@
             <!-- Three tens -->
             <div class="border-r-2 border-[#5067d8] px-4 py-6 max-sm:px-1 max-sm:py-3">
               <div class="grid h-full grid-cols-2 place-items-center gap-4 max-sm:gap-1">
-                <img src="images/pg021_im003.png" alt="" aria-hidden="true" class="h-28 w-auto max-w-full object-contain max-lg:h-24 max-sm:h-16" style="max-width: 100%; height: auto;">
+                <img data-id="pg022_im012" src="images/pg021_im003.png" alt="Three separate groups of ten pencils in the tens column." class="h-28 w-auto max-w-full object-contain max-lg:h-24 max-sm:h-16" style="max-width: 100%; height: auto;">
                 <img src="images/pg021_im003.png" alt="" aria-hidden="true" class="h-28 w-auto max-w-full object-contain max-lg:h-24 max-sm:h-16" style="max-width: 100%; height: auto;">
                 <img src="images/pg021_im003.png" alt="" aria-hidden="true" class="col-span-2 h-28 w-auto max-w-full object-contain max-lg:h-24 max-sm:h-16" style="max-width: 100%; height: auto;">
               </div>
@@ -221,7 +213,7 @@
             <div class="px-3 py-6 max-sm:px-1 max-sm:py-3">
               <div class="flex h-full items-center justify-center gap-5 max-sm:gap-1">
                 <div class="relative h-[170px] w-[34px] overflow-hidden max-lg:h-[145px] max-lg:w-[29px] max-sm:h-[82px] max-sm:w-[15px]">
-                  <img src="images/pg021_im008_seg003_v2.png" alt="" aria-hidden="true" class="absolute left-1/2 top-1/2 h-[150%] w-auto max-w-none -translate-x-1/2 -translate-y-1/2 object-contain" style="max-width: 100%; height: auto;">
+                  <img data-id="pg022_im013" src="images/pg021_im008_seg003_v2.png" alt="Three individual pencils in the ones column." class="absolute left-1/2 top-1/2 h-[150%] w-auto max-w-none -translate-x-1/2 -translate-y-1/2 object-contain" style="max-width: 100%; height: auto;">
                 </div>
 
                 <div class="relative h-[170px] w-[34px] overflow-hidden max-lg:h-[145px] max-lg:w-[29px] max-sm:h-[82px] max-sm:w-[15px]">
@@ -236,27 +228,18 @@
             </div>
           </div>
 
-          <div class="grid grid-cols-[62px_1.4fr_1fr_0.8fr] border-b-2 border-[#5067d8] max-sm:grid-cols-[38px_1.25fr_1fr_0.8fr]">
+          <div class="pg022-place-grid grid border-b-2 border-[#5067d8]">
             <div class="border-r-2 border-[#5067d8]" aria-hidden="true"></div>
 
             <label class="border-r-2 border-[#5067d8] px-5 py-4 max-sm:px-2 max-sm:py-3">
-              <span data-id="pg023_n0021" class="sr-only">
-                Number of hundreds
-              </span>
               <input type="text" inputmode="numeric" data-aria-id="aria-1-0-4" data-activity-item="item-5" aria-label="Question 2, number of hundreds" tabindex="0" class="h-10 w-full border-0 border-b-[3px] border-neutral-700 bg-transparent text-center text-xl outline-none focus:border-blue-600 focus:ring-0 max-sm:h-8 max-sm:text-sm">
             </label>
 
             <label class="border-r-2 border-[#5067d8] px-5 py-4 max-sm:px-2 max-sm:py-3">
-              <span data-id="pg023_n0023" class="sr-only">
-                Number of tens
-              </span>
               <input type="text" inputmode="numeric" data-aria-id="aria-1-0-5" data-activity-item="item-6" aria-label="Question 2, number of tens" tabindex="0" class="h-10 w-full border-0 border-b-[3px] border-neutral-700 bg-transparent text-center text-xl outline-none focus:border-blue-600 focus:ring-0 max-sm:h-8 max-sm:text-sm">
             </label>
 
             <label class="px-5 py-4 max-sm:px-2 max-sm:py-3">
-              <span data-id="pg023_n0025" class="sr-only">
-                Number of ones
-              </span>
               <input type="text" inputmode="numeric" data-aria-id="aria-1-0-6" data-activity-item="item-7" aria-label="Question 2, number of ones" tabindex="0" class="h-10 w-full border-0 border-b-[3px] border-neutral-700 bg-transparent text-center text-xl outline-none focus:border-blue-600 focus:ring-0 max-sm:h-8 max-sm:text-sm">
             </label>
           </div>
@@ -265,9 +248,6 @@
             <div class="border-r-2 border-[#5067d8]" aria-hidden="true"></div>
 
             <label class="px-10 py-5 max-sm:px-4 max-sm:py-3">
-              <span data-id="pg023_n0026" class="sr-only">
-                Write the total in words
-              </span>
               <input type="text" data-aria-id="aria-1-0-7" data-activity-item="item-8" aria-label="Question 2, write the total in words" tabindex="0" class="h-10 w-full border-0 border-b-[3px] border-neutral-700 bg-transparent text-center text-xl outline-none focus:border-blue-600 focus:ring-0 max-sm:h-8 max-sm:text-sm">
             </label>
           </div>
@@ -277,7 +257,7 @@
         <!-- QUESTION 3: 4 hundreds, 3 tens and 3 ones                -->
         <!-- ======================================================== -->
         <article aria-labelledby="pg023-question-3" class="overflow-hidden rounded-[30px] border-[2px] border-[#5067d8] bg-white">
-          <div id="pg023-question-3" class="grid grid-cols-[62px_1.4fr_1fr_0.8fr] border-b-2 border-[#5067d8] text-center max-sm:grid-cols-[38px_1.25fr_1fr_0.8fr]">
+          <div id="pg023-question-3" class="pg022-place-grid grid border-b-2 border-[#5067d8] text-center">
             <div data-id="pg023_n0028" class="border-r-2 border-[#5067d8] px-2 py-4 text-[23px] text-sky-600 max-sm:px-1 max-sm:py-3 max-sm:text-[15px]">
               3.
             </div>
@@ -295,13 +275,13 @@
             </div>
           </div>
 
-          <div class="grid min-h-[380px] grid-cols-[62px_1.4fr_1fr_0.8fr] border-b-2 border-[#5067d8] max-lg:min-h-[320px] max-sm:min-h-[210px] max-sm:grid-cols-[38px_1.25fr_1fr_0.8fr]">
+          <div class="pg022-place-grid grid min-h-[380px] border-b-2 border-[#5067d8] max-lg:min-h-[320px] max-sm:min-h-[210px]">
             <div class="border-r-2 border-[#5067d8]" aria-hidden="true"></div>
 
             <!-- Four hundreds -->
             <div class="border-r-2 border-[#5067d8] px-4 py-6 max-sm:px-1 max-sm:py-3">
               <div class="grid h-full grid-cols-2 place-items-center gap-4 max-sm:gap-1">
-                <img data-id="pg023_im004_seg001_v1" src="images/pg021_im002.png" alt="Part of the exercise showing bundles of pencils representing hundreds." aria-hidden="true" class="h-34 w-auto max-w-full object-contain max-lg:h-28 max-sm:h-20" style="max-width: 100%; height: auto;">
+                <img data-id="pg023_im004_seg001_v1" src="images/pg021_im002.png" alt="Four separate groups of one hundred pencils in the hundreds column." class="h-34 w-auto max-w-full object-contain max-lg:h-28 max-sm:h-20" style="max-width: 100%; height: auto;">
 
                 <img src="images/pg021_im002.png" alt="" aria-hidden="true" class="h-34 w-auto max-w-full object-contain max-lg:h-28 max-sm:h-20" style="max-width: 100%; height: auto;">
 
@@ -317,7 +297,7 @@
             <!-- Three tens -->
             <div class="border-r-2 border-[#5067d8] px-4 py-6 max-sm:px-1 max-sm:py-3">
               <div class="grid h-full grid-cols-2 place-items-center gap-4 max-sm:gap-1">
-                <img data-id="pg023_im005_seg001_v1" src="images/pg021_im003.png" alt="Bundle of pencils representing a ten, with part of a single pencil beside it." aria-hidden="true" class="h-28 w-auto max-w-full object-contain max-lg:h-24 max-sm:h-16" style="max-width: 100%; height: auto;">
+                <img data-id="pg023_im005_seg001_v1" src="images/pg021_im003.png" alt="Three separate groups of ten pencils in the tens column." class="h-28 w-auto max-w-full object-contain max-lg:h-24 max-sm:h-16" style="max-width: 100%; height: auto;">
 
                 <img src="images/pg021_im003.png" alt="" aria-hidden="true" class="h-28 w-auto max-w-full object-contain max-lg:h-24 max-sm:h-16" style="max-width: 100%; height: auto;">
 
@@ -332,7 +312,7 @@
             <div class="px-3 py-6 max-sm:px-1 max-sm:py-3">
               <div class="flex h-full items-center justify-center gap-5 max-sm:gap-1">
                 <div class="relative h-[170px] w-[34px] overflow-hidden max-lg:h-[145px] max-lg:w-[29px] max-sm:h-[82px] max-sm:w-[15px]">
-                  <img src="images/pg021_im008_seg003_v2.png" alt="" aria-hidden="true" class="absolute left-1/2 top-1/2 h-[150%] w-auto max-w-none -translate-x-1/2 -translate-y-1/2 object-contain" style="max-width: 100%; height: auto;">
+                  <img data-id="pg022_im014" src="images/pg021_im008_seg003_v2.png" alt="Three individual pencils in the ones column." class="absolute left-1/2 top-1/2 h-[150%] w-auto max-w-none -translate-x-1/2 -translate-y-1/2 object-contain" style="max-width: 100%; height: auto;">
                 </div>
 
                 <div class="relative h-[170px] w-[34px] overflow-hidden max-lg:h-[145px] max-lg:w-[29px] max-sm:h-[82px] max-sm:w-[15px]">
@@ -347,27 +327,18 @@
             </div>
           </div>
 
-          <div class="grid grid-cols-[62px_1.4fr_1fr_0.8fr] border-b-2 border-[#5067d8] max-sm:grid-cols-[38px_1.25fr_1fr_0.8fr]">
+          <div class="pg022-place-grid grid border-b-2 border-[#5067d8]">
             <div class="border-r-2 border-[#5067d8]" aria-hidden="true"></div>
 
             <label class="border-r-2 border-[#5067d8] px-5 py-4 max-sm:px-2 max-sm:py-3">
-              <span data-id="pg023_n0046" class="sr-only">
-                Number of hundreds
-              </span>
               <input type="text" inputmode="numeric" data-aria-id="aria-1-0-8" data-activity-item="item-9" aria-label="Question 3, number of hundreds" tabindex="0" class="h-10 w-full border-0 border-b-[3px] border-neutral-700 bg-transparent text-center text-xl outline-none focus:border-blue-600 focus:ring-0 max-sm:h-8 max-sm:text-sm">
             </label>
 
             <label class="border-r-2 border-[#5067d8] px-5 py-4 max-sm:px-2 max-sm:py-3">
-              <span data-id="pg023_n0048" class="sr-only">
-                Number of tens
-              </span>
               <input type="text" inputmode="numeric" data-aria-id="aria-1-0-9" data-activity-item="item-10" aria-label="Question 3, number of tens" tabindex="0" class="h-10 w-full border-0 border-b-[3px] border-neutral-700 bg-transparent text-center text-xl outline-none focus:border-blue-600 focus:ring-0 max-sm:h-8 max-sm:text-sm">
             </label>
 
             <label class="px-5 py-4 max-sm:px-2 max-sm:py-3">
-              <span data-id="pg023_n0050" class="sr-only">
-                Number of ones
-              </span>
               <input type="text" inputmode="numeric" data-aria-id="aria-1-0-10" data-activity-item="item-11" aria-label="Question 3, number of ones" tabindex="0" class="h-10 w-full border-0 border-b-[3px] border-neutral-700 bg-transparent text-center text-xl outline-none focus:border-blue-600 focus:ring-0 max-sm:h-8 max-sm:text-sm">
             </label>
           </div>
@@ -376,19 +347,12 @@
             <div class="border-r-2 border-[#5067d8]" aria-hidden="true"></div>
 
             <label class="px-10 py-5 max-sm:px-4 max-sm:py-3">
-              <span data-id="pg023_n0051" class="sr-only">
-                Write the total in words
-              </span>
               <input type="text" data-aria-id="aria-1-0-11" data-activity-item="item-12" aria-label="Question 3, write the total in words" tabindex="0" class="h-10 w-full border-0 border-b-[3px] border-neutral-700 bg-transparent text-center text-xl outline-none focus:border-blue-600 focus:ring-0 max-sm:h-8 max-sm:text-sm">
             </label>
           </div>
         </article>
       </div>
 
-      <!-- Retained for read-aloud only; not displayed diagonally -->
-      <span data-id="pg023_n0017" class="sr-only">
-        For online reading only
-      </span>
     </div>
   </section>
 </div>

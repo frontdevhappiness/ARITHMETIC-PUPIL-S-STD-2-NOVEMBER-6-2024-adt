@@ -10,6 +10,23 @@
     <link href="./content/tailwind_output.css" rel="stylesheet">
     <link href="./assets/libs/fontawesome/css/all.min.css" rel="stylesheet">
     <link href="./assets/fonts.css" rel="stylesheet">
+    <style>
+      .pg024-four-cups { width: 124px; }
+      .pg024-one-cup { width: 62px; height: 64px; }
+      .pg024-one-cup img { width: 124px; height: 128px; max-width: none; }
+
+      @media (max-width: 1023px) {
+        .pg024-four-cups { width: 116px; }
+        .pg024-one-cup { width: 58px; height: 60px; }
+        .pg024-one-cup img { width: 116px; height: 120px; }
+      }
+
+      @media (max-width: 639px) {
+        .pg024-four-cups { width: 64px; }
+        .pg024-one-cup { width: 32px; height: 33px; }
+        .pg024-one-cup img { width: 64px; height: 66px; }
+      }
+    </style>
 </head>
 
 <body class="min-h-screen flex items-center justify-center">
@@ -80,32 +97,13 @@
             </figure>
 
             <!-- 5 red cups -->
-            <!-- Uses individual crops from the confirmed red-cup image -->
+            <!-- Four complete cups from the source plus one complete top-left cup -->
             <figure class="m-0 flex h-[280px] items-center justify-center border-b border-[#405ad0] px-3 py-4 max-lg:h-[245px] max-sm:h-[145px] max-sm:px-1 max-sm:py-2">
-              <div class="grid w-[230px] grid-cols-6 place-items-center gap-x-1 gap-y-2 max-lg:w-[205px] max-sm:w-full max-sm:gap-0" aria-hidden="true">
-                <!-- Red cup 1 -->
-                <div class="relative col-span-2 h-[94px] w-[86px] overflow-hidden max-lg:h-[84px] max-lg:w-[76px] max-sm:h-[48px] max-sm:w-[42px]">
-                  <img src="images/pg024_upload7.png" alt="" class="absolute left-0 top-0 h-[188px] w-[172px] max-w-none max-lg:h-[168px] max-lg:w-[152px] max-sm:h-[96px] max-sm:w-[84px]" style="max-width: 100%; height: auto;">
-                </div>
+              <div class="flex items-start justify-center gap-2 max-sm:gap-1" aria-hidden="true">
+                <img src="images/pg024_upload7.png" alt="" aria-hidden="true" class="pg024-four-cups h-auto object-contain" style="max-width: 100%; height: auto;">
 
-                <!-- Red cup 2 -->
-                <div class="relative col-span-2 h-[94px] w-[86px] overflow-hidden max-lg:h-[84px] max-lg:w-[76px] max-sm:h-[48px] max-sm:w-[42px]">
-                  <img src="images/pg024_upload7.png" alt="" class="absolute left-0 top-0 h-[188px] w-[172px] max-w-none max-lg:h-[168px] max-lg:w-[152px] max-sm:h-[96px] max-sm:w-[84px]" style="max-width: 100%; height: auto;">
-                </div>
-
-                <!-- Red cup 3 -->
-                <div class="relative col-span-2 h-[94px] w-[86px] overflow-hidden max-lg:h-[84px] max-lg:w-[76px] max-sm:h-[48px] max-sm:w-[42px]">
-                  <img src="images/pg024_upload7.png" alt="" class="absolute left-0 top-0 h-[188px] w-[172px] max-w-none max-lg:h-[168px] max-lg:w-[152px] max-sm:h-[96px] max-sm:w-[84px]" style="max-width: 100%; height: auto;">
-                </div>
-
-                <!-- Red cup 4 -->
-                <div class="relative col-span-2 col-start-2 h-[94px] w-[86px] overflow-hidden max-lg:h-[84px] max-lg:w-[76px] max-sm:h-[48px] max-sm:w-[42px]">
-                  <img src="images/pg024_upload7.png" alt="" class="absolute left-0 top-0 h-[188px] w-[172px] max-w-none max-lg:h-[168px] max-lg:w-[152px] max-sm:h-[96px] max-sm:w-[84px]" style="max-width: 100%; height: auto;">
-                </div>
-
-                <!-- Red cup 5 -->
-                <div class="relative col-span-2 col-start-4 h-[94px] w-[86px] overflow-hidden max-lg:h-[84px] max-lg:w-[76px] max-sm:h-[48px] max-sm:w-[42px]">
-                  <img src="images/pg024_upload7.png" alt="" class="absolute left-0 top-0 h-[188px] w-[172px] max-w-none max-lg:h-[168px] max-lg:w-[152px] max-sm:h-[96px] max-sm:w-[84px]" style="max-width: 100%; height: auto;">
+                <div class="pg024-one-cup relative shrink-0 overflow-hidden">
+                  <img src="images/pg024_upload7.png" alt="" aria-hidden="true" class="absolute left-0 top-0">
                 </div>
               </div>
 
@@ -118,26 +116,14 @@
             <div aria-hidden="true" class="border-b border-r border-[#405ad0]"></div>
 
             <div class="flex min-h-[68px] items-center justify-center border-b border-r border-[#405ad0] px-4 py-3 max-sm:min-h-[48px] max-sm:px-1">
-              <span data-id="pg024_n0026" class="sr-only">
-                Enter the hundreds digit for question 1.
-              </span>
-
               <input type="text" inputmode="numeric" maxlength="1" data-activity-item="item-1" data-aria-id="aria-1-0-0" aria-label="Question 1, hundreds digit" tabindex="0" class="w-[82%] border-0 border-b-[3px] border-neutral-700 bg-transparent px-2 py-1 text-center text-[22px] outline-none focus:border-blue-600 focus:ring-0 max-sm:w-[90%] max-sm:text-[15px]">
             </div>
 
             <div class="flex min-h-[68px] items-center justify-center border-b border-r border-[#405ad0] px-4 py-3 max-sm:min-h-[48px] max-sm:px-1">
-              <span data-id="pg024_n0028" class="sr-only">
-                Enter the tens digit for question 1.
-              </span>
-
               <input type="text" inputmode="numeric" maxlength="1" data-activity-item="item-2" data-aria-id="aria-1-0-1" aria-label="Question 1, tens digit" tabindex="0" class="w-[82%] border-0 border-b-[3px] border-neutral-700 bg-transparent px-2 py-1 text-center text-[22px] outline-none focus:border-blue-600 focus:ring-0 max-sm:w-[90%] max-sm:text-[15px]">
             </div>
 
             <div class="flex min-h-[68px] items-center justify-center border-b border-[#405ad0] px-4 py-3 max-sm:min-h-[48px] max-sm:px-1">
-              <span data-id="pg024_n0030" class="sr-only">
-                Enter the ones digit for question 1.
-              </span>
-
               <input type="text" inputmode="numeric" maxlength="1" data-activity-item="item-3" data-aria-id="aria-1-0-2" aria-label="Question 1, ones digit" tabindex="0" class="w-[82%] border-0 border-b-[3px] border-neutral-700 bg-transparent px-2 py-1 text-center text-[22px] outline-none focus:border-blue-600 focus:ring-0 max-sm:w-[90%] max-sm:text-[15px]">
             </div>
           </div>
@@ -200,26 +186,14 @@
             <div aria-hidden="true" class="border-b border-r border-[#405ad0]"></div>
 
             <div class="flex min-h-[68px] items-center justify-center border-b border-r border-[#405ad0] px-4 py-3 max-sm:min-h-[48px] max-sm:px-1">
-              <span data-id="pg024_n0051" class="sr-only">
-                Enter the hundreds digit for question 2.
-              </span>
-
               <input type="text" inputmode="numeric" maxlength="1" data-activity-item="item-4" data-aria-id="aria-1-0-3" aria-label="Question 2, hundreds digit" tabindex="0" class="w-[82%] border-0 border-b-[3px] border-neutral-700 bg-transparent px-2 py-1 text-center text-[22px] outline-none focus:border-blue-600 focus:ring-0 max-sm:w-[90%] max-sm:text-[15px]">
             </div>
 
             <div class="flex min-h-[68px] items-center justify-center border-b border-r border-[#405ad0] px-4 py-3 max-sm:min-h-[48px] max-sm:px-1">
-              <span data-id="pg024_n0053" class="sr-only">
-                Enter the tens digit for question 2.
-              </span>
-
               <input type="text" inputmode="numeric" maxlength="1" data-activity-item="item-5" data-aria-id="aria-1-0-4" aria-label="Question 2, tens digit" tabindex="0" class="w-[82%] border-0 border-b-[3px] border-neutral-700 bg-transparent px-2 py-1 text-center text-[22px] outline-none focus:border-blue-600 focus:ring-0 max-sm:w-[90%] max-sm:text-[15px]">
             </div>
 
             <div class="flex min-h-[68px] items-center justify-center border-b border-[#405ad0] px-4 py-3 max-sm:min-h-[48px] max-sm:px-1">
-              <span data-id="pg024_n0055" class="sr-only">
-                Enter the ones digit for question 2.
-              </span>
-
               <input type="text" inputmode="numeric" maxlength="1" data-activity-item="item-6" data-aria-id="aria-1-0-5" aria-label="Question 2, ones digit" tabindex="0" class="w-[82%] border-0 border-b-[3px] border-neutral-700 bg-transparent px-2 py-1 text-center text-[22px] outline-none focus:border-blue-600 focus:ring-0 max-sm:w-[90%] max-sm:text-[15px]">
             </div>
           </div>
@@ -276,26 +250,14 @@
             <div aria-hidden="true" class="border-r border-[#405ad0]"></div>
 
             <div class="flex min-h-[68px] items-center justify-center border-r border-[#405ad0] px-4 py-3 max-sm:min-h-[48px] max-sm:px-1">
-              <span data-id="pg024_n0075" class="sr-only">
-                Enter the hundreds digit for question 3.
-              </span>
-
               <input type="text" inputmode="numeric" maxlength="1" data-activity-item="item-7" data-aria-id="aria-1-0-6" aria-label="Question 3, hundreds digit" tabindex="0" class="w-[82%] border-0 border-b-[3px] border-neutral-700 bg-transparent px-2 py-1 text-center text-[22px] outline-none focus:border-blue-600 focus:ring-0 max-sm:w-[90%] max-sm:text-[15px]">
             </div>
 
             <div class="flex min-h-[68px] items-center justify-center border-r border-[#405ad0] px-4 py-3 max-sm:min-h-[48px] max-sm:px-1">
-              <span data-id="pg024_n0077" class="sr-only">
-                Enter the tens digit for question 3.
-              </span>
-
               <input type="text" inputmode="numeric" maxlength="1" data-activity-item="item-8" data-aria-id="aria-1-0-7" aria-label="Question 3, tens digit" tabindex="0" class="w-[82%] border-0 border-b-[3px] border-neutral-700 bg-transparent px-2 py-1 text-center text-[22px] outline-none focus:border-blue-600 focus:ring-0 max-sm:w-[90%] max-sm:text-[15px]">
             </div>
 
             <div class="flex min-h-[68px] items-center justify-center px-4 py-3 max-sm:min-h-[48px] max-sm:px-1">
-              <span data-id="pg024_n0079" class="sr-only">
-                Enter the ones digit for question 3.
-              </span>
-
               <input type="text" inputmode="numeric" maxlength="1" data-activity-item="item-9" data-aria-id="aria-1-0-8" aria-label="Question 3, ones digit" tabindex="0" class="w-[82%] border-0 border-b-[3px] border-neutral-700 bg-transparent px-2 py-1 text-center text-[22px] outline-none focus:border-blue-600 focus:ring-0 max-sm:w-[90%] max-sm:text-[15px]">
             </div>
           </div>

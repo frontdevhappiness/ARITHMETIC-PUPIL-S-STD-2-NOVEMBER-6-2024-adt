@@ -33,7 +33,7 @@ for (const number of numbers) {
     language: "en-GB",
     model: "gpt-4o-mini-tts",
     voice: "alloy",
-    instructions: "Say only the supplied number words once, clearly and naturally for a young learner. Do not add any words or read punctuation.",
+    instructions: "Pause briefly, then say only the supplied number words once, clearly and naturally for a young learner. Do not add any words or read punctuation.",
     format: "mp3",
     bookDir: staging,
     cacheDir: `${root}/.audit/tts-cache`,
