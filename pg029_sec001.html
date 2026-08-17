@@ -10,6 +10,43 @@
     <link href="./content/tailwind_output.css" rel="stylesheet">
     <link href="./assets/libs/fontawesome/css/all.min.css" rel="stylesheet">
     <link href="./assets/fonts.css" rel="stylesheet">
+    <style>
+      .pg029-place-value-grid > article {
+        min-width: 0;
+      }
+
+      .pg029-place-value-grid [role="group"] > span:not([data-id]) {
+        left: auto !important;
+        right: 2%;
+        white-space: nowrap;
+      }
+
+      @media (max-width: 1024px) {
+        .pg029-place-value-grid {
+          grid-template-columns: minmax(0, 1fr) !important;
+        }
+
+        .pg029-place-value-grid > article {
+          border-right-width: 0 !important;
+          border-bottom-width: 1px !important;
+        }
+
+        .pg029-place-value-grid > article:last-child {
+          border-bottom-width: 0 !important;
+        }
+      }
+
+      @media (max-width: 420px) {
+        .pg029-place-value-grid > article {
+          grid-template-columns: 42px minmax(0, 1fr) !important;
+        }
+
+        .pg029-place-value-grid [role="group"] > span:not([data-id]) {
+          right: 4px;
+          font-size: 13px !important;
+        }
+      }
+    </style>
 </head>
 
 <body class="min-h-screen flex items-center justify-center">
@@ -61,7 +98,7 @@
           Write the total value of each digit in the following numbers:
         </p>
 
-        <div class="grid grid-cols-2 overflow-hidden border border-[#405ad0] max-sm:grid-cols-1">
+        <div class="pg029-place-value-grid grid grid-cols-2 overflow-hidden border border-[#405ad0] max-sm:grid-cols-1">
 
           <!-- Question 1: 312 -->
           <article class="grid min-h-[260px] grid-cols-[48px_1fr] border-b border-r border-[#405ad0] max-sm:border-r-0">
