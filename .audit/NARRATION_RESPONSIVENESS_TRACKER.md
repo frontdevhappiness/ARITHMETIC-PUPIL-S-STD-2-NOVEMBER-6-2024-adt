@@ -50,12 +50,12 @@ This tracker follows the 186-entry ADT reading order. A page is complete only af
 | 35 | `qz005` | `qz005.html` | — | COMPLETE | Standardized all three-digit option readings; quiz behaviour, highlighting and responsive layout passed. |
 | 36 | `pg030_sec001` | `pg030_sec001.html` | 24 | COMPLETE | Standardized three-digit readings; item 6 now uses the verified reusable 480 clip without the stray word. |
 | 37 | `pg031_sec001` | `pg031_sec001.html` | 25 | COMPLETE | Corrected bead counts, removed repeated labels/answers, and trimmed the example description so twenty-five is spoken once. |
-| 38 | `pg032_sec001` | `pg032_sec001.html` | 26 | COMPLETE | Removed hidden duplication; exercise equals signs were removed while examples retain them; item 3 uses the verified single “eight” clip. |
-| 39 | `pg033_sec001` | `pg033_sec001.html` | 27 | COMPLETE | Standardized expanded-form expressions and removed equals signs from exercise questions; verified item 8 narration/highlighting. |
+| 38 | `pg032_sec001` | `pg032_sec001.html` | 26 | COMPLETE | Removed hidden duplication; examples read visible equals signs while exercise equals signs remain visible but silent; item 3 uses the verified single “eight” clip. |
+| 39 | `pg033_sec001` | `pg033_sec001.html` | 27 | COMPLETE | Standardized expanded-form expressions; exercise equals signs remain visible but silent; verified item 8 narration/highlighting. |
 | 40 | `pg033_sec002` | `pg033_sec002.html` | 27 | COMPLETE | Narration, visible highlighting, item 8 reading, activity behaviour and responsive layout passed. |
 | 41 | `pg034_sec001` | `pg034_sec001.html` | 28 | NOT CHECKED | |
 | 42 | `qz006` | `qz006.html` | — | NOT CHECKED | |
-| 43 | `pg035_sec001` | `pg035_sec001.html` | 29 | NOT CHECKED | |
+| 43 | `pg035_sec001` | `pg035_sec001.html` | 29 | COMPLETE | Corrected the complete 28-number arrow sequence, removed the duplicate inaccurate hidden caption, standardized 999 and zero readings, and passed responsive checks. |
 | 44 | `pg036_sec001` | `pg036_sec001.html` | 30 | NOT CHECKED | |
 | 45 | `pg037_sec001` | `pg037_sec001.html` | 31 | NOT CHECKED | |
 | 46 | `pg038_sec001` | `pg038_sec001.html` | 32 | NOT CHECKED | |
