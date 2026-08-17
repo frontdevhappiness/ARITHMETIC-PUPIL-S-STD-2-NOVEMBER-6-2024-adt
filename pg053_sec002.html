@@ -345,6 +345,45 @@
     </script>
     <div class="relative z-50" id="interface-container"></div>
     <div class="relative z-50" id="nav-container"></div>
+    <script>
+      (() => {
+        /* Give each rich column sum a separate narration source. This keeps
+         * the arithmetic layout intact and keeps answer inputs out of TTS. */
+        for (const target of document.querySelectorAll('.pg053-question-grid [data-id]')) {
+          if (target.childElementCount === 0) continue
+
+          const id = target.dataset.id
+          const source = document.createElement('span')
+          source.dataset.id = id
+          source.className = 'sr-only'
+          source.textContent = (target.textContent || '').replace(/\s+/g, ' ').trim()
+          target.before(source)
+          target.removeAttribute('data-id')
+
+          const input = target.querySelector(':scope > input')
+          const proxies = input
+            ? Array.from(target.children).filter((child) => child !== input)
+            : [target]
+
+          for (const proxy of proxies) {
+            proxy.dataset.ttsHighlightProxy = id
+            proxy.setAttribute('aria-hidden', 'true')
+          }
+
+          const syncArithmeticHighlight = () => {
+            const isActive = source.classList.contains('bg-yellow-300') || Boolean(source.querySelector('.bg-yellow-300'))
+            for (const proxy of proxies) proxy.classList.toggle('bg-yellow-300', isActive)
+          }
+
+          new MutationObserver(syncArithmeticHighlight).observe(source, {
+            attributes: true,
+            childList: true,
+            subtree: true,
+          })
+          syncArithmeticHighlight()
+        }
+      })()
+    </script>
     <script src="./assets/preserve-rich-content.js"></script>
     <script src="./assets/offline-preloader.js"></script>
     <script src="./assets/scorm.js"></script>
