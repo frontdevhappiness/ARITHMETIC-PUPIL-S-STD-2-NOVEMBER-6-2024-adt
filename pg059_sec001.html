@@ -40,20 +40,20 @@
           Solution
         </h1>
 
-        <span data-id="pg059_n0022" class="hidden">
+        <span data-id="pg059_n0022" class="sr-only">
           Grandfather&#x2019;s mango trees = 389
         </span>
-        <span data-id="pg059_n0023" class="hidden">
+        <span data-id="pg059_n0023" class="sr-only">
           Grandmother&#x2019;s mango trees = 433
         </span>
 
         <!-- Compact aligned solution labels -->
         <div class="mt-2 inline-grid grid-cols-[max-content_max-content] gap-x-3 gap-y-1 text-2xl leading-relaxed max-lg:text-xl max-sm:grid-cols-[minmax(0,1fr)_auto] max-sm:text-base">
-          <span>Grandfather&#x2019;s mango trees</span>
-          <span class="not-italic">= 389</span>
+          <span aria-hidden="true" data-calculation-highlight-proxy="pg059_n0022">Grandfather&#x2019;s mango trees</span>
+          <span aria-hidden="true" data-calculation-highlight-proxy="pg059_n0022" class="not-italic">= 389</span>
 
-          <span>Grandmother&#x2019;s mango trees</span>
-          <span class="not-italic">= 433</span>
+          <span aria-hidden="true" data-calculation-highlight-proxy="pg059_n0023">Grandmother&#x2019;s mango trees</span>
+          <span aria-hidden="true" data-calculation-highlight-proxy="pg059_n0023" class="not-italic">= 433</span>
         </div>
 
         <!-- Centered vertical addition -->
@@ -62,11 +62,11 @@
             Add the numbers vertically.
           </h2>
 
-          <span data-id="pg060_n0005" class="hidden">
+          <span data-id="pg060_n0005" class="sr-only">
             389 plus 433 equals 822
           </span>
 
-          <div class="mx-auto mt-4 w-48 font-mono text-3xl not-italic">
+          <div aria-hidden="true" data-calculation-highlight-proxy="pg060_n0005" class="mx-auto mt-4 w-48 font-mono text-3xl not-italic">
             <div class="grid grid-cols-4 text-center text-xl">
               <span></span><span>1</span><span>1</span><span></span>
             </div>
@@ -99,7 +99,7 @@
               </p>
 
               <p data-id="pg060_n0014" class="mt-2 pl-8">
-                Regroup 12 ones into 1 tens and 2 ones.
+                Regroup 12 ones into 1 ten and 2 ones.
               </p>
 
               <p data-id="pg060_n0015" class="pl-8">
@@ -107,16 +107,16 @@
               </p>
 
               <p data-id="pg060_n0017" class="mt-2 pl-8">
-                Take 1 tens to the tens place.
+                Take 1 ten to the tens place.
               </p>
             </div>
 
             <div class="flex items-center justify-center p-5">
-              <span data-id="pg060_n0019" class="hidden">
-                1, 389 plus 433 equals 2
+              <span data-id="pg060_n0019" class="sr-only">
+                389 plus 433. Carry 1 ten. The ones digit is 2.
               </span>
 
-              <div class="w-40 font-mono text-3xl not-italic">
+              <div aria-hidden="true" data-calculation-highlight-proxy="pg060_n0019" class="w-40 font-mono text-3xl not-italic">
                 <div class="grid grid-cols-4 text-center text-xl">
                   <span></span><span></span><span>1</span><span></span>
                 </div>
@@ -147,7 +147,7 @@
               </p>
 
               <p data-id="pg060_n0026" class="mt-2 pl-8">
-                Regroup 12 tens into 1 hundreds and 2 tens.
+                Regroup 12 tens into 1 hundred and 2 tens.
               </p>
 
               <p data-id="pg060_n0027" class="pl-8">
@@ -155,16 +155,16 @@
               </p>
 
               <p data-id="pg060_n0028" class="mt-2 pl-8">
-                Take 1 hundreds to the hundreds place.
+                Take 1 hundred to the hundreds place.
               </p>
             </div>
 
             <div class="flex items-center justify-center p-5">
-              <span data-id="pg060_n0030" class="hidden">
-                1, 1, 389 plus 433 equals 22
+              <span data-id="pg060_n0030" class="sr-only">
+                389 plus 433. Carry one to the hundreds place and one to the tens place. The result is twenty-two.
               </span>
 
-              <div class="w-40 font-mono text-3xl not-italic">
+              <div aria-hidden="true" data-calculation-highlight-proxy="pg060_n0030" class="w-40 font-mono text-3xl not-italic">
                 <div class="grid grid-cols-4 text-center text-xl">
                   <span></span><span>1</span><span>1</span><span></span>
                 </div>
@@ -200,11 +200,11 @@
             </div>
 
             <div class="flex items-center justify-center p-5">
-              <span data-id="pg060_n0039" class="hidden">
-                1, 1, 389 plus 433 equals 822
+              <span data-id="pg060_n0039" class="sr-only">
+                Carry one to the hundreds place and one to the tens place. 389 plus 433 equals 822.
               </span>
 
-              <div class="w-40 font-mono text-3xl not-italic">
+              <div aria-hidden="true" data-calculation-highlight-proxy="pg060_n0039" class="w-40 font-mono text-3xl not-italic">
                 <div class="grid grid-cols-4 text-center text-xl">
                   <span></span><span>1</span><span>1</span><span></span>
                 </div>
@@ -242,6 +242,22 @@
 
     <div class="relative z-50" id="interface-container"></div>
     <div class="relative z-50" id="nav-container"></div>
+    <script>
+      (() => {
+        /* Mirror accessible narration highlighting to the visible labels and
+         * vertical calculations without exposing duplicate screen-reader text. */
+        for (const source of document.querySelectorAll('.sr-only[data-id]')) {
+          const proxies = document.querySelectorAll(`[data-calculation-highlight-proxy="${source.dataset.id}"]`)
+          if (!proxies.length) continue
+          const syncHighlight = () => {
+            const isActive = source.classList.contains('bg-yellow-300') || Boolean(source.querySelector('.bg-yellow-300'))
+            for (const proxy of proxies) proxy.classList.toggle('bg-yellow-300', isActive)
+          }
+          new MutationObserver(syncHighlight).observe(source, { attributes: true, childList: true, subtree: true })
+          syncHighlight()
+        }
+      })()
+    </script>
     <script src="./assets/preserve-rich-content.js"></script>
     <script src="./assets/offline-preloader.js"></script>
     <script src="./assets/scorm.js"></script>
