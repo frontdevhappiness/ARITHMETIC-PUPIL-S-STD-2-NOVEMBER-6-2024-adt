@@ -79,7 +79,7 @@ This tracker follows the 186-entry ADT reading order. A page is complete only af
 | 64 | `qz010` | `qz010.html` | — | NOT CHECKED | |
 | 65 | `pg055_sec001` | `pg055_sec001.html` | 49 | COMPLETE | Replaced incomplete and digit-by-digit chart readings with validated standard clips for 201–206 and 409; regenerated the exercise heading, instruction, plus sign and five follow-up questions with Alloy mini TTS; added precise number timings; connected the five hidden question sources to visible label highlighting; kept all 39 answer fields silent and accessible; verified responsive horizontal chart scrolling. |
 | 66 | `pg055_sec002` | `pg055_sec002.html` | 49 | COMPLETE | Standard-number Alloy mini-TTS regenerated; questions 1–10 and all supplied sequence numbers now highlight visibly; question 8 reads only “eight”; 30 answer inputs remain silent; desktop/mobile audit passes. |
-| 67 | `pg056_sec001` | `pg056_sec001.html` | 50 | NOT CHECKED | |
+| 67 | `pg056_sec001` | `pg056_sec001.html` | 50 | COMPLETE | Steps 1–9 use validated number clips; Alloy mini-TTS regenerated for all instructions; game-board description reads every printed space individually in path order from HOME to SCHOOL using standard whole-number reading; highlighting/timecodes refreshed; desktop/mobile audit passes. |
 | 68 | `pg057_sec001` | `pg057_sec001.html` | 51 | PREVIOUSLY REPAIRED — RECHECK PENDING | |
 | 69 | `pg058_sec001` | `pg058_sec001.html` | 52 | NOT CHECKED | |
 | 70 | `qz011` | `qz011.html` | — | NOT CHECKED | |
