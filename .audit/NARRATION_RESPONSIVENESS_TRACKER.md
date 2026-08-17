@@ -67,7 +67,7 @@ This tracker follows the 186-entry ADT reading order. A page is complete only af
 | 52 | `pg045_sec001` | `pg045_sec001.html` | 39 | COMPLETE | Removed three duplicate hidden-image narrations; added stable non-grid narration for both tables; ordered Example 2 as the displayed digits and plus sign followed by “Solution”; made place-value labels safe leaf highlights; added complete normal/Easy Read mappings; regenerated mini-TTS Alloy with standard British number reading and spoken equals signs; responsive layout passed. |
 | 53 | `pg046_sec001` | `pg046_sec001.html` | 40 | COMPLETE | Standardized both worked tables with safe leaf narration and spoken example equals signs; removed duplicate hidden-image narration; rebuilt all 15 exercise items with separately highlighted question numbers and operands, including question 8; removed answer-prompt narration and preserved answer privacy; regenerated mini-TTS Alloy with standard British number reading and passed responsive checks. |
 | 54 | `qz008` | `qz008.html` | — | NOT CHECKED | |
-| 55 | `pg047_sec001` | `pg047_sec001.html` | 41 | NOT CHECKED | |
+| 55 | `pg047_sec001` | `pg047_sec001.html` | 41 | COMPLETE | Removed four duplicate hidden-image narrations; added safe leaf-level narration and highlighting for all 15 question numbers and all visible operands; standardised British number pronunciation with spoken plus signs; added Easy Read heading support; kept answer inputs silent; responsive grid retained. |
 | 56 | `pg048_sec001` | `pg048_sec001.html` | 42 | NOT CHECKED | |
 | 57 | `pg049_sec001` | `pg049_sec001.html` | 43 | NOT CHECKED | |
 | 58 | `pg050_sec001` | `pg050_sec001.html` | 44 | NOT CHECKED | |
