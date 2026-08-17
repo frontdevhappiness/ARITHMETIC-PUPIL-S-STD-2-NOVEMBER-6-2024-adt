@@ -30,7 +30,7 @@
         </p>
 
         <div class="overflow-x-auto">
-          <table class="mx-auto min-w-[780px] w-full border-collapse table-fixed text-center text-2xl italic">
+          <table aria-label="Addition chart with row and column headings from 201 to 206" class="mx-auto min-w-[780px] w-full border-collapse table-fixed text-center text-2xl italic">
             <thead>
               <tr>
                 <th class="h-14 w-[14%] border-2 border-indigo-600 p-2 font-normal" scope="col">
@@ -214,8 +214,8 @@
         <!-- Follow-up questions -->
         <div class="mt-5 space-y-3 text-2xl italic leading-relaxed max-lg:text-xl max-sm:text-base">
           <div class="grid grid-cols-[minmax(0,1fr)_14rem] items-end gap-4 max-md:grid-cols-1">
-            <span data-id="pg055_n0078" class="hidden">1. Add the numbers in the chart.</span>
-            <label for="q1">
+            <span data-id="pg055_n0078" class="sr-only">1. Add the numbers in the chart.</span>
+            <label for="q1" data-question-highlight-proxy="pg055_n0078">
               <span class="text-sky-500">1.</span>
               Add the numbers in the chart.
             </label>
@@ -223,8 +223,8 @@
           </div>
 
           <div class="grid grid-cols-[minmax(0,1fr)_14rem] items-end gap-4 max-md:grid-cols-1">
-            <span data-id="pg055_n0080" class="hidden">2. Write the smallest number in the first row.</span>
-            <label for="q2">
+            <span data-id="pg055_n0080" class="sr-only">2. Write the smallest number in the first row.</span>
+            <label for="q2" data-question-highlight-proxy="pg055_n0080">
               <span class="text-sky-500">2.</span>
               Write the smallest number in the first row.
             </label>
@@ -232,8 +232,8 @@
           </div>
 
           <div class="grid grid-cols-[minmax(0,1fr)_14rem] items-end gap-4 max-md:grid-cols-1">
-            <span data-id="pg055_n0082" class="hidden">3. Write the largest number in the fifth row.</span>
-            <label for="q3">
+            <span data-id="pg055_n0082" class="sr-only">3. Write the largest number in the fifth row.</span>
+            <label for="q3" data-question-highlight-proxy="pg055_n0082">
               <span class="text-sky-500">3.</span>
               Write the largest number in the fifth row.
             </label>
@@ -241,8 +241,8 @@
           </div>
 
           <div class="grid grid-cols-[minmax(0,1fr)_14rem] items-end gap-4 max-md:grid-cols-1">
-            <span data-id="pg055_n0084" class="hidden">4. Write the largest number in the chart.</span>
-            <label for="q4">
+            <span data-id="pg055_n0084" class="sr-only">4. Write the largest number in the chart.</span>
+            <label for="q4" data-question-highlight-proxy="pg055_n0084">
               <span class="text-sky-500">4.</span>
               Write the largest number in the chart.
             </label>
@@ -250,8 +250,8 @@
           </div>
 
           <div class="grid grid-cols-[minmax(0,1fr)_14rem] items-end gap-4 max-md:grid-cols-1">
-            <span data-id="pg055_n0086" class="hidden">5. The largest number is the sum of which numbers?</span>
-            <label for="q5">
+            <span data-id="pg055_n0086" class="sr-only">5. The largest number is the sum of which numbers?</span>
+            <label for="q5" data-question-highlight-proxy="pg055_n0086">
               <span class="text-sky-500">5.</span>
               The largest number is the sum of which numbers?
             </label>
@@ -275,6 +275,26 @@
     </script>
     <div class="relative z-50" id="interface-container"></div>
     <div class="relative z-50" id="nav-container"></div>
+    <script>
+      (() => {
+        for (const label of document.querySelectorAll('[data-question-highlight-proxy]')) {
+          const source = document.querySelector(`[data-id="${label.dataset.questionHighlightProxy}"]`)
+          if (!source) continue
+
+          const syncQuestionHighlight = () => {
+            const isActive = source.classList.contains('bg-yellow-300') || Boolean(source.querySelector('.bg-yellow-300'))
+            label.classList.toggle('bg-yellow-300', isActive)
+          }
+
+          new MutationObserver(syncQuestionHighlight).observe(source, {
+            attributes: true,
+            childList: true,
+            subtree: true,
+          })
+          syncQuestionHighlight()
+        }
+      })()
+    </script>
     <script src="./assets/preserve-rich-content.js"></script>
     <script src="./assets/offline-preloader.js"></script>
     <script src="./assets/scorm.js"></script>
