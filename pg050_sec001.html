@@ -32,7 +32,7 @@
         </p>
       </div>
 
-      <img data-id="pg051_im001" src="images/pg051_im001.png" alt="Worked example of vertical addition with regrouping: 166 + 126. Under the headings hundreds, tens and ones, the ones are added first, 6 + 6 = 12, regrouping as 1 ten and 2 ones; then the tens are added, 1 carried ten + 6 + 2 = 9; then the hundreds are added, 1 + 1 = 2. The final answer is 292." class="hidden" style="max-width: 100%; height: auto;">
+      <img src="images/pg051_im001.png" alt="" class="hidden" aria-hidden="true" style="max-width: 100%; height: auto;">
 
       <div class="relative mt-14 rounded-[2.5rem] border-[3px] border-sky-300 px-8 pb-10 pt-14 max-lg:px-5 max-sm:rounded-[1.75rem] max-sm:px-3">
         <div class="absolute left-12 top-0 -translate-y-1/2 rounded-full bg-sky-500 px-9 py-2 max-sm:left-5 max-sm:px-6">
@@ -41,6 +41,10 @@
           </span>
         </div>
 
+        <span data-id="pg051_n0040" class="sr-only">
+          166 + 126
+        </span>
+
         <h2 data-id="pg051_n0003" class="text-center text-3xl font-bold italic max-lg:text-2xl">
           Solution
         </h2>
@@ -48,14 +52,14 @@
         <div class="mt-6 grid grid-cols-[1fr_2fr] items-end gap-12 max-md:grid-cols-1 max-md:gap-8">
           <!-- Original vertical question -->
           <div class="mx-auto w-48 font-mono text-3xl">
-            <div class="grid grid-cols-4 text-center">
+            <div data-tts-highlight-proxy="0" class="grid grid-cols-4 text-center">
               <span></span>
               <span>1</span>
               <span>6</span>
               <span>6</span>
             </div>
 
-            <div class="grid grid-cols-4 text-center">
+            <div data-tts-highlight-proxy="1" class="grid grid-cols-4 text-center">
               <span>+</span>
               <span>1</span>
               <span>2</span>
@@ -126,7 +130,7 @@
               </p>
 
               <p data-id="pg051_n0018" class="mt-3 pl-8">
-                Regroup 12 ones into 1 tens and 2 ones.
+                Regroup 12 ones into 1 ten and 2 ones.
               </p>
 
               <p data-id="pg051_n0019" class="pl-8">
@@ -134,13 +138,13 @@
               </p>
 
               <p data-id="pg051_n0020" class="pl-8">
-                Take 1 tens to the tens place.
+                Take 1 ten to the tens place.
               </p>
             </div>
 
             <div class="flex items-center justify-center p-5">
               <span data-id="pg051_n0022" class="sr-only">
-                1, 166 plus 126 equals 2
+                The ones digit of the answer is 2, with 1 ten carried.
               </span>
 
               <div class="w-40 font-mono text-3xl not-italic">
@@ -194,7 +198,7 @@
 
             <div class="flex items-center justify-center p-5">
               <span data-id="pg051_n0029" class="sr-only">
-                1, 166 plus 126 equals 92
+                The tens and ones digits of the answer are 9 and 2.
               </span>
 
               <div class="w-40 font-mono text-3xl not-italic">
@@ -248,7 +252,7 @@
 
             <div class="flex items-center justify-center p-5">
               <span data-id="pg051_n0036" class="sr-only">
-                1, 166 plus 126 equals 292
+                The completed sum is 166 plus 126 equals 292.
               </span>
 
               <div class="w-40 font-mono text-3xl not-italic">
@@ -308,6 +312,29 @@
     </script>
     <div class="relative z-50" id="interface-container"></div>
     <div class="relative z-50" id="nav-container"></div>
+    <script>
+      (() => {
+        const source = document.querySelector('[data-id="pg051_n0040"]')
+        const proxies = document.querySelectorAll('[data-tts-highlight-proxy]')
+        if (!source || proxies.length === 0) return
+
+        const syncVisibleQuestionHighlight = () => {
+          const activeWord = source.querySelector('[data-word-index].bg-yellow-300')
+          const wholeSentenceActive = source.classList.contains('bg-yellow-300')
+          for (const proxy of proxies) {
+            const isActive = wholeSentenceActive || activeWord?.dataset.wordIndex === proxy.dataset.ttsHighlightProxy
+            proxy.classList.toggle('bg-yellow-300', isActive)
+          }
+        }
+
+        new MutationObserver(syncVisibleQuestionHighlight).observe(source, {
+          attributes: true,
+          childList: true,
+          subtree: true,
+        })
+        syncVisibleQuestionHighlight()
+      })()
+    </script>
     <script src="./assets/preserve-rich-content.js"></script>
     <script src="./assets/offline-preloader.js"></script>
     <script src="./assets/scorm.js"></script>
