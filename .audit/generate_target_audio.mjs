@@ -12,7 +12,23 @@ const staging = `${root}/.audit/tts-output`
 const packaged = `${root}/content/i18n/en-GB/audio`
 const texts = JSON.parse(fs.readFileSync(`${root}/content/i18n/en-GB/texts.json`, "utf8"))
 const readEquals = process.argv.includes("--read-equals")
-const requested = process.argv.slice(2).filter((argument) => argument !== "--read-equals")
+const threeDigitPage = process.argv.find((argument) => argument.startsWith("--three-digit-page="))?.split("=")[1]
+const singleDigitPage = process.argv.find((argument) => argument.startsWith("--single-digit-page="))?.split("=")[1]
+const requested = process.argv.slice(2).filter((argument) => (
+  argument !== "--read-equals"
+  && !argument.startsWith("--three-digit-page=")
+  && !argument.startsWith("--single-digit-page=")
+))
+if (threeDigitPage) {
+  requested.push(...Object.entries(texts)
+    .filter(([id, value]) => new RegExp(`^${threeDigitPage}_n\\d+$`).test(id) && /^\d{3}$/.test(value))
+    .map(([id]) => id))
+}
+if (singleDigitPage) {
+  requested.push(...Object.entries(texts)
+    .filter(([id, value]) => new RegExp(`^${singleDigitPage}_n\\d+$`).test(id) && /^\d$/.test(value))
+    .map(([id]) => id))
+}
 const units = [
   "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine",
   "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen",
@@ -32,6 +48,7 @@ function spokenText(text) {
     .replace(/\s*\[\[blank:[^\]]+\]\]/g, "")
     .replace(/^(\d{1,2})\.\s*/, (_, number) => `${numberWords(Number(number))}. `)
     .replace(/\b\d{3}\b/g, (match) => numberWords(Number(match)))
+    .replace(/\b\d\b/g, (match) => numberWords(Number(match)))
     .replace(/\+/g, " plus ")
     .replace(/=/g, readEquals ? " equals " : " ")
     .replace(/\s+/g, " ")
@@ -40,7 +57,7 @@ function spokenText(text) {
 }
 
 const jobs = []
-for (const baseId of requested) {
+for (const baseId of [...new Set(requested)]) {
   for (const textId of [baseId, `${baseId}_easy_read`]) {
     if (texts[textId]) jobs.push({ textId, text: spokenText(texts[textId]) })
   }

@@ -9,7 +9,23 @@ const audios = JSON.parse(fs.readFileSync(path.join(localeRoot, "audios.json"), 
 const timecodePath = path.join(localeRoot, "timecode/timecode_output.json")
 const output = JSON.parse(fs.readFileSync(timecodePath, "utf8"))
 const includeMathSymbols = process.argv.includes("--read-equals")
-const requested = process.argv.slice(2).filter((argument) => argument !== "--read-equals")
+const threeDigitPage = process.argv.find((argument) => argument.startsWith("--three-digit-page="))?.split("=")[1]
+const singleDigitPage = process.argv.find((argument) => argument.startsWith("--single-digit-page="))?.split("=")[1]
+const requested = process.argv.slice(2).filter((argument) => (
+  argument !== "--read-equals"
+  && !argument.startsWith("--three-digit-page=")
+  && !argument.startsWith("--single-digit-page=")
+))
+if (threeDigitPage) {
+  requested.push(...Object.entries(texts)
+    .filter(([id, value]) => new RegExp(`^${threeDigitPage}_n\\d+$`).test(id) && /^\d{3}$/.test(value))
+    .map(([id]) => id))
+}
+if (singleDigitPage) {
+  requested.push(...Object.entries(texts)
+    .filter(([id, value]) => new RegExp(`^${singleDigitPage}_n\\d+$`).test(id) && /^\d$/.test(value))
+    .map(([id]) => id))
+}
 
 function spokenTokens(value) {
   const cleaned = value.replace(/\[\[blank:[^\]]+\]\]/g, " ").trim()
@@ -20,7 +36,7 @@ function spokenTokens(value) {
   return cleaned.replace(/[–—-]/g, " ").match(tokenPattern) ?? []
 }
 
-for (const baseId of requested) {
+for (const baseId of [...new Set(requested)]) {
   for (const id of [baseId, `${baseId}_easy_read`]) {
     if (!(id in texts) || !(id in audios)) continue
     const audioPath = path.join(localeRoot, "audio", audios[id])
