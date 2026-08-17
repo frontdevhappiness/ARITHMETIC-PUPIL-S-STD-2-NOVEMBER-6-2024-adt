@@ -1,0 +1,58 @@
+[
+  {
+    "href": "pg014_sec001.html",
+    "viewport": "desktop",
+    "hasContent": true,
+    "contentOpacity": "1",
+    "contentOverflow": false,
+    "contentScrollWidth": 836,
+    "contentClientWidth": 836,
+    "overflowElements": [],
+    "brokenImages": [],
+    "sassoonLoaded": true,
+    "titleId": "pg014_sec001",
+    "pageErrors": []
+  },
+  {
+    "href": "pg014_sec002.html",
+    "viewport": "desktop",
+    "hasContent": true,
+    "contentOpacity": "1",
+    "contentOverflow": false,
+    "contentScrollWidth": 836,
+    "contentClientWidth": 836,
+    "overflowElements": [],
+    "brokenImages": [],
+    "sassoonLoaded": true,
+    "titleId": "pg014_sec002",
+    "pageErrors": []
+  },
+  {
+    "href": "pg014_sec001.html",
+    "viewport": "mobile",
+    "hasContent": true,
+    "contentOpacity": "1",
+    "contentOverflow": false,
+    "contentScrollWidth": 390,
+    "contentClientWidth": 390,
+    "overflowElements": [],
+    "brokenImages": [],
+    "sassoonLoaded": true,
+    "titleId": "pg014_sec001",
+    "pageErrors": []
+  },
+  {
+    "href": "pg014_sec002.html",
+    "viewport": "mobile",
+    "hasContent": true,
+    "contentOpacity": "1",
+    "contentOverflow": false,
+    "contentScrollWidth": 390,
+    "contentClientWidth": 390,
+    "overflowElements": [],
+    "brokenImages": [],
+    "sassoonLoaded": true,
+    "titleId": "pg014_sec002",
+    "pageErrors": []
+  }
+]

@@ -23,16 +23,16 @@ This tracker follows the 186-entry ADT reading order. A page is complete only af
 | 8 | `pg008_sec001` | `pg008_sec001.html` | 2 | COMPLETE | Removed hidden composite-image narration; standardized 101–150 with verified mini-TTS Alloy audio and cell highlighting. |
 | 9 | `pg008_sec002` | `pg008_sec002.html` | 2 | COMPLETE | Retained meaningful game-image narration; standardized visible labels 101–110 and the instruction’s spoken 102; verified highlighting. |
 | 10 | `pg009_sec001` | `pg009_sec001.html` | 3 | COMPLETE | Removed hidden table-image narration; standardized 151–200 and highlighting. |
-| 11 | `qz001` | `qz001.html` | — | NOT CHECKED | |
-| 12 | `pg010_sec001` | `pg010_sec001.html` | 4 | NOT CHECKED | |
-| 13 | `pg011_sec001` | `pg011_sec001.html` | 5 | NOT CHECKED | |
-| 14 | `pg012_sec001` | `pg012_sec001.html` | 6 | NOT CHECKED | |
-| 15 | `pg012_sec002` | `pg012_sec002.html` | 6 | NOT CHECKED | |
-| 16 | `qz002` | `qz002.html` | — | NOT CHECKED | |
-| 17 | `pg013_sec001` | `pg013_sec001.html` | 7 | NOT CHECKED | |
-| 18 | `pg014_sec001` | `pg014_sec001.html` | 8 | NOT CHECKED | |
-| 19 | `pg014_sec002` | `pg014_sec002.html` | 8 | NOT CHECKED | |
-| 20 | `pg016_sec001` | `pg016_sec001.html` | 10 | NOT CHECKED | |
+| 11 | `qz001` | `qz001.html` | — | COMPLETE | Standardized quiz numbers and feedback with verified British readings and fresh highlighting timestamps. |
+| 12 | `pg010_sec001` | `pg010_sec001.html` | 4 | COMPLETE | Removed duplicate hidden table-image narration; standardized 201–400 with cell highlighting. |
+| 13 | `pg011_sec001` | `pg011_sec001.html` | 5 | COMPLETE | Standardized 401–665 with verified reusable audio and cell highlighting. |
+| 14 | `pg012_sec001` | `pg012_sec001.html` | 6 | COMPLETE | Removed duplicate hidden table-image narration; standardized 666–830 with cell highlighting. |
+| 15 | `pg012_sec002` | `pg012_sec002.html` | 6 | COMPLETE | Removed duplicate hidden table-image narration; standardized 831–999 with cell highlighting. |
+| 16 | `qz002` | `qz002.html` | — | COMPLETE | Standardized quiz numbers and feedback; restored the missing option timestamp. |
+| 17 | `pg013_sec001` | `pg013_sec001.html` | 7 | COMPLETE | Removed duplicate hidden number-chart narration; standardized the visible number grid and highlighting. |
+| 18 | `pg014_sec001` | `pg014_sec001.html` | 8 | COMPLETE | Standardized the displayed three-digit numbers; repaired item 8 and item 19 narration/highlighting in normal and easy modes. |
+| 19 | `pg014_sec002` | `pg014_sec002.html` | 8 | COMPLETE | Repaired item 8 and item 19 narration/highlighting in normal and easy modes; responsive layout passed. |
+| 20 | `pg016_sec001` | `pg016_sec001.html` | 10 | COMPLETE | Removed duplicate chapter/example image narration; standardized all number sequences with word-level highlighting. |
 | 21 | `pg017_sec001` | `pg017_sec001.html` | 11 | NOT CHECKED | |
 | 22 | `pg018_sec001` | `pg018_sec001.html` | 12 | NOT CHECKED | |
 | 23 | `qz003` | `qz003.html` | — | NOT CHECKED | |

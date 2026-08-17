@@ -50,18 +50,28 @@ let next = 0
 async function worker() {
   while (next < jobs.length) {
     const job = jobs[next++]
-    const result = await generateSpeechFile({
-      ...job,
-      language: "en-GB",
-      model: "gpt-4o-mini-tts",
-      voice: "alloy",
-      instructions: "Speak in a cheerful and positive tone. Read the supplied text exactly without adding or omitting words.",
-      format: "mp3",
-      bookDir: stagingRoot,
-      cacheDir: `${bookRoot}/.audit/tts-cache`,
-      ttsSynthesizer: synthesizer,
-      provider: "openai",
-    })
+    let result
+    for (let attempt = 1; attempt <= 4; attempt += 1) {
+      try {
+        result = await generateSpeechFile({
+          ...job,
+          language: "en-GB",
+          model: "gpt-4o-mini-tts",
+          voice: "alloy",
+          instructions: "Speak in a cheerful and positive tone. Read the supplied text exactly without adding or omitting words.",
+          format: "mp3",
+          bookDir: stagingRoot,
+          cacheDir: `${bookRoot}/.audit/tts-cache`,
+          ttsSynthesizer: synthesizer,
+          provider: "openai",
+        })
+        break
+      } catch (error) {
+        if (attempt === 4) throw error
+        console.warn(JSON.stringify({ retry: job.textId, attempt }))
+        await new Promise((resolve) => setTimeout(resolve, attempt * 1000))
+      }
+    }
     const stagedPath = path.join(stagingRoot, "audio", "en-GB", result.fileName)
     const packagedPath = path.join(packagedAudio, result.fileName)
     fs.mkdirSync(packagedAudio, { recursive: true })
@@ -70,4 +80,4 @@ async function worker() {
   }
 }
 
-await Promise.all(Array.from({ length: Math.min(5, jobs.length) }, () => worker()))
+await Promise.all(Array.from({ length: Math.min(20, jobs.length) }, () => worker()))
