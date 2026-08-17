@@ -43,16 +43,16 @@ This tracker follows the 186-entry ADT reading order. A page is complete only af
 | 28 | `qz004` | `qz004.html` | — | COMPLETE | Narration, highlighting, quiz behaviour, and responsive layout passed. |
 | 29 | `pg024_sec001` | `pg024_sec001.html` | 18 | COMPLETE | Narration, highlighting, activity behaviour, and responsive layout passed. |
 | 30 | `pg025_sec001` | `pg025_sec001.html` | 19 | COMPLETE | Standardized three-digit abacus descriptions; narration, highlighting, activity behaviour, and responsive layout passed. |
-| 31 | `pg026_sec001` | `pg026_sec001.html` | 20 | NOT CHECKED | |
-| 32 | `pg027_sec001` | `pg027_sec001.html` | 21 | NOT CHECKED | |
-| 33 | `pg028_sec001` | `pg028_sec001.html` | 22 | NOT CHECKED | |
-| 34 | `pg029_sec001` | `pg029_sec001.html` | 23 | NOT CHECKED | |
-| 35 | `qz005` | `qz005.html` | — | NOT CHECKED | |
-| 36 | `pg030_sec001` | `pg030_sec001.html` | 24 | NOT CHECKED | |
-| 37 | `pg031_sec001` | `pg031_sec001.html` | 25 | NOT CHECKED | |
-| 38 | `pg032_sec001` | `pg032_sec001.html` | 26 | NOT CHECKED | |
-| 39 | `pg033_sec001` | `pg033_sec001.html` | 27 | NOT CHECKED | |
-| 40 | `pg033_sec002` | `pg033_sec002.html` | 27 | NOT CHECKED | |
+| 31 | `pg026_sec001` | `pg026_sec001.html` | 20 | COMPLETE | Removed duplicate chapter-banner narration; added narration for the 324 diagram and its ones/tens/hundreds labels; image descriptions no longer reveal answers. |
+| 32 | `pg027_sec001` | `pg027_sec001.html` | 21 | COMPLETE | Standardized all composite place-value questions, including item 8; removed spoken blank markers and restored item 9 highlighting. |
+| 33 | `pg028_sec001` | `pg028_sec001.html` | 22 | COMPLETE | Standardized composite narration, corrected item 7, retained visible exercise equals signs while omitting them from speech, verified item 8 highlighting, and consolidated Example 1 as “4 hundreds, 7 tens, 8 ones.” |
+| 34 | `pg029_sec001` | `pg029_sec001.html` | 23 | COMPLETE | Removed hidden duplication; each diagram now reads its digits in hundreds–tens–ones order while the visible number highlights. |
+| 35 | `qz005` | `qz005.html` | — | COMPLETE | Standardized all three-digit option readings; quiz behaviour, highlighting and responsive layout passed. |
+| 36 | `pg030_sec001` | `pg030_sec001.html` | 24 | COMPLETE | Standardized three-digit readings; item 6 now uses the verified reusable 480 clip without the stray word. |
+| 37 | `pg031_sec001` | `pg031_sec001.html` | 25 | COMPLETE | Corrected bead counts, removed repeated labels/answers, and trimmed the example description so twenty-five is spoken once. |
+| 38 | `pg032_sec001` | `pg032_sec001.html` | 26 | COMPLETE | Removed hidden duplication; exercise equals signs were removed while examples retain them; item 3 uses the verified single “eight” clip. |
+| 39 | `pg033_sec001` | `pg033_sec001.html` | 27 | COMPLETE | Standardized expanded-form expressions and removed equals signs from exercise questions; verified item 8 narration/highlighting. |
+| 40 | `pg033_sec002` | `pg033_sec002.html` | 27 | COMPLETE | Narration, visible highlighting, item 8 reading, activity behaviour and responsive layout passed. |
 | 41 | `pg034_sec001` | `pg034_sec001.html` | 28 | NOT CHECKED | |
 | 42 | `qz006` | `qz006.html` | — | NOT CHECKED | |
 | 43 | `pg035_sec001` | `pg035_sec001.html` | 29 | NOT CHECKED | |

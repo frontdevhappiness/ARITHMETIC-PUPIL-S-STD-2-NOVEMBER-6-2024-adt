@@ -3,6 +3,10 @@ import path from "node:path"
 import { createTTSSynthesizer } from "/home/echad/Documents/Projects/adt-studio/packages/llm/dist/speech.js"
 import { generateSpeechFile } from "/home/echad/Documents/Projects/adt-studio/packages/pipeline/dist/speech.js"
 
+if (!process.env.OPENAI_API_KEY) {
+  process.loadEnvFile("/home/echad/Documents/Projects/adt-studio/.env")
+}
+
 const root = "/home/echad/Documents/ARITHMETIC-PUPIL-S-STD-2-NOVEMBER-6-2024-adt"
 const staging = `${root}/.audit/tts-output`
 const packaged = `${root}/content/i18n/en-GB/audio`
@@ -25,7 +29,11 @@ function numberWords(number) {
 function spokenText(text) {
   const spoken = text
     .replace(/\s*\[\[blank:[^\]]+\]\]/g, "")
+    .replace(/^(\d{1,2})\.\s*/, (_, number) => `${numberWords(Number(number))}. `)
     .replace(/\b\d{3}\b/g, (match) => numberWords(Number(match)))
+    .replace(/\+/g, " plus ")
+    .replace(/=/g, " ")
+    .replace(/\s+/g, " ")
     .trim()
   return /[.!?]$/.test(spoken) ? spoken : `${spoken}.`
 }
