@@ -207,6 +207,47 @@
     </script>
     <div class="relative z-50" id="interface-container"></div>
     <div class="relative z-50" id="nav-container"></div>
+    <script>
+      (() => {
+        /* Separate each narrated sequence from its editable blanks. The
+         * visible question label and supplied numbers mirror TTS highlighting,
+         * while answer inputs remain interactive and silent. */
+        for (const row of document.querySelectorAll('.space-y-5 > div')) {
+          const sequence = Array.from(row.children).find((child) => child.hasAttribute('data-id') && child.querySelector('input'))
+          if (!sequence) continue
+
+          const id = sequence.dataset.id
+          const label = row.firstElementChild
+          const includesQuestionNumber = /^pg055_n0(?:092|094|096|098|100|102|104)$/.test(id)
+          const source = document.createElement('span')
+          source.dataset.id = id
+          source.className = 'sr-only'
+          source.textContent = `${includesQuestionNumber ? `${label.textContent} ` : ''}${sequence.textContent}`.replace(/\s+/g, ' ').trim()
+          sequence.before(source)
+          sequence.removeAttribute('data-id')
+
+          const proxies = Array.from(sequence.querySelectorAll(':scope > span')).filter((span) => /\d/.test(span.textContent || ''))
+          if (includesQuestionNumber) proxies.unshift(label)
+
+          for (const proxy of proxies) {
+            proxy.dataset.sequenceHighlightProxy = id
+            proxy.setAttribute('aria-hidden', 'true')
+          }
+
+          const syncSequenceHighlight = () => {
+            const isActive = source.classList.contains('bg-yellow-300') || Boolean(source.querySelector('.bg-yellow-300'))
+            for (const proxy of proxies) proxy.classList.toggle('bg-yellow-300', isActive)
+          }
+
+          new MutationObserver(syncSequenceHighlight).observe(source, {
+            attributes: true,
+            childList: true,
+            subtree: true,
+          })
+          syncSequenceHighlight()
+        }
+      })()
+    </script>
     <script src="./assets/preserve-rich-content.js"></script>
     <script src="./assets/offline-preloader.js"></script>
     <script src="./assets/scorm.js"></script>
