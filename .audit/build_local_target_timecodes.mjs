@@ -8,16 +8,19 @@ const texts = JSON.parse(fs.readFileSync(path.join(localeRoot, "texts.json"), "u
 const audios = JSON.parse(fs.readFileSync(path.join(localeRoot, "audios.json"), "utf8"))
 const timecodePath = path.join(localeRoot, "timecode/timecode_output.json")
 const output = JSON.parse(fs.readFileSync(timecodePath, "utf8"))
+const includeMathSymbols = process.argv.includes("--read-equals")
+const requested = process.argv.slice(2).filter((argument) => argument !== "--read-equals")
 
 function spokenTokens(value) {
   const cleaned = value.replace(/\[\[blank:[^\]]+\]\]/g, " ").trim()
   if (/^\d+[.]?$/.test(cleaned)) return [cleaned.replace(/[.]$/, "")]
-  return cleaned
-    .replace(/[–—-]/g, " ")
-    .match(/[A-Za-z]+(?:'[A-Za-z]+)?|\d+/g) ?? []
+  const tokenPattern = includeMathSymbols
+    ? /[A-Za-z]+(?:'[A-Za-z]+)?|\d+|[+=]/g
+    : /[A-Za-z]+(?:'[A-Za-z]+)?|\d+/g
+  return cleaned.replace(/[–—-]/g, " ").match(tokenPattern) ?? []
 }
 
-for (const baseId of process.argv.slice(2)) {
+for (const baseId of requested) {
   for (const id of [baseId, `${baseId}_easy_read`]) {
     if (!(id in texts) || !(id in audios)) continue
     const audioPath = path.join(localeRoot, "audio", audios[id])

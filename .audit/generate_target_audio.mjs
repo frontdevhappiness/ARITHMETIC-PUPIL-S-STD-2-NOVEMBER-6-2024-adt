@@ -11,7 +11,8 @@ const root = "/home/echad/Documents/ARITHMETIC-PUPIL-S-STD-2-NOVEMBER-6-2024-adt
 const staging = `${root}/.audit/tts-output`
 const packaged = `${root}/content/i18n/en-GB/audio`
 const texts = JSON.parse(fs.readFileSync(`${root}/content/i18n/en-GB/texts.json`, "utf8"))
-const requested = process.argv.slice(2)
+const readEquals = process.argv.includes("--read-equals")
+const requested = process.argv.slice(2).filter((argument) => argument !== "--read-equals")
 const units = [
   "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine",
   "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen",
@@ -32,7 +33,7 @@ function spokenText(text) {
     .replace(/^(\d{1,2})\.\s*/, (_, number) => `${numberWords(Number(number))}. `)
     .replace(/\b\d{3}\b/g, (match) => numberWords(Number(match)))
     .replace(/\+/g, " plus ")
-    .replace(/=/g, " ")
+    .replace(/=/g, readEquals ? " equals " : " ")
     .replace(/\s+/g, " ")
     .trim()
   return /[.!?]$/.test(spoken) ? spoken : `${spoken}.`
