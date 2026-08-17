@@ -23,10 +23,6 @@
           <img data-id="pg063_upload1" src="images/pg063_upload1.png" alt="Chapter Six: Subtraction" class="absolute left-1/2 top-1/2 h-[122%] w-[122%] max-w-none -translate-x-1/2 -translate-y-1/2 object-cover object-center" style="max-width: 100%; height: auto;">
         </div>
 
-        <div class="hidden" aria-hidden="true">
-          <span data-id="pg063_n0006">Chapter Six</span>
-          <span data-id="pg063_n0007">Subtraction</span>
-        </div>
       </div>
 
       <div class="px-14 pb-12 pt-10 max-lg:px-8 max-lg:pb-10 max-sm:px-4 max-sm:pb-7 max-sm:pt-7">
@@ -59,16 +55,20 @@
             Example
           </div>
 
-          <p data-id="pg063_n0003" class="text-3xl italic max-lg:text-2xl max-sm:text-xl">
+          <span data-id="pg063_n0003" class="sr-only">247 minus 123</span>
+          <p aria-hidden="true" data-expression-highlight-proxy="pg063_n0003" class="text-3xl italic max-lg:text-2xl max-sm:text-xl">
             247 &#x2212; 123 =
           </p>
 
-          <h3 data-id="pg063_n0004" class="mt-5 text-3xl font-bold italic max-lg:text-2xl max-sm:text-xl">
+          <span data-id="pg063_n0004" class="sr-only">
+            Solution. Place-value table. Hundreds, tens, ones. Two hundred and forty-seven minus one hundred and twenty-three equals one hundred and twenty-four. Hundreds are matched with hundreds, tens with tens, and ones with ones.
+          </span>
+          <h3 aria-hidden="true" data-solution-highlight-proxy="pg063_n0004" class="mt-5 text-3xl font-bold italic max-lg:text-2xl max-sm:text-xl">
             Solution
           </h3>
 
           <div class="mt-8 overflow-x-auto pb-3">
-            <div class="mx-auto min-w-[830px] max-w-5xl">
+            <div aria-hidden="true" data-table-highlight-proxy="pg063_n0004" class="mx-auto min-w-[830px] max-w-5xl">
               <!-- Place-value table -->
               <div class="grid grid-cols-[repeat(3,minmax(80px,1fr))_55px_repeat(3,minmax(80px,1fr))_55px_repeat(3,minmax(80px,1fr))] border border-neutral-700 text-center">
                 <div class="flex h-56 items-center justify-center border-b border-r border-neutral-700">
@@ -138,8 +138,6 @@
             </div>
           </div>
 
-          <!-- Prevents the extracted image from duplicating the example -->
-          <img data-id="pg063_im002" src="images/pg063_im002.png" alt="Worked example of horizontal subtraction without regrouping: 247 minus 123 equals 124, arranged in hundreds, tens and ones with arrows matching hundreds to hundreds, tens to tens, and ones to ones." class="hidden" aria-hidden="true" style="max-width: 100%; height: auto;">
         </div>
       </div>
     </div>
@@ -155,6 +153,31 @@
 
     <div class="relative z-50" id="interface-container"></div>
     <div class="relative z-50" id="nav-container"></div>
+    <script>
+      (() => {
+        /* The worked table is HTML, so mirror its accessible narration source
+         * to the complete visible table and arrow diagram. */
+        const source = document.querySelector('.sr-only[data-id="pg063_n0004"]')
+        const proxies = document.querySelectorAll('[data-solution-highlight-proxy="pg063_n0004"], [data-table-highlight-proxy="pg063_n0004"]')
+        if (!source || proxies.length === 0) return
+        const syncHighlight = () => {
+          const isActive = source.classList.contains('bg-yellow-300') || Boolean(source.querySelector('.bg-yellow-300'))
+          proxies.forEach((proxy) => proxy.classList.toggle('bg-yellow-300', isActive))
+        }
+        new MutationObserver(syncHighlight).observe(source, { attributes: true, childList: true, subtree: true })
+        syncHighlight()
+
+        const expressionSource = document.querySelector('.sr-only[data-id="pg063_n0003"]')
+        const expressionProxy = document.querySelector('[data-expression-highlight-proxy="pg063_n0003"]')
+        if (!expressionSource || !expressionProxy) return
+        const syncExpressionHighlight = () => {
+          const isActive = expressionSource.classList.contains('bg-yellow-300') || Boolean(expressionSource.querySelector('.bg-yellow-300'))
+          expressionProxy.classList.toggle('bg-yellow-300', isActive)
+        }
+        new MutationObserver(syncExpressionHighlight).observe(expressionSource, { attributes: true, childList: true, subtree: true })
+        syncExpressionHighlight()
+      })()
+    </script>
     <script src="./assets/preserve-rich-content.js"></script>
     <script src="./assets/offline-preloader.js"></script>
     <script src="./assets/scorm.js"></script>
