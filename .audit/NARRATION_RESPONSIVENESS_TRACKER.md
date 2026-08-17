@@ -63,7 +63,7 @@ This tracker follows the 186-entry ADT reading order. A page is complete only af
 | 48 | `pg042_sec001` | `pg042_sec001.html` | 36 | COMPLETE | Standardized all 20 question labels and equations with clear British number readings; question 8 says only “eight” and question 19 only “nineteen”; plus is spoken while exercise equals signs and answers remain silent; rebuilt highlighting and passed responsive checks. |
 | 49 | `pg042_sec002` | `pg042_sec002.html` | 36 | COMPLETE | Added concise image narration without repeating the following coin quantities; silenced duplicate box-label clips; regenerated the passage and questions with mini-TTS Alloy and standard number wording; restored verified one-to-five question clips, rebuilt highlighting, preserved answer privacy, and passed responsive checks. |
 | 50 | `qz007` | `qz007.html` | — | NOT CHECKED | |
-| 51 | `pg044_sec001` | `pg044_sec001.html` | 38 | NOT CHECKED | |
+| 51 | `pg044_sec001` | `pg044_sec001.html` | 38 | COMPLETE | Removed duplicate hidden-image narration; made every digit and plus sign in the original vertical problem an individual safe highlight target before “Solution”; moved all other narration triggers outside rich CSS grids so read-aloud cannot distort columns; regenerated mini-TTS Alloy audio with spoken plus/equals signs; responsive layout passed. |
 | 52 | `pg045_sec001` | `pg045_sec001.html` | 39 | NOT CHECKED | |
 | 53 | `pg046_sec001` | `pg046_sec001.html` | 40 | NOT CHECKED | |
 | 54 | `qz008` | `qz008.html` | — | NOT CHECKED | |
