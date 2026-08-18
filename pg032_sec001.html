@@ -10,6 +10,30 @@
     <link href="./content/tailwind_output.css" rel="stylesheet">
     <link href="./assets/libs/fontawesome/css/all.min.css" rel="stylesheet">
     <link href="./assets/fonts.css" rel="stylesheet">
+    <style>
+      .pg032-exercise-answers {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        row-gap: 1.5rem;
+        width: 100%;
+        max-width: 760px;
+        margin-inline: auto;
+      }
+
+      .pg032-exercise-answers > div > div {
+        grid-template-columns: 42px 100px minmax(260px, 1fr);
+      }
+
+      @media (max-width: 640px) {
+        .pg032-exercise-answers {
+          row-gap: 1.25rem;
+        }
+
+        .pg032-exercise-answers > div > div {
+          grid-template-columns: 32px 64px minmax(0, 1fr);
+        }
+      }
+    </style>
 </head>
 
 <body class="min-h-screen flex items-center justify-center">
@@ -94,7 +118,7 @@
           The blank token is placed inside a full-width block so ADT Studio
           generates a long answer field instead of a short intrinsic field.
         -->
-        <div class="grid grid-cols-2 gap-x-16 gap-y-6 max-lg:gap-x-10 max-sm:grid-cols-1 max-sm:gap-y-5">
+        <div class="pg032-exercise-answers">
 
           <!-- Left column: 1–5 -->
           <div class="space-y-6 max-sm:space-y-5">
