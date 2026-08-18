@@ -35,17 +35,24 @@
 
       <!-- Solution pointers -->
       <div class="mb-7">
-        <div data-id="pg071_n0038" class="font-serif text-[2rem] italic text-neutral-800 max-lg:text-[1.7rem] max-sm:text-[1.25rem]">
-          100 &#x2212; 47 = 53
+        <div class="font-serif text-[2rem] italic text-neutral-800 max-lg:text-[1.7rem] max-sm:text-[1.25rem]">
+          <div data-id="pg071_n0038" aria-label="One hundred minus forty-seven equals fifty-three" class="grid text-center" style="width:7.6em;grid-template-columns:repeat(3,0.8em) 1em repeat(2,0.8em) 1em repeat(2,0.8em)">
+            <span>1</span><span>0</span><span>0</span>
+            <span>&#x2212;</span>
+            <span>4</span><span>7</span>
+            <span>=</span>
+            <span>5</span><span>3</span>
+          </div>
+
+          <span data-id="pg071_arrow_guide" class="sr-only">The blue arrow connects zero in the tens place of one hundred to four in the tens place of forty-seven. The red arrow connects zero in the ones place of one hundred to seven in the ones place of forty-seven.</span>
+          <svg data-calculation-highlight-proxy="pg071_arrow_guide" viewBox="0 0 243 52" class="mt-1 block h-auto" style="width:7.6em" aria-hidden="true">
+            <path d="M38.4 2 V42 H121.6 V18" fill="none" stroke="#38aaf0" stroke-width="3"/>
+            <polygon points="114.6,21 121.6,8 128.6,21" fill="#38aaf0"/>
+
+            <path d="M64 2 V34 H147.2 V18" fill="none" stroke="#ef4444" stroke-width="3"/>
+            <polygon points="140.2,21 147.2,8 154.2,21" fill="#ef4444"/>
+          </svg>
         </div>
-
-        <svg viewBox="0 0 290 62" class="mt-1 block h-[62px] w-[290px] max-sm:w-[245px]" aria-hidden="true">
-          <path d="M38 5 V42 H108 V22" fill="none" stroke="#38aaf0" stroke-width="3"/>
-          <polygon points="101,25 108,12 115,25" fill="#38aaf0"/>
-
-          <path d="M64 5 V34 H136 V22" fill="none" stroke="#ef4444" stroke-width="3"/>
-          <polygon points="129,25 136,12 143,25" fill="#ef4444"/>
-        </svg>
       </div>
 
       <div data-id="pg071_n0039" class="mb-5 text-[2rem] font-extrabold italic text-sky-500 max-lg:text-[1.7rem] max-sm:text-[1.4rem]">
@@ -61,13 +68,11 @@
           </div>
 
           <div class="border-r border-indigo-500 p-4 font-serif text-[1.5rem] italic leading-snug text-neutral-800 max-lg:text-[1.15rem] max-sm:border-r-0 max-sm:p-3 max-sm:text-[1rem]">
-            <span data-id="pg071_n0045">Subtract ones: 0 &#x2212; 7, it is not sufficient.</span>
+            <span data-id="pg071_n0045">Subtract the ones: 0 &#x2212; 7. You cannot subtract 7 from 0, so regroup.</span>
           </div>
 
           <div class="flex items-center justify-center p-3 max-sm:col-span-2 max-sm:border-t max-sm:border-indigo-500">
-            <div class="relative h-[88px] w-[290px] shrink-0 font-serif italic text-neutral-800">
-              <span data-id="pg071_n0047" class="sr-only">100 &#x2212; 47 =</span>
-
+            <div data-id="pg071_n0047" aria-label="One hundred minus forty-seven. The red arrow connects zero ones to seven ones. The answer boxes are empty." class="relative h-[88px] w-[290px] shrink-0 font-serif italic text-neutral-800">
               <div class="absolute left-[5px] top-[25px] grid w-[78px] grid-cols-3 text-center text-[1.7rem]">
                 <span>1</span><span>0</span><span>0</span>
               </div>
@@ -83,8 +88,8 @@
               </div>
 
               <svg viewBox="0 0 290 88" class="pointer-events-none absolute inset-0 h-full w-full" aria-hidden="true">
-                <path d="M68 54 V78 H139 V59" fill="none" stroke="#ef4444" stroke-width="2.5"/>
-                <polygon points="132,62 139,49 146,62" fill="#ef4444"/>
+                <path d="M68 54 V78 H152 V59" fill="none" stroke="#ef4444" stroke-width="2.5"/>
+                <polygon points="145,62 152,49 159,62" fill="#ef4444"/>
               </svg>
             </div>
           </div>
@@ -99,13 +104,14 @@
           <div class="border-r border-indigo-500 p-4 font-serif text-[1.4rem] italic leading-[1.45] text-neutral-800 max-lg:text-[1.05rem] max-sm:border-r-0 max-sm:p-3 max-sm:text-[0.95rem]">
             <span data-id="pg072_n0008">Take 1 group of tens from 0 tens.</span>
             <span data-id="pg072_n0009"> It is not sufficient.</span>
-            <span data-id="pg072_n0010"> Take 1 group of hundreds from 1 hundreds.</span>
+            <span data-id="pg072_n0010"> Take 1 hundred from the hundreds place.</span>
             <span data-id="pg072_n0011"> Regroup it into 10 tens.</span>
-            <span data-id="pg072_n0012"> Remember that 0 hundreds remained in the hundreds place.</span>
+            <span data-id="pg072_n0012"> Remember that 0 hundreds remain in the hundreds place.</span>
           </div>
 
           <div class="flex items-center justify-center p-3 max-sm:col-span-2 max-sm:border-t max-sm:border-indigo-500">
-            <div class="relative h-[100px] w-[290px] shrink-0 font-serif italic text-neutral-800">
+            <span data-id="pg071_step2_column" class="sr-only">One hundred minus forty-seven. One hundred is crossed out and regrouped as zero hundreds and ten tens. The answer boxes are empty.</span>
+            <div aria-hidden="true" data-calculation-highlight-proxy="pg071_step2_column" class="relative h-[100px] w-[290px] shrink-0 font-serif italic text-neutral-800">
               <div class="absolute left-[5px] top-[3px] grid w-[78px] grid-cols-3 text-center font-mono text-[0.9rem] not-italic text-sky-500">
                 <span>0</span><span>10</span><span></span>
               </div>
@@ -136,13 +142,14 @@
           </div>
 
           <div class="border-r border-indigo-500 p-4 font-serif text-[1.4rem] italic leading-[1.45] text-neutral-800 max-lg:text-[1.05rem] max-sm:border-r-0 max-sm:p-3 max-sm:text-[0.95rem]">
-            <span data-id="pg072_n0019">Take 1 tens from 10 tens.</span>
-            <span data-id="pg072_n0020"> Regroup 1 tens into 10 ones.</span>
-            <span data-id="pg072_n0021"> Remember 9 tens remained in the tens place.</span>
+            <span data-id="pg072_n0019">Take one ten from ten tens.</span>
+            <span data-id="pg072_n0020"> Regroup one ten into ten ones.</span>
+            <span data-id="pg072_n0021"> Remember that 9 tens remain in the tens place.</span>
           </div>
 
           <div class="flex items-center justify-center p-3 max-sm:col-span-2 max-sm:border-t max-sm:border-indigo-500">
-            <div class="relative h-[100px] w-[290px] shrink-0 font-serif italic text-neutral-800">
+            <span data-id="pg071_step3_column" class="sr-only">One hundred minus forty-seven. The crossed-out one hundred is regrouped as zero hundreds, nine tens, and ten ones. The answer boxes are empty.</span>
+            <div aria-hidden="true" data-calculation-highlight-proxy="pg071_step3_column" class="relative h-[100px] w-[290px] shrink-0 font-serif italic text-neutral-800">
               <div class="absolute left-[5px] top-[3px] grid w-[78px] grid-cols-3 text-center font-mono text-[0.9rem] not-italic text-sky-500">
                 <span>0</span><span>9</span><span>10</span>
               </div>
@@ -178,7 +185,8 @@
           </div>
 
           <div class="flex items-center justify-center p-3 max-sm:col-span-2 max-sm:border-t max-sm:border-indigo-500">
-            <div class="relative h-[100px] w-[290px] shrink-0 font-serif italic text-neutral-800">
+            <span data-id="pg071_step4_column" class="sr-only">One hundred minus forty-seven. After regrouping, the ones answer box contains three. The red arrow connects ten ones to seven ones.</span>
+            <div aria-hidden="true" data-calculation-highlight-proxy="pg071_step4_column" class="relative h-[100px] w-[290px] shrink-0 font-serif italic text-neutral-800">
               <div class="absolute left-[5px] top-[3px] grid w-[78px] grid-cols-3 text-center font-mono text-[0.9rem] not-italic text-sky-500">
                 <span>0</span><span>9</span><span>10</span>
               </div>
@@ -200,8 +208,8 @@
               </div>
 
               <svg viewBox="0 0 290 100" class="pointer-events-none absolute inset-0 h-full w-full" aria-hidden="true">
-                <path d="M68 62 V88 H139 V69" fill="none" stroke="#ef4444" stroke-width="2.5"/>
-                <polygon points="132,72 139,59 146,72" fill="#ef4444"/>
+                <path d="M68 62 V88 H152 V69" fill="none" stroke="#ef4444" stroke-width="2.5"/>
+                <polygon points="145,72 152,59 159,72" fill="#ef4444"/>
               </svg>
             </div>
           </div>
@@ -219,7 +227,8 @@
           </div>
 
           <div class="flex items-center justify-center p-3 max-sm:col-span-2 max-sm:border-t max-sm:border-indigo-500">
-            <div class="relative h-[100px] w-[290px] shrink-0 font-serif italic text-neutral-800">
+            <span data-id="pg071_step5_column" class="sr-only">One hundred minus forty-seven. The answer boxes contain five tens and three ones. The blue arrow connects nine tens to four tens.</span>
+            <div aria-hidden="true" data-calculation-highlight-proxy="pg071_step5_column" class="relative h-[100px] w-[290px] shrink-0 font-serif italic text-neutral-800">
               <div class="absolute left-[5px] top-[3px] grid w-[78px] grid-cols-3 text-center font-mono text-[0.9rem] not-italic text-sky-500">
                 <span>0</span><span>9</span><span>10</span>
               </div>
@@ -241,8 +250,8 @@
               </div>
 
               <svg viewBox="0 0 290 100" class="pointer-events-none absolute inset-0 h-full w-full" aria-hidden="true">
-                <path d="M43 62 V88 H113 V69" fill="none" stroke="#38aaf0" stroke-width="2.5"/>
-                <polygon points="106,72 113,59 120,72" fill="#38aaf0"/>
+                <path d="M43 62 V88 H126 V69" fill="none" stroke="#38aaf0" stroke-width="2.5"/>
+                <polygon points="119,72 126,59 133,72" fill="#38aaf0"/>
               </svg>
             </div>
           </div>
@@ -257,11 +266,12 @@
           <div class="border-r border-indigo-500 p-4 font-serif text-[1.4rem] italic leading-[1.45] text-neutral-800 max-lg:text-[1.05rem] max-sm:border-r-0 max-sm:p-3 max-sm:text-[0.95rem]">
             <span data-id="pg072_n0044">Subtract hundreds:</span>
             <span data-id="pg072_n0045"> 0 &#x2212; 0 = 0.</span>
-            <span data-id="pg072_n0046"> Leave a blank space in the hundreds place.</span>
+            <span data-id="pg072_n0046"> Do not write a zero in the hundreds place.</span>
           </div>
 
           <div class="flex items-center justify-center p-3 max-sm:col-span-2 max-sm:border-t max-sm:border-indigo-500">
-            <div class="relative h-[80px] w-[290px] shrink-0 font-serif italic text-neutral-800">
+            <span data-id="pg071_step6_column" class="sr-only">One hundred minus forty-seven equals fifty-three.</span>
+            <div aria-hidden="true" data-calculation-highlight-proxy="pg071_step6_column" class="relative h-[80px] w-[290px] shrink-0 font-serif italic text-neutral-800">
               <div class="absolute left-[5px] top-[21px] grid w-[78px] grid-cols-3 text-center text-[1.7rem]">
                 <span>1</span><span>0</span><span>0</span>
               </div>
@@ -290,6 +300,24 @@
 
     <div class="relative z-50" id="interface-container"></div>
     <div class="relative z-50" id="nav-container"></div>
+    <script>
+      (() => {
+        /* Mirror each narrated instruction's active highlight onto the
+         * calculation diagram that illustrates that instruction. */
+        for (const proxy of document.querySelectorAll('[data-calculation-highlight-proxy]')) {
+          const source = document.querySelector(`[data-id="${proxy.dataset.calculationHighlightProxy}"]`)
+          if (!source) continue
+
+          const syncHighlight = () => {
+            const isActive = source.classList.contains('bg-yellow-300') || Boolean(source.querySelector('.bg-yellow-300'))
+            proxy.classList.toggle('bg-yellow-300', isActive)
+          }
+
+          new MutationObserver(syncHighlight).observe(source, { attributes: true, childList: true, subtree: true })
+          syncHighlight()
+        }
+      })()
+    </script>
     <script src="./assets/preserve-rich-content.js"></script>
     <script src="./assets/offline-preloader.js"></script>
     <script src="./assets/scorm.js"></script>
