@@ -10,6 +10,38 @@
     <link href="./content/tailwind_output.css" rel="stylesheet">
     <link href="./assets/libs/fontawesome/css/all.min.css" rel="stylesheet">
     <link href="./assets/fonts.css" rel="stylesheet">
+    <style>
+      .pg030-question-columns > div > div {
+        row-gap: 10px;
+      }
+
+      .pg030-question-columns input[data-activity-item] {
+        display: none !important;
+        grid-column: 1 / -1;
+        width: 100% !important;
+        height: 52px !important;
+        border: 2px solid #4b5563 !important;
+        border-radius: 10px !important;
+        background: #fff !important;
+        padding: 7px 12px !important;
+        font-size: 20px !important;
+        line-height: 1.2;
+        text-align: left !important;
+      }
+
+      .pg030-question-columns input[data-activity-item]:focus {
+        border-color: #2563eb !important;
+        box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.22);
+      }
+
+      @media (max-width: 640px) {
+        .pg030-question-columns input[data-activity-item] {
+          height: 48px !important;
+          padding: 6px 10px !important;
+          font-size: 17px !important;
+        }
+      }
+    </style>
 </head>
 
 <body class="min-h-screen flex items-center justify-center">
@@ -29,7 +61,7 @@
         </p>
 
         <!-- Two-column question layout -->
-        <div class="grid grid-cols-2 gap-x-16 max-lg:gap-x-10 max-sm:grid-cols-1 max-sm:gap-y-4">
+        <div class="pg030-question-columns grid grid-cols-2 gap-x-16 max-lg:gap-x-10 max-sm:grid-cols-1 max-sm:gap-y-4">
           <!-- Questions 1–5 -->
           <div class="space-y-6 max-lg:space-y-5 max-sm:space-y-4">
             <!-- Question 1 -->
