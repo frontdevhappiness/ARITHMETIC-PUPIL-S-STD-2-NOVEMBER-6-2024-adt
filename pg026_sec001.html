@@ -10,6 +10,108 @@
     <link href="./content/tailwind_output.css" rel="stylesheet">
     <link href="./assets/libs/fontawesome/css/all.min.css" rel="stylesheet">
     <link href="./assets/fonts.css" rel="stylesheet">
+    <style>
+      [aria-labelledby="pg026-exercise-title"] .border-t {
+        border-top: 0 !important;
+      }
+
+      [aria-labelledby="pg026-exercise-title"] > div.grid > div.grid {
+        grid-template-columns: 40px minmax(0, 1fr) !important;
+      }
+
+      [aria-labelledby="pg026-exercise-title"] > div.grid > div.grid > div:first-child {
+        position: relative;
+      }
+
+      [aria-labelledby="pg026-exercise-title"] > div.grid > div.grid > div:first-child::after {
+        position: absolute;
+        z-index: 20;
+        top: 0;
+        right: -1px;
+        bottom: 0;
+        width: 1px;
+        background: #405ad0;
+        content: "";
+        pointer-events: none;
+      }
+
+      .pg026-inline-diagram {
+        position: relative;
+        flex: none !important;
+        width: 100%;
+        min-height: 0;
+        margin-top: auto;
+        margin-bottom: auto;
+        overflow: visible;
+      }
+
+      .pg026-inline-diagram > img {
+        width: 78%;
+        max-width: none !important;
+        margin-right: auto;
+        margin-left: 2%;
+      }
+
+      .pg026-inline-diagram--wide > img {
+        width: 110%;
+        margin-left: -5%;
+      }
+
+      .pg026-line-answer {
+        position: absolute;
+        right: auto;
+        left: calc(var(--line-x) - 8px);
+        width: 74px;
+        height: 28px;
+        transform: translateY(-50%);
+        border: 2px solid #4b63d3;
+        border-radius: 8px;
+        background: #fff;
+        padding: 1px 4px;
+        text-align: center;
+        font-size: 13px;
+      }
+
+      .pg026-line-answer:focus {
+        border-color: #1d4ed8;
+        outline: 3px solid rgba(37, 99, 235, 0.25);
+        outline-offset: 1px;
+      }
+
+      #pg026-example-1-diagram.pg026-tts-diagram-highlight {
+        border-radius: 12px;
+        background: rgba(253, 224, 71, 0.58);
+        box-shadow: 0 0 0 4px rgba(253, 224, 71, 0.58);
+      }
+
+      .pg026-line-answer--ones { top: 51%; }
+      .pg026-line-answer--tens { top: 63%; }
+      .pg026-line-answer--hundreds {
+        top: 74%;
+        left: calc(var(--line-x) - 22px);
+        width: 90px;
+      }
+
+      .pg026-inline-diagram--wide .pg026-line-answer {
+        left: calc(var(--line-x) - 20px);
+      }
+
+      .pg026-inline-diagram--wide .pg026-line-answer--hundreds {
+        left: calc(var(--line-x) - 40px);
+      }
+
+      @media (max-width: 639px) {
+        [aria-labelledby="pg026-exercise-title"] > div.grid > div.grid {
+          grid-template-columns: 30px minmax(0, 1fr) !important;
+        }
+
+        .pg026-line-answer {
+          height: 26px;
+          padding: 2px 4px;
+          font-size: 13px;
+        }
+      }
+    </style>
 </head>
 
 <body class="min-h-screen flex items-center justify-center">
@@ -58,7 +160,8 @@
             place, and 4 is in the ones place.
           </p>
 
-          <div data-id="pg026_n0013" class="relative mx-auto h-[155px] w-full max-w-[340px]" role="img" aria-label="The number 324. Ones. Tens. Hundreds.">
+          <span data-id="pg026_n0013" class="sr-only">Three hundreds, two tens, four ones.</span>
+          <div id="pg026-example-1-diagram" class="relative mx-auto h-[155px] w-full max-w-[340px]" aria-hidden="true">
             <span aria-hidden="true" class="absolute left-[10%] top-0 text-[25px] leading-none">3</span>
             <span aria-hidden="true" class="absolute left-[27%] top-0 text-[25px] leading-none">2</span>
             <span aria-hidden="true" class="absolute left-[44%] top-0 text-[25px] leading-none">4</span>
@@ -119,11 +222,12 @@
               <span data-id="pg026_n0024" class="text-[23px] text-sky-600">1.</span>
             </div>
             <div class="flex min-w-0 flex-col">
-              <div class="flex flex-1 items-center justify-center p-4">
+              <div class="pg026-inline-diagram pg026-inline-diagram--wide flex flex-1 items-center justify-center p-4" style="aspect-ratio: 1.612;">
                 <img src="images/pg026_upload1.png" alt="Place-value diagram showing the number 224 with guide lines to three answer spaces." data-id="pg026_upload1" class="block h-auto max-h-[170px] max-w-full object-contain" style="max-width: 100%; height: auto;">
-              </div>
-              <div class="flex min-h-[52px] items-center justify-center border-t border-[#405ad0] px-6">
-                <input type="text" data-aria-id="aria-1-0-0" data-activity-item="item-1" aria-label="Write the place value of each digit in question 1" tabindex="0" class="w-full border-0 border-b-2 border-neutral-700 bg-transparent px-2 py-1 text-center text-[17px] outline-none focus:border-blue-600 focus:ring-0">
+
+                <input type="text" autocomplete="off" data-activity-item="q1-ones" aria-label="Question 1: write the place name for digit 4" class="pg026-line-answer pg026-line-answer--ones" style="--line-x: 76%; top: 51%;">
+                <input type="text" autocomplete="off" data-activity-item="q1-tens" aria-label="Question 1: write the place name for the middle digit 2" class="pg026-line-answer pg026-line-answer--tens" style="--line-x: 76%; top: 69.4%;">
+                <input type="text" autocomplete="off" data-activity-item="q1-hundreds" aria-label="Question 1: write the place name for the first digit 2" class="pg026-line-answer pg026-line-answer--hundreds" style="--line-x: 76%; top: 87.8%;">
               </div>
             </div>
           </div>
@@ -133,11 +237,12 @@
               <span data-id="pg026_n0026" class="text-[23px] text-sky-600">2.</span>
             </div>
             <div class="flex min-w-0 flex-col">
-              <div class="flex flex-1 items-center justify-center p-4">
+              <div class="pg026-inline-diagram flex flex-1 items-center justify-center p-4" style="aspect-ratio: 1.91;">
                 <img src="images/pg026_upload2.png" alt="Place-value diagram showing the number 185 with guide lines to three answer spaces." data-id="pg026_upload2" class="block h-auto max-h-[170px] max-w-full object-contain" style="max-width: 100%; height: auto;">
-              </div>
-              <div class="flex min-h-[52px] items-center justify-center border-t border-[#405ad0] px-6">
-                <input type="text" data-aria-id="aria-1-0-1" data-activity-item="item-2" aria-label="Write the place value of each digit in question 2" tabindex="0" class="w-full border-0 border-b-2 border-neutral-700 bg-transparent px-2 py-1 text-center text-[17px] outline-none focus:border-blue-600 focus:ring-0">
+
+                <input type="text" autocomplete="off" spellcheck="false" data-activity-item="q2-ones" aria-label="Question 2: write the place name for digit 5" class="pg026-line-answer pg026-line-answer--ones" style="--line-x: 71.4%; top: 52.8%;">
+                <input type="text" autocomplete="off" spellcheck="false" data-activity-item="q2-tens" aria-label="Question 2: write the place name for digit 8" class="pg026-line-answer pg026-line-answer--tens" style="--line-x: 71.4%; top: 73.6%;">
+                <input type="text" autocomplete="off" spellcheck="false" data-activity-item="q2-hundreds" aria-label="Question 2: write the place name for digit 1" class="pg026-line-answer pg026-line-answer--hundreds" style="--line-x: 71.4%; top: 92.8%;">
               </div>
             </div>
           </div>
@@ -147,11 +252,12 @@
               <span data-id="pg026_n0028" class="text-[23px] text-sky-600">3.</span>
             </div>
             <div class="flex min-w-0 flex-col">
-              <div class="flex flex-1 items-center justify-center p-4">
+              <div class="pg026-inline-diagram flex flex-1 items-center justify-center p-4" style="aspect-ratio: 1.91;">
                 <img src="images/pg026_upload3.png" alt="Place-value diagram showing the number 402 with guide lines to three answer spaces." data-id="pg026_upload3" class="block h-auto max-h-[170px] max-w-full object-contain" style="max-width: 100%; height: auto;">
-              </div>
-              <div class="flex min-h-[52px] items-center justify-center border-t border-[#405ad0] px-6">
-                <input type="text" data-aria-id="aria-1-0-2" data-activity-item="item-3" aria-label="Write the place value of each digit in question 3" tabindex="0" class="w-full border-0 border-b-2 border-neutral-700 bg-transparent px-2 py-1 text-center text-[17px] outline-none focus:border-blue-600 focus:ring-0">
+
+                <input type="text" autocomplete="off" spellcheck="false" data-activity-item="q3-ones" aria-label="Question 3: write the place name for digit 2" class="pg026-line-answer pg026-line-answer--ones" style="--line-x: 65.5%; top: 53.2%;">
+                <input type="text" autocomplete="off" spellcheck="false" data-activity-item="q3-tens" aria-label="Question 3: write the place name for digit 0" class="pg026-line-answer pg026-line-answer--tens" style="--line-x: 65.5%; top: 71.9%;">
+                <input type="text" autocomplete="off" spellcheck="false" data-activity-item="q3-hundreds" aria-label="Question 3: write the place name for digit 4" class="pg026-line-answer pg026-line-answer--hundreds" style="--line-x: 65.3%; top: 90.2%;">
               </div>
             </div>
           </div>
@@ -161,11 +267,12 @@
               <span data-id="pg026_n0030" class="text-[23px] text-sky-600">4.</span>
             </div>
             <div class="flex min-w-0 flex-col">
-              <div class="flex flex-1 items-center justify-center p-4">
+              <div class="pg026-inline-diagram flex flex-1 items-center justify-center p-4" style="aspect-ratio: 1.91;">
                 <img src="images/pg026_upload4.png" alt="Place-value diagram showing the number 306 with guide lines to three answer spaces." data-id="pg026_upload4" class="block h-auto max-h-[170px] max-w-full object-contain" style="max-width: 100%; height: auto;">
-              </div>
-              <div class="flex min-h-[52px] items-center justify-center border-t border-[#405ad0] px-6">
-                <input type="text" data-aria-id="aria-1-0-3" data-activity-item="item-4" aria-label="Write the place value of each digit in question 4" tabindex="0" class="w-full border-0 border-b-2 border-neutral-700 bg-transparent px-2 py-1 text-center text-[17px] outline-none focus:border-blue-600 focus:ring-0">
+
+                <input type="text" autocomplete="off" spellcheck="false" data-activity-item="q4-ones" aria-label="Question 4: write the place name for digit 6" class="pg026-line-answer pg026-line-answer--ones" style="--line-x: 66.4%; top: 56.2%;">
+                <input type="text" autocomplete="off" spellcheck="false" data-activity-item="q4-tens" aria-label="Question 4: write the place name for digit 0" class="pg026-line-answer pg026-line-answer--tens" style="--line-x: 66.4%; top: 76.2%;">
+                <input type="text" autocomplete="off" spellcheck="false" data-activity-item="q4-hundreds" aria-label="Question 4: write the place name for digit 3" class="pg026-line-answer pg026-line-answer--hundreds" style="--line-x: 66.2%; top: 95.7%;">
               </div>
             </div>
           </div>
@@ -175,11 +282,12 @@
               <span data-id="pg027_n0003" class="text-[23px] text-sky-600">5.</span>
             </div>
             <div class="flex min-w-0 flex-col">
-              <div class="flex flex-1 items-center justify-center p-4">
+              <div class="pg026-inline-diagram flex flex-1 items-center justify-center p-4" style="aspect-ratio: 1.91;">
                 <img src="images/pg026_upload5.png" alt="Place-value diagram showing the number 247 with guide lines to three answer spaces." data-id="pg026_upload5" class="block h-auto max-h-[170px] max-w-full object-contain" style="max-width: 100%; height: auto;">
-              </div>
-              <div class="flex min-h-[52px] items-center justify-center border-t border-[#405ad0] px-6">
-                <input type="text" data-aria-id="aria-1-0-4" data-activity-item="item-5" aria-label="Write the place value of each digit in question 5" tabindex="0" class="w-full border-0 border-b-2 border-neutral-700 bg-transparent px-2 py-1 text-center text-[17px] outline-none focus:border-blue-600 focus:ring-0">
+
+                <input type="text" autocomplete="off" spellcheck="false" data-activity-item="q5-ones" aria-label="Question 5: write the place name for digit 7" class="pg026-line-answer pg026-line-answer--ones" style="--line-x: 62.1%; top: 54.9%;">
+                <input type="text" autocomplete="off" spellcheck="false" data-activity-item="q5-tens" aria-label="Question 5: write the place name for digit 4" class="pg026-line-answer pg026-line-answer--tens" style="--line-x: 62%; top: 75.3%;">
+                <input type="text" autocomplete="off" spellcheck="false" data-activity-item="q5-hundreds" aria-label="Question 5: write the place name for digit 2" class="pg026-line-answer pg026-line-answer--hundreds" style="--line-x: 62%; top: 95.7%;">
               </div>
             </div>
           </div>
@@ -189,11 +297,11 @@
               <span data-id="pg027_n0005" class="text-[23px] text-sky-600">6.</span>
             </div>
             <div class="flex min-w-0 flex-col">
-              <div class="flex flex-1 items-center justify-center p-4">
+              <div class="pg026-inline-diagram flex flex-1 items-center justify-center p-4" style="aspect-ratio: 1.665;">
                 <img src="images/pg026_upload6.png" alt="Place-value diagram showing the number 87 with guide lines to two answer spaces." data-id="pg026_upload6" class="block h-auto max-h-[170px] max-w-full object-contain" style="max-width: 100%; height: auto;">
-              </div>
-              <div class="flex min-h-[52px] items-center justify-center border-t border-[#405ad0] px-6">
-                <input type="text" data-aria-id="aria-1-0-5" data-activity-item="item-6" aria-label="Write the place value of each digit in question 6" tabindex="0" class="w-full border-0 border-b-2 border-neutral-700 bg-transparent px-2 py-1 text-center text-[17px] outline-none focus:border-blue-600 focus:ring-0">
+
+                <input type="text" autocomplete="off" spellcheck="false" data-activity-item="q6-ones" aria-label="Question 6: write the place name for digit 7" class="pg026-line-answer pg026-line-answer--ones" style="--line-x: 72%; top: 63.7%;">
+                <input type="text" autocomplete="off" spellcheck="false" data-activity-item="q6-tens" aria-label="Question 6: write the place name for digit 8" class="pg026-line-answer pg026-line-answer--tens" style="--line-x: 71.8%; top: 88.9%;">
               </div>
             </div>
           </div>
@@ -203,11 +311,11 @@
               <span data-id="pg027_n0007" class="text-[23px] text-sky-600">7.</span>
             </div>
             <div class="flex min-w-0 flex-col">
-              <div class="flex flex-1 items-center justify-center p-4">
+              <div class="pg026-inline-diagram flex flex-1 items-center justify-center p-4" style="aspect-ratio: 1.665;">
                 <img src="images/pg026_upload7.png" alt="Place-value diagram showing the number 93 with guide lines to two answer spaces." data-id="pg026_upload7" class="block h-auto max-h-[170px] max-w-full object-contain" style="max-width: 100%; height: auto;">
-              </div>
-              <div class="flex min-h-[52px] items-center justify-center border-t border-[#405ad0] px-6">
-                <input type="text" data-aria-id="aria-1-0-6" data-activity-item="item-7" aria-label="Write the place value of each digit in question 7" tabindex="0" class="w-full border-0 border-b-2 border-neutral-700 bg-transparent px-2 py-1 text-center text-[17px] outline-none focus:border-blue-600 focus:ring-0">
+
+                <input type="text" autocomplete="off" spellcheck="false" data-activity-item="q7-ones" aria-label="Question 7: write the place name for digit 3" class="pg026-line-answer pg026-line-answer--ones" style="--line-x: 67.4%; top: 68.4%;">
+                <input type="text" autocomplete="off" spellcheck="false" data-activity-item="q7-tens" aria-label="Question 7: write the place name for digit 9" class="pg026-line-answer pg026-line-answer--tens" style="--line-x: 67.4%; top: 93.6%;">
               </div>
             </div>
           </div>
@@ -217,11 +325,12 @@
               <span data-id="pg027_n0009" class="text-[23px] text-sky-600">8.</span>
             </div>
             <div class="flex min-w-0 flex-col">
-              <div class="flex flex-1 items-center justify-center p-4">
+              <div class="pg026-inline-diagram flex flex-1 items-center justify-center p-4" style="aspect-ratio: 1.679;">
                 <img src="images/pg026_upload8.png" alt="Place-value diagram showing the number 210 with guide lines to three answer spaces." data-id="pg026_upload8" class="block h-auto max-h-[170px] max-w-full object-contain" style="max-width: 100%; height: auto;">
-              </div>
-              <div class="flex min-h-[52px] items-center justify-center border-t border-[#405ad0] px-6">
-                <input type="text" data-aria-id="aria-1-0-7" data-activity-item="item-8" aria-label="Write the place value of each digit in question 8" tabindex="0" class="w-full border-0 border-b-2 border-neutral-700 bg-transparent px-2 py-1 text-center text-[17px] outline-none focus:border-blue-600 focus:ring-0">
+
+                <input type="text" autocomplete="off" spellcheck="false" data-activity-item="q8-ones" aria-label="Question 8: write the place name for digit 0" class="pg026-line-answer pg026-line-answer--ones" style="--line-x: 66%; top: 54.8%;">
+                <input type="text" autocomplete="off" spellcheck="false" data-activity-item="q8-tens" aria-label="Question 8: write the place name for digit 1" class="pg026-line-answer pg026-line-answer--tens" style="--line-x: 65.8%; top: 74.9%;">
+                <input type="text" autocomplete="off" spellcheck="false" data-activity-item="q8-hundreds" aria-label="Question 8: write the place name for digit 2" class="pg026-line-answer pg026-line-answer--hundreds" style="--line-x: 65.8%; top: 94.1%;">
               </div>
             </div>
           </div>
@@ -231,11 +340,12 @@
               <span data-id="pg027_n0011" class="text-[23px] text-sky-600">9.</span>
             </div>
             <div class="flex min-w-0 flex-col">
-              <div class="flex flex-1 items-center justify-center p-4">
+              <div class="pg026-inline-diagram flex flex-1 items-center justify-center p-4" style="aspect-ratio: 1.679;">
                 <img src="images/pg026_upload9.png" alt="Place-value diagram showing the number 179 with guide lines to three answer spaces." data-id="pg026_upload9" class="block h-auto max-h-[170px] max-w-full object-contain" style="max-width: 100%; height: auto;">
-              </div>
-              <div class="flex min-h-[52px] items-center justify-center border-t border-[#405ad0] px-6">
-                <input type="text" data-aria-id="aria-1-0-8" data-activity-item="item-9" aria-label="Write the place value of each digit in question 9" tabindex="0" class="w-full border-0 border-b-2 border-neutral-700 bg-transparent px-2 py-1 text-center text-[17px] outline-none focus:border-blue-600 focus:ring-0">
+
+                <input type="text" autocomplete="off" spellcheck="false" data-activity-item="q9-ones" aria-label="Question 9: write the place name for digit 9" class="pg026-line-answer pg026-line-answer--ones" style="--line-x: 67.1%; top: 52.3%;">
+                <input type="text" autocomplete="off" spellcheck="false" data-activity-item="q9-tens" aria-label="Question 9: write the place name for digit 7" class="pg026-line-answer pg026-line-answer--tens" style="--line-x: 67.1%; top: 72.4%;">
+                <input type="text" autocomplete="off" spellcheck="false" data-activity-item="q9-hundreds" aria-label="Question 9: write the place name for digit 1" class="pg026-line-answer pg026-line-answer--hundreds" style="--line-x: 66.8%; top: 92.1%;">
               </div>
             </div>
           </div>
@@ -245,11 +355,12 @@
               <span data-id="pg027_n0013" class="text-[23px] text-sky-600">10.</span>
             </div>
             <div class="flex min-w-0 flex-col">
-              <div class="flex flex-1 items-center justify-center p-4">
+              <div class="pg026-inline-diagram flex flex-1 items-center justify-center p-4" style="aspect-ratio: 1.679;">
                 <img src="images/pg026_upload10.png" alt="Place-value diagram showing the number 500 with guide lines to three answer spaces." data-id="pg026_upload10" class="block h-auto max-h-[170px] max-w-full object-contain" style="max-width: 100%; height: auto;">
-              </div>
-              <div class="flex min-h-[52px] items-center justify-center border-t border-[#405ad0] px-6">
-                <input type="text" data-aria-id="aria-1-0-9" data-activity-item="item-10" aria-label="Write the place value of each digit in question 10" tabindex="0" class="w-full border-0 border-b-2 border-neutral-700 bg-transparent px-2 py-1 text-center text-[17px] outline-none focus:border-blue-600 focus:ring-0">
+
+                <input type="text" autocomplete="off" spellcheck="false" data-activity-item="q10-ones" aria-label="Question 10: write the place name for the last digit 0" class="pg026-line-answer pg026-line-answer--ones" style="--line-x: 66%; top: 53.6%;">
+                <input type="text" autocomplete="off" spellcheck="false" data-activity-item="q10-tens" aria-label="Question 10: write the place name for the middle digit 0" class="pg026-line-answer pg026-line-answer--tens" style="--line-x: 66%; top: 73.6%;">
+                <input type="text" autocomplete="off" spellcheck="false" data-activity-item="q10-hundreds" aria-label="Question 10: write the place name for digit 5" class="pg026-line-answer pg026-line-answer--hundreds" style="--line-x: 66%; top: 92.9%;">
               </div>
             </div>
           </div>
@@ -262,7 +373,31 @@
     </main>
 
     <script type="text/javascript">
-        window.correctAnswers = JSON.parse('{"item-1":"224 = 2 hundreds 2 tens 4 ones","item-2":"185 = 1 hundred 8 tens 5 ones","item-3":"402 = 4 hundreds 0 tens 2 ones","item-4":"306 = 3 hundreds 0 tens 6 ones","item-5":"247 = 2 hundreds 4 tens 7 ones","item-6":"87 = 8 tens 7 ones","item-7":"93 = 9 tens 3 ones","item-8":"210 = 2 hundreds 1 ten 0 ones","item-9":"179 = 1 hundred 7 tens 9 ones","item-10":"500 = 5 hundreds 0 tens 0 ones"}');
+        window.correctAnswers = JSON.parse('{"q1-ones":"ones","q1-tens":"tens","q1-hundreds":"hundreds","q2-ones":"ones","q2-tens":"tens","q2-hundreds":"hundreds","q3-ones":"ones","q3-tens":"tens","q3-hundreds":"hundreds","q4-ones":"ones","q4-tens":"tens","q4-hundreds":"hundreds","q5-ones":"ones","q5-tens":"tens","q5-hundreds":"hundreds","q6-ones":"ones","q6-tens":"tens","q7-ones":"ones","q7-tens":"tens","q8-ones":"ones","q8-tens":"tens","q8-hundreds":"hundreds","q9-ones":"ones","q9-tens":"tens","q9-hundreds":"hundreds","q10-ones":"ones","q10-tens":"tens","q10-hundreds":"hundreds"}');
+    </script>
+    <script type="text/javascript">
+      (() => {
+        const narration = document.querySelector('[data-id="pg026_n0013"]');
+        const diagram = document.getElementById("pg026-example-1-diagram");
+        if (!narration || !diagram) return;
+
+        const syncDiagramHighlight = () => {
+          const isActive = narration.hasAttribute("data-tts-original-html")
+            || narration.classList.contains("tts-active-block")
+            || Boolean(narration.querySelector("[data-word-index].bg-yellow-300"));
+          diagram.classList.toggle("pg026-tts-diagram-highlight", isActive);
+        };
+
+        const observer = new MutationObserver(syncDiagramHighlight);
+        observer.observe(narration, {
+          attributes: true,
+          attributeFilter: ["class"],
+          childList: true,
+          subtree: true
+        });
+        syncDiagramHighlight();
+        window.addEventListener("beforeunload", () => observer.disconnect(), { once: true });
+      })();
     </script>
     <div class="relative z-50" id="interface-container"></div>
     <div class="relative z-50" id="nav-container"></div>
