@@ -71,6 +71,15 @@
         box-shadow: inset 0 0 0 3px #ca8a04;
       }
 
+      [data-number-review-button]:disabled {
+        cursor: not-allowed;
+        border-color: #94a3b8;
+        background: #e2e8f0;
+        color: #64748b;
+        box-shadow: none;
+        opacity: 0.72;
+      }
+
       @media (max-width: 640px) {
         #content.pg010-page { padding: 10px 8px; }
         .pg010-shell { min-height: 0; border-width: 6px; border-radius: 16px; }
@@ -429,6 +438,7 @@
 
         const audioMapPromise = fetch("./content/i18n/en-GB/audios.json").then((response) => response.json())
         let activeController = null
+        let readerTtsPlaying = false
 
         const storedNumber = (key, fallback) => {
           try {
@@ -459,14 +469,15 @@
             playing = false
             button.textContent = "Listen after you read"
             button.setAttribute("aria-pressed", "false")
+            button.disabled = readerTtsPlaying
           }
 
-          const stop = () => {
+          const stop = (message = "Number review stopped.") => {
             stopRequested = true
             currentAudio?.pause()
             currentAudio = null
             table.querySelector(".number-review-cell-active")?.classList.remove("number-review-cell-active")
-            status.textContent = "Number review stopped."
+            status.textContent = message
             resetButton()
             if (activeController?.stop === stop) activeController = null
           }
@@ -519,6 +530,33 @@
             }
           })
         }
+
+        const isReaderTtsActive = () => Boolean(
+          document.querySelector('#interface-container button[aria-label="Pause"][aria-pressed="true"]') ||
+          document.querySelector('#interface-container button[aria-label="Deactivate text to speech"] .animate-pulse')
+        )
+
+        const syncWithReaderTts = () => {
+          const nextReaderTtsPlaying = isReaderTtsActive()
+          if (nextReaderTtsPlaying === readerTtsPlaying) return
+
+          readerTtsPlaying = nextReaderTtsPlaying
+          if (readerTtsPlaying) {
+            activeController?.stop("Number review paused while read aloud is playing.")
+          }
+
+          for (const reviewButton of document.querySelectorAll("[data-number-review-button]")) {
+            reviewButton.disabled = readerTtsPlaying
+          }
+        }
+
+        const readerControlsObserver = new MutationObserver(syncWithReaderTts)
+        readerControlsObserver.observe(document.getElementById("interface-container"), {
+          subtree: true,
+          childList: true,
+          attributes: true,
+          attributeFilter: ["aria-label", "aria-pressed", "class"]
+        })
       })()
     </script>
     <script src="./assets/base.bundle.local.js"></script>
