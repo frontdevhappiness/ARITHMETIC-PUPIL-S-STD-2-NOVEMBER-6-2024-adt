@@ -41,7 +41,8 @@
           </div>
 
           <div class="flex items-center p-5 max-lg:p-3 max-sm:p-2">
-            <div class="w-full">
+            <span data-id="pg064_n0011" class="sr-only">Place-value columns: hundreds, tens, ones. Two hundred and forty-seven minus one hundred and twenty-three equals four in the ones place. The blue arrow connects the ones digit seven to the ones digit three.</span>
+            <div aria-hidden="true" data-step-highlight-proxy="pg064_step1" class="w-full">
               <div class="step-place-grid border border-neutral-700 text-center">
                 <div class="step-heading"><span>hundreds</span></div>
                 <div class="step-heading"><span>tens</span></div>
@@ -82,7 +83,8 @@
         <!-- Step 2 -->
         <div class="grid grid-cols-[30%_70%] border-b-2 border-blue-500 max-md:grid-cols-1">
           <div class="border-r-2 border-blue-500 p-6 max-lg:p-4 max-md:border-b-2 max-md:border-r-0 max-sm:p-3">
-            <div data-id="pg064_n0012" class="flex items-start gap-3 text-3xl italic leading-[1.35] max-lg:text-2xl max-sm:text-lg">
+            <span data-id="pg064_n0012" class="sr-only">2. Subtract tens: 4 minus 2 equals 2. Write 2 in the tens place.</span>
+            <div aria-hidden="true" data-instruction-highlight-proxy="pg064_n0012" class="flex items-start gap-3 text-3xl italic leading-[1.35] max-lg:text-2xl max-sm:text-lg">
               <span class="shrink-0 text-sky-500">2.</span>
 
               <span>
@@ -94,7 +96,8 @@
           </div>
 
           <div class="flex items-center p-5 max-lg:p-3 max-sm:p-2">
-            <div class="w-full">
+            <span data-id="pg064_n0013" class="sr-only">Place-value columns: hundreds, tens, ones. Two hundred and forty-seven minus one hundred and twenty-three equals twenty-four: two in the tens place and four in the ones place. The blue arrow connects the tens digit four to the tens digit two.</span>
+            <div aria-hidden="true" data-step-highlight-proxy="pg064_step2" class="w-full">
               <div class="step-place-grid border border-neutral-700 text-center">
                 <div class="step-heading"><span>hundreds</span></div>
                 <div class="step-heading"><span>tens</span></div>
@@ -135,7 +138,8 @@
         <!-- Step 3 -->
         <div class="grid grid-cols-[30%_70%] max-md:grid-cols-1">
           <div class="border-r-2 border-blue-500 p-6 max-lg:p-4 max-md:border-b-2 max-md:border-r-0 max-sm:p-3">
-            <div data-id="pg064_n0014" class="flex items-start gap-3 text-3xl italic leading-[1.35] max-lg:text-2xl max-sm:text-lg">
+            <span data-id="pg064_n0014" class="sr-only">3. Subtract hundreds: 2 minus 1 equals 1. Write 1 in the hundreds place.</span>
+            <div aria-hidden="true" data-instruction-highlight-proxy="pg064_n0014" class="flex items-start gap-3 text-3xl italic leading-[1.35] max-lg:text-2xl max-sm:text-lg">
               <span class="shrink-0 text-sky-500">3.</span>
 
               <span>
@@ -147,7 +151,8 @@
           </div>
 
           <div class="flex items-center p-5 max-lg:p-3 max-sm:p-2">
-            <div class="w-full">
+            <span data-id="pg064_n0015" class="sr-only">Place-value columns: hundreds, tens, ones. Two hundred and forty-seven minus one hundred and twenty-three equals one hundred and twenty-four: one in the hundreds place, two in the tens place, and four in the ones place. The blue arrow connects the hundreds digit two to the hundreds digit one.</span>
+            <div aria-hidden="true" data-step-highlight-proxy="pg064_step3" class="w-full">
               <div class="step-place-grid border border-neutral-700 text-center">
                 <div class="step-heading"><span>hundreds</span></div>
                 <div class="step-heading"><span>tens</span></div>
@@ -190,10 +195,6 @@
         </div>
       </div>
 
-      <div class="hidden" aria-hidden="true">
-        <span data-id="pg064_n0011">247 &#x2212; 123 = 4</span>
-        <span data-id="pg064_n0013">247 &#x2212; 123 = 24</span>
-      </div>
     </div>
   </section>
 
@@ -281,6 +282,35 @@
 
     <div class="relative z-50" id="interface-container"></div>
     <div class="relative z-50" id="nav-container"></div>
+    <script>
+      (() => {
+        const groups = [
+          { ids: ['pg064_n0011'], selector: '[data-step-highlight-proxy="pg064_step1"]' },
+          { ids: ['pg064_n0013'], selector: '[data-step-highlight-proxy="pg064_step2"]' },
+          { ids: ['pg064_n0015'], selector: '[data-step-highlight-proxy="pg064_step3"]' },
+          { ids: ['pg064_n0012'], selector: '[data-instruction-highlight-proxy="pg064_n0012"]' },
+          { ids: ['pg064_n0014'], selector: '[data-instruction-highlight-proxy="pg064_n0014"]' },
+        ]
+
+        groups.forEach(({ ids, selector }) => {
+          const sources = ids.map((id) => document.querySelector(`[data-id="${id}"]`)).filter(Boolean)
+          const target = document.querySelector(selector)
+          if (sources.length === 0 || !target) return
+
+          const syncHighlight = () => {
+            const isActive = sources.some((source) => (
+              source.classList.contains('bg-yellow-300') || Boolean(source.querySelector('.bg-yellow-300'))
+            ))
+            target.classList.toggle('bg-yellow-300', isActive)
+          }
+
+          sources.forEach((source) => {
+            new MutationObserver(syncHighlight).observe(source, { attributes: true, childList: true, subtree: true })
+          })
+          syncHighlight()
+        })
+      })()
+    </script>
     <script src="./assets/preserve-rich-content.js"></script>
     <script src="./assets/offline-preloader.js"></script>
     <script src="./assets/scorm.js"></script>
