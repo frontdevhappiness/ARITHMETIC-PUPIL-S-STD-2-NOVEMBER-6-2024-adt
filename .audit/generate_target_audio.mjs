@@ -49,6 +49,7 @@ function spokenText(text) {
     .replace(/^(\d{1,2})\.\s*/, (_, number) => `${numberWords(Number(number))}. `)
     .replace(/\b\d{3}\b/g, (match) => numberWords(Number(match)))
     .replace(/\b\d\b/g, (match) => numberWords(Number(match)))
+    .replace(/−/g, " minus ")
     .replace(/\+/g, " plus ")
     .replace(/=/g, readEquals ? " equals " : " ")
     .replace(/\s+/g, " ")

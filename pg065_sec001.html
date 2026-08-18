@@ -18,12 +18,13 @@
       <div id="content" class="mx-auto w-full max-w-7xl bg-white p-8 max-lg:p-5 max-sm:p-3 opacity-0">
   <section data-book-page="true" data-section-type="activity_fill_in_the_blank" data-section-id="pg065_sec001" class="relative mx-auto overflow-hidden rounded-[3.5rem] border-[18px] border-sky-100 bg-white px-14 pb-14 pt-10 font-serif text-neutral-800 shadow-[inset_0_0_30px_rgba(125,190,235,0.14),0_8px_24px_rgba(14,116,144,0.08)] max-lg:rounded-[2.75rem] max-lg:border-[14px] max-lg:px-8 max-lg:pb-10 max-lg:pt-8 max-sm:rounded-[2rem] max-sm:border-[9px] max-sm:px-4 max-sm:pb-7 max-sm:pt-6">
     <div class="source-page-65-continuation mx-auto mb-10 max-w-6xl px-8 max-lg:mb-8 max-lg:px-5 max-sm:mb-7 max-sm:px-1">
-      <h2 class="text-[22px] font-bold italic leading-none max-sm:text-lg">Or</h2>
-      <p class="mt-3 text-[22px] italic max-sm:text-base">247 &#x2212; 123 =</p>
+      <h2 data-id="pg065_n0002" class="text-[22px] font-bold italic leading-none max-sm:text-lg">Or</h2>
+      <span data-id="pg065_n0003" class="sr-only">247 minus 123</span>
+      <p aria-hidden="true" data-expression-highlight-proxy="pg065_n0003" class="mt-3 text-[22px] italic max-sm:text-base">247 &#x2212; 123 =</p>
       <div class="source-page-65-abacus mx-auto mt-2 w-full max-w-[430px]">
-        <img data-id="pg064_upload1" src="images/pg064_upload1.png" alt="Place value frame labelled hundreds, tens and ones, showing 1 hundred, 2 tens and 4 ones to make 124." class="block h-auto w-full max-w-full object-contain" style="max-width: 100%; height: auto;">
+        <img data-id="pg065_im001" src="images/pg064_upload1.png" alt="Place-value frame labelled hundreds, tens and ones. One of two hundreds beads, two of four tens beads, and three of seven ones beads are crossed out. One hundred, two tens and four ones remain, making 124." class="block h-auto w-full max-w-full object-contain" style="max-width: 100%; height: auto;">
       </div>
-      <p data-id="pg064_n0015" class="mt-1 text-center text-[22px] italic max-sm:text-base">247 &#x2212; 123 = 124</p>
+      <p data-id="pg065_n0005" class="mt-1 text-center text-[22px] italic max-sm:text-base">247 &#x2212; 123 = 124</p>
     </div>
 
     <div class="source-page-65-exercise relative z-10 mx-auto max-w-6xl rounded-[2.5rem] border-[3px] border-sky-300 bg-white px-12 pb-12 pt-16 font-serif text-neutral-800 max-lg:px-8 max-lg:pb-9 max-sm:rounded-[1.75rem] max-sm:px-4 max-sm:pb-6 max-sm:pt-12">
@@ -228,6 +229,21 @@
     </script>
     <div class="relative z-50" id="interface-container"></div>
     <div class="relative z-50" id="nav-container"></div>
+    <script>
+      (() => {
+        const source = document.querySelector('.sr-only[data-id="pg065_n0003"]')
+        const proxy = document.querySelector('[data-expression-highlight-proxy="pg065_n0003"]')
+        if (!source || !proxy) return
+
+        const syncHighlight = () => {
+          const isActive = source.classList.contains('bg-yellow-300') || Boolean(source.querySelector('.bg-yellow-300'))
+          proxy.classList.toggle('bg-yellow-300', isActive)
+        }
+
+        new MutationObserver(syncHighlight).observe(source, { attributes: true, childList: true, subtree: true })
+        syncHighlight()
+      })()
+    </script>
     <script src="./assets/preserve-rich-content.js"></script>
     <script src="./assets/offline-preloader.js"></script>
     <script src="./assets/scorm.js"></script>
