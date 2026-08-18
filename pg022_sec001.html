@@ -15,9 +15,70 @@
         grid-template-columns: 62px repeat(3, minmax(0, 1fr));
       }
 
+      img[src="images/pg021_im008_seg003_v2.png"] {
+        width: auto !important;
+        height: 150% !important;
+        max-width: none !important;
+      }
+
+      .pg022-place-grid > .border-r-2 {
+        position: relative;
+      }
+
+      .pg022-place-grid > .border-r-2::after {
+        position: absolute;
+        z-index: 20;
+        top: 0;
+        right: -2px;
+        bottom: 0;
+        width: 2px;
+        background: #5067d8;
+        content: "";
+        pointer-events: none;
+      }
+
+      /* Keep every pencil group inside its own place-value cell. */
+      .pg022-picture-grid > div {
+        min-width: 0;
+        overflow: hidden;
+      }
+
+      .pg022-picture-grid > div > div {
+        min-width: 0;
+      }
+
+      .pg022-picture-grid > div:not(:first-child) {
+        padding-right: 0.5rem !important;
+        padding-left: 0.5rem !important;
+      }
+
+      .pg022-hundreds-pair {
+        gap: 0.75rem !important;
+      }
+
+      .pg022-hundreds-pair > img {
+        width: calc((100% - 0.75rem) / 2) !important;
+        height: auto !important;
+        max-width: calc((100% - 0.75rem) / 2) !important;
+      }
+
       @media (max-width: 639px) {
         .pg022-place-grid {
           grid-template-columns: 38px repeat(3, minmax(0, 1fr));
+        }
+
+        .pg022-hundreds-pair > img {
+          width: calc((100% - 0.25rem) / 2) !important;
+          max-width: calc((100% - 0.25rem) / 2) !important;
+        }
+
+        .pg022-picture-grid > div:not(:first-child) {
+          padding-right: 0.25rem !important;
+          padding-left: 0.25rem !important;
+        }
+
+        .pg022-hundreds-pair {
+          gap: 0.25rem !important;
         }
       }
     </style>
@@ -70,7 +131,7 @@
           </div>
 
           <!-- Pictures -->
-          <div class="pg022-place-grid grid min-h-[350px] border-b-2 border-[#5067d8] max-lg:min-h-[300px] max-sm:min-h-[190px]">
+          <div class="pg022-place-grid pg022-picture-grid grid min-h-[350px] border-b-2 border-[#5067d8] max-lg:min-h-[300px] max-sm:min-h-[190px]">
             <div class="border-r-2 border-[#5067d8]" aria-hidden="true"></div>
 
             <!-- Three separate hundreds -->
@@ -183,12 +244,12 @@
             </div>
           </div>
 
-          <div class="pg022-place-grid grid min-h-[350px] border-b-2 border-[#5067d8] max-lg:min-h-[300px] max-sm:min-h-[190px]">
+          <div class="pg022-place-grid pg022-picture-grid grid min-h-[350px] border-b-2 border-[#5067d8] max-lg:min-h-[300px] max-sm:min-h-[190px]">
             <div class="border-r-2 border-[#5067d8]" aria-hidden="true"></div>
 
             <!-- Two hundreds -->
             <div class="border-r-2 border-[#5067d8] px-4 py-6 max-sm:px-1 max-sm:py-3">
-              <div class="flex h-full items-center justify-center gap-6 max-sm:gap-1">
+              <div class="pg022-hundreds-pair flex h-full items-center justify-center gap-6 max-sm:gap-1">
                 <img data-id="pg022_im011" src="images/pg021_im002.png" alt="Two separate groups of one hundred pencils in the hundreds column." class="h-40 w-auto max-w-full object-contain max-lg:h-32 max-sm:h-20" style="max-width: 100%; height: auto;">
                 <img src="images/pg021_im002.png" alt="" aria-hidden="true" class="h-40 w-auto max-w-full object-contain max-lg:h-32 max-sm:h-20" style="max-width: 100%; height: auto;">
               </div>
@@ -275,7 +336,7 @@
             </div>
           </div>
 
-          <div class="pg022-place-grid grid min-h-[380px] border-b-2 border-[#5067d8] max-lg:min-h-[320px] max-sm:min-h-[210px]">
+          <div class="pg022-place-grid pg022-picture-grid grid min-h-[380px] border-b-2 border-[#5067d8] max-lg:min-h-[320px] max-sm:min-h-[210px]">
             <div class="border-r-2 border-[#5067d8]" aria-hidden="true"></div>
 
             <!-- Four hundreds -->
