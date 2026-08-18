@@ -20,10 +20,13 @@ def main() -> None:
     inline = json.loads(source[value_start:value_end])
 
     refreshed = []
-    for key, old_value in inline.items():
+    removed = []
+    for key, old_value in list(inline.items()):
         relative = key[2:] if key.startswith("./") else key
         local_file = ROOT / relative
         if not local_file.is_file():
+            del inline[key]
+            removed.append(key)
             continue
         if local_file.suffix == ".json":
             inline[key] = json.loads(local_file.read_text(encoding="utf-8"))
@@ -38,7 +41,7 @@ def main() -> None:
         source[:value_start] + encoded + source[value_end:],
         encoding="utf-8",
     )
-    print(json.dumps({"refreshed": len(refreshed)}, indent=2))
+    print(json.dumps({"refreshed": len(refreshed), "removed": len(removed)}, indent=2))
 
 
 if __name__ == "__main__":
