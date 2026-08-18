@@ -15,6 +15,22 @@
       .pg024-one-cup { width: 62px; height: 64px; }
       .pg024-one-cup img { width: 124px; height: 128px; max-width: none; }
 
+      .pg024-cups-table .border-r {
+        position: relative;
+      }
+
+      .pg024-cups-table .border-r::after {
+        position: absolute;
+        z-index: 20;
+        top: 0;
+        right: -1px;
+        bottom: 0;
+        width: 1px;
+        background: #405ad0;
+        content: "";
+        pointer-events: none;
+      }
+
       @media (max-width: 1023px) {
         .pg024-four-cups { width: 116px; }
         .pg024-one-cup { width: 58px; height: 60px; }
@@ -48,7 +64,7 @@
           </span>
         </p>
 
-        <div class="w-full overflow-hidden border border-[#405ad0]">
+        <div class="pg024-cups-table w-full overflow-hidden border border-[#405ad0]">
 
           <!-- ======================================================= -->
           <!-- QUESTION 1                                              -->
