@@ -1,10 +1,10 @@
 {
   "summary": {
-    "manifest_entries": 186,
-    "html_files": 186,
-    "text_entries": 10627,
-    "audio_mappings": 10627,
-    "image_elements": 585,
+    "manifest_entries": 154,
+    "html_files": 154,
+    "text_entries": 10708,
+    "audio_mappings": 10708,
+    "image_elements": 577,
     "tables": 28
   },
   "navigation": {
@@ -13,134 +13,20 @@
     "page_section_id_mismatches": []
   },
   "content": {
-    "missing_text_ids": [
-      {
-        "href": "qz001.html",
-        "data_id": "qz001"
-      },
-      {
-        "href": "qz002.html",
-        "data_id": "qz002"
-      },
-      {
-        "href": "qz003.html",
-        "data_id": "qz003"
-      },
-      {
-        "href": "qz004.html",
-        "data_id": "qz004"
-      },
-      {
-        "href": "qz005.html",
-        "data_id": "qz005"
-      },
-      {
-        "href": "qz006.html",
-        "data_id": "qz006"
-      },
-      {
-        "href": "qz007.html",
-        "data_id": "qz007"
-      },
-      {
-        "href": "qz008.html",
-        "data_id": "qz008"
-      },
-      {
-        "href": "qz009.html",
-        "data_id": "qz009"
-      },
-      {
-        "href": "qz010.html",
-        "data_id": "qz010"
-      },
-      {
-        "href": "qz011.html",
-        "data_id": "qz011"
-      },
-      {
-        "href": "qz012.html",
-        "data_id": "qz012"
-      },
-      {
-        "href": "qz013.html",
-        "data_id": "qz013"
-      },
-      {
-        "href": "qz014.html",
-        "data_id": "qz014"
-      },
-      {
-        "href": "qz015.html",
-        "data_id": "qz015"
-      },
-      {
-        "href": "qz016.html",
-        "data_id": "qz016"
-      },
-      {
-        "href": "qz017.html",
-        "data_id": "qz017"
-      },
-      {
-        "href": "qz018.html",
-        "data_id": "qz018"
-      },
-      {
-        "href": "qz019.html",
-        "data_id": "qz019"
-      },
-      {
-        "href": "qz020.html",
-        "data_id": "qz020"
-      },
-      {
-        "href": "qz021.html",
-        "data_id": "qz021"
-      },
-      {
-        "href": "qz022.html",
-        "data_id": "qz022"
-      },
-      {
-        "href": "qz023.html",
-        "data_id": "qz023"
-      },
-      {
-        "href": "qz024.html",
-        "data_id": "qz024"
-      },
-      {
-        "href": "qz025.html",
-        "data_id": "qz025"
-      },
-      {
-        "href": "qz026.html",
-        "data_id": "qz026"
-      },
-      {
-        "href": "qz027.html",
-        "data_id": "qz027"
-      },
-      {
-        "href": "qz028.html",
-        "data_id": "qz028"
-      },
-      {
-        "href": "qz029.html",
-        "data_id": "qz029"
-      },
-      {
-        "href": "qz030.html",
-        "data_id": "qz030"
-      }
-    ],
+    "missing_text_ids": [],
     "duplicate_data_ids": {},
     "missing_image_files": [],
     "image_description_issues": [],
     "visible_images_missing_alt": [],
     "visible_image_audio_issues": [],
-    "image_alt_text_mismatches": []
+    "image_alt_text_mismatches": [
+      {
+        "href": "pg020_sec001.html",
+        "data_id": "pg020_im001",
+        "html_alt": "One bundle of one hundred pencils in the hundreds column.",
+        "localized_text": "A bundle of one hundred pencils representing hundreds."
+      }
+    ]
   },
   "audio": {
     "missing_mappings": [],
@@ -149,7 +35,29 @@
   },
   "accessibility": {
     "heading_skips": [],
-    "tables_without_headers_or_presentation_role": [],
+    "tables_without_headers_or_presentation_role": [
+      {
+        "href": "pg008_sec002.html",
+        "table": 1,
+        "td": 50,
+        "th": 0,
+        "presentation": false
+      },
+      {
+        "href": "pg010_sec001.html",
+        "table": 1,
+        "td": 100,
+        "th": 0,
+        "presentation": false
+      },
+      {
+        "href": "pg010_sec001.html",
+        "table": 2,
+        "td": 100,
+        "th": 0,
+        "presentation": false
+      }
+    ],
     "nested_asides": []
   }
 }
