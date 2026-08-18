@@ -10,6 +10,51 @@
     <link href="./content/tailwind_output.css" rel="stylesheet">
     <link href="./assets/libs/fontawesome/css/all.min.css" rel="stylesheet">
     <link href="./assets/fonts.css" rel="stylesheet">
+    <style>
+      .pg031-abacus-wrap {
+        position: relative;
+        max-width: 100%;
+        flex: 0 1 auto;
+      }
+
+      .pg031-abacus-wrap img {
+        display: block;
+        width: 100% !important;
+        max-width: none !important;
+        height: auto !important;
+      }
+
+      .pg031-digit-input {
+        position: absolute;
+        top: var(--box-top);
+        width: var(--box-width);
+        height: var(--box-height);
+        min-height: 25px;
+        transform: translateX(-50%);
+        border: 2px solid #2563eb;
+        border-radius: 6px;
+        background: rgba(255, 255, 255, 0.98);
+        color: #111827;
+        text-align: center;
+        font-size: clamp(16px, 2vw, 22px);
+        font-weight: 700;
+        line-height: 1;
+        outline: none;
+      }
+
+      .pg031-digit-input:focus {
+        border-color: #1d4ed8;
+        box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.28);
+      }
+
+      @media (max-width: 640px) {
+        .pg031-digit-input {
+          min-height: 22px;
+          border-radius: 5px;
+          font-size: 16px;
+        }
+      }
+    </style>
 </head>
 
 <body class="min-h-screen flex items-center justify-center">
@@ -83,15 +128,16 @@
               </div>
 
               <div class="flex min-h-[295px] flex-1 items-start justify-center max-lg:min-h-[250px] max-sm:min-h-0">
-                <img data-id="pg031_im002" src="images/pg031_im002.png" alt="Abacus showing 2 hundreds, 2 tens and 5 ones." class="block h-auto w-full max-w-[330px] object-contain max-lg:max-w-[285px] max-sm:max-w-[260px]" style="max-width: 100%; height: auto;">
+                <div class="pg031-abacus-wrap" style="width: 330px; --box-top: 78%; --box-width: 13.6%; --box-height: 13.3%;">
+                  <img data-id="pg031_im002" src="images/pg031_im002.png" alt="Abacus showing 2 hundreds, 2 tens and 5 ones.">
+                  <input class="pg031-digit-input" style="left: 20.1%;" data-activity-item="item-2-hundreds" inputmode="numeric" maxlength="1" aria-label="Question 2 hundreds digit">
+                  <input class="pg031-digit-input" style="left: 50.6%;" data-activity-item="item-2-tens" inputmode="numeric" maxlength="1" aria-label="Question 2 tens digit">
+                  <input class="pg031-digit-input" style="left: 79.9%;" data-activity-item="item-2-ones" inputmode="numeric" maxlength="1" aria-label="Question 2 ones digit">
+                </div>
               </div>
-
               <div class="mt-2 flex justify-center">
-                <span class="sr-only">
-                  Answer for question 2
-                </span>
-
-                <input type="text" data-aria-id="aria-1-0-0" data-activity-item="item-1" aria-label="Write the number represented by the abacus in question 2" tabindex="0" inputmode="numeric" class="h-9 w-24 rounded-none border-0 border-b-2 border-neutral-700 bg-transparent px-2 text-center text-[20px] text-neutral-900 outline-none focus:border-blue-600 focus:ring-0 max-sm:h-8 max-sm:w-20 max-sm:text-[17px]">
+                <label for="pg031-answer-2" class="sr-only">Write the complete number represented by the abacus in question 2</label>
+                <input id="pg031-answer-2" type="text" inputmode="numeric" maxlength="3" data-activity-item="item-2-total" aria-label="Write the complete number represented by the abacus in question 2" class="h-9 w-24 rounded-none border-0 border-b-2 border-neutral-700 bg-transparent px-2 text-center text-[22px] text-neutral-900 outline-none focus:border-blue-600 max-sm:h-8 max-sm:w-20 max-sm:text-[18px]">
               </div>
             </div>
           </article>
@@ -112,15 +158,16 @@
               </div>
 
               <div class="flex min-h-[295px] flex-1 items-start justify-center max-lg:min-h-[250px] max-sm:min-h-0">
-                <img data-id="pg031_im003" src="images/pg031_im003.png" alt="Abacus showing 0 hundreds, 3 tens and 3 ones." class="block h-auto w-full max-w-[350px] object-contain max-lg:max-w-[295px] max-sm:max-w-[265px]" style="max-width: 100%; height: auto;">
+                <div class="pg031-abacus-wrap" style="width: 350px; --box-top: 76.2%; --box-width: 13.7%; --box-height: 14%;">
+                  <img data-id="pg031_im003" src="images/pg031_im003.png" alt="Abacus showing 0 hundreds, 3 tens and 3 ones.">
+                  <input class="pg031-digit-input" style="left: 17.8%;" data-activity-item="item-3-hundreds" inputmode="numeric" maxlength="1" aria-label="Question 3 hundreds digit">
+                  <input class="pg031-digit-input" style="left: 49.1%;" data-activity-item="item-3-tens" inputmode="numeric" maxlength="1" aria-label="Question 3 tens digit">
+                  <input class="pg031-digit-input" style="left: 79.9%;" data-activity-item="item-3-ones" inputmode="numeric" maxlength="1" aria-label="Question 3 ones digit">
+                </div>
               </div>
-
               <div class="mt-2 flex justify-center">
-                <span class="sr-only">
-                  Answer for question 3
-                </span>
-
-                <input type="text" data-aria-id="aria-1-0-1" data-activity-item="item-2" aria-label="Write the number represented by the abacus in question 3" tabindex="0" inputmode="numeric" class="h-9 w-24 rounded-none border-0 border-b-2 border-neutral-700 bg-transparent px-2 text-center text-[20px] text-neutral-900 outline-none focus:border-blue-600 focus:ring-0 max-sm:h-8 max-sm:w-20 max-sm:text-[17px]">
+                <label for="pg031-answer-3" class="sr-only">Write the complete number represented by the abacus in question 3</label>
+                <input id="pg031-answer-3" type="text" inputmode="numeric" maxlength="3" data-activity-item="item-3-total" aria-label="Write the complete number represented by the abacus in question 3" class="h-9 w-24 rounded-none border-0 border-b-2 border-neutral-700 bg-transparent px-2 text-center text-[22px] text-neutral-900 outline-none focus:border-blue-600 max-sm:h-8 max-sm:w-20 max-sm:text-[18px]">
               </div>
             </div>
           </article>
@@ -141,15 +188,16 @@
               </div>
 
               <div class="flex min-h-[295px] flex-1 items-start justify-center max-lg:min-h-[250px] max-sm:min-h-0">
-                <img data-id="pg031_im004" src="images/pg031_im004.png" alt="Abacus showing 4 hundreds, 0 tens and 4 ones." class="block h-auto w-full max-w-[330px] object-contain max-lg:max-w-[285px] max-sm:max-w-[260px]" style="max-width: 100%; height: auto;">
+                <div class="pg031-abacus-wrap" style="width: 330px; --box-top: 76.3%; --box-width: 13.6%; --box-height: 14.1%;">
+                  <img data-id="pg031_im004" src="images/pg031_im004.png" alt="Abacus showing 4 hundreds, 0 tens and 4 ones.">
+                  <input class="pg031-digit-input" style="left: 19.6%;" data-activity-item="item-4-hundreds" inputmode="numeric" maxlength="1" aria-label="Question 4 hundreds digit">
+                  <input class="pg031-digit-input" style="left: 49.7%;" data-activity-item="item-4-tens" inputmode="numeric" maxlength="1" aria-label="Question 4 tens digit">
+                  <input class="pg031-digit-input" style="left: 78.7%;" data-activity-item="item-4-ones" inputmode="numeric" maxlength="1" aria-label="Question 4 ones digit">
+                </div>
               </div>
-
               <div class="mt-2 flex justify-center">
-                <span class="sr-only">
-                  Answer for question 4
-                </span>
-
-                <input type="text" data-aria-id="aria-1-0-2" data-activity-item="item-3" aria-label="Write the number represented by the abacus in question 4" tabindex="0" inputmode="numeric" class="h-9 w-24 rounded-none border-0 border-b-2 border-neutral-700 bg-transparent px-2 text-center text-[20px] text-neutral-900 outline-none focus:border-blue-600 focus:ring-0 max-sm:h-8 max-sm:w-20 max-sm:text-[17px]">
+                <label for="pg031-answer-4" class="sr-only">Write the complete number represented by the abacus in question 4</label>
+                <input id="pg031-answer-4" type="text" inputmode="numeric" maxlength="3" data-activity-item="item-4-total" aria-label="Write the complete number represented by the abacus in question 4" class="h-9 w-24 rounded-none border-0 border-b-2 border-neutral-700 bg-transparent px-2 text-center text-[22px] text-neutral-900 outline-none focus:border-blue-600 max-sm:h-8 max-sm:w-20 max-sm:text-[18px]">
               </div>
             </div>
           </article>
@@ -170,15 +218,16 @@
               </div>
 
               <div class="flex min-h-[295px] flex-1 items-start justify-center max-lg:min-h-[250px] max-sm:min-h-0">
-                <img data-id="pg031_im005" src="images/pg031_im005.png" alt="Abacus showing 1 hundred, 3 tens and 3 ones." class="block h-auto w-full max-w-[340px] object-contain max-lg:max-w-[290px] max-sm:max-w-[260px]" style="max-width: 100%; height: auto;">
+                <div class="pg031-abacus-wrap" style="width: 340px; --box-top: 76.5%; --box-width: 13.8%; --box-height: 13.8%;">
+                  <img data-id="pg031_im005" src="images/pg031_im005.png" alt="Abacus showing 1 hundred, 3 tens and 3 ones.">
+                  <input class="pg031-digit-input" style="left: 17.7%;" data-activity-item="item-5-hundreds" inputmode="numeric" maxlength="1" aria-label="Question 5 hundreds digit">
+                  <input class="pg031-digit-input" style="left: 49.2%;" data-activity-item="item-5-tens" inputmode="numeric" maxlength="1" aria-label="Question 5 tens digit">
+                  <input class="pg031-digit-input" style="left: 79.8%;" data-activity-item="item-5-ones" inputmode="numeric" maxlength="1" aria-label="Question 5 ones digit">
+                </div>
               </div>
-
               <div class="mt-2 flex justify-center">
-                <span class="sr-only">
-                  Answer for question 5
-                </span>
-
-                <input type="text" data-aria-id="aria-1-0-3" data-activity-item="item-4" aria-label="Write the number represented by the abacus in question 5" tabindex="0" inputmode="numeric" class="h-9 w-24 rounded-none border-0 border-b-2 border-neutral-700 bg-transparent px-2 text-center text-[20px] text-neutral-900 outline-none focus:border-blue-600 focus:ring-0 max-sm:h-8 max-sm:w-20 max-sm:text-[17px]">
+                <label for="pg031-answer-5" class="sr-only">Write the complete number represented by the abacus in question 5</label>
+                <input id="pg031-answer-5" type="text" inputmode="numeric" maxlength="3" data-activity-item="item-5-total" aria-label="Write the complete number represented by the abacus in question 5" class="h-9 w-24 rounded-none border-0 border-b-2 border-neutral-700 bg-transparent px-2 text-center text-[22px] text-neutral-900 outline-none focus:border-blue-600 max-sm:h-8 max-sm:w-20 max-sm:text-[18px]">
               </div>
             </div>
           </article>
@@ -199,15 +248,16 @@
               </div>
 
               <div class="flex min-h-[295px] flex-1 items-start justify-center max-lg:min-h-[250px] max-sm:min-h-0">
-                <img data-id="pg031_im006" src="images/pg031_im006.png" alt="Abacus showing 3 hundreds, 7 tens and 5 ones." class="block h-auto w-full max-w-[330px] object-contain max-lg:max-w-[285px] max-sm:max-w-[260px]" style="max-width: 100%; height: auto;">
+                <div class="pg031-abacus-wrap" style="width: 330px; --box-top: 86.5%; --box-width: 13.5%; --box-height: 12%;">
+                  <img data-id="pg031_im006" src="images/pg031_im006.png" alt="Abacus showing 3 hundreds, 7 tens and 5 ones.">
+                  <input class="pg031-digit-input" style="left: 19.7%;" data-activity-item="item-6-hundreds" inputmode="numeric" maxlength="1" aria-label="Question 6 hundreds digit">
+                  <input class="pg031-digit-input" style="left: 49.8%;" data-activity-item="item-6-tens" inputmode="numeric" maxlength="1" aria-label="Question 6 tens digit">
+                  <input class="pg031-digit-input" style="left: 79.3%;" data-activity-item="item-6-ones" inputmode="numeric" maxlength="1" aria-label="Question 6 ones digit">
+                </div>
               </div>
-
               <div class="mt-2 flex justify-center">
-                <span class="sr-only">
-                  Answer for question 6
-                </span>
-
-                <input type="text" data-aria-id="aria-1-0-4" data-activity-item="item-5" aria-label="Write the number represented by the abacus in question 6" tabindex="0" inputmode="numeric" class="h-9 w-24 rounded-none border-0 border-b-2 border-neutral-700 bg-transparent px-2 text-center text-[20px] text-neutral-900 outline-none focus:border-blue-600 focus:ring-0 max-sm:h-8 max-sm:w-20 max-sm:text-[17px]">
+                <label for="pg031-answer-6" class="sr-only">Write the complete number represented by the abacus in question 6</label>
+                <input id="pg031-answer-6" type="text" inputmode="numeric" maxlength="3" data-activity-item="item-6-total" aria-label="Write the complete number represented by the abacus in question 6" class="h-9 w-24 rounded-none border-0 border-b-2 border-neutral-700 bg-transparent px-2 text-center text-[22px] text-neutral-900 outline-none focus:border-blue-600 max-sm:h-8 max-sm:w-20 max-sm:text-[18px]">
               </div>
             </div>
           </article>
@@ -219,7 +269,7 @@
     </main>
 
     <script type="text/javascript">
-        window.correctAnswers = JSON.parse('{"item-1":"225","item-2":"34","item-3":"404","item-4":"143","item-5":"365"}');
+        window.correctAnswers = JSON.parse('{"item-2-hundreds":"2","item-2-tens":"2","item-2-ones":"5","item-2-total":"225","item-3-hundreds":"0","item-3-tens":"3","item-3-ones":"3","item-3-total":"33","item-4-hundreds":"4","item-4-tens":"0","item-4-ones":"4","item-4-total":"404","item-5-hundreds":"1","item-5-tens":"3","item-5-ones":"3","item-5-total":"133","item-6-hundreds":"3","item-6-tens":"7","item-6-ones":"5","item-6-total":"375"}');
     </script>
     <div class="relative z-50" id="interface-container"></div>
     <div class="relative z-50" id="nav-container"></div>
