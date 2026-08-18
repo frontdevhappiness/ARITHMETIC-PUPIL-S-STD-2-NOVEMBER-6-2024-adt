@@ -15,7 +15,66 @@
         min-width: 0;
       }
 
-      .pg029-place-value-grid [role="group"] > span:not([data-id]) {
+      .pg029-place-value-grid .pg029-number-visual {
+        right: 0 !important;
+        left: 0 !important;
+        display: block !important;
+        width: 100%;
+        z-index: 1;
+      }
+
+      .pg029-place-value-grid .pg029-number-visual > span {
+        position: absolute;
+        transform: translateX(-50%);
+      }
+
+      .pg029-place-value-grid .pg029-number-visual:has(> span:nth-child(3)) > span:nth-child(1) { left: 17%; }
+      .pg029-place-value-grid .pg029-number-visual:has(> span:nth-child(3)) > span:nth-child(2) { left: 28%; }
+      .pg029-place-value-grid .pg029-number-visual:has(> span:nth-child(3)) > span:nth-child(3) { left: 39%; }
+
+      .pg029-place-value-grid .pg029-number-visual:has(> span:nth-child(2)):not(:has(> span:nth-child(3))) > span:nth-child(1) { left: 30%; }
+      .pg029-place-value-grid .pg029-number-visual:has(> span:nth-child(2)):not(:has(> span:nth-child(3))) > span:nth-child(2) { left: 41%; }
+
+      .pg029-place-value-grid .pg029-number-visual:has(> span:only-child) > span:only-child { left: 41%; }
+
+      .pg029-place-value-grid [role="group"].pg029-tts-question-highlight::before {
+        position: absolute;
+        z-index: 0;
+        top: 8px;
+        left: 12%;
+        width: 34%;
+        height: 34px;
+        border-radius: 8px;
+        background: rgba(253, 224, 71, 0.68);
+        content: "";
+        pointer-events: none;
+      }
+
+      .pg029-place-value-grid input[data-activity-item] {
+        height: 34px;
+        border-width: 2px !important;
+        border-style: solid !important;
+        border-radius: 8px;
+        background: #fff;
+        padding: 2px 6px;
+      }
+
+      .pg029-place-value-grid input[data-activity-item]:focus {
+        outline: 3px solid rgba(37, 99, 235, 0.25);
+        outline-offset: 1px;
+      }
+
+      .pg029-place-value-grid input[aria-label$="hundreds value"] { width: 44% !important; }
+      .pg029-place-value-grid input[aria-label$="tens value"] { width: 33% !important; }
+      .pg029-place-value-grid input[aria-label$="ones value"] { width: 22% !important; }
+
+      #pg029-example-diagram.pg029-tts-diagram-highlight {
+        border-radius: 12px;
+        background: rgba(253, 224, 71, 0.58);
+        box-shadow: 0 0 0 4px rgba(253, 224, 71, 0.58);
+      }
+
+      .pg029-place-value-grid [role="group"] > span:not([data-id]):not(.pg029-number-visual) {
         left: auto !important;
         right: 2%;
         white-space: nowrap;
@@ -41,7 +100,7 @@
           grid-template-columns: 42px minmax(0, 1fr) !important;
         }
 
-        .pg029-place-value-grid [role="group"] > span:not([data-id]) {
+        .pg029-place-value-grid [role="group"] > span:not([data-id]):not(.pg029-number-visual) {
           right: 4px;
           font-size: 13px !important;
         }
@@ -65,9 +124,12 @@
           Write the total value of each digit in 395.
         </p>
 
-        <div class="relative mb-7 h-[180px] w-full max-w-[480px] max-sm:h-[160px]" role="img" aria-label="Place-value diagram for 395 showing 3 hundreds, 9 tens and 5 ones">
-          <div data-id="pg029_n0005" class="absolute left-[8%] top-0 flex gap-[22px] text-[26px] leading-none max-sm:text-[21px]">
-            <span>3</span><span>9</span><span>5</span>
+        <span data-id="pg029_n0005" class="sr-only">Three hundreds, nine tens, five ones.</span>
+        <div id="pg029-example-diagram" class="relative mb-7 h-[180px] w-full max-w-[480px] max-sm:h-[160px]" role="img" aria-label="Place-value diagram for 395 showing 3 hundreds, 9 tens and 5 ones">
+          <div aria-hidden="true" class="absolute text-[26px] leading-none max-sm:text-[21px]" style="top: 0; right: 0; left: 0; height: 28px;">
+            <span class="absolute -translate-x-1/2" style="left: 10%;">3</span>
+            <span class="absolute -translate-x-1/2" style="left: 19%;">9</span>
+            <span class="absolute -translate-x-1/2" style="left: 28%;">5</span>
           </div>
 
           <div aria-hidden="true" class="absolute left-[10%] top-[35px] h-[120px] w-[55%] border-b-[3px] border-l-[3px] border-orange-400"></div>
@@ -406,6 +468,65 @@
 
     <script type="text/javascript">
         window.correctAnswers = JSON.parse('{"item-1":"300","item-2":"10","item-3":"2","item-4":"100","item-5":"0","item-6":"8","item-7":"400","item-8":"90","item-9":"5","item-10":"30","item-11":"5","item-12":"200","item-13":"10","item-14":"5","item-15":"400","item-16":"0","item-17":"3","item-18":"500","item-19":"0","item-20":"0","item-21":"60","item-22":"4","item-23":"6","item-24":"60","item-25":"1","item-26":"100","item-27":"30","item-28":"2","item-29":"300","item-30":"80","item-31":"7","item-32":"200","item-33":"90","item-34":"4","item-35":"300","item-36":"70","item-37":"1"}');
+    </script>
+    <script type="text/javascript">
+      (() => {
+        const visualNumbers = document.querySelectorAll('.pg029-place-value-grid [role="group"] > [data-id]');
+
+        visualNumbers.forEach((visual) => {
+          const textId = visual.getAttribute("data-id");
+          const group = visual.closest('[role="group"]');
+          if (!textId || !group) return;
+
+          const narration = document.createElement("span");
+          narration.className = "sr-only";
+          narration.setAttribute("data-id", textId);
+          narration.textContent = (visual.textContent || "").replace(/\s+/g, " ").trim();
+
+          visual.removeAttribute("data-id");
+          visual.classList.add("pg029-number-visual");
+          visual.setAttribute("aria-hidden", "true");
+          visual.before(narration);
+
+          const syncQuestionHighlight = () => {
+            const isActive = narration.hasAttribute("data-tts-original-html")
+              || narration.classList.contains("tts-active-block")
+              || Boolean(narration.querySelector("[data-word-index].bg-yellow-300"));
+            group.classList.toggle("pg029-tts-question-highlight", isActive);
+          };
+
+          const observer = new MutationObserver(syncQuestionHighlight);
+          observer.observe(narration, {
+            attributes: true,
+            attributeFilter: ["class"],
+            childList: true,
+            subtree: true
+          });
+          syncQuestionHighlight();
+          window.addEventListener("beforeunload", () => observer.disconnect(), { once: true });
+        });
+
+        const narration = document.querySelector('[data-id="pg029_n0005"]');
+        const diagram = document.getElementById("pg029-example-diagram");
+        if (!narration || !diagram) return;
+
+        const syncDiagramHighlight = () => {
+          const isActive = narration.hasAttribute("data-tts-original-html")
+            || narration.classList.contains("tts-active-block")
+            || Boolean(narration.querySelector("[data-word-index].bg-yellow-300"));
+          diagram.classList.toggle("pg029-tts-diagram-highlight", isActive);
+        };
+
+        const observer = new MutationObserver(syncDiagramHighlight);
+        observer.observe(narration, {
+          attributes: true,
+          attributeFilter: ["class"],
+          childList: true,
+          subtree: true
+        });
+        syncDiagramHighlight();
+        window.addEventListener("beforeunload", () => observer.disconnect(), { once: true });
+      })();
     </script>
     <div class="relative z-50" id="interface-container"></div>
     <div class="relative z-50" id="nav-container"></div>
