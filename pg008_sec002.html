@@ -26,6 +26,15 @@
         color: #111827 !important;
         box-shadow: inset 0 0 0 3px #ca8a04;
       }
+
+      #pg009-number-review-button:disabled {
+        cursor: not-allowed;
+        border-color: #94a3b8;
+        background: #e2e8f0;
+        color: #64748b;
+        box-shadow: none;
+        opacity: 0.72;
+      }
     </style>
 </head>
 
@@ -261,6 +270,7 @@
         let currentAudio = null
         let playing = false
         let stopRequested = false
+        let readerTtsPlaying = false
 
         const storedNumber = (key, fallback) => {
           try {
@@ -275,7 +285,45 @@
           playing = false
           button.textContent = "Listen after you read"
           button.setAttribute("aria-pressed", "false")
+          button.disabled = readerTtsPlaying
         }
+
+        const stopNumberReview = (message = "Number review stopped.") => {
+          if (!playing) return
+          stopRequested = true
+          currentAudio?.pause()
+          currentAudio = null
+          table.querySelector(".number-review-cell-active")?.classList.remove("number-review-cell-active")
+          status.textContent = message
+          resetButton()
+        }
+
+        const isReaderTtsActive = () => Boolean(
+          document.querySelector('#interface-container button[aria-label="Pause"][aria-pressed="true"]') ||
+          document.querySelector('#interface-container button[aria-label="Deactivate text to speech"] .animate-pulse')
+        )
+
+        const syncWithReaderTts = () => {
+          const nextReaderTtsPlaying = isReaderTtsActive()
+          if (nextReaderTtsPlaying === readerTtsPlaying) return
+
+          readerTtsPlaying = nextReaderTtsPlaying
+          if (readerTtsPlaying) {
+            stopNumberReview("Number review paused while read aloud is playing.")
+            button.disabled = true
+          } else {
+            button.disabled = false
+          }
+        }
+
+        const interfaceContainer = document.getElementById("interface-container")
+        const readerControlsObserver = new MutationObserver(syncWithReaderTts)
+        readerControlsObserver.observe(interfaceContainer, {
+          subtree: true,
+          childList: true,
+          attributes: true,
+          attributeFilter: ["aria-label", "aria-pressed", "class"]
+        })
 
         const playClip = (src, cell) => new Promise((resolve) => {
           const audio = new Audio(src)
@@ -292,12 +340,7 @@
 
         button.addEventListener("click", async () => {
           if (playing) {
-            stopRequested = true
-            currentAudio?.pause()
-            currentAudio = null
-            table.querySelector(".number-review-cell-active")?.classList.remove("number-review-cell-active")
-            status.textContent = "Number review stopped."
-            resetButton()
+            stopNumberReview()
             return
           }
 
