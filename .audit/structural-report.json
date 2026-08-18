@@ -1,7 +1,7 @@
 {
   "summary": {
-    "manifest_entries": 154,
-    "html_files": 154,
+    "manifest_entries": 153,
+    "html_files": 153,
     "text_entries": 10708,
     "audio_mappings": 10708,
     "image_elements": 577,
@@ -54,6 +54,41 @@
         "href": "pg010_sec001.html",
         "table": 2,
         "td": 100,
+        "th": 0,
+        "presentation": false
+      },
+      {
+        "href": "pg011_sec001.html",
+        "table": 1,
+        "td": 100,
+        "th": 0,
+        "presentation": false
+      },
+      {
+        "href": "pg011_sec001.html",
+        "table": 2,
+        "td": 165,
+        "th": 0,
+        "presentation": false
+      },
+      {
+        "href": "pg012_sec001.html",
+        "table": 1,
+        "td": 165,
+        "th": 0,
+        "presentation": false
+      },
+      {
+        "href": "pg012_sec002.html",
+        "table": 1,
+        "td": 169,
+        "th": 0,
+        "presentation": false
+      },
+      {
+        "href": "pg012_sec002.html",
+        "table": 2,
+        "td": 90,
         "th": 0,
         "presentation": false
       }
