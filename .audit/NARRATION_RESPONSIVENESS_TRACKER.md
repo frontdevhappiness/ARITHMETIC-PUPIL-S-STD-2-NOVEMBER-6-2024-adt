@@ -19,7 +19,7 @@ This tracker follows the 186-entry ADT reading order. A page is complete only af
 | 4 | `pg004_sec001` | `pg004_sec001.html` | — | COMPLETE | Narration, highlighting and responsive layout passed without repair. |
 | 5 | `pg005_sec001` | `pg005_sec001.html` | — | COMPLETE | Removed hidden watermark narration; retained meaningful signature narration. |
 | 6 | `pg006_sec001` | `pg006_sec001.html` | — | COMPLETE | Narration, QR description, highlighting and responsive layout passed. |
-| 7 | `pg007_sec001` | `pg007_sec001.html` | 1 | COMPLETE | Removed duplicate chapter-banner image narration; verified standard British readings in the number song. |
+| 7 | `pg007_sec001` | `pg007_sec001.html` | 1 | COMPLETE | Removed duplicate chapter-banner image narration; verified standard British readings in the number song; matrix terminology item confirmed and corrected so each visible “× 2” song instruction is narrated as “two times,” with synchronized highlighting. |
 | 8 | `pg008_sec001` | `pg008_sec001.html` | 2 | COMPLETE | Removed hidden composite-image narration; standardized 101–150 with verified mini-TTS Alloy audio and cell highlighting. |
 | 9 | `pg008_sec002` | `pg008_sec002.html` | 2 | COMPLETE | Retained meaningful game-image narration; standardized visible labels 101–110 and the instruction’s spoken 102; verified highlighting. |
 | 10 | `pg009_sec001` | `pg009_sec001.html` | 3 | COMPLETE | Removed hidden table-image narration; standardized 151–200 and highlighting. |

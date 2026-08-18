@@ -55,8 +55,9 @@
 
         <!-- Song content -->
         <div class="ml-10 max-w-[900px] space-y-4 text-[23px] leading-[1.6] text-neutral-800 max-lg:ml-7 max-lg:text-[20px] max-sm:ml-4 max-sm:space-y-3 max-sm:text-[15px] max-sm:leading-[1.55]">
-          <p data-id="pg007_n0012">
-            Who has my lost bag? &#xd7; 2.
+          <p>
+            <span data-id="pg007_n0012" class="sr-only">Who has my lost bag &#x2014; two times.</span>
+            <span aria-hidden="true" data-song-highlight-proxy="pg007_n0012">Who has my lost bag? &#xd7; 2.</span>
           </p>
 
           <p data-id="pg007_n0013">
@@ -68,8 +69,9 @@
             one hundred and four, one hundred and five.
           </p>
 
-          <p data-id="pg007_n0015">
-            Who has my lost bag? &#xd7; 2.
+          <p>
+            <span data-id="pg007_n0015" class="sr-only">Who has my lost bag &#x2014; two times.</span>
+            <span aria-hidden="true" data-song-highlight-proxy="pg007_n0015">Who has my lost bag? &#xd7; 2.</span>
           </p>
 
           <p data-id="pg007_n0016">
@@ -81,8 +83,9 @@
             one hundred and nine, one hundred and ten.
           </p>
 
-          <p data-id="pg007_n0019">
-            Who has my lost bag? &#xd7; 2.
+          <p>
+            <span data-id="pg007_n0019" class="sr-only">Who has my lost bag &#x2014; two times.</span>
+            <span aria-hidden="true" data-song-highlight-proxy="pg007_n0019">Who has my lost bag? &#xd7; 2.</span>
           </p>
 
           <p data-id="pg007_n0020">
@@ -102,6 +105,22 @@
 
     <div class="relative z-50" id="interface-container"></div>
     <div class="relative z-50" id="nav-container"></div>
+    <script>
+      (() => {
+        for (const source of document.querySelectorAll('.sr-only[data-id]')) {
+          const proxies = document.querySelectorAll(`[data-song-highlight-proxy="${source.dataset.id}"]`)
+          if (!proxies.length) continue
+
+          const syncHighlight = () => {
+            const isActive = source.classList.contains('bg-yellow-300') || Boolean(source.querySelector('.bg-yellow-300'))
+            for (const proxy of proxies) proxy.classList.toggle('bg-yellow-300', isActive)
+          }
+
+          new MutationObserver(syncHighlight).observe(source, { attributes: true, childList: true, subtree: true })
+          syncHighlight()
+        }
+      })()
+    </script>
     <script src="./assets/preserve-rich-content.js"></script>
     <script src="./assets/offline-preloader.js"></script>
     <script src="./assets/scorm.js"></script>
