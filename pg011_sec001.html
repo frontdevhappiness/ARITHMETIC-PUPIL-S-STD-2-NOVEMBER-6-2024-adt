@@ -10,6 +10,22 @@
     <link href="./content/tailwind_output.css" rel="stylesheet">
     <link href="./assets/libs/fontawesome/css/all.min.css" rel="stylesheet">
     <link href="./assets/fonts.css" rel="stylesheet">
+    <style>
+      .number-review-cell-active {
+        background: #fde047 !important;
+        color: #111827 !important;
+        box-shadow: inset 0 0 0 3px #ca8a04;
+      }
+
+      [data-number-review-button]:disabled {
+        cursor: not-allowed;
+        border-color: #94a3b8;
+        background: #e2e8f0;
+        color: #64748b;
+        box-shadow: none;
+        opacity: 0.72;
+      }
+    </style>
 </head>
 
 <body class="min-h-screen flex items-center justify-center">
@@ -29,7 +45,7 @@
         </p>
 
         <div class="w-full overflow-hidden">
-          <table role="presentation" class="source-number-grid w-full table-fixed border-collapse text-center text-[18px] text-neutral-900 max-lg:text-[15px] max-sm:text-[9px]">
+          <table data-number-review-table="exercise-6" role="table" class="source-number-grid w-full table-fixed border-collapse text-center text-[18px] text-neutral-900 max-lg:text-[15px] max-sm:text-[9px]">
             <caption class="sr-only">
               A table containing the numbers from 401 to 500.
             </caption>
@@ -167,6 +183,13 @@
             </tbody>
           </table>
         </div>
+
+        <div class="mt-8 flex flex-col items-center gap-3 max-sm:mt-6">
+          <button data-number-review-button="exercise-6" type="button" aria-pressed="false" class="rounded-xl border-2 border-[#239bd8] bg-white px-6 py-3 text-[19px] font-bold text-[#1679ad] shadow-sm transition hover:bg-sky-50 focus:outline-none focus-visible:ring-4 focus-visible:ring-sky-300 max-sm:px-4 max-sm:py-2 max-sm:text-[15px]">
+            Listen after you read
+          </button>
+          <p data-number-review-status="exercise-6" class="sr-only" aria-live="polite"></p>
+        </div>
       </section>
 
       <!-- Exercise 7 -->
@@ -180,7 +203,7 @@
         </p>
 
         <div class="w-full overflow-hidden">
-          <table role="presentation" class="source-number-grid w-full table-fixed border-collapse text-center text-[17px] text-neutral-900 max-lg:text-[14px] max-sm:text-[8px]">
+          <table data-number-review-table="exercise-7" role="table" class="source-number-grid w-full table-fixed border-collapse text-center text-[17px] text-neutral-900 max-lg:text-[14px] max-sm:text-[8px]">
             <caption class="sr-only">
               A table containing the numbers from 501 to 665.
             </caption>
@@ -398,6 +421,13 @@
             </tbody>
           </table>
         </div>
+
+        <div class="mt-8 flex flex-col items-center gap-3 max-sm:mt-6">
+          <button data-number-review-button="exercise-7" type="button" aria-pressed="false" class="rounded-xl border-2 border-[#239bd8] bg-white px-6 py-3 text-[19px] font-bold text-[#1679ad] shadow-sm transition hover:bg-sky-50 focus:outline-none focus-visible:ring-4 focus-visible:ring-sky-300 max-sm:px-4 max-sm:py-2 max-sm:text-[15px]">
+            Listen after you read
+          </button>
+          <p data-number-review-status="exercise-7" class="sr-only" aria-live="polite"></p>
+        </div>
       </section>
     </div>
   </div>
@@ -409,6 +439,134 @@
     <script src="./assets/preserve-rich-content.js"></script>
     <script src="./assets/offline-preloader.js"></script>
     <script src="./assets/scorm.js"></script>
+    <script>
+      (() => {
+        const tables = Array.from(document.querySelectorAll("[data-number-review-table]"))
+        if (!tables.length) return
+
+        const audioMapPromise = fetch("./content/i18n/en-GB/audios.json").then((response) => response.json())
+        let activeController = null
+        let readerTtsPlaying = false
+
+        const storedNumber = (key, fallback) => {
+          try {
+            const value = JSON.parse(localStorage.getItem(key) ?? "null")
+            return typeof value === "number" ? value : fallback
+          } catch {
+            return fallback
+          }
+        }
+
+        for (const table of tables) {
+          const reviewName = table.dataset.numberReviewTable
+          const button = document.querySelector(`[data-number-review-button="${reviewName}"]`)
+          const status = document.querySelector(`[data-number-review-status="${reviewName}"]`)
+          if (!button || !status) continue
+
+          const cells = Array.from(table.querySelectorAll("td[data-id]"))
+          for (const cell of cells) {
+            cell.dataset.reviewAudioId = cell.dataset.id
+            cell.removeAttribute("data-id")
+          }
+
+          let currentAudio = null
+          let playing = false
+          let stopRequested = false
+
+          const resetButton = () => {
+            playing = false
+            button.textContent = "Listen after you read"
+            button.setAttribute("aria-pressed", "false")
+            button.disabled = readerTtsPlaying
+          }
+
+          const stop = (message = "Number review stopped.") => {
+            stopRequested = true
+            currentAudio?.pause()
+            currentAudio = null
+            table.querySelector(".number-review-cell-active")?.classList.remove("number-review-cell-active")
+            status.textContent = message
+            resetButton()
+            if (activeController?.stop === stop) activeController = null
+          }
+
+          const playClip = (src, cell) => new Promise((resolve) => {
+            const audio = new Audio(src)
+            currentAudio = audio
+            audio.playbackRate = storedNumber("audioSpeed", 1)
+            audio.volume = Math.min(1, Math.max(0, storedNumber("audioVolume", 1)))
+            audio.addEventListener("ended", resolve, { once: true })
+            audio.addEventListener("error", resolve, { once: true })
+            audio.addEventListener("pause", resolve, { once: true })
+            cell.classList.add("number-review-cell-active")
+            cell.scrollIntoView({ block: "center", behavior: "smooth" })
+            audio.play().catch(resolve)
+          })
+
+          button.addEventListener("click", async () => {
+            if (playing) {
+              stop()
+              return
+            }
+
+            activeController?.stop()
+            activeController = { stop }
+            playing = true
+            stopRequested = false
+            button.textContent = "Stop listening"
+            button.setAttribute("aria-pressed", "true")
+            status.textContent = "Listening to the numbers in order."
+
+            try {
+              const audioMap = await audioMapPromise
+              for (const cell of cells) {
+                if (stopRequested) break
+                const filename = audioMap[cell.dataset.reviewAudioId]
+                if (!filename) continue
+                await playClip(`./content/i18n/en-GB/audio/${filename}`, cell)
+                cell.classList.remove("number-review-cell-active")
+                currentAudio = null
+              }
+              if (!stopRequested) status.textContent = "Number review complete."
+            } catch {
+              status.textContent = "The number review could not be played."
+            } finally {
+              table.querySelector(".number-review-cell-active")?.classList.remove("number-review-cell-active")
+              currentAudio = null
+              resetButton()
+              if (activeController?.stop === stop) activeController = null
+            }
+          })
+        }
+
+        const isReaderTtsActive = () => Boolean(
+          document.querySelector('#interface-container button[aria-label="Pause"][aria-pressed="true"]') ||
+          document.querySelector('#interface-container button[aria-label="Deactivate text to speech"] .animate-pulse')
+        )
+
+        const syncWithReaderTts = () => {
+          const nextReaderTtsPlaying = isReaderTtsActive()
+          if (nextReaderTtsPlaying === readerTtsPlaying) return
+
+          readerTtsPlaying = nextReaderTtsPlaying
+          if (readerTtsPlaying) {
+            activeController?.stop("Number review paused while read aloud is playing.")
+          }
+
+          for (const reviewButton of document.querySelectorAll("[data-number-review-button]")) {
+            reviewButton.disabled = readerTtsPlaying
+          }
+        }
+
+        const readerControlsObserver = new MutationObserver(syncWithReaderTts)
+        readerControlsObserver.observe(document.getElementById("interface-container"), {
+          subtree: true,
+          childList: true,
+          attributes: true,
+          attributeFilter: ["aria-label", "aria-pressed", "class"]
+        })
+      })()
+    </script>
     <script src="./assets/base.bundle.local.js"></script>
 </body>
 
