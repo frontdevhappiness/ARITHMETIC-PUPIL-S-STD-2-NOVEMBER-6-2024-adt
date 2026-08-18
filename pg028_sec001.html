@@ -10,6 +10,35 @@
     <link href="./content/tailwind_output.css" rel="stylesheet">
     <link href="./assets/libs/fontawesome/css/all.min.css" rel="stylesheet">
     <link href="./assets/fonts.css" rel="stylesheet">
+    <style>
+      [aria-labelledby="pg028-exercise-3-title"] .fitb-inline-input {
+        width: 96px !important;
+        min-width: 96px !important;
+        height: 46px;
+        padding: 3px 8px;
+        font-size: 20px;
+        transform: translateY(-14px);
+        vertical-align: baseline;
+      }
+
+      #pg028-example-1-diagram.pg028-tts-diagram-highlight {
+        border-radius: 12px;
+        background: rgba(253, 224, 71, 0.58);
+        box-shadow: 0 0 0 4px rgba(253, 224, 71, 0.58);
+      }
+
+      @media (max-width: 639px) {
+        [aria-labelledby="pg028-exercise-3-title"] .fitb-inline-input {
+          width: 78px !important;
+          min-width: 78px !important;
+          height: 42px;
+          font-size: 17px;
+          display: block;
+          margin: 4px 0 0 auto;
+          transform: none;
+        }
+      }
+    </style>
 </head>
 
 <body class="min-h-screen flex items-center justify-center">
@@ -99,22 +128,23 @@
         </p>
 
         <!-- Place-value diagram -->
-        <div class="relative mb-10 h-[190px] w-full max-w-[480px] max-sm:h-[165px]" role="img" aria-label="The number 478 showing 4 hundreds, 7 tens and 8 ones">
+        <span data-id="pg028_n0022" class="sr-only">Four hundreds, seven tens, eight ones.</span>
+        <div id="pg028-example-1-diagram" class="relative mb-10 h-[190px] w-full max-w-[480px] max-sm:h-[165px]" role="img" aria-label="The number 478 showing 4 hundreds, 7 tens and 8 ones">
           <!-- Digits -->
-          <div data-id="pg028_n0022" aria-hidden="true" class="absolute left-[3%] top-0 flex gap-[18px] text-[27px] leading-none tracking-normal text-neutral-900 max-sm:text-[22px]">
-            <span>4</span>
-            <span>7</span>
-            <span>8</span>
+          <div aria-hidden="true" class="absolute text-[27px] leading-none text-neutral-900 max-sm:text-[22px]" style="top: 0; right: 0; left: 0; height: 28px;">
+            <span class="absolute -translate-x-1/2" style="left: 4.15%;">4</span>
+            <span class="absolute -translate-x-1/2" style="left: 10.2%;">7</span>
+            <span class="absolute -translate-x-1/2" style="left: 16.2%;">8</span>
           </div>
 
           <!-- Hundreds connector -->
-          <div aria-hidden="true" class="absolute left-[5%] top-[39px] h-[125px] w-[57%] border-b-[3px] border-l-[3px] border-orange-400"></div>
+          <div aria-hidden="true" class="absolute top-[39px] h-[125px] border-b-[3px] border-l-[3px] border-orange-400" style="left: 4.15%; width: 57.85%;"></div>
 
           <!-- Tens connector -->
-          <div aria-hidden="true" class="absolute left-[13%] top-[39px] h-[88px] w-[49%] border-b-[3px] border-l-[3px] border-pink-500"></div>
+          <div aria-hidden="true" class="absolute top-[39px] h-[88px] border-b-[3px] border-l-[3px] border-pink-500" style="left: 10.2%; width: 51.8%;"></div>
 
           <!-- Ones connector -->
-          <div aria-hidden="true" class="absolute left-[21%] top-[39px] h-[51px] w-[41%] border-b-[3px] border-l-[3px] border-sky-500"></div>
+          <div aria-hidden="true" class="absolute top-[39px] h-[51px] border-b-[3px] border-l-[3px] border-sky-500" style="left: 16.2%; width: 45.8%;"></div>
 
           <!-- Labels -->
           <span aria-hidden="true" class="absolute left-[65%] top-[74px] text-[19px] leading-none text-neutral-800 max-sm:text-[15px]">
@@ -152,6 +182,30 @@
 
     <script type="text/javascript">
         window.correctAnswers = JSON.parse('{"item-1":"201","item-2":"334","item-3":"69","item-4":"5","item-5":"400","item-6":"123","item-7":"256","item-8":"410","item-9":"308","item-10":"241"}');
+    </script>
+    <script type="text/javascript">
+      (() => {
+        const narration = document.querySelector('[data-id="pg028_n0022"]');
+        const diagram = document.getElementById("pg028-example-1-diagram");
+        if (!narration || !diagram) return;
+
+        const syncDiagramHighlight = () => {
+          const isActive = narration.hasAttribute("data-tts-original-html")
+            || narration.classList.contains("tts-active-block")
+            || Boolean(narration.querySelector("[data-word-index].bg-yellow-300"));
+          diagram.classList.toggle("pg028-tts-diagram-highlight", isActive);
+        };
+
+        const observer = new MutationObserver(syncDiagramHighlight);
+        observer.observe(narration, {
+          attributes: true,
+          attributeFilter: ["class"],
+          childList: true,
+          subtree: true
+        });
+        syncDiagramHighlight();
+        window.addEventListener("beforeunload", () => observer.disconnect(), { once: true });
+      })();
     </script>
     <div class="relative z-50" id="interface-container"></div>
     <div class="relative z-50" id="nav-container"></div>
