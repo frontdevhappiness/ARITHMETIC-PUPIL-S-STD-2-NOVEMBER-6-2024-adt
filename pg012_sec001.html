@@ -10,6 +10,22 @@
     <link href="./content/tailwind_output.css" rel="stylesheet">
     <link href="./assets/libs/fontawesome/css/all.min.css" rel="stylesheet">
     <link href="./assets/fonts.css" rel="stylesheet">
+    <style>
+      .number-review-cell-active {
+        background: #fde047 !important;
+        color: #111827 !important;
+        box-shadow: inset 0 0 0 3px #ca8a04;
+      }
+
+      #pg012-number-review-button:disabled {
+        cursor: not-allowed;
+        border-color: #94a3b8;
+        background: #e2e8f0;
+        color: #64748b;
+        box-shadow: none;
+        opacity: 0.72;
+      }
+    </style>
 </head>
 
 <body class="min-h-screen flex items-center justify-center">
@@ -19,7 +35,7 @@
   <div aria-label="Book page" role="region" data-book-page="true" class="relative mx-auto min-h-[1123px] w-full overflow-visible rounded-[48px] border-[18px] border-[#cfe8fb] bg-white text-neutral-900 shadow-[inset_0_0_55px_rgba(186,220,245,0.32)] max-sm:min-h-0 max-sm:rounded-[30px] max-sm:border-[10px]">
     <div class="mx-auto w-full max-w-[1120px] px-12 pt-14 pb-36 max-lg:px-8 max-lg:pt-12 max-lg:pb-32 max-sm:px-3 max-sm:pt-9 max-sm:pb-24">
       <!-- Exercise 8 -->
-      <section data-section-type="activity_other" data-section-id="pg012_sec001" aria-labelledby="pg012-exercise-8-title" class="relative mt-8 w-full overflow-visible rounded-[36px] border-[4px] border-[#8fd0f1] bg-white px-10 pt-16 pb-10 max-lg:px-7 max-sm:mt-6 max-sm:rounded-[24px] max-sm:border-[3px] max-sm:px-2 max-sm:pt-12 max-sm:pb-5">
+      <section data-section-type="text_and_images" data-section-id="pg012_sec001" aria-labelledby="pg012-exercise-8-title" class="relative mt-8 w-full overflow-visible rounded-[36px] border-[4px] border-[#8fd0f1] bg-white px-10 pt-16 pb-10 max-lg:px-7 max-sm:mt-6 max-sm:rounded-[24px] max-sm:border-[3px] max-sm:px-2 max-sm:pt-12 max-sm:pb-5">
         <!-- Preserve original extracted image reference -->
         <img src="images/pg012_im001.png" alt="" aria-hidden="true" class="hidden" style="max-width: 100%; height: auto;">
 
@@ -35,7 +51,7 @@
 
         <!-- Accessible number table without horizontal scrolling -->
         <div class="w-full overflow-hidden">
-          <table role="presentation" class="source-number-grid w-full table-fixed border-collapse text-center text-[18px] text-neutral-900 max-lg:text-[15px] max-sm:text-[8px]">
+          <table data-number-review-table role="table" class="source-number-grid w-full table-fixed border-collapse text-center text-[18px] text-neutral-900 max-lg:text-[15px] max-sm:text-[8px]">
             <caption class="sr-only">
               Read the numbers from left to right, beginning with 666 and
               ending with 830.
@@ -254,6 +270,13 @@
             </tbody>
           </table>
         </div>
+
+        <div class="mt-8 flex flex-col items-center gap-3 max-sm:mt-6">
+          <button id="pg012-number-review-button" type="button" aria-pressed="false" class="rounded-xl border-2 border-[#239bd8] bg-white px-6 py-3 text-[19px] font-bold text-[#1679ad] shadow-sm transition hover:bg-sky-50 focus:outline-none focus-visible:ring-4 focus-visible:ring-sky-300 max-sm:px-4 max-sm:py-2 max-sm:text-[15px]">
+            Listen after you read
+          </button>
+          <p id="pg012-number-review-status" class="sr-only" aria-live="polite"></p>
+        </div>
       </section>
     </div>
   </div>
@@ -265,6 +288,123 @@
     <script src="./assets/preserve-rich-content.js"></script>
     <script src="./assets/offline-preloader.js"></script>
     <script src="./assets/scorm.js"></script>
+    <script>
+      (() => {
+        const table = document.querySelector("[data-number-review-table]")
+        const button = document.getElementById("pg012-number-review-button")
+        const status = document.getElementById("pg012-number-review-status")
+        if (!table || !button || !status) return
+
+        const cells = Array.from(table.querySelectorAll("td[data-id]"))
+        for (const cell of cells) {
+          cell.dataset.reviewAudioId = cell.dataset.id
+          cell.removeAttribute("data-id")
+        }
+
+        let currentAudio = null
+        let playing = false
+        let stopRequested = false
+        let readerTtsPlaying = false
+
+        const storedNumber = (key, fallback) => {
+          try {
+            const value = JSON.parse(localStorage.getItem(key) ?? "null")
+            return typeof value === "number" ? value : fallback
+          } catch {
+            return fallback
+          }
+        }
+
+        const resetButton = () => {
+          playing = false
+          button.textContent = "Listen after you read"
+          button.setAttribute("aria-pressed", "false")
+          button.disabled = readerTtsPlaying
+        }
+
+        const stopNumberReview = (message = "Number review stopped.") => {
+          if (!playing) return
+          stopRequested = true
+          currentAudio?.pause()
+          currentAudio = null
+          table.querySelector(".number-review-cell-active")?.classList.remove("number-review-cell-active")
+          status.textContent = message
+          resetButton()
+        }
+
+        const isReaderTtsActive = () => Boolean(
+          document.querySelector('#interface-container button[aria-label="Pause"][aria-pressed="true"]') ||
+          document.querySelector('#interface-container button[aria-label="Deactivate text to speech"] .animate-pulse')
+        )
+
+        const syncWithReaderTts = () => {
+          const nextReaderTtsPlaying = isReaderTtsActive()
+          if (nextReaderTtsPlaying === readerTtsPlaying) return
+
+          readerTtsPlaying = nextReaderTtsPlaying
+          if (readerTtsPlaying) {
+            stopNumberReview("Number review paused while read aloud is playing.")
+            button.disabled = true
+          } else {
+            button.disabled = false
+          }
+        }
+
+        const readerControlsObserver = new MutationObserver(syncWithReaderTts)
+        readerControlsObserver.observe(document.getElementById("interface-container"), {
+          subtree: true,
+          childList: true,
+          attributes: true,
+          attributeFilter: ["aria-label", "aria-pressed", "class"]
+        })
+
+        const playClip = (src, cell) => new Promise((resolve) => {
+          const audio = new Audio(src)
+          currentAudio = audio
+          audio.playbackRate = storedNumber("audioSpeed", 1)
+          audio.volume = Math.min(1, Math.max(0, storedNumber("audioVolume", 1)))
+          audio.addEventListener("ended", resolve, { once: true })
+          audio.addEventListener("error", resolve, { once: true })
+          audio.addEventListener("pause", resolve, { once: true })
+          cell.classList.add("number-review-cell-active")
+          cell.scrollIntoView({ block: "center", behavior: "smooth" })
+          audio.play().catch(resolve)
+        })
+
+        button.addEventListener("click", async () => {
+          if (playing) {
+            stopNumberReview()
+            return
+          }
+
+          playing = true
+          stopRequested = false
+          button.textContent = "Stop listening"
+          button.setAttribute("aria-pressed", "true")
+          status.textContent = "Listening to the numbers in order."
+
+          try {
+            const response = await fetch("./content/i18n/en-GB/audios.json")
+            const audioMap = await response.json()
+            for (const cell of cells) {
+              if (stopRequested) break
+              const filename = audioMap[cell.dataset.reviewAudioId]
+              if (!filename) continue
+              await playClip(`./content/i18n/en-GB/audio/${filename}`, cell)
+              cell.classList.remove("number-review-cell-active")
+              currentAudio = null
+            }
+            if (!stopRequested) status.textContent = "Number review complete."
+          } catch {
+            status.textContent = "The number review could not be played."
+          } finally {
+            table.querySelector(".number-review-cell-active")?.classList.remove("number-review-cell-active")
+            currentAudio = null
+            resetButton()
+          }
+        })
+      })()
+    </script>
     <script src="./assets/base.bundle.local.js"></script>
 </body>
 
