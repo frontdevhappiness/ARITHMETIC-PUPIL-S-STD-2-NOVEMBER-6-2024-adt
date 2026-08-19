@@ -68,13 +68,26 @@
       .pg029-place-value-grid input[aria-label$="tens value"] { width: 33% !important; }
       .pg029-place-value-grid input[aria-label$="ones value"] { width: 22% !important; }
 
+      /* In reading-only mode the response inputs become inert line segments.
+       * Their top positions begin 19px before the corresponding vertical
+       * place-value line ends, so retain that height to form one continuous L
+       * instead of leaving the horizontal and vertical strokes disconnected. */
+      .pg029-place-value-grid .source-static-control {
+        height: 19px !important;
+        border-width: 0 !important;
+        border-bottom-width: 2px !important;
+        border-radius: 0 !important;
+        background: transparent !important;
+        padding: 0 !important;
+      }
+
       #pg029-example-diagram.pg029-tts-diagram-highlight {
         border-radius: 12px;
         background: rgba(253, 224, 71, 0.58);
         box-shadow: 0 0 0 4px rgba(253, 224, 71, 0.58);
       }
 
-      .pg029-place-value-grid [role="group"] > span:not([data-id]):not(.pg029-number-visual) {
+      .pg029-place-value-grid [role="group"] > span:not([data-id]):not(.pg029-number-visual):not(.source-static-control) {
         left: auto !important;
         right: 2%;
         white-space: nowrap;
@@ -100,7 +113,7 @@
           grid-template-columns: 42px minmax(0, 1fr) !important;
         }
 
-        .pg029-place-value-grid [role="group"] > span:not([data-id]):not(.pg029-number-visual) {
+        .pg029-place-value-grid [role="group"] > span:not([data-id]):not(.pg029-number-visual):not(.source-static-control) {
           right: 4px;
           font-size: 13px !important;
         }

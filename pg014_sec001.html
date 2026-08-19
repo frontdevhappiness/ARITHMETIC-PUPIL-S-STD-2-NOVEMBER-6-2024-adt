@@ -10,6 +10,40 @@
     <link href="./content/tailwind_output.css" rel="stylesheet">
     <link href="./assets/libs/fontawesome/css/all.min.css" rel="stylesheet">
     <link href="./assets/fonts.css" rel="stylesheet">
+    <style>
+      /* Exercise 11 follows the compact two-column proportions of the source book. */
+      @media (min-width: 769px) {
+        #pg014-exercise-11 {
+          padding: 3.25rem 2rem 2rem;
+        }
+
+        #pg014-exercise-11 .exercise-instruction {
+          margin-bottom: 1rem;
+          font-size: 1.25rem;
+          line-height: 1.35;
+        }
+
+        #pg014-exercise-11 .exercise-column > :not([hidden]) ~ :not([hidden]) {
+          margin-top: 0.25rem;
+        }
+
+        #pg014-exercise-11 .exercise-column > div {
+          grid-template-columns: 2.25rem 3.75rem minmax(0, 1fr);
+          gap: 0.35rem;
+        }
+
+        #pg014-exercise-11 .exercise-column > div > span {
+          font-size: 1.125rem;
+          line-height: 1.8rem;
+        }
+
+        #pg014-exercise-11 .exercise-column > div > input {
+          height: 1.8rem;
+          padding-inline: 0.25rem;
+          font-size: 1rem;
+        }
+      }
+    </style>
 </head>
 
 <body class="min-h-screen flex items-center justify-center">
@@ -24,21 +58,21 @@
       </h1>
 
       <!-- Exercise 11 -->
-      <section data-section-type="activity_fill_in_the_blank" data-section-id="pg014_sec001" aria-labelledby="pg014-exercise-title" class="relative mt-8 w-full overflow-visible rounded-[36px] border-[4px] border-[#8fd0f1] bg-white px-10 pt-16 pb-12 max-lg:px-7 max-sm:mt-6 max-sm:rounded-[24px] max-sm:border-[3px] max-sm:px-4 max-sm:pt-12 max-sm:pb-8">
+      <section id="pg014-exercise-11" data-section-type="activity_fill_in_the_blank" data-section-id="pg014_sec001" aria-labelledby="pg014-exercise-title" class="relative mt-8 w-full overflow-visible rounded-[36px] border-[4px] border-[#8fd0f1] bg-white px-10 pt-16 pb-12 max-lg:px-7 max-sm:mt-6 max-sm:rounded-[24px] max-sm:border-[3px] max-sm:px-4 max-sm:pt-12 max-sm:pb-8">
         <!-- Exercise banner -->
         <h2 id="pg014-exercise-title" data-id="pg014_n0005" class="absolute -top-8 left-10 z-20 m-0 rounded-[28px] border-[4px] border-[#239bd8] bg-white px-8 py-2 text-[30px] font-bold leading-none text-[#239bd8] max-sm:-top-6 max-sm:left-5 max-sm:rounded-[20px] max-sm:border-[3px] max-sm:px-5 max-sm:py-2 max-sm:text-[19px]">
           Exercise 11
         </h2>
 
         <!-- Instruction -->
-        <p data-id="pg014_n0006" class="mb-8 text-left text-[25px] leading-[1.45] text-neutral-900 max-sm:mb-6 max-sm:text-[17px]">
+        <p data-id="pg014_n0006" class="exercise-instruction mb-8 text-left text-[25px] leading-[1.45] text-neutral-900 max-sm:mb-6 max-sm:text-[17px]">
           Write the following numbers in words.
         </p>
 
-        <!-- Single-column exercise layout gives each written answer a full-width line. -->
-        <div class="grid grid-cols-1 items-start gap-y-5">
+        <!-- Match the printed book: questions 1–13 on the left and 14–25 on the right. -->
+        <div class="grid grid-cols-2 items-start gap-x-10 gap-y-5 max-md:grid-cols-1 max-md:gap-y-6">
           <!-- Items 1–13 -->
-          <div class="space-y-4">
+          <div class="exercise-column space-y-4">
             <!-- Item 1 -->
             <div class="grid grid-cols-[2.6rem_5rem_minmax(0,1fr)] items-end gap-2 max-sm:grid-cols-[2rem_4rem_minmax(0,1fr)]">
               <span id="pg014-item-1" data-id="pg014_n0007" class="text-[21px] leading-10 text-[#239bd8] max-sm:text-[17px]">
@@ -210,7 +244,7 @@
           </div>
 
           <!-- Items 14–25 -->
-          <div class="space-y-4">
+          <div class="exercise-column space-y-4">
             <!-- Item 14 -->
             <div class="grid grid-cols-[2.6rem_5rem_minmax(0,1fr)] items-end gap-2 max-sm:grid-cols-[2rem_4rem_minmax(0,1fr)]">
               <span id="pg014-item-14" data-id="pg014_n0033" class="text-[21px] leading-10 text-[#239bd8] max-sm:text-[17px]">

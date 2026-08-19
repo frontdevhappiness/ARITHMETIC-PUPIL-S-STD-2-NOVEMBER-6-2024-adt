@@ -21,7 +21,7 @@
     "state": true,
     "characterDisplay": false,
     "highlight": true,
-    "activities": true
+    "activities": false
   },
   "analytics": {
     "enabled": false,

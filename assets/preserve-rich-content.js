@@ -23,6 +23,152 @@
 
   const snapshots = new Map()
 
+  /* This edition is temporarily distributed as a reading-only textbook.
+   * Remove every answer control, but preserve a non-interactive line where the
+   * original PDF actually printed one. These sections were checked against the
+   * source pages; other [[blank:...]] fields were conversion-only additions. */
+  const sourcePrintedBlankWidths = new Map([
+    ["pg017_sec001", "4.5em"],
+    ["pg019_sec001", "2.5em"],
+    ["pg027_sec001", "2.4em"],
+    ["pg028_sec001", "4.8em"],
+    ["pg032_sec001", "6em"],
+    ["pg082_sec001", "2.8em"],
+    ["pg120_sec002", "6em"],
+    ["pg142_sec001", "7.5em"],
+  ])
+
+  /* Authored controls were audited against the corresponding source-PDF pages.
+   * Only controls which represent a mark actually printed in the book appear
+   * here. Empty table cells, artwork boxes and conversion-only response fields
+   * are intentionally absent: removing their controls already reveals the
+   * source layout underneath. */
+  const sourceControlShellSelectors = new Map([
+    ["pg014_sec001", ["input"]],
+    ["pg014_sec002", ["input"]],
+    ["pg016_sec001", ["input"]],
+    ["pg018_sec001", ["input"]],
+    ["pg022_sec001", ["input"]],
+    ["pg024_sec001", ["input"]],
+    ["pg029_sec001", ["input"]],
+    ["pg031_sec001", ["input:not(.pg031-digit-input)"]],
+    ["pg033_sec002", ["input"]],
+    ["pg036_sec001", ['input[aria-label^="Number formed"]']],
+    ["pg039_sec001", ["input"]],
+    ["pg046_sec001", ["input"]],
+    ["pg047_sec001", ["input"]],
+    ["pg053_sec001", ["input"]],
+    ["pg053_sec002", ["input"]],
+    ["pg055_sec002", ["input"]],
+    ["pg068_sec001", ["input"]],
+    ["pg069_sec001", ["input"]],
+    ["pg069_sec002", ["input"]],
+    ["pg075_sec001", ["input"]],
+    ["pg076_sec001", ["input"]],
+    ["pg082_sec001", ["input"]],
+    ["pg087_sec001", ["input"]],
+    ["pg089_sec001", ["input.mt-3"]],
+    ["pg105_sec002", ["input"]],
+    ["pg107_sec001", ["input"]],
+    ["pg108_sec001", ["input"]],
+    ["pg110_sec001", ["input"]],
+    ["pg114_sec002", ["input"]],
+  ])
+
+  const sourceAuthoredUnderlineSelectors = new Map([
+    ["pg025_sec001", ["textarea"]],
+  ])
+
+  const sourceAuthoredUnderlineWidths = new Map([
+    ["pg055_sec002", "3.5rem"],
+  ])
+
+  const sourceBlankWidth = (control, sectionId) => {
+    if (!sourcePrintedBlankWidths.has(sectionId)) return null
+    /* Runtime-generated [[blank:...]] controls live in fitb-sentence. Inputs
+     * positioned over an illustration are deliberately excluded: removing
+     * those reveals the blank box already printed in the source artwork. */
+    return control.closest(".fitb-sentence")
+      ? sourcePrintedBlankWidths.get(sectionId)
+      : null
+  }
+
+  const makeSourceBlank = (width) => {
+    const blank = document.createElement("span")
+    blank.className = "source-printed-answer-blank"
+    blank.setAttribute("aria-hidden", "true")
+    blank.style.cssText = [
+      "display:inline-block",
+      `width:${width}`,
+      "max-width:100%",
+      "height:0.9em",
+      "margin-inline:0.12em",
+      "border-bottom:2px solid currentColor",
+      "vertical-align:baseline",
+    ].join(";")
+    return blank
+  }
+
+  const matchesSourceRule = (control, rules) =>
+    (rules || []).some((selector) => control.matches(selector))
+
+  const makeSourceControlShell = (control) => {
+    const shell = document.createElement("span")
+    shell.className = `${control.className || ""} source-static-control`.trim()
+    shell.setAttribute("aria-hidden", "true")
+    if (control.getAttribute("style")) {
+      shell.setAttribute("style", control.getAttribute("style"))
+    }
+    /* Inputs are replaced by empty inline spans, so explicitly establish a
+     * box. This retains their authored width, height, border and positioning
+     * classes without leaving any focusable or editable control behind. */
+    shell.style.display = "block"
+    shell.style.boxSizing = "border-box"
+    shell.style.pointerEvents = "none"
+    return shell
+  }
+
+  const staticizeExercises = () => {
+    const sectionId =
+      document.querySelector('meta[name="title-id"]')?.getAttribute("content") || ""
+    for (const control of document.querySelectorAll(
+      "#content input, #content textarea, #content select",
+    )) {
+      const width = sourceBlankWidth(control, sectionId)
+      const authoredWidth = sourceAuthoredUnderlineWidths.get(sectionId)
+      if (authoredWidth && control.matches('input[type="text"]')) {
+        control.replaceWith(makeSourceBlank(authoredWidth))
+      } else if (width) {
+        control.replaceWith(makeSourceBlank(width))
+      } else if (
+        matchesSourceRule(
+          control,
+          sourceAuthoredUnderlineSelectors.get(sectionId),
+        )
+      ) {
+        const blank = makeSourceBlank("100%")
+        blank.style.display = "block"
+        control.replaceWith(blank)
+      } else if (
+        matchesSourceRule(control, sourceControlShellSelectors.get(sectionId))
+      ) {
+        control.replaceWith(makeSourceControlShell(control))
+      } else {
+        control.remove()
+      }
+    }
+
+    for (const button of document.querySelectorAll("button")) {
+      if ((button.textContent || "").trim().toLowerCase() !== "submit") continue
+      const submitDock = button.parentElement?.parentElement
+      if (submitDock && getComputedStyle(submitDock).position === "fixed") {
+        submitDock.remove()
+      } else {
+        button.remove()
+      }
+    }
+  }
+
   /* A converted subtraction exercise coloured its numbering with
    * `::first-letter`. That only colours the first digit of 10–18, leaving the
    * second digit and full stop black. Wrap the complete leading number after
@@ -203,6 +349,7 @@
     }
     wrapExerciseNumbers()
     normalizeSourceBanners()
+    staticizeExercises()
   }
 
   const observer = new MutationObserver(restoreFlattenedContainers)
@@ -216,4 +363,5 @@
   restoreFlattenedContainers()
   wrapExerciseNumbers()
   normalizeSourceBanners()
+  staticizeExercises()
 })()
