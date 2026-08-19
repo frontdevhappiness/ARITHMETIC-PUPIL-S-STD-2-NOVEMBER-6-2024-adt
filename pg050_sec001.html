@@ -10,12 +10,20 @@
     <link href="./content/tailwind_output.css" rel="stylesheet">
     <link href="./assets/libs/fontawesome/css/all.min.css" rel="stylesheet">
     <link href="./assets/fonts.css" rel="stylesheet">
+    <style>
+      .pg050-diagram-highlight {
+        background-color: #fef9c3 !important;
+        border-radius: 0.75rem;
+        box-shadow: 0 0 0 4px #facc15;
+        transition: background-color 120ms ease, box-shadow 120ms ease;
+      }
+    </style>
 </head>
 
 <body class="min-h-screen flex items-center justify-center">
     <main class="w-full">
       <div id="content" class="mx-auto w-full max-w-7xl bg-white p-8 max-lg:p-5 max-sm:p-3 opacity-0">
-  <section data-book-page="true" data-section-type="activity_fill_in_the_blank" data-section-id="pg050_sec001" class="relative mx-auto overflow-hidden rounded-[3.5rem] border-[18px] border-sky-100 bg-white shadow-[inset_0_0_30px_rgba(125,190,235,0.14),0_8px_24px_rgba(14,116,144,0.08)] max-lg:rounded-[2.75rem] max-lg:border-[14px] max-sm:rounded-[2rem] max-sm:border-[9px]">
+  <section data-book-page="true" data-section-type="text_and_single_image" data-section-id="pg050_sec001" class="relative mx-auto overflow-hidden rounded-[3.5rem] border-[18px] border-sky-100 bg-white shadow-[inset_0_0_30px_rgba(125,190,235,0.14),0_8px_24px_rgba(14,116,144,0.08)] max-lg:rounded-[2.75rem] max-lg:border-[14px] max-sm:rounded-[2rem] max-sm:border-[9px]">
     <div class="relative z-10 px-16 py-14 font-serif text-neutral-800 max-lg:px-10 max-lg:py-10 max-sm:px-4 max-sm:py-7">
       <h1 data-id="pg050_n0068" class="text-4xl font-bold italic leading-tight max-lg:text-3xl max-sm:text-2xl">
         Adding numbers vertically by regrouping
@@ -88,14 +96,20 @@
                 <span></span>
               </div>
 
-              <div data-id="pg051_n0010" class="grid grid-cols-[2rem_repeat(3,minmax(0,1fr))] text-center">
+              <span data-id="pg051_n0010" class="sr-only">
+                1 in the hundreds place, 6 in the tens place, and 6 in the ones place.
+              </span>
+              <div aria-hidden="true" data-diagram-highlight-source="pg051_n0010" class="grid grid-cols-[2rem_repeat(3,minmax(0,1fr))] text-center">
                 <span></span>
                 <span>1</span>
                 <span>6</span>
                 <span>6</span>
               </div>
 
-              <div data-id="pg051_n0011" class="grid grid-cols-[2rem_repeat(3,minmax(0,1fr))] text-center">
+              <span data-id="pg051_n0011" class="sr-only">
+                Plus 1 in the hundreds place, 2 in the tens place, and 6 in the ones place.
+              </span>
+              <div aria-hidden="true" data-diagram-highlight-source="pg051_n0011" class="grid grid-cols-[2rem_repeat(3,minmax(0,1fr))] text-center">
                 <span>+</span>
                 <span>1</span>
                 <span>2</span>
@@ -104,7 +118,10 @@
 
               <div class="mt-1 border-t-2 border-neutral-700"></div>
 
-              <div data-id="pg051_n0012" class="grid grid-cols-[2rem_repeat(3,minmax(0,1fr))] text-center">
+              <span data-id="pg051_n0012" class="sr-only">
+                The sum is 2 in the hundreds place, 9 in the tens place, and 2 in the ones place: 292.
+              </span>
+              <div aria-hidden="true" data-diagram-highlight-source="pg051_n0012" class="grid grid-cols-[2rem_repeat(3,minmax(0,1fr))] text-center">
                 <span></span>
                 <span>2</span>
                 <span>9</span>
@@ -142,9 +159,9 @@
               </p>
             </div>
 
-            <div class="flex items-center justify-center p-5">
+            <div data-diagram-highlight-source="pg051_n0022" class="flex items-center justify-center p-5">
               <span data-id="pg051_n0022" class="sr-only">
-                The ones digit of the answer is 2, with 1 ten carried.
+                The ones digit of the answer is 2, with 1 ten carried to the tens place.
               </span>
 
               <div class="w-40 font-mono text-3xl not-italic">
@@ -196,7 +213,7 @@
               </p>
             </div>
 
-            <div class="flex items-center justify-center p-5">
+            <div data-diagram-highlight-source="pg051_n0029" class="flex items-center justify-center p-5">
               <span data-id="pg051_n0029" class="sr-only">
                 The tens and ones digits of the answer are 9 and 2.
               </span>
@@ -250,7 +267,7 @@
               </p>
             </div>
 
-            <div class="flex items-center justify-center p-5">
+            <div data-diagram-highlight-source="pg051_n0036" class="flex items-center justify-center p-5">
               <span data-id="pg051_n0036" class="sr-only">
                 The completed sum is 166 plus 126 equals 292.
               </span>
@@ -307,9 +324,6 @@
 </div>
     </main>
 
-    <script type="text/javascript">
-        window.correctAnswers = JSON.parse('{"item-1":"292"}');
-    </script>
     <div class="relative z-50" id="interface-container"></div>
     <div class="relative z-50" id="nav-container"></div>
     <script>
@@ -333,6 +347,27 @@
           subtree: true,
         })
         syncVisibleQuestionHighlight()
+      })()
+    </script>
+    <script>
+      (() => {
+        for (const diagram of document.querySelectorAll('[data-diagram-highlight-source]')) {
+          const source = document.querySelector(`[data-id="${diagram.dataset.diagramHighlightSource}"]`)
+          if (!source) continue
+
+          const syncDiagramHighlight = () => {
+            const isActive = source.classList.contains('bg-yellow-300') || Boolean(source.querySelector('.bg-yellow-300'))
+            diagram.classList.toggle('pg050-diagram-highlight', isActive)
+          }
+
+          new MutationObserver(syncDiagramHighlight).observe(source, {
+            attributes: true,
+            childList: true,
+            subtree: true,
+            attributeFilter: ['class']
+          })
+          syncDiagramHighlight()
+        }
       })()
     </script>
     <script src="./assets/preserve-rich-content.js"></script>
