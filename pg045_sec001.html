@@ -10,6 +10,13 @@
     <link href="./content/tailwind_output.css" rel="stylesheet">
     <link href="./assets/libs/fontawesome/css/all.min.css" rel="stylesheet">
     <link href="./assets/fonts.css" rel="stylesheet">
+    <style>
+      .pg045-table-highlight {
+        background-color: #fef9c3 !important;
+        box-shadow: 0 0 0 4px #facc15;
+        transition: background-color 120ms ease, box-shadow 120ms ease;
+      }
+    </style>
 </head>
 
 <body class="min-h-screen flex items-center justify-center">
@@ -43,8 +50,8 @@
 
           <!-- Completed place-value table -->
           <div class="border-l border-[#405ad0] p-3 max-sm:border-l-0 max-sm:border-t">
-            <span data-id="pg045_n0012" class="sr-only">The completed table shows three hundred and eighteen.</span>
-            <div class="grid h-full min-h-[300px] grid-cols-[36px_repeat(3,1fr)] grid-rows-[150px_50px_50px_50px] border border-neutral-600 text-center text-[22px] leading-none max-sm:min-h-[250px] max-sm:grid-rows-[115px_42px_42px_42px] max-sm:text-[17px]">
+            <span data-id="pg045_n0012" class="sr-only">2 in the hundreds place, 1 in the tens place, 6 in the ones place. Plus 1 in the hundreds place, 0 in the tens place, and 2 in the ones place. Equals 3 in the hundreds place, 1 in the tens place, and 8 in the ones place.</span>
+            <div data-table-highlight-source="pg045_n0012" class="grid h-full min-h-[300px] grid-cols-[36px_repeat(3,1fr)] grid-rows-[150px_50px_50px_50px] border border-neutral-600 text-center text-[22px] leading-none max-sm:min-h-[250px] max-sm:grid-rows-[115px_42px_42px_42px] max-sm:text-[17px]">
               <!-- Vertical headings -->
               <div class="border-b border-r border-neutral-500"></div>
 
@@ -102,10 +109,6 @@
 
         <!-- Solution -->
         <div class="mx-auto mb-8 w-full max-w-[760px] max-sm:mb-6">
-          <h2 class="mb-4 text-center text-[27px] font-bold leading-tight text-neutral-900 max-lg:text-[23px] max-sm:text-[18px]">
-            Solution
-          </h2>
-
           <div class="grid grid-cols-[180px_1fr] items-end gap-x-14 max-lg:grid-cols-[145px_1fr] max-lg:gap-x-8 max-sm:grid-cols-1 max-sm:gap-y-6">
             <!-- Vertical question -->
             <div role="img" class="mx-auto w-[150px] text-[27px] leading-[1.3] text-neutral-900 max-sm:w-[125px] max-sm:text-[20px]" aria-label="345 plus 223">
@@ -125,17 +128,20 @@
               <div class="ml-[24px] h-10 border-b-2 border-neutral-700 max-sm:h-8"></div>
             </div>
 
-            <span data-id="pg045_n0007" class="sr-only">Solution</span>
-
-            <!-- Completed solution -->
             <div class="min-w-0">
+              <h2 data-id="pg045_n0007" class="mb-4 text-center text-[27px] font-bold leading-tight text-neutral-900 max-lg:text-[23px] max-sm:text-[18px]">
+                Solution
+              </h2>
+
+              <!-- Completed solution -->
+              <div data-table-highlight-source="pg045_n0023" class="min-w-0">
               <div class="mb-2 grid grid-cols-3 text-center text-[23px] italic leading-tight text-neutral-800 max-lg:text-[20px] max-sm:text-[15px]">
                 <span data-id="pg045_n0020">hundreds</span>
                 <span data-id="pg045_n0021">tens</span>
                 <span data-id="pg045_n0022">ones</span>
               </div>
 
-              <span data-id="pg045_n0023" class="sr-only">The answer is five hundred and sixty-eight.</span>
+              <span data-id="pg045_n0023" class="sr-only">3 in the hundreds place, 4 in the tens place, 5 in the ones place. Plus 2 in the hundreds place, 2 in the tens place, and 3 in the ones place. Equals 5 in the hundreds place, 6 in the tens place, and 8 in the ones place.</span>
 
               <div class="grid grid-cols-[34px_repeat(3,1fr)] text-center text-[27px] leading-[1.3] max-sm:grid-cols-[26px_repeat(3,1fr)] max-sm:text-[20px]">
                 <span></span>
@@ -152,6 +158,7 @@
                 <span class="border-b-2 border-neutral-700 py-1">5</span>
                 <span class="border-b-2 border-neutral-700 py-1">6</span>
                 <span class="border-b-2 border-neutral-700 py-1">8</span>
+              </div>
               </div>
             </div>
           </div>
@@ -178,8 +185,8 @@
 
           <!-- Step 1 place-value table -->
           <div class="border-l border-[#405ad0] p-2 max-sm:border-l-0 max-sm:border-t">
-            <span data-id="pg045_n0024" class="sr-only">The table now shows eight in the ones place.</span>
-            <div class="grid min-h-[230px] grid-cols-[34px_repeat(3,1fr)] grid-rows-[118px_44px_44px_44px] border border-neutral-600 text-center text-[20px] leading-none max-sm:min-h-[200px] max-sm:grid-rows-[94px_40px_40px_40px] max-sm:text-[16px]">
+            <span data-id="pg045_n0024" class="sr-only">8 in the ones place.</span>
+            <div data-table-highlight-source="pg045_n0024" class="grid min-h-[230px] grid-cols-[34px_repeat(3,1fr)] grid-rows-[118px_44px_44px_44px] border border-neutral-600 text-center text-[20px] leading-none max-sm:min-h-[200px] max-sm:grid-rows-[94px_40px_40px_40px] max-sm:text-[16px]">
               <!-- Vertical headings -->
               <div class="border-b border-r border-neutral-500"></div>
 
@@ -229,6 +236,27 @@
 
     <div class="relative z-50" id="interface-container"></div>
     <div class="relative z-50" id="nav-container"></div>
+    <script>
+      (() => {
+        for (const table of document.querySelectorAll('[data-table-highlight-source]')) {
+          const source = document.querySelector(`[data-id="${table.dataset.tableHighlightSource}"]`)
+          if (!source) continue
+
+          const syncTableHighlight = () => {
+            const isActive = source.classList.contains('bg-yellow-300') || Boolean(source.querySelector('.bg-yellow-300'))
+            table.classList.toggle('pg045-table-highlight', isActive)
+          }
+
+          new MutationObserver(syncTableHighlight).observe(source, {
+            attributes: true,
+            childList: true,
+            subtree: true,
+            attributeFilter: ['class']
+          })
+          syncTableHighlight()
+        }
+      })()
+    </script>
     <script src="./assets/preserve-rich-content.js"></script>
     <script src="./assets/offline-preloader.js"></script>
     <script src="./assets/scorm.js"></script>
