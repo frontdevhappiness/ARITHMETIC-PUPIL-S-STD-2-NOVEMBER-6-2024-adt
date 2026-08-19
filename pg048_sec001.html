@@ -10,6 +10,42 @@
     <link href="./content/tailwind_output.css" rel="stylesheet">
     <link href="./assets/libs/fontawesome/css/all.min.css" rel="stylesheet">
     <link href="./assets/fonts.css" rel="stylesheet">
+    <style>
+      .pg048-diagram-highlight {
+        background-color: #fef9c3 !important;
+        border-radius: 0.75rem;
+        box-shadow: 0 0 0 4px #facc15;
+        transition: background-color 120ms ease, box-shadow 120ms ease;
+      }
+
+      .pg048-step-row {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .pg048-step-row > * {
+        min-width: 0;
+      }
+
+      .pg048-step-diagram {
+        width: 100%;
+        max-width: 36rem;
+      }
+
+      .pg048-step-diagram .pg048-step-digits text {
+        font-size: 40px !important;
+      }
+
+      .pg048-step-diagram .pg048-step-symbols text {
+        font-size: 36px !important;
+      }
+
+      @media (max-width: 640px) {
+        .pg048-step-row {
+          grid-template-columns: minmax(0, 1fr);
+        }
+      }
+    </style>
 </head>
 
 <body class="min-h-screen flex items-center justify-center">
@@ -43,8 +79,8 @@
           </span>
         </div>
 
-        <p data-id="pg048_n0021" class="text-3xl max-lg:text-2xl max-sm:text-xl">
-          167 + 138 =
+        <p class="text-3xl max-lg:text-2xl max-sm:text-xl">
+          <span data-id="pg048_n0021">167 + 138</span><span aria-hidden="true"> =</span>
         </p>
 
         <h2 data-id="pg048_n0022" class="mt-5 text-3xl font-bold max-lg:text-2xl">
@@ -52,9 +88,9 @@
         </h2>
 
         <!-- Solution regrouping diagram -->
-        <div class="mt-3 w-full max-w-md">
+        <div data-diagram-highlight-source="pg048_n0023" class="mt-3 w-full max-w-md p-1">
           <span data-id="pg048_n0023" class="sr-only">
-            167 + 138 = 305
+            The diagram shows 167 plus 138 equals 305. The green arrow connects the hundreds, the blue arrow connects the tens, and the red arrow connects the ones.
           </span>
 
           <svg viewBox="0 0 520 145" role="img" aria-label="167 plus 138 equals 305 with regrouping arrows" class="h-auto w-full" shape-rendering="geometricPrecision">
@@ -72,19 +108,25 @@
               </marker>
             </defs>
 
-            <g fill="#111" font-family="Arial, sans-serif" font-size="42">
-              <text x="10" y="45">167</text>
-              <text x="92" y="45">+</text>
-              <text x="132" y="45">138</text>
-              <text x="222" y="45">=</text>
-              <text x="270" y="45">305</text>
+            <g fill="#111" font-family="Arial, sans-serif" font-size="42" text-anchor="middle">
+              <text x="22" y="45">1</text>
+              <text x="45" y="45">6</text>
+              <text x="68" y="45">7</text>
+              <text x="104" y="45">+</text>
+              <text x="144" y="45">1</text>
+              <text x="167" y="45">3</text>
+              <text x="190" y="45">8</text>
+              <text x="234" y="45">=</text>
+              <text x="283" y="45">3</text>
+              <text x="306" y="45">0</text>
+              <text x="329" y="45">5</text>
             </g>
 
-            <path d="M22 56V132H147V69" fill="none" stroke="#39b54a" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter" marker-end="url(#solution-green)"/>
+            <path d="M22 56V132H144V56" fill="none" stroke="#39b54a" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter" marker-end="url(#solution-green)"/>
 
-            <path d="M45 56V113H170V69" fill="none" stroke="#0ea5e9" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter" marker-end="url(#solution-blue)"/>
+            <path d="M45 56V113H167V56" fill="none" stroke="#0ea5e9" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter" marker-end="url(#solution-blue)"/>
 
-            <path d="M68 56V94H193V69" fill="none" stroke="#ed1c24" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter" marker-end="url(#solution-red)"/>
+            <path d="M68 56V94H190V56" fill="none" stroke="#ed1c24" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter" marker-end="url(#solution-red)"/>
           </svg>
         </div>
 
@@ -97,7 +139,7 @@
         <!-- Steps 1 and 2 -->
         <div class="mt-5 overflow-hidden border-2 border-indigo-400 text-2xl leading-relaxed max-lg:text-xl max-sm:text-base">
           <!-- Step 1 -->
-          <div class="grid grid-cols-[6fr_5fr] border-b-2 border-indigo-400 max-sm:grid-cols-1">
+          <div class="pg048-step-row border-b-2 border-indigo-400">
             <div class="border-r-2 border-indigo-400 p-5 max-sm:border-b-2 max-sm:border-r-0">
               <p data-id="pg048_n0025">
                 <span class="font-bold text-sky-500">1.</span>
@@ -117,41 +159,38 @@
               </p>
             </div>
 
-            <div class="flex items-center justify-center p-4">
+            <div data-diagram-highlight-source="pg048_n0029" class="flex items-center justify-center p-4">
               <span data-id="pg048_n0029" class="sr-only">
-                The ones digit of the answer is 5.
+                The red arrow connects 7 ones and 8 ones. The answer has 5 ones, with 1 ten carried to the tens place.
               </span>
 
-              <svg viewBox="0 0 325 150" aria-hidden="true" class="h-auto w-full max-w-sm" shape-rendering="geometricPrecision">
+              <svg viewBox="0 0 365 165" aria-hidden="true" class="pg048-step-diagram h-auto" shape-rendering="geometricPrecision">
                 <defs>
                   <marker id="step-one-red" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto">
                     <path d="M0 0L8 4L0 8Z" fill="#ed1c24"/>
                   </marker>
                 </defs>
 
-                <line x1="43" y1="9" x2="43" y2="36" stroke="#14dce5" stroke-width="3" stroke-linecap="square"/>
+                <line x1="48" y1="4" x2="48" y2="38" stroke="#14dce5" stroke-width="4" stroke-linecap="square"/>
 
-                <g fill="#111" font-family="Arial, sans-serif" font-size="40" text-anchor="middle">
-                  <text x="20" y="75">1</text>
-                  <text x="43" y="75">6</text>
-                  <text x="66" y="75">7</text>
-                  <text x="100" y="75">+</text>
-                  <text x="137" y="75">1</text>
-                  <text x="160" y="75">3</text>
-                  <text x="183" y="75">8</text>
-                  <text x="220" y="75">=</text>
-                  <text x="251" y="75">_</text>
-                  <text x="274" y="75">_</text>
-                  <text x="297" y="75">5</text>
+                <g fill="#111" font-family="Arial, sans-serif" text-anchor="middle">
+                  <g class="pg048-step-digits" font-size="72">
+                    <text x="20" y="88" style="font-size:40px!important">1</text><text x="48" y="88" style="font-size:40px!important">6</text><text x="76" y="88" style="font-size:40px!important">7</text>
+                    <text x="148" y="88" style="font-size:40px!important">1</text><text x="176" y="88" style="font-size:40px!important">3</text><text x="204" y="88" style="font-size:40px!important">8</text>
+                  </g>
+                  <g class="pg048-step-symbols" font-size="62">
+                    <text x="112" y="88" style="font-size:36px!important">+</text><text x="250" y="88" style="font-size:36px!important">=</text>
+                    <text x="284" y="88" style="font-size:36px!important">_</text><text x="318" y="88" style="font-size:36px!important">_</text><text x="350" y="88" style="font-size:36px!important">5</text>
+                  </g>
                 </g>
 
-                <path d="M66 84V130H183V88" fill="none" stroke="#ed1c24" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter" marker-end="url(#step-one-red)"/>
+                <path d="M76 102V152H204V102" fill="none" stroke="#ed1c24" stroke-width="5" stroke-linecap="square" stroke-linejoin="miter" marker-end="url(#step-one-red)"/>
               </svg>
             </div>
           </div>
 
           <!-- Step 2 -->
-          <div class="grid grid-cols-[6fr_5fr] max-sm:grid-cols-1">
+          <div class="pg048-step-row">
             <div class="border-r-2 border-indigo-400 p-5 max-sm:border-b-2 max-sm:border-r-0">
               <p data-id="pg048_n0030">
                 <span class="font-bold text-sky-500">2.</span>
@@ -171,37 +210,34 @@
               </p>
             </div>
 
-            <div class="flex items-center justify-center p-4">
+            <div data-diagram-highlight-source="pg048_n0034" class="flex items-center justify-center p-4">
               <span data-id="pg048_n0034" class="sr-only">
-                The tens and ones digits of the answer are 0 and 5.
+                The blue arrow connects 6 tens and 3 tens. The answer has 0 tens and 5 ones, with 1 hundred carried.
               </span>
 
-              <svg viewBox="0 0 325 150" aria-hidden="true" class="h-auto w-full max-w-sm" shape-rendering="geometricPrecision">
+              <svg viewBox="0 0 365 165" aria-hidden="true" class="pg048-step-diagram h-auto" shape-rendering="geometricPrecision">
                 <defs>
                   <marker id="step-two-blue" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto">
                     <path d="M0 0L8 4L0 8Z" fill="#0ea5e9"/>
                   </marker>
                 </defs>
 
-                <line x1="20" y1="9" x2="20" y2="36" stroke="#14dce5" stroke-width="3" stroke-linecap="square"/>
+                <line x1="20" y1="4" x2="20" y2="38" stroke="#14dce5" stroke-width="4" stroke-linecap="square"/>
 
-                <line x1="43" y1="9" x2="43" y2="36" stroke="#14dce5" stroke-width="3" stroke-linecap="square"/>
+                <line x1="48" y1="4" x2="48" y2="38" stroke="#14dce5" stroke-width="4" stroke-linecap="square"/>
 
-                <g fill="#111" font-family="Arial, sans-serif" font-size="40" text-anchor="middle">
-                  <text x="20" y="75">1</text>
-                  <text x="43" y="75">6</text>
-                  <text x="66" y="75">7</text>
-                  <text x="100" y="75">+</text>
-                  <text x="137" y="75">1</text>
-                  <text x="160" y="75">3</text>
-                  <text x="183" y="75">8</text>
-                  <text x="220" y="75">=</text>
-                  <text x="251" y="75">_</text>
-                  <text x="274" y="75">0</text>
-                  <text x="297" y="75">5</text>
+                <g fill="#111" font-family="Arial, sans-serif" text-anchor="middle">
+                  <g class="pg048-step-digits" font-size="72">
+                    <text x="20" y="88" style="font-size:40px!important">1</text><text x="48" y="88" style="font-size:40px!important">6</text><text x="76" y="88" style="font-size:40px!important">7</text>
+                    <text x="148" y="88" style="font-size:40px!important">1</text><text x="176" y="88" style="font-size:40px!important">3</text><text x="204" y="88" style="font-size:40px!important">8</text>
+                  </g>
+                  <g class="pg048-step-symbols" font-size="62">
+                    <text x="112" y="88" style="font-size:36px!important">+</text><text x="250" y="88" style="font-size:36px!important">=</text>
+                    <text x="284" y="88" style="font-size:36px!important">_</text><text x="318" y="88" style="font-size:36px!important">0</text><text x="350" y="88" style="font-size:36px!important">5</text>
+                  </g>
                 </g>
 
-                <path d="M43 84V130H160V88" fill="none" stroke="#0ea5e9" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter" marker-end="url(#step-two-blue)"/>
+                <path d="M48 102V152H176V102" fill="none" stroke="#0ea5e9" stroke-width="5" stroke-linecap="square" stroke-linejoin="miter" marker-end="url(#step-two-blue)"/>
               </svg>
             </div>
           </div>
@@ -209,7 +245,7 @@
 
         <!-- Step 3 -->
         <div class="mt-6 overflow-hidden border-2 border-indigo-400 text-2xl leading-relaxed max-lg:text-xl max-sm:text-base">
-          <div class="grid grid-cols-[6fr_5fr] border-b-2 border-indigo-400 max-sm:grid-cols-1">
+          <div class="pg048-step-row border-b-2 border-indigo-400">
             <div class="border-r-2 border-indigo-400 p-5 max-sm:border-b-2 max-sm:border-r-0">
               <p data-id="pg049_n0003">
                 <span class="font-bold text-sky-500">3.</span>
@@ -221,35 +257,32 @@
               </p>
             </div>
 
-            <div class="flex items-center justify-center p-4">
+            <div data-diagram-highlight-source="pg049_n0005" class="flex items-center justify-center p-4">
               <span data-id="pg049_n0005" class="sr-only">
-                167 + 138 = 305
+                The green arrow connects 1 hundred and 1 hundred. With the carried hundred, the completed answer is 305.
               </span>
 
-              <svg viewBox="0 0 325 150" aria-hidden="true" class="h-auto w-full max-w-sm" shape-rendering="geometricPrecision">
+              <svg viewBox="0 0 365 165" aria-hidden="true" class="pg048-step-diagram h-auto" shape-rendering="geometricPrecision">
                 <defs>
                   <marker id="step-three-green" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto">
                     <path d="M0 0L8 4L0 8Z" fill="#39b54a"/>
                   </marker>
                 </defs>
 
-                <line x1="20" y1="9" x2="20" y2="36" stroke="#14dce5" stroke-width="3" stroke-linecap="square"/>
+                <line x1="20" y1="4" x2="20" y2="38" stroke="#14dce5" stroke-width="4" stroke-linecap="square"/>
 
-                <g fill="#111" font-family="Arial, sans-serif" font-size="40" text-anchor="middle">
-                  <text x="20" y="75">1</text>
-                  <text x="43" y="75">6</text>
-                  <text x="66" y="75">7</text>
-                  <text x="100" y="75">+</text>
-                  <text x="137" y="75">1</text>
-                  <text x="160" y="75">3</text>
-                  <text x="183" y="75">8</text>
-                  <text x="220" y="75">=</text>
-                  <text x="251" y="75">3</text>
-                  <text x="274" y="75">0</text>
-                  <text x="297" y="75">5</text>
+                <g fill="#111" font-family="Arial, sans-serif" text-anchor="middle">
+                  <g class="pg048-step-digits" font-size="72">
+                    <text x="20" y="88" style="font-size:40px!important">1</text><text x="48" y="88" style="font-size:40px!important">6</text><text x="76" y="88" style="font-size:40px!important">7</text>
+                    <text x="148" y="88" style="font-size:40px!important">1</text><text x="176" y="88" style="font-size:40px!important">3</text><text x="204" y="88" style="font-size:40px!important">8</text>
+                  </g>
+                  <g class="pg048-step-symbols" font-size="62">
+                    <text x="112" y="88" style="font-size:36px!important">+</text><text x="250" y="88" style="font-size:36px!important">=</text>
+                    <text x="284" y="88" style="font-size:36px!important">3</text><text x="318" y="88" style="font-size:36px!important">0</text><text x="350" y="88" style="font-size:36px!important">5</text>
+                  </g>
                 </g>
 
-                <path d="M20 84V130H137V88" fill="none" stroke="#39b54a" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter" marker-end="url(#step-three-green)"/>
+                <path d="M20 102V152H148V102" fill="none" stroke="#39b54a" stroke-width="5" stroke-linecap="square" stroke-linejoin="miter" marker-end="url(#step-three-green)"/>
               </svg>
             </div>
           </div>
@@ -269,7 +302,7 @@
           <div class="mt-3 flex items-end justify-center">
             
 
-            <img src="images/pg048_upload1.png" alt="Place-value bead chart showing the answer 305: 3 beads in the hundreds place, no beads in the tens place, and 5 beads in the ones place. The arrows show regrouping 10 ones as 1 ten and 10 tens as 1 hundred." data-id="pg048_upload1" class="min-w-0 flex-1 object-contain" style="max-width: 100%; height: auto;">
+            <img src="images/pg048_upload1.png" alt="The bead chart shows another way to add 167 and 138. First, 7 ones plus 8 ones makes 15 ones. Regroup 10 of the ones as 1 ten, leaving 5 ones. Next, add the carried ten to 6 tens and 3 tens. This makes 10 tens. Regroup the 10 tens as 1 hundred, leaving 0 tens. Finally, add the carried hundred to 1 hundred and 1 hundred. This makes 3 hundreds. The final number is 3 hundreds, 0 tens and 5 ones: 305." data-id="pg048_upload1" class="min-w-0 flex-1 object-contain" style="max-width: 100%; height: auto;">
           </div>
 
           <p data-id="pg049_n0012" class="mt-4 text-3xl max-lg:text-2xl max-sm:text-xl">
@@ -291,6 +324,27 @@
 
     <div class="relative z-50" id="interface-container"></div>
     <div class="relative z-50" id="nav-container"></div>
+    <script>
+      (() => {
+        for (const diagram of document.querySelectorAll('[data-diagram-highlight-source]')) {
+          const source = document.querySelector(`[data-id="${diagram.dataset.diagramHighlightSource}"]`)
+          if (!source) continue
+
+          const syncDiagramHighlight = () => {
+            const isActive = source.classList.contains('bg-yellow-300') || Boolean(source.querySelector('.bg-yellow-300'))
+            diagram.classList.toggle('pg048-diagram-highlight', isActive)
+          }
+
+          new MutationObserver(syncDiagramHighlight).observe(source, {
+            attributes: true,
+            childList: true,
+            subtree: true,
+            attributeFilter: ['class']
+          })
+          syncDiagramHighlight()
+        }
+      })()
+    </script>
     <script src="./assets/preserve-rich-content.js"></script>
     <script src="./assets/offline-preloader.js"></script>
     <script src="./assets/scorm.js"></script>
