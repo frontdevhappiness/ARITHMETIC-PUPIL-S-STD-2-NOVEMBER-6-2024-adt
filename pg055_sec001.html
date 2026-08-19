@@ -10,6 +10,29 @@
     <link href="./content/tailwind_output.css" rel="stylesheet">
     <link href="./assets/libs/fontawesome/css/all.min.css" rel="stylesheet">
     <link href="./assets/fonts.css" rel="stylesheet">
+    <style>
+      .pg055-addition-table input {
+        min-width: 0;
+      }
+
+      .pg055-chart-highlight {
+        background-color: #fde047 !important;
+        color: #111827 !important;
+        transition: background-color 120ms ease;
+      }
+
+      @media (max-width: 640px) {
+        .pg055-addition-table th,
+        .pg055-addition-table td {
+          padding-left: 0.125rem !important;
+          padding-right: 0.125rem !important;
+        }
+
+        .pg055-addition-table input {
+          font-size: 0.875rem !important;
+        }
+      }
+    </style>
 </head>
 
 <body class="min-h-screen flex items-center justify-center">
@@ -29,30 +52,37 @@
           Use the following chart to answer the questions.
         </p>
 
-        <div class="overflow-x-auto">
-          <table aria-label="Addition chart with row and column headings from 201 to 206" class="mx-auto min-w-[780px] w-full border-collapse table-fixed text-center text-2xl italic">
+        <div class="w-full overflow-hidden">
+          <div class="sr-only">
+            <span data-id="pg055_n0007">Addition chart.</span>
+            <span data-id="pg055_n0009">Column headings: 201, 202, 203, 204, 205 and 206.</span>
+            <span data-id="pg055_n0022">Row headings: 201, 202, 203, 204, 205 and 206.</span>
+            <span data-id="pg055_n0055">Given number 409 at row 204, column 205.</span>
+            <span data-id="pg055_n0072">Given number 409 at row 206, column 203.</span>
+          </div>
+          <table aria-label="Addition chart with row and column headings from 201 to 206" class="pg055-addition-table mx-auto w-full table-fixed border-collapse text-center text-2xl italic max-lg:text-xl max-sm:text-sm">
             <thead>
               <tr>
-                <th class="h-14 w-[14%] border-2 border-indigo-600 p-2 font-normal" scope="col">
-                  <span data-id="pg055_n0007">+</span>
+                <th data-chart-highlight-source="pg055_n0007" class="h-14 w-[14%] border-2 border-indigo-600 p-2 font-normal max-sm:p-1" scope="col">
+                  <span aria-hidden="true">+</span>
                 </th>
-                <th class="h-14 border-2 border-indigo-600 p-2 font-normal" scope="col">
-                  <span data-id="pg055_n0009">201</span>
+                <th data-chart-highlight-source="pg055_n0009" class="h-14 border-2 border-indigo-600 p-2 font-normal" scope="col">
+                  <span aria-hidden="true">201</span>
                 </th>
-                <th class="h-14 border-2 border-indigo-600 p-2 font-normal" scope="col">
-                  <span data-id="pg055_n0011">202</span>
+                <th data-chart-highlight-source="pg055_n0009" class="h-14 border-2 border-indigo-600 p-2 font-normal" scope="col">
+                  <span aria-hidden="true">202</span>
                 </th>
-                <th class="h-14 border-2 border-indigo-600 p-2 font-normal" scope="col">
-                  <span data-id="pg055_n0013">203</span>
+                <th data-chart-highlight-source="pg055_n0009" class="h-14 border-2 border-indigo-600 p-2 font-normal" scope="col">
+                  <span aria-hidden="true">203</span>
                 </th>
-                <th class="h-14 border-2 border-indigo-600 p-2 font-normal" scope="col">
-                  <span data-id="pg055_n0015">204</span>
+                <th data-chart-highlight-source="pg055_n0009" class="h-14 border-2 border-indigo-600 p-2 font-normal" scope="col">
+                  <span aria-hidden="true">204</span>
                 </th>
-                <th class="h-14 border-2 border-indigo-600 p-2 font-normal" scope="col">
-                  <span data-id="pg055_n0017">205</span>
+                <th data-chart-highlight-source="pg055_n0009" class="h-14 border-2 border-indigo-600 p-2 font-normal" scope="col">
+                  <span aria-hidden="true">205</span>
                 </th>
-                <th class="h-14 border-2 border-indigo-600 p-2 font-normal" scope="col">
-                  <span data-id="pg055_n0019">206</span>
+                <th data-chart-highlight-source="pg055_n0009" class="h-14 border-2 border-indigo-600 p-2 font-normal" scope="col">
+                  <span aria-hidden="true">206</span>
                 </th>
               </tr>
             </thead>
@@ -60,8 +90,8 @@
             <tbody>
               <!-- Row 201 -->
               <tr>
-                <th class="h-16 border-2 border-indigo-600 p-2 font-normal">
-                  <span data-id="pg055_n0022">201</span>
+                <th data-chart-highlight-source="pg055_n0022" class="h-16 border-2 border-indigo-600 p-2 font-normal" scope="row">
+                  <span aria-hidden="true">201</span>
                 </th>
                 <td class="h-16 border-2 border-indigo-600 p-0">
                   <input id="cell-1" type="text" aria-label="201 plus 201" data-activity-item="item-1" class="h-full w-full bg-transparent text-center text-2xl outline-none focus:bg-sky-50">
@@ -85,8 +115,8 @@
 
               <!-- Row 202 -->
               <tr>
-                <th class="h-16 border-2 border-indigo-600 p-2 font-normal">
-                  <span data-id="pg055_n0031">202</span>
+                <th data-chart-highlight-source="pg055_n0022" class="h-16 border-2 border-indigo-600 p-2 font-normal" scope="row">
+                  <span aria-hidden="true">202</span>
                 </th>
                 <td class="h-16 border-2 border-indigo-600 p-0">
                   <input id="cell-7" type="text" aria-label="202 plus 201" data-activity-item="item-7" class="h-full w-full bg-transparent text-center text-2xl outline-none focus:bg-sky-50">
@@ -110,8 +140,8 @@
 
               <!-- Row 203 -->
               <tr>
-                <th class="h-16 border-2 border-indigo-600 p-2 font-normal">
-                  <span data-id="pg055_n0040">203</span>
+                <th data-chart-highlight-source="pg055_n0022" class="h-16 border-2 border-indigo-600 p-2 font-normal" scope="row">
+                  <span aria-hidden="true">203</span>
                 </th>
                 <td class="h-16 border-2 border-indigo-600 p-0">
                   <input id="cell-13" type="text" aria-label="203 plus 201" data-activity-item="item-13" class="h-full w-full bg-transparent text-center text-2xl outline-none focus:bg-sky-50">
@@ -135,8 +165,8 @@
 
               <!-- Row 204 -->
               <tr>
-                <th class="h-16 border-2 border-indigo-600 p-2 font-normal">
-                  <span data-id="pg055_n0049">204</span>
+                <th data-chart-highlight-source="pg055_n0022" class="h-16 border-2 border-indigo-600 p-2 font-normal" scope="row">
+                  <span aria-hidden="true">204</span>
                 </th>
                 <td class="h-16 border-2 border-indigo-600 p-0">
                   <input id="cell-19" type="text" aria-label="204 plus 201" data-activity-item="item-19" class="h-full w-full bg-transparent text-center text-2xl outline-none focus:bg-sky-50">
@@ -150,8 +180,8 @@
                 <td class="h-16 border-2 border-indigo-600 p-0">
                   <input id="cell-22" type="text" aria-label="204 plus 204" data-activity-item="item-22" class="h-full w-full bg-transparent text-center text-2xl outline-none focus:bg-sky-50">
                 </td>
-                <td class="h-16 border-2 border-indigo-600 p-2">
-                  <span data-id="pg055_n0055">409</span>
+                <td data-chart-highlight-source="pg055_n0055" class="h-16 border-2 border-indigo-600 p-2">
+                  <span aria-hidden="true">409</span>
                 </td>
                 <td class="h-16 border-2 border-indigo-600 p-0">
                   <input id="cell-23" type="text" aria-label="204 plus 206" data-activity-item="item-23" class="h-full w-full bg-transparent text-center text-2xl outline-none focus:bg-sky-50">
@@ -160,8 +190,8 @@
 
               <!-- Row 205 -->
               <tr>
-                <th class="h-16 border-2 border-indigo-600 p-2 font-normal">
-                  <span data-id="pg055_n0059">205</span>
+                <th data-chart-highlight-source="pg055_n0022" class="h-16 border-2 border-indigo-600 p-2 font-normal" scope="row">
+                  <span aria-hidden="true">205</span>
                 </th>
                 <td class="h-16 border-2 border-indigo-600 p-0">
                   <input id="cell-24" type="text" aria-label="205 plus 201" data-activity-item="item-24" class="h-full w-full bg-transparent text-center text-2xl outline-none focus:bg-sky-50">
@@ -185,8 +215,8 @@
 
               <!-- Row 206 -->
               <tr>
-                <th class="h-16 border-2 border-indigo-600 p-2 font-normal">
-                  <span data-id="pg055_n0068">206</span>
+                <th data-chart-highlight-source="pg055_n0022" class="h-16 border-2 border-indigo-600 p-2 font-normal" scope="row">
+                  <span aria-hidden="true">206</span>
                 </th>
                 <td class="h-16 border-2 border-indigo-600 p-0">
                   <input id="cell-30" type="text" aria-label="206 plus 201" data-activity-item="item-30" class="h-full w-full bg-transparent text-center text-2xl outline-none focus:bg-sky-50">
@@ -194,8 +224,8 @@
                 <td class="h-16 border-2 border-indigo-600 p-0">
                   <input id="cell-31" type="text" aria-label="206 plus 202" data-activity-item="item-31" class="h-full w-full bg-transparent text-center text-2xl outline-none focus:bg-sky-50">
                 </td>
-                <td class="h-16 border-2 border-indigo-600 p-2">
-                  <span data-id="pg055_n0072">409</span>
+                <td data-chart-highlight-source="pg055_n0072" class="h-16 border-2 border-indigo-600 p-2">
+                  <span aria-hidden="true">409</span>
                 </td>
                 <td class="h-16 border-2 border-indigo-600 p-0">
                   <input id="cell-32" type="text" aria-label="206 plus 204" data-activity-item="item-32" class="h-full w-full bg-transparent text-center text-2xl outline-none focus:bg-sky-50">
@@ -275,6 +305,27 @@
     </script>
     <div class="relative z-50" id="interface-container"></div>
     <div class="relative z-50" id="nav-container"></div>
+    <script>
+      (() => {
+        for (const cell of document.querySelectorAll('[data-chart-highlight-source]')) {
+          const source = document.querySelector(`[data-id="${cell.dataset.chartHighlightSource}"]`)
+          if (!source) continue
+
+          const syncChartHighlight = () => {
+            const isActive = source.classList.contains('bg-yellow-300') || Boolean(source.querySelector('.bg-yellow-300'))
+            cell.classList.toggle('pg055-chart-highlight', isActive)
+          }
+
+          new MutationObserver(syncChartHighlight).observe(source, {
+            attributes: true,
+            childList: true,
+            subtree: true,
+            attributeFilter: ['class']
+          })
+          syncChartHighlight()
+        }
+      })()
+    </script>
     <script>
       (() => {
         for (const label of document.querySelectorAll('[data-question-highlight-proxy]')) {
