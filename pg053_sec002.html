@@ -45,6 +45,36 @@
             min-width: 0;
         }
 
+        .pg053054-merged-page {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .pg053054-merged-part {
+            min-height: 0 !important;
+            overflow: visible !important;
+            border: 0 !important;
+            border-radius: 0 !important;
+            box-shadow: none !important;
+        }
+
+        .pg053054-merged-part + .pg053054-merged-part {
+            margin-top: -8rem;
+        }
+
+        .pg054-addition-chart th,
+        .pg054-addition-chart td {
+            padding-left: 0.5rem !important;
+            padding-right: 0.5rem !important;
+        }
+
+        .pg054-cell-highlight {
+            background-color: #fde047 !important;
+            color: #111827 !important;
+            transition: background-color 120ms ease;
+        }
+
         @media (max-width: 1199px) {
             .pg053-question-grid {
                 grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
@@ -82,6 +112,22 @@
                 font-size: 1.5rem;
             }
         }
+
+        @media (max-width: 640px) {
+            .pg053054-merged-page {
+                gap: 1rem;
+            }
+
+            .pg053054-merged-part + .pg053054-merged-part {
+                margin-top: -3rem;
+            }
+
+            .pg054-addition-chart th,
+            .pg054-addition-chart td {
+                padding-left: 0.25rem !important;
+                padding-right: 0.25rem !important;
+            }
+        }
     </style>
 </head>
 
@@ -89,7 +135,8 @@
     <main class="w-full">
       <h1 class="sr-only" id="page-heading">Exercise 8</h1>
       <div id="content" class="mx-auto w-full max-w-7xl bg-white p-8 max-lg:p-5 max-sm:p-3 opacity-0">
-  <section data-book-page="true" data-section-type="activity_fill_in_the_blank" data-section-id="pg053_sec002" class="relative mx-auto overflow-hidden rounded-[3.5rem] border-[18px] border-sky-100 bg-white shadow-[inset_0_0_30px_rgba(125,190,235,0.14),0_8px_24px_rgba(14,116,144,0.08)] max-lg:rounded-[2.75rem] max-lg:border-[14px] max-sm:rounded-[2rem] max-sm:border-[9px]">
+  <div data-book-page="true" class="pg053054-merged-page relative mx-auto overflow-hidden rounded-[3.5rem] border-[18px] border-sky-100 bg-white shadow-[inset_0_0_30px_rgba(125,190,235,0.14),0_8px_24px_rgba(14,116,144,0.08)] max-lg:rounded-[2.75rem] max-lg:border-[14px] max-sm:rounded-[2rem] max-sm:border-[9px]">
+  <section data-merged-page="true" data-section-type="activity_fill_in_the_blank" data-section-id="pg053_sec002" class="pg053054-merged-part relative mx-auto w-full bg-white">
     <div class="pg053-exercise-body relative z-10 px-14 py-14 font-serif text-neutral-900 max-lg:px-8 max-lg:py-10 max-sm:px-3 max-sm:py-7">
       <div class="pg053-exercise-panel relative rounded-[2.5rem] border-[3px] border-sky-300 px-12 pb-12 pt-16 max-lg:px-7 max-sm:rounded-[1.75rem] max-sm:px-4">
         <div class="absolute left-16 top-0 -translate-y-1/2 rounded-full border-[3px] border-sky-500 bg-white px-10 py-2 max-sm:left-5 max-sm:px-6">
@@ -337,6 +384,145 @@
       </div>
     </div>
   </section>
+
+  <!-- Page 54 content is appended vertically as part of this single page. -->
+  <section data-merged-page="true" data-section-type="text_and_single_image" data-section-id="pg054_sec001" class="pg053054-merged-part relative mx-auto w-full bg-white">
+    <div class="relative z-10 px-16 py-14 font-serif text-neutral-800 max-lg:px-10 max-lg:py-10 max-sm:px-4 max-sm:py-7">
+      <h1 data-id="pg054_n0038" class="text-4xl font-bold italic leading-tight max-lg:text-3xl max-sm:text-2xl">
+        Adding numbers in a chart
+      </h1>
+
+      <p class="mt-3 text-3xl italic leading-relaxed max-lg:text-2xl max-sm:text-lg">
+        <span data-id="pg054_n0040">
+          The following chart has rows and columns of numbers.
+        </span>
+      </p>
+
+      <!-- Addition chart -->
+      <div class="mt-6 overflow-x-auto">
+        <div class="sr-only">
+          <span data-id="pg054_tbl_r0c0">Addition chart.</span>
+          <span data-id="pg054_tbl_r0c1">Column heading: 101.</span>
+          <span data-id="pg054_tbl_r0c2">Column heading: 102.</span>
+          <span data-id="pg054_tbl_r0c3">Column heading: 103.</span>
+          <span data-id="pg054_tbl_r0c4">Column heading: 104.</span>
+          <span data-id="pg054_tbl_r0c5">Column heading: 105.</span>
+          <span data-id="pg054_tbl_r1c0">Row heading: 101.</span>
+          <span data-id="pg054_tbl_r2c0">Row heading: 102.</span>
+          <span data-id="pg054_tbl_r3c0">Row heading: 103.</span>
+          <span data-id="pg054_tbl_r4c0">Row heading: 104.</span>
+          <span data-id="pg054_tbl_r5c0">Row heading: 105.</span>
+        </div>
+        <table aria-label="Addition chart showing sums of row and column numbers" class="pg054-addition-chart mx-auto w-full table-fixed border-collapse text-center text-3xl italic max-lg:text-2xl max-sm:text-base">
+          <thead>
+            <tr>
+              <th scope="col" aria-label="Addition chart" data-chart-highlight-source="pg054_tbl_r0c0" class="border-2 border-indigo-700 bg-[#8ca9d9] px-6 py-3 font-normal">
+                <span aria-hidden="true">+</span>
+              </th>
+              <th scope="col" aria-label="Column heading 101" data-chart-highlight-source="pg054_tbl_r0c1" class="border-2 border-indigo-700 bg-[#8ca9d9] px-6 py-3 font-normal">
+                <span aria-hidden="true">101</span>
+              </th>
+              <th scope="col" aria-label="Column heading 102" data-chart-highlight-source="pg054_tbl_r0c2" class="border-2 border-indigo-700 bg-[#8ca9d9] px-6 py-3 font-normal">
+                <span aria-hidden="true">102</span>
+              </th>
+              <th scope="col" aria-label="Column heading 103" data-chart-highlight-source="pg054_tbl_r0c3" class="border-2 border-indigo-700 bg-[#8ca9d9] px-6 py-3 font-normal">
+                <span aria-hidden="true">103</span>
+              </th>
+              <th scope="col" aria-label="Column heading 104" data-chart-highlight-source="pg054_tbl_r0c4" class="border-2 border-indigo-700 bg-[#8ca9d9] px-6 py-3 font-normal">
+                <span aria-hidden="true">104</span>
+              </th>
+              <th scope="col" aria-label="Column heading 105" data-chart-highlight-source="pg054_tbl_r0c5" class="border-2 border-indigo-700 bg-[#8ca9d9] px-6 py-3 font-normal">
+                <span aria-hidden="true">105</span>
+              </th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <th scope="row" aria-label="Row heading 101" data-chart-highlight-source="pg054_tbl_r1c0" class="border-2 border-indigo-700 bg-[#afc2e2] px-6 py-3 font-normal">
+                <span aria-hidden="true">101</span>
+              </th>
+              <td data-chart-highlight-source="pg054_tbl_r1c1" class="border-2 border-indigo-700 px-6 py-3"><span data-id="pg054_tbl_r1c1" class="sr-only">Results for row 101: 202, 203, 204, 205 and 206.</span><span aria-hidden="true">202</span></td>
+              <td data-chart-highlight-source="pg054_tbl_r1c1" class="border-2 border-indigo-700 px-6 py-3"><span aria-hidden="true">203</span></td>
+              <td data-chart-highlight-source="pg054_tbl_r1c1" class="border-2 border-indigo-700 px-6 py-3"><span aria-hidden="true">204</span></td>
+              <td data-chart-highlight-source="pg054_tbl_r1c1" class="border-2 border-indigo-700 px-6 py-3"><span aria-hidden="true">205</span></td>
+              <td data-chart-highlight-source="pg054_tbl_r1c1" class="border-2 border-indigo-700 px-6 py-3"><span aria-hidden="true">206</span></td>
+            </tr>
+
+            <tr>
+              <th scope="row" aria-label="Row heading 102" data-chart-highlight-source="pg054_tbl_r2c0" class="border-2 border-indigo-700 bg-[#afc2e2] px-6 py-3 font-normal">
+                <span aria-hidden="true">102</span>
+              </th>
+              <td data-chart-highlight-source="pg054_tbl_r2c1" class="border-2 border-indigo-700 px-6 py-3"><span data-id="pg054_tbl_r2c1" class="sr-only">Results for row 102: 203, 204, 205, 206 and 207.</span><span aria-hidden="true">203</span></td>
+              <td data-chart-highlight-source="pg054_tbl_r2c1" class="border-2 border-indigo-700 px-6 py-3"><span aria-hidden="true">204</span></td>
+              <td data-chart-highlight-source="pg054_tbl_r2c1" class="border-2 border-indigo-700 px-6 py-3"><span aria-hidden="true">205</span></td>
+              <td data-chart-highlight-source="pg054_tbl_r2c1" class="border-2 border-indigo-700 px-6 py-3"><span aria-hidden="true">206</span></td>
+              <td data-chart-highlight-source="pg054_tbl_r2c1" class="border-2 border-indigo-700 px-6 py-3"><span aria-hidden="true">207</span></td>
+            </tr>
+
+            <tr>
+              <th scope="row" aria-label="Row heading 103" data-chart-highlight-source="pg054_tbl_r3c0" class="border-2 border-indigo-700 bg-[#afc2e2] px-6 py-3 font-normal">
+                <span aria-hidden="true">103</span>
+              </th>
+              <td data-chart-highlight-source="pg054_tbl_r3c1" class="border-2 border-indigo-700 px-6 py-3"><span data-id="pg054_tbl_r3c1" class="sr-only">Results for row 103: 204, 205, 206, 207 and 208.</span><span aria-hidden="true">204</span></td>
+              <td data-chart-highlight-source="pg054_tbl_r3c1" class="border-2 border-indigo-700 px-6 py-3"><span aria-hidden="true">205</span></td>
+              <td data-chart-highlight-source="pg054_tbl_r3c1" class="border-2 border-indigo-700 px-6 py-3"><span aria-hidden="true">206</span></td>
+              <td data-chart-highlight-source="pg054_tbl_r3c1" class="border-2 border-indigo-700 px-6 py-3"><span aria-hidden="true">207</span></td>
+              <td data-chart-highlight-source="pg054_tbl_r3c1" class="border-2 border-indigo-700 px-6 py-3"><span aria-hidden="true">208</span></td>
+            </tr>
+
+            <tr>
+              <th scope="row" aria-label="Row heading 104" data-chart-highlight-source="pg054_tbl_r4c0" class="border-2 border-indigo-700 bg-[#afc2e2] px-6 py-3 font-normal">
+                <span aria-hidden="true">104</span>
+              </th>
+              <td data-chart-highlight-source="pg054_tbl_r4c1" class="border-2 border-indigo-700 px-6 py-3"><span data-id="pg054_tbl_r4c1" class="sr-only">Results for row 104: 205, 206, 207, 208 and 209.</span><span aria-hidden="true">205</span></td>
+              <td data-chart-highlight-source="pg054_tbl_r4c1" class="border-2 border-indigo-700 px-6 py-3"><span aria-hidden="true">206</span></td>
+              <td data-chart-highlight-source="pg054_tbl_r4c1" class="border-2 border-indigo-700 px-6 py-3"><span aria-hidden="true">207</span></td>
+              <td data-chart-highlight-source="pg054_tbl_r4c1" class="border-2 border-indigo-700 px-6 py-3"><span aria-hidden="true">208</span></td>
+              <td data-chart-highlight-source="pg054_tbl_r4c1" class="border-2 border-indigo-700 px-6 py-3"><span aria-hidden="true">209</span></td>
+            </tr>
+
+            <tr>
+              <th scope="row" aria-label="Row heading 105" data-chart-highlight-source="pg054_tbl_r5c0" class="border-2 border-indigo-700 bg-[#afc2e2] px-6 py-3 font-normal">
+                <span aria-hidden="true">105</span>
+              </th>
+              <td data-chart-highlight-source="pg054_tbl_r5c1" class="border-2 border-indigo-700 px-6 py-3"><span data-id="pg054_tbl_r5c1" class="sr-only">Results for row 105: 206, 207, 208, 209 and 210.</span><span aria-hidden="true">206</span></td>
+              <td data-chart-highlight-source="pg054_tbl_r5c1" class="border-2 border-indigo-700 px-6 py-3"><span aria-hidden="true">207</span></td>
+              <td data-chart-highlight-source="pg054_tbl_r5c1" class="border-2 border-indigo-700 px-6 py-3"><span aria-hidden="true">208</span></td>
+              <td data-chart-highlight-source="pg054_tbl_r5c1" class="border-2 border-indigo-700 px-6 py-3"><span aria-hidden="true">209</span></td>
+              <td data-chart-highlight-source="pg054_tbl_r5c1" class="border-2 border-indigo-700 px-6 py-3"><span aria-hidden="true">210</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="mt-10 text-3xl italic leading-relaxed max-lg:text-2xl max-sm:mt-7 max-sm:text-lg">
+        <span data-id="pg054_n0042">Look at the first row.</span>
+        <span data-id="pg054_n0043">
+          It has 101, 102, 103, 104 and 105.
+        </span>
+        <span data-id="pg054_n0044">
+          The first column has 101, 102, 103, 104 and 105.
+        </span>
+        <span data-id="pg054_n0045">
+          Observe where the rows and columns meet.
+        </span>
+        <span data-id="pg054_n0046">
+          Each number in the box is the sum of two numbers.
+        </span>
+        <span data-id="pg054_n0047">
+          Those numbers are in the first row and the first column.
+        </span>
+      </p>
+    </div>
+
+    <div aria-hidden="true" class="pointer-events-none absolute inset-[18px] z-20 flex items-center justify-center overflow-hidden rounded-[2.4rem] max-lg:inset-[14px] max-sm:inset-[9px]">
+      <span class="-rotate-45 whitespace-nowrap text-6xl font-medium tracking-wide text-rose-300/35 max-lg:text-5xl max-sm:text-3xl hidden">
+        FOR ONLINE READING ONLY
+      </span>
+    </div>
+  </section>
+  </div>
 </div>
     </main>
 
@@ -381,6 +567,27 @@
             subtree: true,
           })
           syncArithmeticHighlight()
+        }
+      })()
+    </script>
+    <script>
+      (() => {
+        for (const cell of document.querySelectorAll('[data-chart-highlight-source]')) {
+          const source = document.querySelector(`[data-id="${cell.dataset.chartHighlightSource}"]`)
+          if (!source) continue
+
+          const syncCellHighlight = () => {
+            const isActive = source.classList.contains('bg-yellow-300') || Boolean(source.querySelector('.bg-yellow-300'))
+            cell.classList.toggle('pg054-cell-highlight', isActive)
+          }
+
+          new MutationObserver(syncCellHighlight).observe(source, {
+            attributes: true,
+            childList: true,
+            subtree: true,
+            attributeFilter: ['class']
+          })
+          syncCellHighlight()
         }
       })()
     </script>
